@@ -29,26 +29,26 @@
 
 - (void)viewDidLoad {
 	[super viewDidLoad];
-
+	
 	[self testArray];
-//
-//	LinkedList <Person *> *linked = [[LinkedList alloc] init];
-//
-//	Person *p1 = [Person new];
-//	Person *p2 = [Person new];
-//	Person *p3 = [Person new];
-//	NSLog(@"p1 = %p p2 = %p p3 = %p",p1,p2,p3);
-//
-//	[linked addObjectAtFirst:p1];
-//	[linked addObjectAtFirst:p2];
-//	[linked addObjectAtFirst:p3];
-//
-//	NSLog(@"%@",linked);
-////
-////	[linked removeFirstObject];
-////	[linked removeFirstObject];
-////	[linked removeFirstObject];
-
+	//
+	//	LinkedList <Person *> *linked = [[LinkedList alloc] init];
+	//
+	//	Person *p1 = [Person new];
+	//	Person *p2 = [Person new];
+	//	Person *p3 = [Person new];
+	//	NSLog(@"p1 = %p p2 = %p p3 = %p",p1,p2,p3);
+	//
+	//	[linked addObjectAtFirst:p1];
+	//	[linked addObjectAtFirst:p2];
+	//	[linked addObjectAtFirst:p3];
+	//
+	//	NSLog(@"%@",linked);
+	////
+	////	[linked removeFirstObject];
+	////	[linked removeFirstObject];
+	////	[linked removeFirstObject];
+	
 	
 }
 
@@ -89,7 +89,7 @@
 	[[NSRunLoop currentRunLoop] addTimer:timer forMode:NSRunLoopCommonModes];
 	_timer = timer;
 	_timeArray = [NSMutableArray array];
-
+	
 }
 
 - (void) testStack {
@@ -100,16 +100,16 @@
 	NSLog(@"%ld",(long)stack.size);
 	NSLog(@"%ld",(long)stack.isEmpty);
 	NSLog(@"%@",stack);
-
+	
 	id obj = [stack pop];
 	NSLog(@"%@",obj);
-
+	
 	NSLog(@"%@",stack);
 	
 	[stack removeAllObjects];
 	
 	NSLog(@"%@",stack);
-
+	
 }
 
 - (void) testQueue {
@@ -126,12 +126,12 @@
 	}
 	CFAbsoluteTime linkTime = (CFAbsoluteTimeGetCurrent() - startTime);
 	NSLog(@"%s Linked in %f s",__func__ ,linkTime);
-
+	
 }
 
 - (void) testLoopQueue {
 	
-
+	
 	
 }
 
@@ -143,14 +143,14 @@
 		NSLog(@"time is %@",[_timeArray valueForKeyPath:@"@avg.self"]);
 		return;
 	}
-
+	
 	dispatch_async(dispatch_get_global_queue(0, 0), ^{
 		CFAbsoluteTime startTime = CFAbsoluteTimeGetCurrent();
 		int number = 100000;
 		Person *p = [Person new];
 		LinkedList <Person *> *linked = [LinkedList new];
 		for (int i = 0; i<number; i++) {
-//			[linked addObject:p];
+			//			[linked addObject:p];
 			[linked addObjectAtFirst:p];
 		}
 		CFAbsoluteTime linkTime = (CFAbsoluteTimeGetCurrent() - startTime);

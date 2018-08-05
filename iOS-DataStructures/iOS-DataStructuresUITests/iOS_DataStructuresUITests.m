@@ -1,18 +1,18 @@
 //
-//  ArrayListUITests.m
-//  ArrayListUITests
+//  iOS_DataStructuresUITests.m
+//  iOS-DataStructuresUITests
 //
-//  Created by dzb on 2018/7/19.
+//  Created by dzb on 2018/8/5.
 //  Copyright © 2018 大兵布莱恩特. All rights reserved.
 //
 
 #import <XCTest/XCTest.h>
 
-@interface ArrayListUITests : XCTestCase
+@interface iOS_DataStructuresUITests : XCTestCase
 
 @end
 
-@implementation ArrayListUITests
+@implementation iOS_DataStructuresUITests
 
 - (void)setUp {
     [super setUp];
