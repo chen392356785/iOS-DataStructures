@@ -88,10 +88,13 @@ typedef void * AnyObject;
 		CFRelease(obj);
 		i--;
 	}
-	if (oldArray != NULL) { free(oldArray); }
+	if (oldArray != NULL) {
+		free(oldArray);
+		oldArray = NULL;
+	}
 	_size = 0;
 	_capacity = defaultCapacity;
-	_array = (AnyObject*)calloc(_capacity, sizeof(AnyObject));
+	_array = (AnyObject*)calloc(_capacity,sizeof(AnyObject));
 }
 
 - (void)removeObjectAtIndex:(NSUInteger)index {

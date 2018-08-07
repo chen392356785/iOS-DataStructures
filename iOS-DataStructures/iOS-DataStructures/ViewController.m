@@ -12,7 +12,7 @@
 #import "ArrayQueue.h"
 #import "ArrayStack.h"
 #import "LoopQueue.h"
-
+#import "LinkedListStack.h"
 #import "LinkedList.h"
 
 @interface ViewController ()
@@ -85,7 +85,7 @@
 
 - (void) testArray {
 	
-	NSTimer *timer = [NSTimer timerWithTimeInterval:3.0f target:self selector:@selector(test) userInfo:nil repeats:NO];
+	NSTimer *timer = [NSTimer timerWithTimeInterval:3.0f target:self selector:@selector(test) userInfo:nil repeats:YES];
 	[[NSRunLoop currentRunLoop] addTimer:timer forMode:NSRunLoopCommonModes];
 	_timer = timer;
 	_timeArray = [NSMutableArray array];
@@ -148,10 +148,9 @@
 		CFAbsoluteTime startTime = CFAbsoluteTimeGetCurrent();
 		int number = 100000;
 		Person *p = [Person new];
-		LinkedList <Person *> *linked = [LinkedList new];
+		LinkedListStack <Person *> *linked = [LinkedListStack new];
 		for (int i = 0; i<number; i++) {
-			//			[linked addObject:p];
-			[linked addObjectAtFirst:p];
+			[linked push:p];
 		}
 		CFAbsoluteTime linkTime = (CFAbsoluteTimeGetCurrent() - startTime);
 		CFTimeInterval duration = linkTime * 1000.0f;

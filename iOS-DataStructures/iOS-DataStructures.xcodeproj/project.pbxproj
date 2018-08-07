@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2427C21321198EBE00646965 /* LinkedList.m in Sources */ = {isa = PBXBuildFile; fileRef = 2427C20921198EBE00646965 /* LinkedList.m */; };
+		2427C21421198EBE00646965 /* LoopQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = 2427C20A21198EBE00646965 /* LoopQueue.m */; };
+		2427C21521198EBE00646965 /* ArrayQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = 2427C20B21198EBE00646965 /* ArrayQueue.m */; };
+		2427C21621198EBE00646965 /* ArrayList.m in Sources */ = {isa = PBXBuildFile; fileRef = 2427C20E21198EBE00646965 /* ArrayList.m */; };
+		2427C21721198EBE00646965 /* ArrayStack.m in Sources */ = {isa = PBXBuildFile; fileRef = 2427C21121198EBE00646965 /* ArrayStack.m */; };
+		2427C21B21198EF700646965 /* LinkedListStack.m in Sources */ = {isa = PBXBuildFile; fileRef = 2427C21A21198EF700646965 /* LinkedListStack.m */; };
 		2460DFD62116BA0F0087678A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2460DFD52116BA0F0087678A /* AppDelegate.m */; };
 		2460DFD92116BA0F0087678A /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2460DFD82116BA0F0087678A /* ViewController.m */; };
 		2460DFDC2116BA0F0087678A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2460DFDA2116BA0F0087678A /* Main.storyboard */; };
@@ -15,12 +21,9 @@
 		2460DFE42116BA100087678A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2460DFE32116BA100087678A /* main.m */; };
 		2460DFEE2116BA100087678A /* iOS_DataStructuresTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2460DFED2116BA100087678A /* iOS_DataStructuresTests.m */; };
 		2460DFF92116BA100087678A /* iOS_DataStructuresUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2460DFF82116BA100087678A /* iOS_DataStructuresUITests.m */; };
-		2460E0112116BA260087678A /* ArrayQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = 2460E0082116BA250087678A /* ArrayQueue.m */; };
-		2460E0122116BA260087678A /* ArrayList.m in Sources */ = {isa = PBXBuildFile; fileRef = 2460E0092116BA250087678A /* ArrayList.m */; };
-		2460E0132116BA260087678A /* ArrayStack.m in Sources */ = {isa = PBXBuildFile; fileRef = 2460E00B2116BA250087678A /* ArrayStack.m */; };
-		2460E0142116BA260087678A /* LoopQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = 2460E00C2116BA250087678A /* LoopQueue.m */; };
-		2460E0152116BA260087678A /* LinkedList.m in Sources */ = {isa = PBXBuildFile; fileRef = 2460E0102116BA250087678A /* LinkedList.m */; };
 		2460E0182116BA300087678A /* Person.m in Sources */ = {isa = PBXBuildFile; fileRef = 2460E0172116BA300087678A /* Person.m */; };
+		2460E01A2116BAD20087678A /* TestArray.m in Sources */ = {isa = PBXBuildFile; fileRef = 2460E0192116BAD20087678A /* TestArray.m */; };
+		24AD8E7D211991B900356900 /* TestStack.m in Sources */ = {isa = PBXBuildFile; fileRef = 24AD8E7C211991B900356900 /* TestStack.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -41,6 +44,18 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2427C20721198EBE00646965 /* LinkedList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LinkedList.h; sourceTree = "<group>"; };
+		2427C20921198EBE00646965 /* LinkedList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LinkedList.m; sourceTree = "<group>"; };
+		2427C20A21198EBE00646965 /* LoopQueue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoopQueue.m; sourceTree = "<group>"; };
+		2427C20B21198EBE00646965 /* ArrayQueue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ArrayQueue.m; sourceTree = "<group>"; };
+		2427C20C21198EBE00646965 /* ArrayStack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ArrayStack.h; sourceTree = "<group>"; };
+		2427C20D21198EBE00646965 /* LoopQueue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoopQueue.h; sourceTree = "<group>"; };
+		2427C20E21198EBE00646965 /* ArrayList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ArrayList.m; sourceTree = "<group>"; };
+		2427C20F21198EBE00646965 /* ArrayList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ArrayList.h; sourceTree = "<group>"; };
+		2427C21021198EBE00646965 /* ArrayQueue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ArrayQueue.h; sourceTree = "<group>"; };
+		2427C21121198EBE00646965 /* ArrayStack.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ArrayStack.m; sourceTree = "<group>"; };
+		2427C21921198EF700646965 /* LinkedListStack.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LinkedListStack.h; sourceTree = "<group>"; };
+		2427C21A21198EF700646965 /* LinkedListStack.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LinkedListStack.m; sourceTree = "<group>"; };
 		2460DFD12116BA0F0087678A /* iOS-DataStructures.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "iOS-DataStructures.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2460DFD42116BA0F0087678A /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		2460DFD52116BA0F0087678A /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -57,18 +72,10 @@
 		2460DFF42116BA100087678A /* iOS-DataStructuresUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "iOS-DataStructuresUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2460DFF82116BA100087678A /* iOS_DataStructuresUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = iOS_DataStructuresUITests.m; sourceTree = "<group>"; };
 		2460DFFA2116BA100087678A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		2460E0072116BA250087678A /* LoopQueue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoopQueue.h; sourceTree = "<group>"; };
-		2460E0082116BA250087678A /* ArrayQueue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ArrayQueue.m; sourceTree = "<group>"; };
-		2460E0092116BA250087678A /* ArrayList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ArrayList.m; sourceTree = "<group>"; };
-		2460E00A2116BA250087678A /* LinkedList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LinkedList.h; sourceTree = "<group>"; };
-		2460E00B2116BA250087678A /* ArrayStack.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ArrayStack.m; sourceTree = "<group>"; };
-		2460E00C2116BA250087678A /* LoopQueue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoopQueue.m; sourceTree = "<group>"; };
-		2460E00D2116BA250087678A /* ArrayQueue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ArrayQueue.h; sourceTree = "<group>"; };
-		2460E00E2116BA250087678A /* ArrayList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ArrayList.h; sourceTree = "<group>"; };
-		2460E00F2116BA250087678A /* ArrayStack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ArrayStack.h; sourceTree = "<group>"; };
-		2460E0102116BA250087678A /* LinkedList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LinkedList.m; sourceTree = "<group>"; };
 		2460E0162116BA300087678A /* Person.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Person.h; sourceTree = "<group>"; };
 		2460E0172116BA300087678A /* Person.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Person.m; sourceTree = "<group>"; };
+		2460E0192116BAD20087678A /* TestArray.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestArray.m; sourceTree = "<group>"; };
+		24AD8E7C211991B900356900 /* TestStack.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestStack.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -139,6 +146,8 @@
 			isa = PBXGroup;
 			children = (
 				2460DFED2116BA100087678A /* iOS_DataStructuresTests.m */,
+				2460E0192116BAD20087678A /* TestArray.m */,
+				24AD8E7C211991B900356900 /* TestStack.m */,
 				2460DFEF2116BA100087678A /* Info.plist */,
 			);
 			path = "iOS-DataStructuresTests";
@@ -156,16 +165,18 @@
 		2460E0062116BA250087678A /* DataStructures */ = {
 			isa = PBXGroup;
 			children = (
-				2460E0072116BA250087678A /* LoopQueue.h */,
-				2460E0082116BA250087678A /* ArrayQueue.m */,
-				2460E0092116BA250087678A /* ArrayList.m */,
-				2460E00A2116BA250087678A /* LinkedList.h */,
-				2460E00B2116BA250087678A /* ArrayStack.m */,
-				2460E00C2116BA250087678A /* LoopQueue.m */,
-				2460E00D2116BA250087678A /* ArrayQueue.h */,
-				2460E00E2116BA250087678A /* ArrayList.h */,
-				2460E00F2116BA250087678A /* ArrayStack.h */,
-				2460E0102116BA250087678A /* LinkedList.m */,
+				2427C20F21198EBE00646965 /* ArrayList.h */,
+				2427C20E21198EBE00646965 /* ArrayList.m */,
+				2427C21021198EBE00646965 /* ArrayQueue.h */,
+				2427C20B21198EBE00646965 /* ArrayQueue.m */,
+				2427C20C21198EBE00646965 /* ArrayStack.h */,
+				2427C21121198EBE00646965 /* ArrayStack.m */,
+				2427C20721198EBE00646965 /* LinkedList.h */,
+				2427C20921198EBE00646965 /* LinkedList.m */,
+				2427C20D21198EBE00646965 /* LoopQueue.h */,
+				2427C20A21198EBE00646965 /* LoopQueue.m */,
+				2427C21921198EF700646965 /* LinkedListStack.h */,
+				2427C21A21198EF700646965 /* LinkedListStack.m */,
 			);
 			path = DataStructures;
 			sourceTree = "<group>";
@@ -300,15 +311,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2460E0142116BA260087678A /* LoopQueue.m in Sources */,
 				2460DFD92116BA0F0087678A /* ViewController.m in Sources */,
-				2460E0152116BA260087678A /* LinkedList.m in Sources */,
+				2427C21621198EBE00646965 /* ArrayList.m in Sources */,
+				2427C21721198EBE00646965 /* ArrayStack.m in Sources */,
+				2427C21521198EBE00646965 /* ArrayQueue.m in Sources */,
 				2460DFE42116BA100087678A /* main.m in Sources */,
-				2460E0132116BA260087678A /* ArrayStack.m in Sources */,
 				2460DFD62116BA0F0087678A /* AppDelegate.m in Sources */,
+				2427C21421198EBE00646965 /* LoopQueue.m in Sources */,
+				2427C21B21198EF700646965 /* LinkedListStack.m in Sources */,
+				2427C21321198EBE00646965 /* LinkedList.m in Sources */,
 				2460E0182116BA300087678A /* Person.m in Sources */,
-				2460E0122116BA260087678A /* ArrayList.m in Sources */,
-				2460E0112116BA260087678A /* ArrayQueue.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -317,6 +329,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				2460DFEE2116BA100087678A /* iOS_DataStructuresTests.m in Sources */,
+				2460E01A2116BAD20087678A /* TestArray.m in Sources */,
+				24AD8E7D211991B900356900 /* TestStack.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

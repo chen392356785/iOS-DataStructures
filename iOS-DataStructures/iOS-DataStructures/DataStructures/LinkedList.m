@@ -134,6 +134,12 @@ typedef struct node {
 	return [self removeObjectAtIndex:self.count-1];
 }
 
+- (void) removeAllObjects {
+	while (self.count != 0) {
+		[self removeFirstObject];
+	}
+}
+
 - (NSInteger)count {
 	return self.size;
 }
@@ -158,9 +164,6 @@ typedef struct node {
 
 - (void)dealloc
 {
-	while (self.count != 0) {
-		[self removeFirstObject];
-	}
-	
+	[self removeAllObjects];
 }
 @end

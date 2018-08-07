@@ -28,6 +28,8 @@
 
 - (ObjectType) removeLastObject;
 
+- (void) removeAllObjects;
+
 ///count
 @property (nonatomic,assign) NSInteger count;
 ///empty

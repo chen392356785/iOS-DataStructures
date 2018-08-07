@@ -12,6 +12,6 @@
 
 - (void)dealloc
 {
-	NSLog(@"person dealloc %p",self);
+//	NSLog(@"person dealloc %p",self);
 }
 @end
