@@ -18,7 +18,7 @@
 		2460DFDC2116BA0F0087678A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2460DFDA2116BA0F0087678A /* Main.storyboard */; };
 		2460DFDE2116BA100087678A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2460DFDD2116BA100087678A /* Assets.xcassets */; };
 		2460DFE12116BA100087678A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2460DFDF2116BA100087678A /* LaunchScreen.storyboard */; };
-		2460DFE42116BA100087678A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2460DFE32116BA100087678A /* main.m */; };
+		2460DFE42116BA100087678A /* main.mm in Sources */ = {isa = PBXBuildFile; fileRef = 2460DFE32116BA100087678A /* main.mm */; };
 		2460DFEE2116BA100087678A /* iOS_DataStructuresTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2460DFED2116BA100087678A /* iOS_DataStructuresTests.m */; };
 		2460DFF92116BA100087678A /* iOS_DataStructuresUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2460DFF82116BA100087678A /* iOS_DataStructuresUITests.m */; };
 		2460E0182116BA300087678A /* Person.m in Sources */ = {isa = PBXBuildFile; fileRef = 2460E0172116BA300087678A /* Person.m */; };
@@ -65,7 +65,7 @@
 		2460DFDD2116BA100087678A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2460DFE02116BA100087678A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2460DFE22116BA100087678A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		2460DFE32116BA100087678A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		2460DFE32116BA100087678A /* main.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = main.mm; sourceTree = "<group>"; };
 		2460DFE92116BA100087678A /* iOS-DataStructuresTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "iOS-DataStructuresTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2460DFED2116BA100087678A /* iOS_DataStructuresTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = iOS_DataStructuresTests.m; sourceTree = "<group>"; };
 		2460DFEF2116BA100087678A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -137,7 +137,7 @@
 				2460DFDD2116BA100087678A /* Assets.xcassets */,
 				2460DFDF2116BA100087678A /* LaunchScreen.storyboard */,
 				2460DFE22116BA100087678A /* Info.plist */,
-				2460DFE32116BA100087678A /* main.m */,
+				2460DFE32116BA100087678A /* main.mm */,
 			);
 			path = "iOS-DataStructures";
 			sourceTree = "<group>";
@@ -315,7 +315,7 @@
 				2427C21621198EBE00646965 /* ArrayList.m in Sources */,
 				2427C21721198EBE00646965 /* ArrayStack.m in Sources */,
 				2427C21521198EBE00646965 /* ArrayQueue.m in Sources */,
-				2460DFE42116BA100087678A /* main.m in Sources */,
+				2460DFE42116BA100087678A /* main.mm in Sources */,
 				2460DFD62116BA0F0087678A /* AppDelegate.m in Sources */,
 				2427C21421198EBE00646965 /* LoopQueue.m in Sources */,
 				2427C21B21198EF700646965 /* LinkedListStack.m in Sources */,

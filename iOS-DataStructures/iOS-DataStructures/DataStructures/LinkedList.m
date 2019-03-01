@@ -9,7 +9,6 @@
 #import "LinkedList.h"
 
 typedef void* AnyObject;
-
 typedef struct node {
 	AnyObject data;
 	struct node *next;
@@ -166,4 +165,5 @@ typedef struct node {
 {
 	[self removeAllObjects];
 }
+
 @end
