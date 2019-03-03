@@ -11,17 +11,24 @@
 #import <iostream>
 
 class Car {
-public:
-	int _price;
-	char *_name;
-	Car(int price = 0,char *name = NULL) :_price(price){
+	
+private:
+	
+	void copy(const char *name = NULL) {
 		if (name == NULL) return;
 		size_t len = strlen(name) + 1;
 		_name = new char[len]{};
-		strcpy(_name, name);
+		strcpy(_name,name);
 	}
-	Car(const Car &car) : _price(car._price) ,_name(car._name) {
-		
+	
+public:
+	int _price;
+	char *_name;
+	Car(int price = 0,const char *name = NULL) :_price(price) {
+		copy(name);
+	}
+	Car(const Car &car) : _price(car._price)  {
+		copy(car._name);
 	}
 	void display() {
 		std::cout << "price is " << this->_price << " name is " <<this->_name << std::endl;
@@ -39,12 +46,18 @@ public:
 int main(int argc, char * argv[]) {
 	@autoreleasepool {
 
-		char name[] = {'d','z','b','\0'};
-		std::cout << sizeof(name) << std::endl;
-		Car *car = new Car(100,name);
-		car->display();
+		char *name = new char[7]{'b','r','y','a','n','t','\0'};
+		Car car = Car(100,name);
+		car.display();
 		
-		delete car;
+		Car car2 = Car(car);
+		car2.display();
+		
+		car._name = (char *)"hellow";
+		car.display();
+		car2.display();
+
+		delete[] name;
 		
 //		Car c1 = Car(100);
 //		Car c2 = Car(c1);
