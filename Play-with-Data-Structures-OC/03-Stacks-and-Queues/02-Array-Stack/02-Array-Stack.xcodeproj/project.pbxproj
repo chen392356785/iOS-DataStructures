@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		24ED7B5C222BD7B7000B2A63 /* main.mm in Sources */ = {isa = PBXBuildFile; fileRef = 24ED7B5B222BD7B7000B2A63 /* main.mm */; };
-		24ED7B64222BD7F6000B2A63 /* ArrayList.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 24ED7B63222BD7F6000B2A63 /* ArrayList.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -24,11 +23,10 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		242A1001222C1665008D7051 /* Stack.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Stack.hpp; sourceTree = "<group>"; };
 		24ED7B58222BD7B7000B2A63 /* 02-Array-Stack */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "02-Array-Stack"; sourceTree = BUILT_PRODUCTS_DIR; };
 		24ED7B5B222BD7B7000B2A63 /* main.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = main.mm; sourceTree = "<group>"; };
 		24ED7B62222BD7F6000B2A63 /* ArrayList.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = ArrayList.hpp; sourceTree = "<group>"; };
-		24ED7B63222BD7F6000B2A63 /* ArrayList.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ArrayList.cpp; sourceTree = "<group>"; };
-		24ED7B66222BD864000B2A63 /* Stack.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Stack.hpp; sourceTree = "<group>"; };
 		24ED7B69222BD91F000B2A63 /* ArrayStack.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = ArrayStack.hpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -62,11 +60,10 @@
 		24ED7B5A222BD7B7000B2A63 /* 02-Array-Stack */ = {
 			isa = PBXGroup;
 			children = (
-				24ED7B63222BD7F6000B2A63 /* ArrayList.cpp */,
+				242A1001222C1665008D7051 /* Stack.hpp */,
 				24ED7B62222BD7F6000B2A63 /* ArrayList.hpp */,
-				24ED7B5B222BD7B7000B2A63 /* main.mm */,
-				24ED7B66222BD864000B2A63 /* Stack.hpp */,
 				24ED7B69222BD91F000B2A63 /* ArrayStack.hpp */,
+				24ED7B5B222BD7B7000B2A63 /* main.mm */,
 			);
 			path = "02-Array-Stack";
 			sourceTree = "<group>";
@@ -128,7 +125,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				24ED7B5C222BD7B7000B2A63 /* main.mm in Sources */,
-				24ED7B64222BD7F6000B2A63 /* ArrayList.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

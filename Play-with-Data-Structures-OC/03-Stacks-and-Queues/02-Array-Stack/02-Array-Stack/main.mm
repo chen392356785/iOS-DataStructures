@@ -7,13 +7,18 @@
 //
 
 #include <iostream>
-#import "ArrayList.hpp"
+#include "ArrayStack.hpp"
 #import <Foundation/Foundation.h>
 
 using namespace std;
 
 int main() {
-	
+    {
+        ArrayStack<int> stack(10);
+        stack.push(10);
+        stack.push(100);
+        stack.toString();
+    }
 	getchar();
 	return 0;
 }

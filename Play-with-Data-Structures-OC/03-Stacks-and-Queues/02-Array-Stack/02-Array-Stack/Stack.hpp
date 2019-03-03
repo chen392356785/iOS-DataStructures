@@ -11,15 +11,17 @@
 
 #include <stdio.h>
 
+///Stakc虚基类
 template <class E>
 class Stack {
 	
 public:
-	virturl int getSize();
-	virturl bool isEmpty();
-	virturl void push(E e);
-	virturl E pop();
-	virturl E peek();
+    virtual int getSize() { return 0; }
+    virtual bool isEmpty() { return false; }
+    virtual void push(E e) { }
+    virtual E pop() { return (E)(0);}
+    virtual E peek() { return (E)0; }
 };
+
 
 #endif /* Stack_hpp */

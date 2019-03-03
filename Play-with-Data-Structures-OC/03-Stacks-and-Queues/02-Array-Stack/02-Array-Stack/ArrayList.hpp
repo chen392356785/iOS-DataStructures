@@ -25,8 +25,8 @@ private:
     void resize(int newCapacity);
 public:
     ///构造方法
-    ArrayList();
-    ArrayList(int capacity);
+    explicit  ArrayList();
+    explicit  ArrayList(int capacity);
     ///析构函数
     ~ArrayList();
     // 获取数组的容量
@@ -43,6 +43,10 @@ public:
     void insert(T element,int index);
     /// 获取index索引位置的元素
     T objectAtIndex(int index);
+    /// 获取数组最后一个元素
+    T getLast();
+    /// 获取数组首元素
+    T getFirst();
     /// 修改index索引位置的元素为e
     void setObject(T element,int index);
     // 查找数组中是否有元素e
@@ -99,7 +103,10 @@ bool ArrayList<T>::isEmpty() {
 template <class T>
 ArrayList<T>::~ArrayList() {
     cout << "~ArrayList()析构函数" << endl;
-    delete [] _data;
+    if (_data != nullptr) {
+        delete [] _data;
+        _data = nullptr;
+    }
 }
 
 #pragma mark - 添加元素
@@ -143,6 +150,18 @@ void ArrayList<T>::setObject(T element, int index) {
     _data[index] = element;
 }
 #pragma mark - 查找
+
+/// 获取数组最后一个元素
+template <class T>
+T ArrayList<T>::getLast() {
+    return objectAtIndex(_size);
+}
+
+/// 获取数组首元素
+template <class T>
+T ArrayList<T>::getFirst() {
+    return objectAtIndex(0);
+}
 
 template <class T>
 // 查找数组中是否有元素e

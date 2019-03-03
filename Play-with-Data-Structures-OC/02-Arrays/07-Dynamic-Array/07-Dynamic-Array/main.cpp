@@ -7,9 +7,12 @@
 //
 
 #include <iostream>
+#include "ArrayList.hpp"
 
 int main(int argc, const char * argv[]) {
-	// insert code here...
-	std::cout << "Hello, World!\n";
+
+    ArrayList<int> array(10);
+    array.addFirst(0);
+    
 	return 0;
 }
