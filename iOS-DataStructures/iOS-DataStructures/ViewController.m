@@ -32,24 +32,28 @@
 	
 //	[self testArray];
 	
-	LinkedList <Person *> *linked = [[LinkedList alloc] init];
+	LoopQueue *queue = [LoopQueue loopQueueWithCapacity:10];
+	[queue enqueue:@"dzb"];
 	
-	Person *p1 = [Person new];
-	Person *p2 = [Person new];
-	Person *p3 = [Person new];
-	NSLog(@"p1 = %p p2 = %p p3 = %p",p1,p2,p3);
 	
-	[linked addObjectAtFirst:p1];
-	[linked addObjectAtFirst:p2];
-	[linked addObjectAtFirst:p3];
-	
-	NSLog(@"%@",linked);
-	
-	[linked removeFirstObject];
-	[linked removeFirstObject];
-	[linked removeFirstObject];
-	
-	NSLog(@"%@",linked);
+//	LinkedList <Person *> *linked = [[LinkedList alloc] init];
+//
+//	Person *p1 = [Person new];
+//	Person *p2 = [Person new];
+//	Person *p3 = [Person new];
+//	NSLog(@"p1 = %p p2 = %p p3 = %p",p1,p2,p3);
+//
+//	[linked addObjectAtFirst:p1];
+//	[linked addObjectAtFirst:p2];
+//	[linked addObjectAtFirst:p3];
+//
+//	NSLog(@"%@",linked);
+//
+//	[linked removeFirstObject];
+//	[linked removeFirstObject];
+//	[linked removeFirstObject];
+//
+//	NSLog(@"%@",linked);
 
 }
 
