@@ -36,7 +36,7 @@ int main() {
 	ArrayQueue<int> arrayQueue;
 	double time1 = testQueue(arrayQueue, opCount);
 	std::cout<<"ArrayQueue, time: " << time1 << " s" << endl;
-
+	
 	LoopQueue<int> loopQueue;
 	double time2 = testQueue(loopQueue, opCount);
 	std::cout<<"LoopQueue, time: " << time2 << " s" << endl;
