@@ -11,7 +11,6 @@
 
 #include <stdio.h>
 
-
 template <typename T>
 struct Node {
 public:
@@ -28,6 +27,7 @@ public:
 	}
 };
 
+///链表虚基类 提供了链表操作的接口
 template <class T>
 class LinkList {
 	

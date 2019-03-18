@@ -65,7 +65,7 @@ int main(int argc, const char * argv[]) {
 	linklist.insertList(100);
 	linklist.insertList(33);
 	linklist.insertList(655);
-////	linklist.travereList();
+    linklist.travereList();
 //	std::cout<<linklist.lenList()<<std::endl;
 //	
 //	Node<int> *n = linklist.serchList(33);

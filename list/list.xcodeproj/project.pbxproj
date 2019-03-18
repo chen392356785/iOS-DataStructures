@@ -64,16 +64,24 @@
 		247333AA222F754E00A44784 /* list */ = {
 			isa = PBXGroup;
 			children = (
+				2489985F22312CA800C7CDEF /* linklist */,
 				247333B7222F756700A44784 /* main.cpp */,
 				247333B2222F755A00A44784 /* list.h */,
 				247333B3222F755A00A44784 /* list.cpp */,
 				247333B9222FAAB100A44784 /* dlist.cpp */,
 				247333BA222FAAB100A44784 /* dlist.hpp */,
+			);
+			path = list;
+			sourceTree = "<group>";
+		};
+		2489985F22312CA800C7CDEF /* linklist */ = {
+			isa = PBXGroup;
+			children = (
 				247333BD222FBAA100A44784 /* LinkList.hpp */,
 				247333C0222FBC3800A44784 /* SingleLinkList.hpp */,
 				247333C3222FC9EE00A44784 /* DualLinkList.hpp */,
 			);
-			path = list;
+			path = linklist;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

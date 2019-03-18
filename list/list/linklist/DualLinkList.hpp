@@ -17,26 +17,25 @@ template <class T>
 class DualLinkList : public LinkList<T> {
 	Node<T> *_head; ///头指针
 public:
-	DualLinkList();
-	~DualLinkList();
-	///链表插入一个元素
-	void insertList(T e);
-	///遍历链表内容
-	void travereList(void);
-	/// 链表长度
-	int lenList(void);
-	///搜索链表元素
-	Node<T> * serchList(T find);
-	///删除链表元素
-	void deleteList(Node<T> *pFind);
-	/// 排序
-	void popSortList(void);
-	///逆置链表
-	void reverseList(void);
-	///销毁链表
-	void destroyList(void);
+    DualLinkList();
+    ~DualLinkList();
+    ///链表插入一个元素
+    void insertList(T e);
+    ///遍历链表内容
+    void travereList(void);
+    /// 链表长度
+    int lenList(void);
+    ///搜索链表元素
+    Node<T> * serchList(T find);
+    ///删除链表元素
+    void deleteList(Node<T> *pFind);
+    /// 排序
+    void popSortList(void);
+    ///逆置链表
+    void reverseList(void);
+    ///销毁链表
+    void destroyList(void);
 };
-
 
 template <class T>
 DualLinkList<T>::DualLinkList() {
@@ -65,7 +64,7 @@ void DualLinkList<T>::insertList(T e) {
 template <typename T>
 void DualLinkList<T>::travereList(void) {
 	Node<T> *cur = _head->_next;
-	while (cur != nullptr) {
+	while (cur != _head) {
 		std::cout<<cur->_data<<std::endl;
 		cur = cur->_next;
 	}
@@ -97,27 +96,10 @@ Node<T> * DualLinkList<T>::serchList(T find) {
 }
 
 ///删除链表元素
-//template <typename T>
-//void DualLinkList<T>::deleteList(Node<T> *pFind) {
-//
-//	if (pFind->_next == NULL) {
-//		Node<T> *cur = _head->_next;
-//		while (cur->_next != pFind) {
-//			cur = cur->_next;
-//		}
-//		cur->_next = pFind->_next;
-//		delete pFind;
-//	} else {
-//		pFind->_data = pFind->_next->_data;
-//		Node<T> *t = pFind->_next;
-//		pFind->_next = t->_next;
-//		delete t;
-//	}
-//}
-//
 template <class T>
 void DualLinkList<T>::deleteList(Node<T> *pFind) {
 	
+    
 }
 
 /// 排序
