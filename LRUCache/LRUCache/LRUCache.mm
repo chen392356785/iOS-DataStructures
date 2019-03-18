@@ -11,6 +11,11 @@
 #include <pthread.h>
 #import "LRUCache.h"
 #include "LinkList.hpp"
+
+#if __has_include(<UIKit/UIKit.h>)
+#import <UIKit/UIKit.h>
+#endif
+
 #import <CoreFoundation/CoreFoundation.h>
 
 using namespace std;
@@ -47,8 +52,12 @@ typedef  multimap<NSString *, LinkNodeType *>::iterator MapIterator;
         _lru_cache = [super allocWithZone:zone];
         _lru_cache->_countLimit = 10;
         _lru_cache->_autoTrimInterval = 5.0f;
-        pthread_mutex_init(&_lru_cache->_lock,NULL);
         [_lru_cache _trimRecursively];
+        pthread_mutex_init(&_lru_cache->_lock,NULL);
+        _lru_cache->_shouldRemoveAllObjectsOnMemoryWarning = YES;
+#if __has_include(<UIKit/UIKit.h>)
+        [[NSNotificationCenter defaultCenter] addObserver:_lru_cache selector:@selector(_appDidReceiveMemoryWarningNotification) name:UIApplicationDidReceiveMemoryWarningNotification object:nil];
+#endif
     });
     return _lru_cache;
 }
@@ -91,6 +100,8 @@ typedef  multimap<NSString *, LinkNodeType *>::iterator MapIterator;
         if (pthread_mutex_trylock(&_lock) == 0) {
             int size = self.linkList->size();
             if (size > countLimit) { ///移除尾结点数据
+                LinkNodeType *last = self.linkList->lastObject();
+                self.dict->erase([NSString stringWithUTF8String:last->_key]);
                 AnyObject obj = self->_linkList->remove_tail_node();
                 if ([self.delegate respondsToSelector:@selector(lurcache:willEvictObject:)]) {
                     [self.delegate lurcache:self willEvictObject:PointerBridge(obj)];
@@ -147,6 +158,8 @@ typedef  multimap<NSString *, LinkNodeType *>::iterator MapIterator;
     }
     int size = self.linkList->size();
     if (size > _countLimit) { ///链表缓存数量已经超过最大缓存数量
+        LinkNodeType *lastNode = self.linkList->lastObject();
+        self.dict->erase([NSString stringWithUTF8String:lastNode->_key]);
         AnyObject data = self.linkList->remove_tail_node();
         if ([self.delegate respondsToSelector:@selector(lurcache:willEvictObject:)]) {
             [self.delegate lurcache:self willEvictObject:PointerBridge(data)];
@@ -179,6 +192,7 @@ typedef  multimap<NSString *, LinkNodeType *>::iterator MapIterator;
     LinkNodeType *node;
     MapIterator ret = self.dict->find(key);
     if (ret != self.dict->end()) {
+        self.dict->erase(key);
         node = ret->second;
         AnyObject data = self.linkList->remove_by(node);
         if ([self.delegate respondsToSelector:@selector(lurcache:willEvictObject:)]) {
@@ -190,6 +204,7 @@ typedef  multimap<NSString *, LinkNodeType *>::iterator MapIterator;
 }
 
 - (void)removeAllObjects {
+    if (self.totalCount == 0) return;
     pthread_mutex_lock(&_lock);
     self.dict->clear();
     self.linkList->clear_by_completion([](AnyObject obj){
@@ -221,9 +236,17 @@ typedef  multimap<NSString *, LinkNodeType *>::iterator MapIterator;
 
 - (NSUInteger)totalCount {
     pthread_mutex_lock(&_lock);
-    NSInteger size = (NSInteger)self.linkList->size();
+    NSInteger size = self.linkList->size();
     pthread_mutex_unlock(&_lock);
     return size;
+}
+
+/**
+ app收到内存警告清空内存
+ */
+- (void) _appDidReceiveMemoryWarningNotification:(NSNotification *)noti {
+    if (!self.shouldRemoveAllObjectsOnMemoryWarning) return;
+    [self removeAllObjects];
 }
 
 #pragma mark - NSMutableCopying

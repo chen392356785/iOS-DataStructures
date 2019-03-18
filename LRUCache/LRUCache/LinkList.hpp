@@ -38,6 +38,10 @@ public:
     LinkNode * insert(T object);
     ///查找元素
     LinkNode * find(T object);
+    ///获取尾结点
+    LinkNode * lastObject();
+    ///获取头结点
+    LinkNode * firstObject();
     /// 移动结点到链表头部
     void bring_node_to_head(LinkNode *pFind);
     ///遍历所有元素
@@ -79,7 +83,7 @@ LinkList<T>::LinkNode::LinkNode(T data,LinkNode *pre,LinkNode *next,const char *
 
 template<class T>
 LinkList<T>::LinkNode::~LinkNode() {
-    std::cout << "~LinkNode()" << std::endl;
+//    std::cout << "~LinkNode()" << std::endl;
 }
 
 #pragma mark - LinkList
@@ -92,7 +96,7 @@ LinkList<T>::LinkList() {
 
 template<class T>
 LinkList<T>::~LinkList() {
-    std::cout << "LinkList()" << std::endl;
+//    std::cout << "LinkList()" << std::endl;
 }
 
 /**
@@ -193,6 +197,23 @@ typename LinkList<T>::LinkNode * LinkList<T>::find(T object) {
         unclock = unclock->_pre;
     }
     return NULL;
+}
+
+///获取尾结点
+template<class T>
+typename LinkList<T>::LinkNode * LinkList<T>::lastObject() {
+    LinkNode *tail = _header->_pre;
+    if (tail == _header) return NULL;
+    return tail;
+}
+///获取头结点
+template<class T>
+typename LinkList<T>::LinkNode * LinkList<T>::firstObject() {
+    LinkNode *first = _header->_next;
+    if (first == _header) {
+        return NULL;
+    }
+    return first;
 }
 
 ///销毁链表

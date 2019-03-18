@@ -62,6 +62,11 @@ NS_ASSUME_NONNULL_BEGIN
  */
 @property (nonatomic,weak) id<LRUCacheDelegate>delegate;
 
+/**
+ 收到内存警告时 是否清理缓存
+ */
+@property (nonatomic,assign) BOOL shouldRemoveAllObjectsOnMemoryWarning;
+
 @end
 
 NS_ASSUME_NONNULL_END

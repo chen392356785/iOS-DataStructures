@@ -14,22 +14,21 @@ int main(int argc, const char * argv[]) {
     @autoreleasepool {
         
         LRUCache *cache = [LRUCache shareCache];
-        cache.countLimit = 2;
-        {
-            Person *p1 = [[Person alloc] initWithName:@"dzb"];
-            Person *p2 = [[Person alloc] initWithName:@"aaa"];
-            //Person *p3 = [[Person alloc] initWithName:@"ccc"];
-            
-            [cache setObject:p1 forKey:@"dzb"];
-            [cache setObject:p2 forKey:@"aaa"];
-            
+        cache.countLimit = 10;
+      
+        for (int i = 0; i<100; i++) {
+            NSString *key = [NSString stringWithFormat:@"key_%d",i];
+            Person *p = [[Person alloc] initWithName:key];
+            [cache setObject:p forKey:key];
         }
         
-//        [cache removeAllObjects];
-        [cache setObject:[[Person alloc] initWithName:@"dzb"] forKey:@"ccc"];
-        NSLog(@"%lu",(unsigned long)cache.totalCount);
+        for (int i = 90; i<100; i++) {
+            NSString *key = [NSString stringWithFormat:@"key_%d",i];
+            Person *p = [cache objectForKey:key];
+            NSLog(@"%@",p.name);
+        }
+        
         [cache removeAllObjects];
-        NSLog(@"%lu",(unsigned long)cache.totalCount);
 
     }
     
