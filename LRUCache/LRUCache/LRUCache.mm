@@ -11,24 +11,24 @@
 #include <pthread.h>
 #import "LRUCache.h"
 #include "LinkList.hpp"
-#import <Quartz/Quartz.h>
 #import <CoreFoundation/CoreFoundation.h>
 
 using namespace std;
+
 /// 任意类型指针
 typedef void * AnyObject;
 ///链表数据节点
 typedef  LinkList<AnyObject>::LinkNode  LinkNodeType;
 typedef  multimap<NSString *, LinkNodeType *>::iterator MapIterator;
 
+#define PointerBridge(obj) ((__bridge id)obj)
 #define ObjectBridge(obj) ((__bridge_retained AnyObject)obj)
-#define PointerBridge(obj) ((__bridge AnyObject)obj)
 
 @interface LRUCache () <NSCopying,NSMutableCopying>
 
-@property (nonatomic,assign) LinkList<AnyObject> *linkList;
+@property (nonatomic,assign) LinkList<AnyObject> *linkList; ///链表
+@property (nonatomic,assign,readonly) pthread_mutex_t lock; ///线程同步锁
 @property (nonatomic,assign) multimap<NSString *, LinkNodeType *> *dict;
-@property (nonatomic,assign,readonly) pthread_mutex_t lock;
 
 @end
 
@@ -93,7 +93,7 @@ typedef  multimap<NSString *, LinkNodeType *>::iterator MapIterator;
             if (size > countLimit) { ///移除尾结点数据
                 AnyObject obj = self->_linkList->remove_tail_node();
                 if ([self.delegate respondsToSelector:@selector(lurcache:willEvictObject:)]) {
-                    [self.delegate lurcache:self willEvictObject:(__bridge id)obj];
+                    [self.delegate lurcache:self willEvictObject:PointerBridge(obj)];
                 }
                 CFRelease(obj);
             } else {
@@ -149,7 +149,7 @@ typedef  multimap<NSString *, LinkNodeType *>::iterator MapIterator;
     if (size > _countLimit) { ///链表缓存数量已经超过最大缓存数量
         AnyObject data = self.linkList->remove_tail_node();
         if ([self.delegate respondsToSelector:@selector(lurcache:willEvictObject:)]) {
-            [self.delegate lurcache:self willEvictObject:(__bridge id)data];
+            [self.delegate lurcache:self willEvictObject:PointerBridge(data)];
         }
         CFRelease(data);
     }
@@ -166,7 +166,7 @@ typedef  multimap<NSString *, LinkNodeType *>::iterator MapIterator;
         node = ret->second;
         node->_time = [NSDate date].timeIntervalSince1970;
         AnyObject data = node->_data;
-        object = (__bridge id)data;
+        object = PointerBridge(data);
         self.linkList->bring_node_to_head(node);
     }
     pthread_mutex_unlock(&_lock);
@@ -182,7 +182,7 @@ typedef  multimap<NSString *, LinkNodeType *>::iterator MapIterator;
         node = ret->second;
         AnyObject data = self.linkList->remove_by(node);
         if ([self.delegate respondsToSelector:@selector(lurcache:willEvictObject:)]) {
-            [self.delegate lurcache:self willEvictObject:(__bridge id)data];
+            [self.delegate lurcache:self willEvictObject:PointerBridge(data)];
         }
         CFRelease(data);
     }
@@ -195,7 +195,7 @@ typedef  multimap<NSString *, LinkNodeType *>::iterator MapIterator;
     self.linkList->clear_by_completion([](AnyObject obj){
         typeof(self)weakSelf = LRUCache.shareCache;
         if ([weakSelf.delegate respondsToSelector:@selector(lurcache:willEvictObject:)]) {
-            [weakSelf.delegate lurcache:weakSelf willEvictObject:(__bridge id)obj];
+            [weakSelf.delegate lurcache:weakSelf willEvictObject:PointerBridge(obj)];
         }
         CFRelease(obj);
     });
@@ -237,6 +237,7 @@ typedef  multimap<NSString *, LinkNodeType *>::iterator MapIterator;
 - (id)copyWithZone:(NSZone *)zone {
     return self;
 }
+
 - (void)dealloc
 {
     pthread_mutex_destroy(&_lock);
