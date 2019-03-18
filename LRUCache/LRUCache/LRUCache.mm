@@ -114,7 +114,6 @@ typedef  multimap<NSString *, LinkNodeType *>::iterator MapIterator;
         } else {
             usleep(10 * 1000); //10 ms
         }
-        
     }
     
 
