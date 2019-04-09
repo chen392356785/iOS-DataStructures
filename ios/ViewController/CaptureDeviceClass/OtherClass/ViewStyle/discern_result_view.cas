@@ -1,0 +1,70 @@
+
+UIImageView.discernResult_imageView {
+    cas_marginTop 0
+    cas_marginLeft 0
+    cas_marginRight 0
+
+    cas_sizeHeight 201
+
+    content-mode aspectFill
+    background-color gray
+}
+
+UIView.discernResult_maskView {
+    cas_marginTop 0
+    cas_marginLeft 0
+    cas_marginRight 0
+
+    cas_sizeHeight 235
+
+    background-color white
+}
+
+UIImageView.discernResult_moveLineIocn {
+    cas_marginTop 0
+    cas_marginLeft 0
+
+    cas_size 3 235
+}
+
+DFDiscernWaitingView.discernResult_waitingView {
+    cas_marginLeft 0
+
+    cas_marginRight 0
+}
+
+DFDiscernWaitingView.discernResult_waitingView_X {
+    cas_marginBottom -34
+    cas_marginLeft 0
+
+    cas_marginRight 0
+}
+
+DFDiscernSuccessView.discernResult_successView {
+    cas_marginLeft 0
+
+    cas_marginRight 0
+}
+
+DFDiscernSuccessView.discernResult_successView_X {
+    cas_marginBottom -34
+    cas_marginLeft 0
+
+    cas_marginRight 0
+}
+
+DFDiscernFailureView.discernResult_failureView {
+    cas_marginLeft 0
+
+    cas_marginRight 0
+}
+
+DFDiscernFailureView.discernResult_failureView_X {
+    cas_marginBottom -34
+    cas_marginLeft 0
+
+    cas_marginRight 0
+}
+
+
+

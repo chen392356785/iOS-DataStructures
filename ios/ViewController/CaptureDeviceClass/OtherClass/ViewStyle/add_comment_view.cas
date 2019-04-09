@@ -1,0 +1,46 @@
+
+UIView.addComment_toolView {
+    cas_sizeHeight 50
+
+    background-color #f0eff5
+}
+
+UIButton.addComment_cancleButton {
+    cas_sizeWidth 60
+
+    title-label @{
+        font PingFangSC-Regular 14
+    }
+}
+
+UILabel.addComment_titleLabel {
+    cas_size 100 30
+
+    text-color #333333
+    text-alignment center
+    font PingFangSC-Regular 17
+}
+
+
+UIButton.addComment_confirmButton {
+    cas_sizeWidth 60
+
+    title-label @{
+        font PingFangSC-Regular 14
+    }
+}
+
+UITextView.addComment_textView {
+    cas_marginTop 15
+    cas_marginLeft 15
+    cas_marginRight -15
+    cas_marginBottom -15
+
+    font PingFangSC-Regular 14
+
+    layer @{
+        corner-radius 5
+        border-color lightGray
+        border-width 1
+    }
+}

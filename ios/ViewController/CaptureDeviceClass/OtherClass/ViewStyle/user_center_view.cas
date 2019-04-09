@@ -1,0 +1,93 @@
+
+UIImageView.userCenter_backgroundImageView {
+    cas_sizeHeight 200
+
+    content-mode aspectFill
+}
+
+UIImageView.userCenter_backgroundImageView_X {
+    cas_sizeHeight 244
+
+    content-mode aspectFill
+}
+
+
+UIImageView.userCenter_userHeaderIcon {
+    cas_marginTop 40
+    cas_size 70 70
+
+    content-mode aspectFit
+
+    layer @{
+        corner-radius 35
+        border-color white
+        border-width 1.5
+    }
+}
+
+UIImageView.userCenter_userHeaderIcon_X {
+    cas_marginTop 84
+    cas_size 70 70
+
+    content-mode aspectFit
+
+    layer @{
+        corner-radius 35
+        border-color white
+        border-width 1.5
+    }
+}
+
+UILabel.userCenter_userNameLabel {
+    cas_sizeHeight 30
+    cas_marginTop 26.5
+
+    text-color white
+    text-alignment center
+    font PingFangSC-Medium 22
+}
+
+UILabel.userCenter_userDescribeLabel {
+    cas_sizeHeight 20
+    cas_marginTop 6
+
+    text-color white
+    text-alignment center
+    font PingFangSC-Regular 13
+
+    layer @{
+        shadow-color #0e050a
+    }
+}
+
+UITableView.userCenter_tableView {
+
+    background-color white
+}
+
+UIButton.userCenter_loginOutButton {
+    cas_marginBottom 0
+    cas_sizeHeight 49
+
+    title-label @{
+        text-color white
+        font PingFangSC-Regular 15
+    }
+    background-color #5ba997
+}
+
+UIButton.userCenter_loginOutButton_X {
+    cas_marginBottom -34
+    cas_sizeHeight 49
+
+    title-label @{
+        text-color white
+        font PingFangSC-Regular 15
+    }
+    background-color #5ba997
+}
+
+
+
+
+

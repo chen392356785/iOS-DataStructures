@@ -1,0 +1,173 @@
+//
+//  MiaoTuProject.pch
+//  MiaoTuProject
+//
+//  Created by 苏浩楠 on 2017/6/19.
+//  Copyright © 2017年 xubin. All rights reserved.
+//
+
+#ifndef MiaoTuProject_pch
+#define MiaoTuProject_pch
+
+
+#ifdef __OBJC__
+
+
+
+#define IHPushNotification                          @"IHPushNotification"
+#define IHAddStartViewKey                           @"IHAddStartViewKey"
+#define IHRemoveStartViewKey                        @"IHRemoveStartViewKey"
+#define IHPushViewControllerKey						@"SXPushViewControllerKey"
+#define IHPopViewControllerKey						@"SXPopViewControllerKey"
+#define IHPopToRootViewController					@"SXPopToRootViewController"
+#define IHOpenPresentModelViewControllerKey         @"IHOpenPresentModelViewControllerKey"
+#define IHDissmissModalViewContollerKey             @"IHDissmissModalViewContollerKey"
+
+
+#define APP_MiaoTu
+//#define APP_YiLiang
+
+#import "IQKeyboardManager.h"
+
+#import "UIImageView+WebCache.h"
+#import "UIButton+WebCache.h"
+#import "IHUtility.h"
+#import "IHBase.h"
+#import "Contant.h"
+#import "MBProgressHUD.h"
+#import "MJExtension.h"
+#import "Masonry.h"
+#import "UIViewAdditions.h"
+#import "HJCActionSheet.h"
+#import "UIAsyncImageView.h"
+#import "MTBase.h"
+
+#import "AppDelegate+EaseMob.h"
+#import "EaseMob.h"
+#import "ChatDemoUIDefine.h"
+
+#import "EMAlertView.h"
+#import "TTGlobalUICommon.h"
+#import "UIViewController+HUD.h"
+//#import "UIViewController+DismissKeyboard.h"
+#import "NSString+Valid.h"
+
+#import "IHBaseConfig.h"
+#import "MiaoTuNetworkConst.h"
+#import "SMBaseViewController.h"
+
+//#import "NNDeviceInformation.h"
+
+
+/*
+ 全局 H 宏文件
+ by wannili
+ */
+#import "THOSMacro.h"
+#import "THRectMacro.h"
+#import "THColorMacro.h"
+#import "THFontMacro.h"
+#import "THCompatibilityMacro.h"
+
+//category
+#import "UIAlertView+Block.h"
+#import "UIImage+Extents.h"
+
+#import "DeviceConfiguation.h"
+#import "netWorkRequest.h"
+#import "UIView+Extension.h"
+#import "MJRefresh.h"
+//上下拉刷新
+
+
+#define WXXCXappId      @"wx3475ac33beeafdf4"
+#define WXXCXappSecret  @"4cb53e99e8b2d2f306c0cc1e37c98d9a"
+                        
+
+
+#define WXKTXappId      @"wx153d9cd8374a529a"
+#define WXKTXappSecret  @"ab140b12c29e8ca0f8857b5bd33244cb"
+
+
+//Vedio Play
+#import "UILabel+LXLabel.h"
+#import "UIColor+Expanded.h"
+#import "LxButton.h"
+#import "UIView+LX_Frame.h"
+#import "LXAVPlayer.h"
+//----------⬇️----------花眼拍照
+#import "Header.h"
+#import "Define.h"
+#import "ColorFont.h"
+
+//常用工具类
+#import "TTFunctions.h"
+#import "DFStringFunctions.h"
+#import "DFNavigationView.h"
+//#import "DFNavigationController.h"
+#import "HttpRequest.h"
+//#import "DFEnumConstant.h"
+//#import "DFIconConstant.h"
+//#import "DFIdentifierConstant.h"
+#import "DFTool.h"
+#import "DFShareView.h"
+//#import "DFCustomShareView.h"
+//#import "TFProgressHUD.h"
+#import "DFUserModel.h"
+#import "TFRemindView.h"
+#import "DFLoginViewController.h"
+
+
+//扩展类
+#import "UIView+HW.h"
+#import "UIImage+Base64.h"
+#import "UIImage+SuperCompress.h"
+#import "UIImageView+UIActivityIndicatorForSDWebImage.h"
+#import "UIView+Shadow.h"
+#import "UIButton+CountDown.h"
+#import "UIButton+ResponseArea.h"
+#import "NSString+Extension.h"
+#import "UITextView+Select.h"
+#import "UITextView+PlaceHolder.h"
+#import "NSDictionary+Extension.h"
+
+
+//第三方类
+#import "HYBNetworking.h"
+#import "CCPRestSDK.h"
+#import "YQAlertView.h"
+#import "RefreshHeader.h"
+#import "RefreshFooter.h"
+#import "MJRefreshAutoBackFooter.h"
+#import "Classy.h"
+#import "ClassyLiveLayout.h"
+#import "MobClick.h"
+//#import <UMSocialCore/UMSocialCore.h>
+
+//----------⬆️----------花眼拍照
+
+
+#ifdef DEBUG
+#define NSLog(...) NSLog(__VA_ARGS__)
+#else
+#define NSLog(...)
+#endif
+
+#ifdef DEBUG
+#define DLog(FORMAT, ...) fprintf(stderr,"%s:%d\t%s\n",[[[NSString stringWithUTF8String:__FILE__] lastPathComponent] UTF8String], __LINE__, [[NSString stringWithFormat:FORMAT, ##__VA_ARGS__] UTF8String]);
+#else
+#define DLog(...)
+#endif
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+//#if !DEBUG
+//#define NSLog(...) {}
+//#else
+//#define NSLog(...) NSLog(__VA_ARGS__)
+//#endif
+
+#endif
+
+
+#endif /* MiaoTuProject_pch */

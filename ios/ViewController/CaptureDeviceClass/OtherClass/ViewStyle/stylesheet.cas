@@ -1,0 +1,34 @@
+
+@import "base_view.cas";
+@import "navigation_view.cas";
+
+@import "camera_view.cas";
+@import "photo_tool_view.cas";
+@import "album_tool_view.cas";
+
+@import "discern_result_view.cas";
+@import "discern_waiting_view.cas";
+@import "discern_success_view.cas";
+@import "discern_failure_view.cas";
+@import "success_collectionView_cell.cas";
+
+@import "creat_photos_view.cas";
+
+@import "share_view.cas";
+@import "custom_share_view.cas";
+@import "user_center_view.cas";
+@import "user_property_cell.cas";
+@import "user_info_view.cas";
+
+@import "users_discern_view.cas";
+@import "users_discern_cell.cas";
+@import "comment_view.cas";
+@import "add_comment_view.cas";
+
+@import "user_comment_view.cas";
+@import "user_comment_cell.cas";
+@import "comment_top_cell.cas";
+
+@import "discern_detail_view.cas";
+
+@import "login_view.cas";

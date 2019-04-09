@@ -1,0 +1,67 @@
+
+UIView.navigation_backgroundView {
+    cas_marginTop 20
+    cas_marginLeft 0
+    cas_marginRight 0
+
+    cas_sizeHeight 44
+
+}
+
+UIView.navigation_backgroundView_X {
+    cas_marginTop 44
+    cas_marginLeft 0
+    cas_marginRight 0
+
+    cas_sizeHeight 44
+
+}
+
+UIButton.navigation_back {
+    cas_marginLeft 10
+    cas_size 40 40
+
+    background-color clear
+
+    image-view @{
+        content-mode aspectFit
+    }
+}
+
+UIButton.navigation_forward {
+    cas_marginRight -10
+    cas_size 40 40
+
+    background-color clear
+
+    image-view @{
+        content-mode aspectFit
+    }
+}
+
+UILabel.navigation_title {
+    cas_size 250 30
+
+    font PingFangSC-Light 18
+    text-color black
+    background-color clear
+    text-alignment center
+}
+
+UIView.navigation_line {
+    cas_marginLeft 0
+    cas_marginRight 0
+
+    cas_sizeHeight 0.5
+
+    background-color #e5e5e5
+}
+
+UIView.navigation_line_clear {
+    cas_marginLeft 0
+    cas_marginRight 0
+
+    cas_sizeHeight 0.5
+
+    background-color clear
+}

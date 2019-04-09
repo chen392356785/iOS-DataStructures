@@ -1,0 +1,21 @@
+
+UIButton.photo_photoButton {
+    cas_size 78 78
+
+}
+
+UIButton.photo_albumButton {
+    cas_marginLeft 47.5
+
+    cas_size 33 27
+
+}
+
+
+UIButton.photo_changeButton {
+    cas_marginRight -47.5
+
+    cas_size 32 28
+
+}
+

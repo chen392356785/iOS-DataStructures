@@ -1,0 +1,15 @@
+
+UIImageView.userProperty_propertyIcon {
+    cas_marginLeft 31
+    cas_size 20 20
+
+    content-mode aspectFit
+}
+
+UILabel.userProperty_propertyTitleLabel {
+    cas_marginLeft 32
+    cas_sizeHeight 20
+
+    text-color #333333
+    font PingFangSC-Regular 15
+}

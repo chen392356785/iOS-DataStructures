@@ -1,0 +1,14 @@
+
+DFShareView.shareView {
+
+    cas_sizeHeight 180
+
+    background-color white
+}
+
+DFShareView.shareView_X {
+
+    cas_sizeHeight 214
+
+    background-color white
+}

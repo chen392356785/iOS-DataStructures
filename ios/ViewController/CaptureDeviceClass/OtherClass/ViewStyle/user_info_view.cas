@@ -1,0 +1,60 @@
+
+UILabel.user_info_nameLab {
+
+    cas_marginLeft 14
+    cas_marginRight 0
+
+    font PingFangSC-Light 14
+    text-color #666666
+    background-color clear
+    text-alignment left
+}
+
+UIImageView.user_info_arrowImageView {
+    cas_size 6 11
+    cas_marginRight -14
+    content-mode aspectFit
+    background-color clear
+}
+UIImageView.user_info_headerImageView {
+    cas_size 41 41
+    cas_marginRight -14
+    content-mode aspectFit
+    background-color clear
+}
+
+UILabel.user_info_detailLab {
+
+    cas_marginTop 0
+    cas_marginLeft 0
+    cas_marginRight -10
+
+    font PingFangSC-Light 13
+    text-color #333333
+    background-color clear
+    text-alignment right
+}
+
+UIView.user_info_bottomBottomView {
+    cas_marginBottom -0.6
+    cas_marginLeft 14
+    cas_marginRight -14
+
+    cas_sizeHeight 0.5
+
+    background-color #0xe5e5e5
+}
+
+UITableView.userInfo_tableView {
+    cas_marginBottom 0
+
+    background-color #f6f6f6
+}
+
+UITableView.userInfo_tableView_X {
+    cas_marginBottom -34
+
+    background-color #f6f6f6
+}
+
+

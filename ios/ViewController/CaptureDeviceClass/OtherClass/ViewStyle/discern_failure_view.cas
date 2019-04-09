@@ -1,0 +1,46 @@
+
+UILabel.discernFailure_failureMessageLabel {
+    cas_size 375 20
+
+    text-color #555555
+    font PingFangSC-Regular 15
+    text-alignment center
+}
+
+
+UILabel.discernFailure_failureTipsLabel {
+    cas_marginTop 10
+
+    cas_size 375 20
+
+    text-color #8c8c8c
+    font PingFangSC-Regular 13
+    text-alignment center
+}
+
+UIImageView.discernFailure_badIcon {
+    cas_marginBottom -34
+
+    cas_size 101 100
+
+    content-mode aspectFit
+}
+
+UIButton.discernFailure_takePhotosButton {
+    cas_marginTop 62.5
+
+    cas_size 150 42
+
+    title-label @{
+        font PingFangSC-Regular 15
+    }
+    layer @{
+        corner-radius 2
+        border-color #5ba997
+        border-width 1
+    }
+
+
+}
+
+

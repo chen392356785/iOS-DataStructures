@@ -1,0 +1,12 @@
+
+UIButton.album_confirmButton {
+    cas_size 68 68
+
+}
+
+UIButton.album_reselectPhotoButton {
+    cas_marginLeft 47.5
+
+    cas_size 50 30
+
+}

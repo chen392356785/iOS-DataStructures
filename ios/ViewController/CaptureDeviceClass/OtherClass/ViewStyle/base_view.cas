@@ -1,0 +1,18 @@
+
+DFNavigationView.navigation_view {
+    cas_marginTop 0
+    cas_marginLeft 0
+    cas_marginRight 0
+    cas_sizeHeight 64
+
+    background-color clear
+}
+
+DFNavigationView.navigation_view_X {
+    cas_marginTop 0
+    cas_marginLeft 0
+    cas_marginRight 0
+    cas_sizeHeight 88
+
+    background-color clear
+}

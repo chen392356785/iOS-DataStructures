@@ -1,0 +1,41 @@
+
+UITableView.userComment_tableView {
+    cas_marginTop 0
+
+    background-color #f6f6f6
+}
+
+UIView.userComment_commentView {
+    cas_marginBottom 0
+    cas_sizeHeight 50
+
+    layer@{
+        border-color #e5e5e5
+        border-width 0.5
+    }
+
+    background-color white
+}
+
+UIView.userComment_commentView_X {
+    cas_marginBottom -34
+    cas_sizeHeight 50
+
+    layer@{
+        border-color #e5e5e5
+        border-width 0.5
+    }
+
+    background-color white
+}
+
+UITextField.userComment_textField {
+    font PingFangSC-Regular 14
+    text-color #333333
+}
+
+UIButton.userComment_sendButton {
+    cas_sizeWidth 100
+
+    background-color #5ba997
+}

@@ -1,0 +1,9 @@
+
+UIImageView.creatPhotos_imageView {
+    content-mode aspectFit
+
+    layer @{
+        shadow-color #0e050a
+    }
+}
+

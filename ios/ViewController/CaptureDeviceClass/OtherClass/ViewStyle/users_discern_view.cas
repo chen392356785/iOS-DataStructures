@@ -1,0 +1,51 @@
+
+UICollectionView.usersDiscern_collectionView {
+    cas_marginBottom 0
+
+    background-color #f6f6f6
+}
+
+UICollectionView.usersDiscern_collectionView_X {
+    cas_marginBottom -34
+
+    background-color #f6f6f6
+}
+
+UILabel.userDiscern_navigation_title {
+    cas_size 175 30
+
+    font PingFangSC-Light 18
+    text-color black
+    background-color clear
+    text-alignment center
+}
+
+UIButton.usersDiscern_selectDiscernType {
+    cas_marginRight -20
+    cas_size 80 40
+
+}
+
+UIView.usersDiscern_firstLineView {
+    cas_sizeHeight 0.5
+
+    background-color #e5e5e5
+}
+
+UIImageView.userDiscern_arrowIcon {
+    cas_marginTop -10
+    cas_marginRight -15
+
+    cas_size 19 26
+}
+
+UIButton.usersDiscern_allFlowerButton {
+    cas_marginTop 10
+    cas_sizeHeight 50
+
+    background-color white
+
+    title-label @{
+        font PingFangSC-Regular 15
+    }
+}

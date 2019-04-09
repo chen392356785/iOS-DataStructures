@@ -1,0 +1,36 @@
+
+UIImageView.commentTop_flowerImageView {
+    cas_sizeHeight 290
+
+    content-mode aspectFill
+
+    background-color lightGray
+}
+
+UIImageView.commentTop_userHeader {
+    cas_marginTop -27
+    cas_size 54 54
+
+    content-mode aspectFit
+
+    layer @{
+        corner-radius 27
+    }
+
+}
+
+UILabel.commentTop_userName {
+    cas_marginTop 10
+
+    cas_sizeHeight 20
+
+    text-color #333333
+    text-alignment center
+    font PingFangSC-Regular 13
+}
+
+UIView.commentTop_lineView {
+    cas_sizeHeight 10
+
+    background-color #f6f6f6
+}

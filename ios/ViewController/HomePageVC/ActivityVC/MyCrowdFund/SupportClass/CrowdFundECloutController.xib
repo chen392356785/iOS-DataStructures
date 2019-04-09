@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14109"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CrowdFundECloutController">
+            <connections>
+                <outlet property="tabedSlideView" destination="4rQ-Js-EdF" id="F4d-PW-2Dv"/>
+                <outlet property="view" destination="mYc-QR-Dxq" id="AFv-DW-Yer"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="mYc-QR-Dxq">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4rQ-Js-EdF" customClass="DLTabedSlideView">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <connections>
+                        <outlet property="delegate" destination="-1" id="WoJ-fT-4yL"/>
+                    </connections>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="4rQ-Js-EdF" firstAttribute="top" secondItem="mYc-QR-Dxq" secondAttribute="top" id="3Qu-ik-tLn"/>
+                <constraint firstItem="4rQ-Js-EdF" firstAttribute="trailing" secondItem="mYc-QR-Dxq" secondAttribute="trailing" id="D2h-5f-zej"/>
+                <constraint firstItem="4rQ-Js-EdF" firstAttribute="bottom" secondItem="mYc-QR-Dxq" secondAttribute="bottom" id="rnr-oy-ZBx"/>
+                <constraint firstItem="4rQ-Js-EdF" firstAttribute="leading" secondItem="mYc-QR-Dxq" secondAttribute="leading" id="zsH-aj-fCc"/>
+            </constraints>
+            <nil key="simulatedBottomBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="494.5" y="-559.5"/>
+        </view>
+    </objects>
+</document>

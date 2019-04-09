@@ -1,0 +1,48 @@
+
+UIWebView.discernDetail_webView {
+    background-color clear
+}
+
+UIView.discernDetail_toolView {
+    cas_marginBottom 0
+    cas_sizeHeight 50
+
+    background-color white
+
+    layer @{
+        border-color #e5e5e5
+        border-width 0.5
+    }
+}
+
+UIView.discernDetail_toolView_X {
+    cas_marginBottom -34
+    cas_sizeHeight 50
+
+    background-color white
+
+    layer @{
+        border-color #e5e5e5
+        border-width 0.5
+    }
+}
+
+UIButton.discernDetail_confirmButton {
+
+    cas_sizeWidth 187.5
+
+    background-color white
+
+    title-label @{
+        font PingFangSC-Regular 15
+    }
+
+}
+
+UIButton.discernDetail_shareButton {
+    background-color #5ba997
+
+    title-label @{
+        font PingFangSC-Regular 15
+    }
+}

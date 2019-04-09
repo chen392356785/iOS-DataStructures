@@ -1,0 +1,48 @@
+platform :ios,'8.0'
+inhibit_all_warnings!
+
+target 'MiaoTuProject' do
+	
+	pod 'FMDB'
+	pod 'Masonry'
+	pod 'JSONModel'
+	pod 'MJRefresh'
+	pod 'SDWebImage'
+	pod 'MJExtension'
+	pod 'SDAutoLayout'
+	pod 'AFNetworking'
+	pod 'AliyunOSSiOS'
+	pod 'EaseMobSDKFull'
+	pod 'MBProgressHUD','~> 1.0.0’
+	pod 'IQKeyboardManager', '4.0.10'
+	#包含支付宝微信银联三个渠道
+	pod 'BeeCloud'
+	
+	pod 'HYBNetworking', '~> 3.3.1'
+	pod 'Classy', '~> 0.2.4'
+	pod 'ClassyLiveLayout', '~> 0.6.0'
+	
+	#友盟推送
+	pod 'UMCPush'
+	#友盟统计分析
+	pod 'UMCCommon'
+	pod 'UMCAnalytics'
+	#友盟日志
+#	pod 'UMCCommonLog'
+	#友盟分享
+	
+	pod 'UMCShare/Social/ReducedQQ'
+	# 集成新浪微博(完整版25.3M)
+	 pod 'UMCShare/Social/ReducedSina'
+	
+	#高德地图
+	pod 'AMap3DMap'
+	pod 'AMapSearch'
+	pod 'AMapLocation'
+	
+	#内存泄漏检测工具
+	#pod 'MLeaksFinder'
+	
+end
+
+

@@ -1,0 +1,34 @@
+
+UIImageView.success_flowerIcon {
+    cas_marginTop 5
+    cas_marginLeft 5
+    cas_marginRight -5
+    cas_marginBottom -5
+
+    content-mode aspectFill
+
+    background-color white
+
+}
+
+UIImageView.success_roundIcon {
+    
+
+    content-mode aspectFill
+
+}
+
+UIButton.success_checkButton {
+    cas_marginBottom -20
+
+    cas_size 200 20
+
+    title-label @{
+        text-color white
+        font PingFangSC-Regular 15
+    }
+
+}
+
+
+

@@ -1,0 +1,133 @@
+
+UILabel.discernSuccess_flowerNameLabel  {
+    cas_marginTop 15
+
+    cas_size 375 30
+
+    text-color #333333
+    font PingFangSC-Medium 20
+    text-alignment center
+}
+
+UILabel.discernSuccess_flowerDiscribeLabel  {
+
+    cas_size 375 20
+    
+    text-color #8c8c8c
+    font PingFangSC-Regular 13
+    text-alignment center
+}
+
+UIButton.discernSuccess_creatPhotoButton  {
+    cas_marginBottom -20
+
+    cas_size 125 34
+
+    background-color #5ba997
+
+    title-label @{
+        text-color white
+        font PingFangSC-Regular 15
+    }
+
+    layer@{
+        corner-radius 2
+    }
+}
+
+UIButton.discernSuccess_creatPhotoButton_X  {
+    cas_marginBottom -30
+
+    cas_size 125 42
+
+    background-color #5ba997
+
+    title-label @{
+        text-color white
+        font PingFangSC-Regular 15
+    }
+
+    layer@{
+        corner-radius 2
+    }
+}
+
+
+UIButton.discernSuccess_shareResultButton  {
+    cas_marginBottom -20
+
+    cas_size 125 34
+
+    background-color #5ba997
+
+    title-label @{
+        text-color white
+        font PingFangSC-Regular 15
+    }
+
+    layer@{
+        corner-radius 2
+    }
+}
+
+UIButton.discernSuccess_shareResultButton_X {
+    cas_marginBottom -30
+
+    cas_size 125 42
+
+    background-color #5ba997
+
+    title-label @{
+        text-color white
+        font PingFangSC-Regular 15
+    }
+
+    layer@{
+        corner-radius 2
+    }
+}
+
+UIButton.discernSuccess_masterDiscernButton  {
+    cas_marginBottom -20
+
+    cas_size 125 34
+
+    background-color #5ba997
+
+    title-label @{
+        text-color white
+        font PingFangSC-Regular 15
+    }
+
+    layer@{
+        corner-radius 2
+    }
+}
+
+UIButton.discernSuccess_masterDiscernButton_X {
+    cas_marginBottom -30
+
+    cas_size 125 42
+
+    background-color #5ba997
+
+    title-label @{
+        text-color white
+        font PingFangSC-Regular 15
+    }
+
+    layer@{
+        corner-radius 2
+    }
+}
+
+
+UICollectionView.discernSuccess_collectionView  {
+    cas_marginTop 20
+    cas_marginLeft 0
+    cas_marginBottom -102
+
+    cas_size 375 260
+
+    background-color white
+}

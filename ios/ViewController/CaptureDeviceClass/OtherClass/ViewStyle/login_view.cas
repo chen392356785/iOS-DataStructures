@@ -1,0 +1,98 @@
+
+UIButton.login_wechatButton {
+    cas_marginTop 10
+
+    cas_size 80 80
+
+    layer @{
+        corner-radius 40
+    }
+}
+
+UILabel.login_wecharLabel {
+    cas_marginTop 15
+
+    cas_size 100 20
+
+    text-alignment center
+    font PingFangSC-Light 16
+}
+
+UIView.login_lineView {
+    cas_marginTop 27.5
+
+    cas_size 240 1
+
+    background-color #e2e3e7
+}
+
+UILabel.login_orLabel {
+    cas_size 20 15
+
+    text-color #929292
+    text-alignment center
+    font PingFangSC-Light 14
+
+    background-color white
+}
+
+UILabel.login_phoneLoginLabel {
+    cas_marginTop 27.5
+
+    cas_size 100 20
+
+    text-alignment center
+    font PingFangSC-Light 16
+}
+
+UITextField.login_phoneTextField {
+
+    text-color #929292
+    font PingFangSC-Light 16
+}
+
+UIButton.login_sendCodeButton {
+
+    title-label @{
+        font PingFangSC-Light 13
+    }
+}
+
+UITextField.login_codeTextField {
+
+    text-color #929292
+    font PingFangSC-Light 16
+}
+
+UIButton.login_voiceButton {
+    cas_marginTop 15
+    cas_marginLeft 15.5
+    cas_marginRight -15.5
+
+    cas_sizeHeight 20
+
+    title-label @{
+        font PingFangSC-Light 14
+    }
+}
+
+UIButton.login_loginButton {
+    cas_marginTop 50
+    cas_marginLeft 15.5
+    cas_marginRight -15.5
+
+    cas_sizeHeight 45
+
+    layer @{
+        corner-radius 2
+    }
+
+    title-label @{
+        font PingFangSC-Light 16
+    }
+
+    background-color #9d9d9d
+}
+
+
+

@@ -1,0 +1,137 @@
+//
+//  THColorMacro.h
+//  Owner
+//
+//  Created by Neely on 2018/3/24.
+//
+
+#ifndef THColorMacro
+#define THColorMacro
+
+#import "UIColor+Extents.h"
+
+#define CREATE_RGBA_COLOR(r, g, b, a)                                                              \
+[UIColor colorWithRed:r / 255.0 green:g / 255.0 blue:b / 255.0 alpha:a]
+
+#define CREATE_HEX_COLOR(hex) [UIColor colorWithHexString:hex]
+
+#define XRGBA CREATE_RGBA_COLOR
+
+#define COLOR_78_152_73 CREATE_RGBA_COLOR(78, 152, 73, 1)
+#define COLOR_80_148_75 CREATE_RGBA_COLOR(80, 148, 75, 1)
+#define COLOR_80_80_80 CREATE_RGBA_COLOR(80, 80, 80, 1)
+#define COLOR_216_216_216 CREATE_RGBA_COLOR(216, 216, 216, 1)
+#define COLOR_202_202_202 CREATE_RGBA_COLOR(202, 202, 202, 1)
+#define COLOR_255_86_1 CREATE_RGBA_COLOR(255, 86, 1, 1)
+#define COLOR_221_221_221 CREATE_RGBA_COLOR(221, 221, 221, 1)
+#define COLOR_223_227_226 CREATE_RGBA_COLOR(223, 227, 226, 1)
+#define COLOR_199_201_200 CREATE_RGBA_COLOR(199, 201, 200, 1)
+#define COLOR_99_172_91 CREATE_RGBA_COLOR(99, 172, 91, 1)
+#define COLOR_132_132_132 CREATE_RGBA_COLOR(132, 132, 132, 1)
+#define COLOR_58_136_159 CREATE_RGBA_COLOR(58, 136, 159, 1)
+#define COLOR_159_159_159 CREATE_RGBA_COLOR(159, 159, 159, 1)
+#define COLOR_84_160_77 CREATE_RGBA_COLOR(84, 160, 77, 0.1)
+#define COLOR_218_218_218 CREATE_RGBA_COLOR(218, 218, 218, 1)
+#define COLOR_242_242_242 CREATE_RGBA_COLOR(242, 242, 242, 1)
+#define COLOR_133_133_133 CREATE_RGBA_COLOR(133, 133, 133, 1)
+
+#define COLOR_TITLEBAR_GREEN COLOR_99_172_91 // titlebar绿色
+#define COLOR_EMPHASIS COLOR_80_148_75       //强调色
+#define COLOR_WARNING COLOR_255_86_1         //警示色
+
+#define COLOR_TABBAR_SEPARATOR COLOR_223_227_226                  // tabbar间隔色
+#define COLOR_NOTE_TEXT COLOR_199_201_200                         //注释文本色
+#define COLOR_TITLEBAR_WHITE CREATE_RGBA_COLOR(255, 255, 255, 1)  // titleBar白色
+#define COLOR_CELL_HIGHTLIGHT CREATE_RGBA_COLOR(36, 103, 29, 0.8) //全局列表选中色
+#define COLOR_IMAGE_HIGHTLIGHT CREATE_RGBA_COLOR(3, 37, 0, 0.7)   //全局图片选中色
+#define COLOR_ADVBANNER_BG CREATE_RGBA_COLOR(252, 252, 252, 1)    //广告banner填充色
+#define COLOR_CURSOR CREATE_RGBA_COLOR(175, 184, 171, 1)
+
+#define COLOR_MAIN_TEXT_B CREATE_HEX_COLOR(@"#131313") //正文加黑
+#define COLOR_MAIN_TEXT CREATE_HEX_COLOR(@"#333333")      //正文色
+#define COLOR_SUBTEXT CREATE_HEX_COLOR(@"#999999")        //辅助文本色
+#define COLOR_MAIN_SUBTEXT CREATE_HEX_COLOR(@"#666666")   // 第二正文本色
+#define COLOR_BACKGROUDCOLOR CREATE_HEX_COLOR(@"#f8f8f8") // 默认背景色
+#define COLOR_NAV_TITLEBAR_HOME CREATE_HEX_COLOR(@"#f14348")
+#define COLOR_NAV_TITLEBAR      CREATE_HEX_COLOR(@"#f6f6f6") // navigationBar 颜色（已在底层处理）
+#define COLOR_TITLEBAR_GRAY CREATE_HEX_COLOR(@"#f8f8f8") // navigationBar 灰色（已在底层处理）
+#define COLOR_TITLEBAR_GRAY_TITLE CREATE_HEX_COLOR(@"#333333") // navigationBar 字体（已在底层处理）
+#define COLOR_SHOW_golden CREATE_HEX_COLOR(@"#ff6600")               //优惠券边框颜色
+#define COLOR_CELL_BACKGRPUD CREATE_HEX_COLOR(@"#fcfcfc") // 大部分cell 背景色（已在底层处理）
+#define COLOR_TABBAR_NORMAL CREATE_HEX_COLOR(@"#828282") // tabbar 未选中字体颜色（已在底层处理）
+#define COLOR_TEXT_YELLOW CREATE_HEX_COLOR(@"#fab428")                // 黄色
+#define COLOR_TEXT_NAVITATIONBARITEM CREATE_HEX_COLOR(@"#0066ff")     // navigation  Bar 蓝色
+#define COLOR_SHADE CREATE_HEX_COLOR(@"#efeff4")                   //VC 默认背景色
+#define COLOR_SEPARATOR CREATE_HEX_COLOR(@"#e1e4e6")                //页面间隔线色
+#define COLOR_YELLOW_TEXT CREATE_HEX_COLOR(@"#ff6600")                //橘黄色
+#define COLOR_SELECT_CELL CREATE_HEX_COLOR(@"#f3f5f7")
+
+#define COLOR_SOLD_COUNT CREATE_HEX_COLOR(@"#ff6600")
+
+#define COLOR_BACKCCOLOR CREATE_HEX_COLOR(@"#222222")
+#define COLOR_ORANGE CREATE_RGBA_COLOR(248, 136, 28, 1)
+
+#define COLOR_PlaceHolderColor CREATE_HEX_COLOR(@"#c8c8c8")  //placeHolder颜色
+
+#define COLOR_Light_Blue CREATE_HEX_COLOR(@"#3366ff")   //违章中的蓝色
+#define COLOR_GRAY  CREATE_HEX_COLOR(@"#bbbbbb")  //按钮未点击颜色
+
+#define COLOR_ButtonCOLOR CREATE_HEX_COLOR(@"#f01e50")
+#define COLOR_DROPMENU_BACK CREATE_HEX_COLOR(@"#000000") //下拉view背景
+
+#define COLOR_Question_Yello CREATE_HEX_COLOR(@"#f8bb1c")
+#define COLOR_Round_Gray CREATE_HEX_COLOR(@"#dcdcdc")
+#define COLOR_RED_NEW CREATE_HEX_COLOR(@"#f42f34")
+#define COLOR_SUBTITLE_NEW CREATE_HEX_COLOR(@"#a9a9a9")
+#define COLOR_TITLE_NEW CREATE_HEX_COLOR(@"#888888")
+#define COLOR_TITLE_DISABLE_NEW CREATE_HEX_COLOR(@"#cccccc")
+#define COLOR_SEPARATOR_NEW CREATE_HEX_COLOR(@"#eeeeee")
+
+//新分割线样式
+#define COLOR_SEPARATOR_WHITE_P3 CREATE_RGBA_COLOR(255, 255, 255, 0.8)
+#define COLOR_SEPARATOR_WHITE_P4 CREATE_RGBA_COLOR(255, 255, 255, 0.5)
+#define COLOR_SEPARATOR_WHITE_P5 CREATE_RGBA_COLOR(255, 255, 255, 0.3)
+
+#define COLOR_SEPARATOR_BLACK_P0 CREATE_RGBA_COLOR(0, 0, 0, 0.1)
+#define COLOR_SEPARATOR_BLACK_P1 CREATE_RGBA_COLOR(0, 0, 0, 0.3)
+#define COLOR_SEPARATOR_BLACK_P2 CREATE_RGBA_COLOR(0, 0, 0, 0.05)
+
+//子标题
+#define COLOR_SUBTITLE CREATE_HEX_COLOR(@"#858585")
+
+//蓝色（保养项目中使用）
+#define COLOR_BLUE_TEXT CREATE_HEX_COLOR(@"#1568d0")
+
+//红色按钮
+#define BTN_BG_RED_NORMAL CREATE_HEX_COLOR(@"#f42f34")//CREATE_HEX_COLOR(@"#f03060")
+#define BTN_BG_RED_HILIGHTED CREATE_HEX_COLOR(@"#dc222f")
+
+
+//邀请好友红色标记
+#define INVITE_FRIEND_RED CREATE_HEX_COLOR(@"#f42f34")
+
+
+//绿色按钮
+#define BTN_BG_GREEN_NORMAL CREATE_HEX_COLOR(@"#33cc66")
+#define BTN_BG_GREEN_HILIGHTED CREATE_HEX_COLOR(@"#33aa66")
+
+#define BTN_BG_DISABLE CREATE_HEX_COLOR(@"#c8c8c8")
+
+#define BTN_BG_YELLO CREATE_HEX_COLOR(@"#ff9900")
+#define BTN_BG_YELLO_HILIGHTED CREATE_HEX_COLOR(@"#ec8b00")
+#define BTN_BG_GRAY CREATE_HEX_COLOR(@"#d7d7d7")
+
+//蓝色按钮
+#define BTN_BG_BLUE CREATE_HEX_COLOR(@"#2d76f4")
+
+
+//活动字体颜色
+#define COLOR_PROMOTION CREATE_HEX_COLOR(@"#F5A623")
+
+//绿色√
+#define COLOR_SELECTED_GREEN CREATE_HEX_COLOR(@"#20C90A")
+
+
+
+#endif
+

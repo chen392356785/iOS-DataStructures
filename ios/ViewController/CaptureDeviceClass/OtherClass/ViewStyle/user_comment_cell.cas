@@ -1,0 +1,49 @@
+
+UIImageView.userComment_userIcon {
+    cas_marginLeft 15
+
+    cas_size 45 45
+
+    layer @{
+        corner-radius 22.5
+    }
+    content-mode aspectFit
+
+    background-color lightGray
+}
+
+UILabel.userComment_userNameLabel {
+    cas_marginTop 15
+    cas_marginLeft 10
+    cas_sizeHeight 20
+
+    text-color #333333
+    font PingFangSC-Regular 14
+}
+
+UILabel.userComment_timeLabel {
+    cas_marginRight -15
+    cas_size 100 20
+
+    text-color #8c8c8c
+    font PingFangSC-Regular 12
+    text-alignment right
+}
+
+
+UILabel.userComment_contentLabel {
+    cas_marginBottom -15
+    cas_marginLeft 10
+    cas_marginRight -10
+    cas_sizeHeight 20
+
+    text-color #333333
+    font PingFangSC-Regular 14
+}
+
+UIView.userComment_lineView {
+    cas_marginBottom -0.5
+    cas_sizeHeight 0.5
+
+    background-color #e5e5e5
+}

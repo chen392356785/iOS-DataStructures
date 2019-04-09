@@ -1,0 +1,96 @@
+
+
+UIView.camera_backgroundView {
+
+    background-color clear
+}
+UISlider.camera_flashSlider {
+
+    cas_size 150 10
+    cas_marginRight 50
+    cas_marginBottom -130
+
+}
+UIImageView.camera_photoImageView {
+
+    background-color clear
+}
+
+UIScrollView.camera_pinchScrollView {
+
+    background-color clear
+}
+
+
+UIImageView.camera_flowerImageView {
+    cas_size 318 307
+
+    content-mode aspectFit
+    background-color clear
+}
+
+UIImageView.camera_focusImageView {
+    cas_size 113 113
+
+    content-mode aspectFit
+    background-color clear
+}
+
+UILabel.camera_tipsLabel {
+
+    cas_marginBottom -20
+    cas_marginLeft 0
+    cas_marginRight 0
+
+    cas_sizeHeight 30
+
+    font PingFangSC-Medium 17
+    text-color white
+    background-color clear
+    shadow-color #0e050a
+    text-alignment center
+}
+
+UIButton.camera_infoButton {
+    cas_marginTop 24
+    cas_marginLeft 10
+    cas_size 40 40
+}
+
+UIButton.camera_infoButton_X {
+    cas_marginTop 46
+    cas_marginLeft 10
+    cas_size 40 40
+}
+
+UIButton.camera_focusButton {
+    cas_marginRight -10
+    cas_size 40 40
+}
+
+DFPhotoToolView.camera_photoToolView {
+    cas_marginBottom 0
+
+    cas_sizeHeight 142
+
+    background-color white
+}
+
+
+DFAlbumToolView.camera_albumToolView {
+    cas_marginBottom 0
+
+    cas_sizeHeight 142
+
+    background-color white
+}
+
+
+
+
+
+
+
+
+
+

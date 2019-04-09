@@ -1,0 +1,15 @@
+
+UILabel.commentView_nameLabel {
+    cas_marginLeft 10
+    cas_sizeHeight 20
+
+    text-color #5ba997
+    font PingFangSC-Regular 11
+}
+
+UILabel.commentView_contentLabel {
+    cas_marginLeft 5
+    cas_marginRight -5
+
+    font PingFangSC-Regular 11
+}

@@ -1,0 +1,43 @@
+
+UIImageView.creatPhotos_bigImageView {
+
+    content-mode aspectFill
+
+    background-color white
+}
+
+UIWebView.creatPhotos_webView {
+    background-color clear
+}
+
+UICollectionView.creatPhotos_collectionView {
+    cas_sizeHeight 115.5
+
+    background-color #f6f6f6
+}
+
+UIButton.creatPhotos_shareButton {
+    cas_marginBottom 0
+    cas_sizeHeight 49
+
+    background-color #5ba997
+
+    title-label @{
+        text-color white
+        text-alignment center
+        font PingFangSC-Regular 15
+    }
+}
+
+UIButton.creatPhotos_shareButton_X {
+    cas_marginBottom -34
+    cas_sizeHeight 49
+
+    background-color #5ba997
+
+    title-label @{
+        text-color white
+        text-alignment center
+        font PingFangSC-Regular 15
+    }
+}

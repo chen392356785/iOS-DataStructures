@@ -1,0 +1,40 @@
+
+UILabel.discernWaiting_precentLabel {
+    cas_marginTop 25
+    cas_marginLeft 0
+
+    cas_size 375  30
+
+    text-color #171717
+    font PingFangSC-Regular 17
+    text-alignment center
+}
+
+UILabel.discernWaiting_leftLabel {
+    cas_marginBottom -20
+
+    cas_size 50  35
+
+    text-color #5BA997
+    font PingFangSC-Semibold 35
+    text-alignment center
+}
+
+UILabel.discernWaiting_waitTipsLabel {
+
+    cas_size 375 30
+
+    text-color #5BA997
+    font PingFangSC-Regular 22
+    text-alignment center
+}
+
+UILabel.discernWaiting_rightLabel {
+    cas_marginTop 40
+
+    cas_size 50  35
+
+    text-color #5BA997
+    font PingFangSC-Semibold 35
+    text-alignment center
+}

@@ -1,0 +1,41 @@
+
+UIView.share_leftView {
+    cas_size 35 1
+
+    background-color #555555
+}
+
+UILabel.share_titleLabel {
+    cas_marginTop 29
+    cas_size 80 20
+
+    text-color #555555
+    text-alignment center
+    font PingFangSC-Regular 12
+
+}
+
+UIView.share_WXView {
+    cas_marginTop 24
+    cas_marginLeft 20
+
+    cas_size 40 60
+}
+
+UIImageView.share_WXImageView {
+    cas_size 40 40
+
+    content-mode aspectFit
+}
+
+UILabel.share_WXTitleLabel {
+    cas_marginTop 5
+
+    cas_size 50 15
+
+    text-color #5ba997
+    text-alignment center
+    font PingFangSC-Regular 10
+}
+
+

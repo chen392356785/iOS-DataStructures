@@ -1,0 +1,60 @@
+
+UIImageView.discernCell_flowerImageView {
+    cas_sizeHeight 169
+
+    background-color lightGray
+
+    content-mode aspectFill
+}
+
+UILabel.discernCell_titleLabel {
+    cas_marginTop 10
+    cas_marginLeft 5
+    cas_marginRight -5
+
+    cas_sizeHeight 20
+
+    text-color #333333
+    font PingFangSC-Regular 12
+}
+
+UIView.discernCell_userView {
+    cas_sizeHeight 50
+
+}
+
+UIImageView.discernCell_userIcon {
+    cas_marginLeft 5
+
+    cas_size 25 25
+
+    content-mode aspectFit
+
+    layer @{
+        corner-radius 12.5
+    }
+}
+
+UILabel.discernCell_userNameLabel {
+    cas_marginLeft 5
+    cas_marginRight -5
+
+    cas_sizeHeight 20
+
+    text-color #8c8c8c
+    font PingFangSC-Light 11
+
+}
+
+UIButton.discernCell_commentButton {
+    cas_marginRight -5
+
+    cas_size 25 25
+
+    content-mode aspectFit
+}
+
+
+
+
+
