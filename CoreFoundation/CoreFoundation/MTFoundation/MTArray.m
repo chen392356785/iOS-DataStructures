@@ -54,17 +54,14 @@ typedef id _Nullable (*RFUNC)(id _Nonnull, SEL _Nonnull,...);
 - (instancetype)initWithObjects:(id)firstObj, ... {
 	if (self = [super init]) {
 		_array = CFArrayCreateMutable(kCFAllocatorDefault,0, &kCFTypeArrayCallBacks);
-		
 		va_list ap;
 		va_start(ap, firstObj);
-		
 		id obj = firstObj;
 		while (obj != nil) {
 			CFArrayAppendValue(_array,(__bridge const void *)(obj));
 			obj = va_arg(ap, id);
 		}
 		va_end(ap);
-		
 	}
 	return self;
 }
@@ -116,6 +113,29 @@ typedef id _Nullable (*RFUNC)(id _Nonnull, SEL _Nonnull,...);
 
 - (NSString *)description {
 	return [NSString stringWithFormat:@"%@",_array];
+}
+
+- (MTArray *)subarrayWithRange:(NSRange)range {
+    if (range.location < 0 || range.location > self.count-1) {
+        return nil;
+    }
+    if (range.location + range.length > self.count) {
+        return nil;
+    }
+    const void **values = malloc(sizeof(void*)*range.length);
+    CFArrayGetValues(_array,CFRangeMake(range.location, range.length), values);
+    CFMutableArrayRef newArr = CFArrayCreateMutable(kCFAllocatorDefault,0, &kCFTypeArrayCallBacks);
+   
+    for (int i = 0; i<range.length;i++) {
+        const void *obj = values[i];
+        CFArrayAppendValue(newArr,obj);
+    }
+    
+    MTArray *array = [MTArray arrayWithArray:(__bridge NSArray * _Nonnull)(newArr)];
+    CFRelease(newArr);
+    free(values);
+
+    return array;
 }
 
 - (void)dealloc {

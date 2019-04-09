@@ -17,6 +17,9 @@
 		246363D62254EC6A00FEEAEB /* CoreFoundationUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 246363D52254EC6A00FEEAEB /* CoreFoundationUITests.m */; };
 		246363E52254F13E00FEEAEB /* MTArray.m in Sources */ = {isa = PBXBuildFile; fileRef = 246363E42254F13E00FEEAEB /* MTArray.m */; };
 		246363E82254FB1F00FEEAEB /* MTMutableArray.m in Sources */ = {isa = PBXBuildFile; fileRef = 246363E72254FB1F00FEEAEB /* MTMutableArray.m */; };
+		247CBEAD225A175400A810FC /* MTDictionary.m in Sources */ = {isa = PBXBuildFile; fileRef = 247CBEAC225A175400A810FC /* MTDictionary.m */; };
+		247CBEB1225A30C200A810FC /* MTMutableDictionary.m in Sources */ = {isa = PBXBuildFile; fileRef = 247CBEB0225A30C200A810FC /* MTMutableDictionary.m */; };
+		247CBEB4225A357900A810FC /* MTSet.m in Sources */ = {isa = PBXBuildFile; fileRef = 247CBEB3225A357900A810FC /* MTSet.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +60,12 @@
 		246363E42254F13E00FEEAEB /* MTArray.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MTArray.m; sourceTree = "<group>"; };
 		246363E62254FB1F00FEEAEB /* MTMutableArray.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MTMutableArray.h; sourceTree = "<group>"; };
 		246363E72254FB1F00FEEAEB /* MTMutableArray.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MTMutableArray.m; sourceTree = "<group>"; };
+		247CBEAB225A175400A810FC /* MTDictionary.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MTDictionary.h; sourceTree = "<group>"; };
+		247CBEAC225A175400A810FC /* MTDictionary.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MTDictionary.m; sourceTree = "<group>"; };
+		247CBEAF225A30C200A810FC /* MTMutableDictionary.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MTMutableDictionary.h; sourceTree = "<group>"; };
+		247CBEB0225A30C200A810FC /* MTMutableDictionary.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MTMutableDictionary.m; sourceTree = "<group>"; };
+		247CBEB2225A357900A810FC /* MTSet.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MTSet.h; sourceTree = "<group>"; };
+		247CBEB3225A357900A810FC /* MTSet.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MTSet.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,6 +116,7 @@
 		246363B02254EC6900FEEAEB /* CoreFoundation */ = {
 			isa = PBXGroup;
 			children = (
+				247CBEAE225A175700A810FC /* MTFoundation */,
 				246363B12254EC6900FEEAEB /* AppDelegate.h */,
 				246363B22254EC6900FEEAEB /* AppDelegate.m */,
 				246363B42254EC6900FEEAEB /* ViewController.h */,
@@ -116,10 +126,6 @@
 				246363BC2254EC6A00FEEAEB /* LaunchScreen.storyboard */,
 				246363BF2254EC6A00FEEAEB /* Info.plist */,
 				246363C02254EC6A00FEEAEB /* main.m */,
-				246363E32254F13E00FEEAEB /* MTArray.h */,
-				246363E42254F13E00FEEAEB /* MTArray.m */,
-				246363E62254FB1F00FEEAEB /* MTMutableArray.h */,
-				246363E72254FB1F00FEEAEB /* MTMutableArray.m */,
 			);
 			path = CoreFoundation;
 			sourceTree = "<group>";
@@ -140,6 +146,23 @@
 				246363D72254EC6A00FEEAEB /* Info.plist */,
 			);
 			path = CoreFoundationUITests;
+			sourceTree = "<group>";
+		};
+		247CBEAE225A175700A810FC /* MTFoundation */ = {
+			isa = PBXGroup;
+			children = (
+				246363E32254F13E00FEEAEB /* MTArray.h */,
+				246363E42254F13E00FEEAEB /* MTArray.m */,
+				246363E62254FB1F00FEEAEB /* MTMutableArray.h */,
+				246363E72254FB1F00FEEAEB /* MTMutableArray.m */,
+				247CBEAB225A175400A810FC /* MTDictionary.h */,
+				247CBEAC225A175400A810FC /* MTDictionary.m */,
+				247CBEAF225A30C200A810FC /* MTMutableDictionary.h */,
+				247CBEB0225A30C200A810FC /* MTMutableDictionary.m */,
+				247CBEB2225A357900A810FC /* MTSet.h */,
+				247CBEB3225A357900A810FC /* MTSet.m */,
+			);
+			path = MTFoundation;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -272,11 +295,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				247CBEAD225A175400A810FC /* MTDictionary.m in Sources */,
 				246363E52254F13E00FEEAEB /* MTArray.m in Sources */,
 				246363B62254EC6900FEEAEB /* ViewController.m in Sources */,
 				246363C12254EC6A00FEEAEB /* main.m in Sources */,
+				247CBEB1225A30C200A810FC /* MTMutableDictionary.m in Sources */,
 				246363B32254EC6900FEEAEB /* AppDelegate.m in Sources */,
 				246363E82254FB1F00FEEAEB /* MTMutableArray.m in Sources */,
+				247CBEB4225A357900A810FC /* MTSet.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -382,7 +408,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -435,7 +461,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -455,7 +481,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.iostream.demo.CoreFoundation;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -471,7 +497,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.iostream.demo.CoreFoundation;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

@@ -8,7 +8,7 @@
 
 #import "Person.h"
 #include "LRUCache.h"
-#import <Foundation/Foundation.h>
+//#import <Foundation/Foundation.h>
 
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
