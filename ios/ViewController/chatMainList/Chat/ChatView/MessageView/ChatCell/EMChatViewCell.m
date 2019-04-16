@@ -63,9 +63,7 @@ NSString *const kShouldResendCell = @"kShouldResendCell";
                 {
                     _activityView.hidden = NO;
                     _hasRead.hidden = NO;
-                }
-                else
-                {
+                } else {
                     [_activityView setHidden:YES];
                 }
             }

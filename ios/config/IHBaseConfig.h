@@ -11,8 +11,8 @@
 #define ConfigManager				[IHBaseConfig config]
 
 #define TestImageURL				@"http://8yyq8.com"
-#define upload_url_write             @"https://oss-cn-beijing.aliyuncs.com"
-//#define upload_url_write             @"https://img-cn-beijing.aliyuncs.com"
+#define upload_url_write            @"https://oss-cn-beijing.aliyuncs.com"
+//#define upload_url_write         @"https://img-cn-beijing.aliyuncs.com"
 
 #define VERSION_CODE  @"2"  //测试升级版本的
 
@@ -41,21 +41,9 @@
 #endif
 
 extern NSString* serverURL;
-extern NSString* LBSServerURL;
-//extern NSString* serverURL;
 extern NSString* APP_KEY;
-extern NSString* APP_SECRET;
-extern NSString* CHANNEL_ID;
-extern NSString* API_VERSION;
-extern NSString *API_BASE_VERSION;
 extern NSString* shareURL;
-extern NSString* ServiceTelNumber ;
-extern NSString* weatherServerURL;
-extern NSString* weatherRealTimeServerURL;
 
- 
- 
- 
 extern NSString *dwonShareURL;
 @interface IHBaseConfig : NSObject
 {

@@ -13,7 +13,7 @@
     MTBaseTableView *commTableView;
     int page;
     NSMutableArray *dataArray;
-    NSIndexPath *_indexPath;
+//    NSIndexPath *_indexPath;
     UIView *_headerView;
     SMLabel *_titlelbl;
     ShareView *_shareView;

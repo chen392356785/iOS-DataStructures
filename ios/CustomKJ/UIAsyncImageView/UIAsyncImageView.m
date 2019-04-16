@@ -23,27 +23,14 @@ UIImageView* goBackImageView;
 }
 
 -(void)setImageAsyncWithURL:(NSString *)url placeholderImage:(UIImage *)placeholder{
-//    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_LOW, 0), ^{
-//        NSData  *imageData = [NSData dataWithContentsOfURL:[NSURL URLWithString:url]];
-//        UIImage *image = [UIImage sd_animatedGIFWithData:imageData];
-//        dispatch_async(dispatch_get_main_queue(), ^{
-//            self.image = image;
-//            if (!image) {
-//                self.image = placeholder;
-//            }
-//        });
-//    });
-    [self sd_setImageWithURL:[NSURL URLWithString:url] placeholderImage:placeholder];
-}
-/*
-// Only override drawRect: if you perform custom drawing.
-// An empty implementation adversely affects performance during animation.
-- (void)drawRect:(CGRect)rect {
-    // Drawing code
-}
-*/
 
-
+	[self sd_setImageWithURL:[NSURL URLWithString:url] placeholderImage:placeholder completed:^(UIImage * _Nullable image, NSError * _Nullable error, SDImageCacheType cacheType, NSURL * _Nullable imageURL) {
+		NSString *string = [NSString stringWithFormat:@"imageURL ------%@",imageURL];
+		NSAssert(image,string);
+	}];
+	
+	
+}
 
 #pragma mark -- 单张图片（大图）
 /*

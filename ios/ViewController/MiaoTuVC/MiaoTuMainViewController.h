@@ -15,8 +15,8 @@
 
 @interface MiaoTuMainViewController : SMBaseViewController<UITableViewDelegate,UIScrollViewDelegate>
 {
-    MTBaseTableView *_commTableView;
-    UIScrollView *_scroll;
+//    MTBaseTableView *_commTableView;
+//    UIScrollView *_scroll;
 }
 
 @property(nonatomic,strong)NSString *company_name;

@@ -21,11 +21,11 @@
     KICropImageView* _cropImageView;
     NSMutableArray *headImageArray;
     UIView *_bgView1;
-    NSString *_companyImage;
-    int typeId;
-
-    CGFloat _latitude;
-    CGFloat _longitude;
+//    NSString *_companyImage;
+//    int typeId;
+//
+//    CGFloat _latitude;
+//    CGFloat _longitude;
 
     MTCompanyModel *_companyModel;
 
@@ -445,7 +445,9 @@
            
            
             
-        }];
+		} failure:^(NSError *error) {
+			
+		}];
     }
     
     
@@ -459,7 +461,7 @@
 		EditInformationView *emailView=[self->_bgView1 viewWithTag:1006];
         emailView.lbl.text=@"已上传";
         emailView.lbl.textColor=cBlackColor;
-		self->_companyImage=str;
+//		self->_companyImage=str;
     };
     [self pushViewController:vc];
 }
@@ -473,8 +475,8 @@
 		EditInformationView *sexView=[self->_BaseScrollView viewWithTag:1004];
         sexView.lbl.textColor=cBlackColor;
         sexView.lbl.text=adress;
-		self->_latitude=latitude;
-		self->_longitude=longtitude;
+//		self->_latitude=latitude;
+//		self->_longitude=longtitude;
     };
    
     [self pushViewController:vc];

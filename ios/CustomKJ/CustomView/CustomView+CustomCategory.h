@@ -50,7 +50,7 @@
     UIImageView *_typeImageView;
     SMLabel *_addresslbl;
     UIImageView *_idtypeImageView;
-    UIImageView *_idImageView;
+//    UIImageView *_idImageView;
 }
 -(void)setData:(UserChildrenInfo *)model type:(buyType)type;
 
@@ -74,7 +74,7 @@
 @interface CatapultView : CustomView
 {
     UIView *_view;
-    UIImageView *_imageView;
+//    UIImageView *_imageView;
 }
 @property(nonatomic,strong)UIImageView *imageView;
  @property(nonatomic,copy)DidSelectBtnBlock selectBtnBlock;
@@ -112,7 +112,7 @@
 {
     
     SMLabel *_timelabel;
-    SMLabel *_priceLabel;
+//    SMLabel *_priceLabel;
     
 }
 @property (nonatomic,strong)SMLabel *connectUser;
@@ -128,8 +128,8 @@
 {
     SMLabel *_lbl;
     UIView *_lineView;
-    UIImageView *_rightImag;
-    UIView *_bottomLineView;
+//    UIImageView *_rightImag;
+//    UIView *_bottomLineView;
     UIImageView *_imageview1;
     UIImageView *_imageview2;
     UIImageView *_imageview3;

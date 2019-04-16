@@ -10,10 +10,10 @@
 
 @interface BindenterpriseViewController ()<UITableViewDelegate>
 {
-    int page;
+//    int page;
 	MTBaseTableView *commTableView;
     NSMutableArray *dataArray;
-    NSIndexPath *_indexPath;
+//    NSIndexPath *_indexPath;
     SearchView *_searchV;
     NSString *_company_name;
     SMLabel *_label;

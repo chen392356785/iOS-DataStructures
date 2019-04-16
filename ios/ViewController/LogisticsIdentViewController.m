@@ -12,8 +12,8 @@
 #import "LogisticsFindGoodsListViewController.h"
 @interface LogisticsIdentViewController ()
 {
-    UIButton *_btn2;
-    UIButton *_btn1;
+//    UIButton *_btn2;
+//    UIButton *_btn1;
     UIImageView *_imageView;
     UIView *_view1;
     UIView *_view2;

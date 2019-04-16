@@ -18,18 +18,18 @@
 	MTBaseTableView *commTableView2;
 	int page;
 	NSMutableArray *dataArray;
-	NSIndexPath *_indexPath;
+//	NSIndexPath *_indexPath;
 	
 	
 	AreaView *_areaV;
 	MTLogisticsChooseView *_logisticsView;
 	SearchView *_searchV;
 	NSString *_provice;
-	NSString *_city;
+//	NSString *_city;
 	NSString *_scale;
-	NSString *_company_name;
-	int level;
-	int typeID;
+//	NSString *_company_name;
+//	int level;
+//	int typeID;
 	NSString *_tilte;
 	int jobType;
 	NSMutableDictionary *positionDic;
@@ -42,7 +42,7 @@
 	NSMutableArray *btnArray;//热门搜索或者附近的人
 	NSArray *array;//附近的人
 	
-	NSInteger btnIndex;//选择按钮的索引
+//	NSInteger btnIndex;//选择按钮的索引
 	
 }
 
@@ -76,10 +76,10 @@
 	
 	// [self setRightButtonImage:Image(@"Search Icon.png") forState:UIControlStateNormal];
 	_provice = @"";
-	_city = @"";
+//	_city = @"";
 	jobType=0;
 	_scale=@"desc";
-	_company_name = @"";
+//	_company_name = @"";
 	_tilte=@"";
 	_nickName=@"";
 	positionDic=[[NSMutableDictionary alloc]init];
@@ -432,7 +432,7 @@
 			
 			if ([str isEqualToString:@"区域"]) {
 				self->_provice =  provice;
-				self->_city = city;
+//				self->_city = city;
 				
 			}else if ([str isEqualToString:@"职位类型"]){
 				
@@ -544,7 +544,7 @@
 
 -(void)creatSearch:(NSInteger)index{
 	__weak EPCloudConnectionViewController *weakSelf=self;
-	btnIndex = index;
+//	btnIndex = index;
 	
 	MTNearUserModel *model=array[index];
 	[weakSelf addWaitingView];

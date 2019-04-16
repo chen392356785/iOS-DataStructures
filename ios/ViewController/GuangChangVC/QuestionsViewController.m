@@ -15,9 +15,9 @@
     MTBaseTableView *commTableView;
     int page;
     NSMutableArray *dataArray;
-    float lastContentOffset;
+//    float lastContentOffset;
     NSMutableArray *_indexPathArr;
-    UIImageView *_redImageView;
+//    UIImageView *_redImageView;
     NSIndexPath *_indexPath;
 }
 

@@ -10,7 +10,7 @@
 #import "EditPersonInformationViewController.h"
 @interface PersonUserInfromationViewController ()<personInfoDelegate>
 {
-    PersonInformationView *_personView;
+//    PersonInformationView *_personView;
     UIImageView *_positionImageView;
     SMLabel *_positionLabel;
     UIImageView *_pohoneImageView;
@@ -25,7 +25,7 @@
     NSDictionary *_dic;
     UIView *_lineView4;
     UIView *_lineView5;
-    UIImageView *_companyImageView;
+//    UIImageView *_companyImageView;
 }
 
 @end
@@ -71,8 +71,8 @@
     //        }
     //    };
     
-    _personView=personView;
-    
+//    _personView=personView;
+	
     [_BaseScrollView addSubview:personView];
     
     UIButton *editBtn=[UIButton buttonWithType:UIButtonTypeSystem];
@@ -99,7 +99,7 @@
     
     UIImage *companyImg=Image(@"iconfont-gongsi.png");
     UIImageView *companyImageView=[[UIImageView alloc]initWithFrame:CGRectMake(lineView.left, lineView.bottom+10, companyImg.size.width, companyImg.size.height)];
-    _companyImageView=companyImageView;
+//    _companyImageView=companyImageView;
     companyImageView.image=companyImg;
     [_BaseScrollView addSubview:companyImageView];
     

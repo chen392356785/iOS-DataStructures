@@ -544,7 +544,7 @@
         SMLabel *stateLbl = [[SMLabel alloc] initWithFrameWith:CGRectMake(0, 12, size.width, 20) textColor:cGreenColor textFont:sysFont(14)];
         stateLbl.right = self.width - 12;
         stateLbl.text = @"支付成功";
-        _stateLbl = stateLbl;
+//        _stateLbl = stateLbl;
         stateLbl.textAlignment= NSTextAlignmentCenter;
         [backView addSubview:stateLbl];
         
@@ -1277,11 +1277,11 @@
 
 -(void)setDataWith:(NSDictionary *)dic{
     
-    UIImage *img=Image(dic[@"image"]);
-    _imageView.image=img;
-    _imageView.size=CGSizeMake(img.size.width, img.size.height);
-    _name.text=dic[@"text"];
-    _lbl.text=dic[@"name"];
+    UIImage *img = Image(dic[@"image"]);
+    _imageView.image = img;
+    _imageView.size = CGSizeMake(img.size.width, img.size.height);
+    _name.text = dic[@"text"];
+    _lbl.text = dic[@"name"];
     
     
     

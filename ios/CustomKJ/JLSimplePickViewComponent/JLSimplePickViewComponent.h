@@ -35,7 +35,7 @@ UIPickerViewDelegate,
 UIPickerViewDataSource
 >
 {
-    UIView *ActionView;
+//    UIView *ActionView;
     NSArray *m_DataArray;
     //  UIPickerView *G_pickerView;
     NSString* m_SelectedStr;

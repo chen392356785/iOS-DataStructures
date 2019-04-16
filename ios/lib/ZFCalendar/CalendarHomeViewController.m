@@ -17,8 +17,8 @@
 {
 
     
-    int daynumber;//天数
-    int optiondaynumber;//选择日期数量
+//    int daynumber;//天数
+//    int optiondaynumber;//选择日期数量
 //    NSMutableArray *optiondayarray;//存放选择好的日期对象数组
     
 }

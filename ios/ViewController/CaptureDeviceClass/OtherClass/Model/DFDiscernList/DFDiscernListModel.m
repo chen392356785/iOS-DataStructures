@@ -7,14 +7,7 @@
 //
 
 #import "DFDiscernListModel.h"
-#import "DFCommentModel.h"
 
 @implementation DFDiscernListModel
-
-+ (NSDictionary *)mj_objectClassInArray {
-    return @{
-             @"CommentList" : [DFCommentModel class]
-             };
-}
 
 @end

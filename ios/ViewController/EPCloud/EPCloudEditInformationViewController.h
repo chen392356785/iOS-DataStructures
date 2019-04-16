@@ -8,6 +8,7 @@
 
 #import "SMBaseViewController.h"
 #import "EditInformationDelegate.h"
+
 @interface EPCloudEditInformationViewController : SMBaseCustomViewController<EditInformationDelegate>
 
 @end

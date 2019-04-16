@@ -12,7 +12,7 @@
 #import "CityTableViewController.h"
 @interface CityChooseViewController ()<UITableViewDelegate,SlideNavTabBarDelegate>
 {
-    MTBaseTableView *commTableView;
+//    MTBaseTableView *commTableView;
     SlideNavTabBarController *navTabBarController;
     
     NavSlideView *navView;

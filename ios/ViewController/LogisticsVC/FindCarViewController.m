@@ -30,8 +30,8 @@
     NSString *_province2;
     NSString *_town2;
     
-    UIButton *_createBtn;
-    calendarView *_calendarV;
+//    UIButton *_createBtn;
+//    calendarView *_calendarV;
     MTLogisticsChooseView *_logisticsView;
     carSourceMoreView *_carSV;
     UIButton *_btn;
@@ -39,7 +39,7 @@
     NSMutableArray *_typeArr;
     AddressDropView *_view1;
     AddressDropView *_view2;
-    NSIndexPath *_indexPath;
+//    NSIndexPath *_indexPath;
     FindCarModel *_model;
     
 }
@@ -204,8 +204,6 @@
     [self beginRefesh:ENT_RefreshHeader];
 }
 
-
-
 -(void)zhuangcheAddress{
     
     __weak FindCarViewController *weakSelf=self;
@@ -363,7 +361,7 @@
 -(void)BCtableViewCell:(IHTableViewCell *)cell action:(BCTableViewCellAction)action indexPath:(NSIndexPath *)indexPath attribute:(NSObject *)attribute{
     FindCarModel *model=dataArray[indexPath.row];
     _model=model;
-    _indexPath=indexPath;
+//    _indexPath=indexPath;
     if (action==MTLianXiActionTableViewCell) {
         [self pushToChatVC:model];
        

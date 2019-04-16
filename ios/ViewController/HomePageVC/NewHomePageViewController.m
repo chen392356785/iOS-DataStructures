@@ -7,40 +7,20 @@
 //
 
 #import "NewHomePageViewController.h"
-#import "AdView.h"
 #import "YLWebViewController.h"
-//#import "GongQiuMainViewController.h"
 #import "MTTopicDetailsViewController.h"
 #import "GongQiuDetailsViewController.h"
 #import "NewsTableListViewController.h"
-#import "ActivityListViewController.h"      //活动列表
-//#import "ActivityTypeController.h"          //活动分类
-#import "NewsBanner.h"
+#import "ActivityListViewController.h"
 #import "MTOtherInfomationMainViewController.h"
-//#import "LogisticsIdentViewController.h"
-//#import "LogisticsFindCarListViewController.h"
-//#import "LogisticsFindGoodsListViewController.h"
 #import "ChatListViewController.h"
-//#import "ActivityDetailViewController.h"
-//#import "InvitedViewController.h"
 #import "MTTopicListViewController.h"
-//#import "MapAnnotationViewController.h"
-//#import "MYTaskViewController.h"
 #import "NewSlideHeadingViewController.h"
 #import "NewsDetailViewController.h"
 #import "NewsImageDetailViewController.h"
 #import "EPCloudListViewController.h"
-//#import "EPCloudCumlativeViewController.h"
-//#import "GardenCloudViewController.h"
-//#import "MTNewSupplyAndBuyViewController.h"
-//#import "VotoChartsListViewController.h"
 #import "ActivtiesVoteViewController.h"
-//#import "MTThemeListViewController.h"
 #import "MiaoTuMainViewController.h"
-//#import "EditPersonInformationViewController.h"
-//#import "CrowdFundingViewController.h"
-//#import "IdentAuthViewController.h"
-//#import "JionEPCloudViewController.h"
 #import "JobIdentViewController.h"
 #import "GiuZhiViewController.h"
 #import "ZhaoPingViewController.h"
@@ -49,23 +29,13 @@
 #import "AskProblemDetailViewController.h"
 #import "NurseryCloudViewController.h"
 #import "HomePageWeatherViewController.h"
-//#import "CreatNerseryViewController.h"
-//#import "CityTableViewController.h"
-//#import "CityChooseViewController.h"
 #import "JLAddressPickView.h"
-//#import "ScoreConvertViewController.h"
-//#import "PersonScoreViewController.h"
-//#import "NewsTableListViewController.h"
 #import "EPCloudDetailViewController.h"
-//#import "ChatroomListViewController.h"
 #import "MTShoppingViewController.h"
 #import "FindCarViewController.h"
-//#import "LogisticsFindCarListViewController.h"
-//#import "MTTopicDetailsViewController.h"
 
 #import "MTHomeSectionTitleView.h"
 #import "ChooseHTTPServiceViewController.h"
-//#import "UIBarButtonItem+Extents.h"
 #import "THModalNavigationController.h"
 
 #import "ActivesCrowdFundController.h"
@@ -76,10 +46,8 @@
 #import "showImageController.h" //新品种图片大图
 
 #import "DFDiscernListViewController.h"     //鉴定
-//#import "ClassroomHomeController.h"         //课堂首页
 #import "GardenListHomeController.h"        //园榜
 #import "MTHomePopView.h"                   //弹框
-//#import "MTHomePopModel.h"                  //弹框Model
 #import "MyClassSourceController.h"         //我的课程
 #import "RecommendTeacherController.h"      //推荐讲师
 #import "MyMessageListViewController.h"   //我的消息
@@ -96,18 +64,18 @@
 {
     MTBaseTableView * commTableView;
     NSMutableArray * dataArray;
-    int page;
-    NSMutableArray * tittleArr;
-    NewsBanner *tittleScroll;
-    UIView *_topView;
-    AdView *_v;
-    CGFloat _offsetY;
-    float lastContentOffset;
-    CornerView *_cornerview;
+//    int page;
+//    NSMutableArray * tittleArr;
+//    NewsBanner *tittleScroll;
+//    UIView *_topView;
+//    AdView *_v;
+//    CGFloat _offsetY;
+//    float lastContentOffset;
+//    CornerView *_cornerview;
     UIView *_bkView;
     NSInteger _question;
     CGFloat width;
-    CGFloat hight;
+//    CGFloat hight;
     UIImageView *_redImageView;
     NSString *_city;
     UIView *_view;
@@ -211,19 +179,19 @@
     //  [_cornerview setNum:[[notification object] intValue]];
     
 }
-- (void)scrollViewWillBeginDragging:(UIScrollView *)scrollView{
-    
-    lastContentOffset = scrollView.contentOffset.y;
-}
-
-- (void)scrollViewWillBeginDecelerating:(UIScrollView *)scrollView{
-//   滚动列表tabbar隐藏。
-//    if (lastContentOffset < scrollView.contentOffset.y) {
-//        [self setHomeTabBarHidden:YES];
-//    }else{
-//        [self setHomeTabBarHidden:NO];
-//    }
-}
+//- (void)scrollViewWillBeginDragging:(UIScrollView *)scrollView{
+//
+//    lastContentOffset = scrollView.contentOffset.y;
+//}
+//
+//- (void)scrollViewWillBeginDecelerating:(UIScrollView *)scrollView{
+////   滚动列表tabbar隐藏。
+////    if (lastContentOffset < scrollView.contentOffset.y) {
+////        [self setHomeTabBarHidden:YES];
+////    }else{
+////        [self setHomeTabBarHidden:NO];
+////    }
+//}
 
 -(void)cityPick
 {
@@ -399,7 +367,6 @@
 }
 
 -(void)notificationPush:(NSNotification *)notification {
-    
     NSDictionary *dic=[notification object];
     [self weakPushWebVC:dic];
 }
@@ -447,7 +414,7 @@
         }
     }
     [self.navigationController popToRootViewControllerAnimated:YES];
-    if ( type==5) {    //网页链接
+    if ( type == 5) {    //网页链接
         
         NSString *url=dic[@"activities_content"];
         if (url) {
@@ -457,7 +424,7 @@
             [self pushViewController:controller];
         }
     }
-    else if (type==6){ //资讯
+    else if (type == 6){ //资讯
         [self addWaitingView];
         [network getPushNewsDetail:stringFormatString(dic[@"businessid"]) success:^(NSDictionary *obj) {
             [self removeWaitingView];
@@ -477,8 +444,7 @@
             }
         } failure:^(NSDictionary *obj2) {
         }];
-    }
-    else if (type==1){  // 供应
+    } else if (type==1){  // 供应
         [self addWaitingView];
         [network getSupplyDetailID:USERMODEL.userID supply_id:stringFormatString(dic[@"businessid"])  success:^(NSDictionary *obj) {
             NSDictionary *dic=obj[@"content"];
@@ -488,27 +454,27 @@
         } failure:^(NSDictionary *obj2) {
             
         }];
-    }else if (type==2){  // 话题
-        [self addWaitingView];
-        [network getTopicDetailID:USERMODEL.userID topic_id:stringFormatString(dic[@"businessid"]) success:^(NSDictionary *obj) {
-            NSDictionary *dic=obj[@"content"];
-            
-            [weakSelf pushVC:dic type:3];
-            
-        } failure:^(NSDictionary *obj2) {
-            
-        }];
-    }else if (type==3){  //求购
-        [self addWaitingView];
-        [network getBuyDetailID:USERMODEL.userID want_buy_id:stringFormatString(dic[@"businessid"]) success:^(NSDictionary *obj) {
-            NSDictionary *dic=obj[@"content"];
-            
-            [weakSelf pushVC:dic type:2];
-            
-        } failure:^(NSDictionary *obj2) {
-            
-        }];
-    }else if (type == 4||type == 8||type == 7){ //活动
+    } else if (type == 2){  // 话题
+		[self addWaitingView];
+		[network getTopicDetailID:USERMODEL.userID topic_id:stringFormatString(dic[@"businessid"]) success:^(NSDictionary *obj) {
+			NSDictionary *dic=obj[@"content"];
+			
+			[weakSelf pushVC:dic type:3];
+			
+		} failure:^(NSDictionary *obj2) {
+			
+		}];
+    } else if (type == 3){  //求购
+		[self addWaitingView];
+		[network getBuyDetailID:USERMODEL.userID want_buy_id:stringFormatString(dic[@"businessid"]) success:^(NSDictionary *obj) {
+			NSDictionary *dic=obj[@"content"];
+			
+			[weakSelf pushVC:dic type:2];
+			
+		} failure:^(NSDictionary *obj2) {
+			
+		}];
+    } else if (type == 4 || type == 8 || type == 7) { //活动
         [self addWaitingView];
         [network getActivitiesDetail:stringFormatString(dic[@"businessid"]) type:stringFormatInt(type) success:^(NSDictionary *obj) {
             ActivitiesListModel *detailModel = obj[@"content"];
@@ -530,13 +496,14 @@
         } failure:^(NSDictionary *obj2) {
             
         }];
-    }else if (type==10 || type ==11){// 评论我的
+    } else if (type==10 || type ==11){// 评论我的
         
-    }else if (type==12){//发布的问题被回复
+    } else if ( type == 12){//发布的问题被回复
         AskProblemDetailViewController *vc=[[AskProblemDetailViewController alloc]init];
         vc.answer_id=[dic[@"answer_id"] stringValue];
         [self pushViewController:vc];
     }
+	
 }
 
 -(void)pushVC:(NSDictionary *)dic type:(int)type {
@@ -586,7 +553,7 @@
     
     
     topView = [[HomePageTopView alloc]initWithFrame:CGRectMake(0, 0, WindowWith, WindowWith*0.453)];
-    _v = topView.v;
+//    _v = topView.v;
     _weatherView = topView.weatherView;
     _redImageView = topView.redImageView;
     topView.callBack=^(NSInteger index,NSDictionary *dic){
@@ -633,7 +600,7 @@
     [self CreateTableViewRefesh:_table type:ENT_RefreshHeader successRefesh:^(MJRefreshComponent *refreshView) {
         [weakSelf loadRefesh:refreshView];
     }];
-    page = 1;
+//    page = 1;
     //    [self refreshTableViewLoading:commTableView data:dataArray dateType:kTopicUserDate];
     //  [self beginRefesh:ENT_RefreshHeader];
     
@@ -696,15 +663,16 @@
     self.popupViewController.theme.presentationStyle = CNPPopupPresentationStyleFadeIn;
     [self.popupViewController presentPopupControllerAnimated:YES];
 }
+
 - (void)dismissPopupController {
     [self.popupViewController dismissPopupControllerAnimated:YES];
 }
 
-
--(void)backTopClick:(UIButton *)sender {    
-    [self scrollTopPoint:_table];
-    [self setHomeTabBarHidden:NO];
+-(void)backTopClick:(UIButton *)sender {
+	[self scrollTopPoint:_table];
+	[self setHomeTabBarHidden:NO];
 }
+
 //地址选择
 - (void)chooseAdress:(NSString *)title tag:(NSInteger)tag
 {
@@ -870,7 +838,7 @@
         ConfigManager.uploadImgUrl=url2;
         
         self->topView = [[HomePageTopView alloc]initWithFrame:CGRectMake(0, 0, WindowWith, WindowWith*0.453)];
-        self->_v = self->topView.v;
+//        self->_v = self->topView.v;
         self->_weatherView = self->topView.weatherView;
         self->_redImageView = self->topView.redImageView;
          __weak NewHomePageViewController *weakSelf=self;
@@ -941,11 +909,11 @@
         GuangChangMainViewController *controller=[[GuangChangMainViewController alloc]init];
         controller.i=_question;
         [self pushViewController:controller];
-#elif defined APP_YiLiang
-        MTThemeListViewController *controller=[[MTThemeListViewController alloc]init];
-        //controller.type=ENT_topic;
-        controller.inviteParentController=self;
-        [self pushViewController:controller];
+//#elif defined APP_YiLiang
+//        MTThemeListViewController *controller=[[MTThemeListViewController alloc]init];
+//        //controller.type=ENT_topic;
+//        controller.inviteParentController=self;
+//        [self pushViewController:controller];
 #endif
     }
     else if (integer==1003)
@@ -972,7 +940,7 @@
             ZhaoPingViewController *vc=[[ZhaoPingViewController alloc]init];
             [self pushViewController:vc];
             return;
-        }else if ([[NSUserDefaults standardUserDefaults] integerForKey:kJobIdentKey]==1001){
+        } else if ([[NSUserDefaults standardUserDefaults] integerForKey:kJobIdentKey]==1001){
             GiuZhiViewController *vc=[[GiuZhiViewController alloc]init];
             [self pushViewController:vc];
             return;
@@ -1362,8 +1330,7 @@
         return kWidth(284);
         return 10+WindowWith*0.456*0.6315+45;
         
-    }
-    else{
+    } else{
         return 40;
     }
 }
@@ -1513,10 +1480,7 @@
     [self pushViewController:vc];
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
+
 #pragma mark - 搜索代理
 - (void)flowerSearchViewWithText:(NSString *)searchText textField:(UITextField *)textField {
     [textField resignFirstResponder];

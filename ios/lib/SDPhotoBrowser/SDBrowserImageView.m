@@ -15,7 +15,7 @@
 @implementation SDBrowserImageView
 {
     __weak SDWaitingView *_waitingView;
-    BOOL _didCheckSize;
+//    BOOL _didCheckSize;
     UIScrollView *_scroll;
     UIImageView *_scrollImageView;
     UIScrollView *_zoomingScroolView;

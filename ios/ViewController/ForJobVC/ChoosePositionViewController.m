@@ -13,7 +13,7 @@
     //IHTextField *_textView;
     PlaceholderTextView *_textView;
     MTBaseTableView *commTableView;
-    int page;
+//    int page;
     
     NSMutableArray *dataArray;
     SearchType _type;

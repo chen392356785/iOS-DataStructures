@@ -14,7 +14,7 @@
 
 @interface CreatNerseryViewController ()<JLActionSheetDelegate,JLAddressActionSheetDelegate,UICollectionViewDelegate,UICollectionViewDataSource,UITextFieldDelegate,UITextViewDelegate>
 {
-    JLSimplePickViewComponent *_pickView;
+//    JLSimplePickViewComponent *_pickView;
     NSMutableArray *plantArr;
     NSArray *nameArr;
     NSArray *dataArr;
@@ -27,7 +27,7 @@
     UICollectionView *_collectionView;
     NSMutableArray *imgsArray;
     BOOL isFirstAddPhoto;
-    BOOL isSelectedPhoto;
+//    BOOL isSelectedPhoto;
     
     CGFloat height;
     
@@ -493,7 +493,9 @@
                     
                 }];
                 
-            }];
+			} failure:^(NSError *error) {
+				
+			}];
         }else {
             [self addSucessView:@"请上传3张真实苗木图片" type:2];
         }
@@ -802,10 +804,10 @@
     //重新刷新布局
     _collectionView.sd_layout.heightIs(((imgsArray.count-1)/3+1) *((WindowWith-60)/3 +20));
     [_topView setupAutoHeightWithBottomView:_collectionView bottomMargin:15];
-    
-    if (imgsArray.count==0) {
-        isSelectedPhoto=NO;
-    }
+//    
+//    if (imgsArray.count==0) {
+//        isSelectedPhoto=NO;
+//    }
 }
 
 //接收选择的城市和省份名称

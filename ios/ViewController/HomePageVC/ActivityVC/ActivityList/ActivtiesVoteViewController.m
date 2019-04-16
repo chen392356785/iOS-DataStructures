@@ -19,11 +19,11 @@
 {
     UICollectionView *_collectionView;
     NSMutableArray *dataArr;
-    UIView *_topView;
+//    UIView *_topView;
     UITextField *_textfiled;
     UIView *_bottomView;
     VotoView *_votoView;
-    NSIndexPath *_indexPath;
+//    NSIndexPath *_indexPath;
     NSString *_totleNum;
     NSString *_total_piao;      //总共可用票数
     NSString *_surplus;

@@ -17,7 +17,7 @@
     UILabel *_remarkLabel;
     UIAsyncImageView *_imageView;
     
-    NSInteger _index;
+//    NSInteger _index;
     BOOL _editing;
 }
 

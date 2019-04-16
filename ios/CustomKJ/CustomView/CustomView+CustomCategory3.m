@@ -20,19 +20,8 @@
 {
     self = [super initWithFrame:frame];
     if (self) {
-
         _picContainerView = [SDWeiXinPhotoContainerView new];
         [self addSubview:_picContainerView];
-//        for (NSInteger i=0; i<9; i++) {
-//            UIAsyncImageView *imageView=[[UIAsyncImageView alloc]initWithFrame:CGRectMake(0, _lastImg.bottom+10, self.width, 100)];
-//            _lastImg=imageView;
-//            imageView.tag=2000+i;
-//            imageView.hidden=YES;
-//            imageView.image=DefaultImage_logo;
-//            [self addSubview:imageView];
-//
-//
-//        }
     }
     
     return self;
@@ -48,47 +37,18 @@
     _picContainerView.sd_layout
     .leftSpaceToView(self, 4)
     .topSpaceToView(self, 5);
-/*
-    CGFloat imgHeigh=0;
-    for (int i=0; i<arr.count; i++) {
-        
-        if (i!=0) {
-            imgHeigh=_lastImg.bottom;
-        }
-          MTPhotosModel *mod=arr[i];
-        
-         UIAsyncImageView *imageView=[self viewWithTag:2000+i];
-         [imageView setImageAsyncWithURL:mod.imgUrl placeholderImage:DefaultImage_logo];
-        [imageView canClickItWithDuration:0.5 ThumbUrl:mod.imgUrl];
-         imageView.frame=CGRectMake(0, imgHeigh+10, self.width, self.width*(mod.imgHeigh/mod.imgWidth));
-         _lastImg=imageView;
-         imageView.hidden=NO;
-     
-     }
-    
-    int count=(int)arr.count;
-    for (int i=2000+count; i<2009; i++) {
-        UIAsyncImageView *imgView=(UIAsyncImageView *)[self viewWithTag:i];
-        imgView.hidden=YES;
-    }
-//*/
+
 }
 
 
 -(CGFloat)returnImagesHightWithArr:(NSArray *)arr{
     CGFloat hight=0;
     for (int i=0; i<arr.count; i++) {
-       MTPhotosModel *mod=arr[i];
-        
+       MTPhotosModel *mod = arr[i];
         hight=hight+self.width*(mod.imgHeigh/mod.imgWidth)+10;
     }
-    
     return _picContainerView.size.height;
-    
-//    return hight;
 }
-
-
 
 
 @end
@@ -529,7 +489,7 @@ typedef NS_ENUM(NSInteger , MTPayType) {
     UIView *topview;
     UIView *zfbBgView;
     UIView *wxBgView;
-    UIButton *GoPay;
+//    UIButton *GoPay;
     UIButton *zfbBut;
     UIButton *wxBut;
     MTPayType payType;
@@ -722,7 +682,7 @@ typedef NS_ENUM(NSInteger , MTPayType) {
         bkView.backgroundColor=[UIColor whiteColor];
         bkView.center=self.center;
         [self addSubview:bkView];
-        _bkView=bkView;
+//        _bkView=bkView;
         
         UITapGestureRecognizer *Tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(hide)];
         

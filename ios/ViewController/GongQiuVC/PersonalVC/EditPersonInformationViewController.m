@@ -18,13 +18,13 @@
 {
     UIButton *_manBtn;
     UIButton *_famaleBtn;
-    SMLabel *_manLbl;
-    SMLabel *_famaleLbl;
+//    SMLabel *_manLbl;
+//    SMLabel *_famaleLbl;
     NSString *_zhuying;
-    NSString *_introduction;
-    NSArray *hyArray;
+//    NSString *_introduction;
+//    NSArray *hyArray;
      NSMutableArray *headImageArray;
-    NSInteger _selIndex;
+//    NSInteger _selIndex;
     KICropImageView* _cropImageView;
      UIAsyncImageView *_headImageView;
     int job_type;
@@ -64,7 +64,7 @@
     
    NSDictionary *dic=[IHUtility getUserDefalutsDicKey:kUserDefalutLoginInfo];
    
-    hyArray=[[NSMutableArray alloc]init];
+//    hyArray=[[NSMutableArray alloc]init];
     headImageArray=[[NSMutableArray alloc]init];
     
     [self setTitle:@"编辑个人资料"];
@@ -451,7 +451,9 @@
                 
             }];
             
-        }];
+		} failure:^(NSError *error) {
+			
+		}];
 
     }else
     {

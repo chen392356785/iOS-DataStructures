@@ -12,7 +12,7 @@
     UILabel *titlLabel;
     UILabel *moreLabel;
     UIAsyncImageView *_ContImageView;
-    NewVarietyPicModel *_model;
+//    NewVarietyPicModel *_model;
     UIAsyncImageView *moreImgeV;
     UITapGestureRecognizer *tap;    //点击手势
 }
@@ -85,7 +85,7 @@
     }];
 }
 - (void)setHeadViewNewVarietyPicModel:(NewVarietyPicModel *)model {
-    _model = model;
+//    _model = model;
     moreLabel.text = @"查看更多";
     titlLabel.text = model.nurseryTypeName;
     if (model.nurseryNewDetailList.count == 0) {

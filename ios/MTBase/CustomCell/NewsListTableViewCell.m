@@ -436,7 +436,7 @@
         
         UIView * line=[[UIView alloc]initWithFrame:CGRectMake(0, 0, WindowWith, 1)];
         line.backgroundColor=cLineColor;
-        _lineView=line;
+//        _lineView=line;
         [self.contentView addSubview:line];
         
         
@@ -562,7 +562,7 @@
         
         UIView * line=[[UIView alloc]initWithFrame:CGRectMake(0,  0, WindowWith, 1)];
         line.backgroundColor=cLineColor;
-        _lineView=line;
+//        _lineView=line;
         [self.contentView addSubview:line];
         
         
@@ -719,7 +719,7 @@
         
         UIView * line=[[UIView alloc]initWithFrame:CGRectMake(0,  0, WindowWith, 1)];
         line.backgroundColor=cLineColor;
-        _lineView=line;
+//        _lineView=line;
         [self.contentView addSubview:line];
         
         

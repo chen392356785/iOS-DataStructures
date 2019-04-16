@@ -13,9 +13,9 @@
 {
     IHTextField *_passWordText;
     IHTextField *_phoneText;
-    IHTextField *_oldPassWordTextFeild;
-    IHTextField *_newPassWordTextFeild;
-    BOOL isHiddenPW;
+//    IHTextField *_oldPassWordTextFeild;
+//    IHTextField *_newPassWordTextFeild;
+//    BOOL isHiddenPW;
      int channel;
     
 }
@@ -148,7 +148,9 @@
                         NSString *hxpassword  =dic[@"hx_password"];
                         self.NewSelectSurnBlock(YES, hxName, hxpassword,dic);
                     }];
-                }];
+				} failure:^(NSError *error) {
+					
+				}];
             }
             else {
 				[network NewGetUserPhoneNumber:self.UserID code:self->_passWordText.text phone:self->_phoneText.text WXName:self.WXName WXIcon:self.headIconUrl success:^(NSDictionary *obj) {

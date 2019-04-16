@@ -10,149 +10,139 @@
 
 #import "BuyCellSubView.h"
 
-@interface FabuBuyViewCell () {
-    FabuBuyModel *model;
-}
+@interface FabuBuyViewCell ()
+
+///scrollView
+@property (nonatomic,strong) UIScrollView *scrollView;
+///releaseModel
+@property (nonatomic,strong) FabuBuyModel *releaseModel;
 
 @end
 
 @implementation FabuBuyViewCell
 
+#pragma mark - setup
+
 - (instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier
 {
-    self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
-    if (self) {
-        [self createView];
-        model = [[FabuBuyModel alloc] init];
-    }
-    return self;
+	self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
+	if (self) {
+		[self createView];
+		[[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(CommitNotificationBuyFabuAction:) name:NotificationBuyFabuAction object:nil];
+
+	}
+	return self;
 }
 
-//- (void)layoutSubviews {
-//	[super layoutSubviews];
-//}
 
 - (void) createView {
-    _scroll = [[UIScrollView alloc] init];
-    [self.contentView addSubview:_scroll];
-    marr = [[NSMutableArray alloc] init];
-    _scroll.delegate = self;
-    [_scroll mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.left.right.bottom.top.equalTo(self);
-    }];
-    _scroll.contentSize = CGSizeMake(iPhoneWidth*MTbuyViewTypeCount, 0);
-    _scroll.pagingEnabled = YES;
-    _scroll.backgroundColor = kColor(@"#FBFBFB");
-    _scroll.showsHorizontalScrollIndicator = NO;
-    [self addScrollSubViews];
+	_scrollView = [[UIScrollView alloc] init];
+	[self.contentView addSubview:_scrollView];
+	_scrollView.delegate = self;
+	[_scrollView mas_makeConstraints:^(MASConstraintMaker *make) {
+		make.edges.equalTo(self.contentView);
+	}];
+	_scrollView.contentSize = CGSizeMake(iPhoneWidth*MTbuyViewTypeCount, 0);
+	_scrollView.pagingEnabled = YES;
+	_scrollView.backgroundColor = kColor(@"#FBFBFB");
+	_scrollView.showsHorizontalScrollIndicator = NO;
+	[self addScrollSubViews];
+	
 }
+
+
 
 - (void)addScrollSubViews {
-    [_scroll removeAllSubviews];
-    WS(weakSelf);
-    [_scroll setNeedsLayout];
-    for (int i = 0; i < MTbuyViewTypeCount; i ++) {
-        BuyCellSubView *subView = [[BuyCellSubView alloc] init];
-        subView.selectGuigeBlock = ^(UILabel *lab) {
-            self.selectGuigeBlock(lab);
-        };
-        subView.selectMoneyBlock = ^(UILabel *lab) {
-            self.selectMoneyBlock(lab);
-        };
-        subView.selectCompanyNameBlock = ^(UILabel *lab) {
-            self.selectCompanyNameBlock(lab);
-        };
-        subView.selectPinZBlock = ^(UILabel *lab) {
-            self.selectPinZhongBlock(lab);
-        };
-        subView.tag = i;
-        subView.index = i;
-        subView.fabumodel = [[FabuBuyModel alloc] init];
-        [marr addObject:subView.fabumodel];
-//        subView.scrollSubView = _scroll;
-        subView.commmitselectBlock = ^{
-            [weakSelf commitData];
-        };
-        [_scroll addSubview:subView];
-        [subView mas_makeConstraints:^(MASConstraintMaker *make) {
-            make.top.bottom.equalTo(self);
-            make.width.offset(iPhoneWidth);
-            make.left.offset((i*iPhoneWidth));
-        }];
-    }
+	//移除旧的视图 重新布局 UI
+	[_scrollView removeAllSubviews];
+	for (int i = 0; i < MTbuyViewTypeCount; i ++) {
+		BuyCellSubView *subView = [[BuyCellSubView alloc] init];
+		subView.selectCompanyNameBlock = self.selectCompanyNameBlock;
+		subView.tag = i;
+		subView.index = i;
+		subView.fabumodel = self.releaseModel;
+		[_scrollView addSubview:subView];
+		[subView mas_makeConstraints:^(MASConstraintMaker *make) {
+			make.top.bottom.equalTo(self.contentView);
+			make.width.offset(iPhoneWidth);
+			make.left.offset((i*iPhoneWidth));
+		}];
+	}
+	
+}
 
+- (FabuBuyModel *)releaseModel {
+	if (!_releaseModel) {
+		_releaseModel = [[FabuBuyModel alloc] init];
+		_releaseModel.number = @"1";
+		_releaseModel.unit = @"株";
+		_releaseModel.raiseMethod = @"籽播苗";
+		_releaseModel.windPoint = @"";
+		_releaseModel.height = @"";
+		_releaseModel.crownWidth = @"";
+		_releaseModel.spec = @"";
+		_releaseModel.specUnit = @"胸径";
+		_releaseModel.univalent = @"";
+		_releaseModel.density = @"疏";
+		_releaseModel.hasTrunk = @"有";
+		_releaseModel.model = @"伞形";
+		_releaseModel.type = @"独杆";
+		_releaseModel.culturalMethod = @"圃地苗";
+		_releaseModel.soilBallDress = @"草绳";
+		_releaseModel.soilBall = @"黄土";
+		_releaseModel.safeguard = @"树干缠亚麻";
+		_releaseModel.soilBallSize = @"";
+		_releaseModel.soilThickness = @"";
+		_releaseModel.soilBallShape = @"锥形";
+		_releaseModel.insectPest = @"一般";
+		_releaseModel.trim = @"是";
+		_releaseModel.waterFertilizer = @"一般";
+		_releaseModel.loadLift = @"一般水平";
+		_releaseModel.roadWay = @"道路设施完善";
+		_releaseModel.userId = USERMODEL.userID;
+		_releaseModel.remark = @"";
+	}
+	return _releaseModel;
 }
-- (void) commitData {
-    for (int i = 0; i < MTbuyViewTypeCount; i ++) {
-       FabuBuyModel *tempModel = marr[i];
-        if (i == 0) {
-            if (tempModel.height == nil || tempModel.height.length < 1) {
-                [IHUtility addSucessView:@"请输入高度" type:2];
-                return;
-            }
-            if (tempModel.crownWidth == nil || tempModel.crownWidth.length < 1) {
-                [IHUtility addSucessView:@"请输入冠幅" type:2];
-                return;
-            }
-            if (tempModel.windPoint == nil || tempModel.windPoint.length < 1) {
-                [IHUtility addSucessView:@"请输入分支点" type:2];
-                return;
-            }
-            model.height = tempModel.height;
-            model.crownWidth = tempModel.crownWidth;
-            model.windPoint = tempModel.windPoint;
-            model.number = tempModel.number;
-            model.raiseMethod = tempModel.raiseMethod;
-            model.unit = tempModel.unit;
-            
-        }else if (i == 1){
-            model.density = tempModel.density;
-            model.hasTrunk = tempModel.hasTrunk;
-            model.type = tempModel.type;
-            model.model = tempModel.model;
-            model.culturalMethod = tempModel.culturalMethod;
-        }else if (i == 2){
-            model.soilBallDress = tempModel.soilBallDress;
-            model.soilBall = tempModel.soilBall;
-            model.safeguard = tempModel.safeguard;
-            model.soilBallSize = tempModel.soilBallSize;
-            model.soilThickness = tempModel.soilThickness;
-            model.soilBallShape = tempModel.soilBallShape;
-        }else if (i == 3){
-            model.insectPest = tempModel.insectPest;
-            model.trim = tempModel.trim;
-            model.waterFertilizer = tempModel.waterFertilizer;
-            model.loadLift = tempModel.loadLift;
-            model.roadWay = tempModel.roadWay;
-        }
-    }
-    if (self.selectcommitModelBlock) {
-        self.selectcommitModelBlock(model);
-    }
-//    NSLog(@"subbiewModel = %@",model);
-}
-- (void)setScrollViewContOffX:(NSInteger)index {
-    [UIView animateWithDuration:0.3 animations:^{
-		self->_scroll.contentOffset = CGPointMake(index * iPhoneWidth, 0);
-    }];
-}
+
+#pragma mark - UIScrollViewDelegate
 
 - (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView {
-    NSInteger current = scrollView.contentOffset.x / iPhoneWidth;
-    if (self.ContOffXBlock) {
-        self.ContOffXBlock(current);
-    }
+	NSInteger current = scrollView.contentOffset.x / iPhoneWidth;
+	if (self.ContOffXBlock) {
+		self.ContOffXBlock(current);
+	}
 }
-- (BOOL)gestureRecognizer:(UIGestureRecognizer *)gestureRecognizer shouldReceiveTouch:(UITouch *)touch{
-    if ([NSStringFromClass([touch.view class]) isEqualToString:@"UITableViewCellContentView"]) {
-        return NO;
-        
-    } else {
-        return YES;
-        
-    }
+
+- (void)setScrollViewContOffX:(NSInteger)index {
+	[UIView animateWithDuration:0.3 animations:^{
+		self->_scrollView.contentOffset = CGPointMake(index * iPhoneWidth,0);
+	}];
+}
+
+#pragma mark - Function
+
+//提交
+-(void)CommitNotificationBuyFabuAction:(NSNotification *)notification {
+	
+	if ([self.releaseModel.varieties isEqualToString:@""]) {
+		[IHUtility addSucessView:@"请输入品种" type:2];
+		return;
+	}
+	if (self.selectcommitModelBlock) {
+		self.selectcommitModelBlock(self.releaseModel);
+	}
+}
+
+/// 更新公司苗圃名称
+- (void) updateCompanyName:(NSString *)company companyId:(NSString *)aCompanyId {
+	self.releaseModel.companyname = company;
+	self.releaseModel.companyId = aCompanyId;
+	BuyCellSubView *subView = [self.scrollView.subviews firstObject];
+	[subView reloadData];
 }
 
 
 
 @end
+

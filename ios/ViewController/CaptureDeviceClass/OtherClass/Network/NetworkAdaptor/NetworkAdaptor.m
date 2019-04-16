@@ -7,7 +7,6 @@
 //
 
 #import "NetworkAdaptor.h"
-//#import "HYBNetWorking.h"
 
 @implementation NetworkAdaptor
 

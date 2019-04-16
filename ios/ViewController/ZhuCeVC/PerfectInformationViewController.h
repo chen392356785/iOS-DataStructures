@@ -14,10 +14,10 @@
     KICropImageView* _cropImageView;
      BOOL isSelectedPhoto;
     MapAnnotationView *_nickNamelbl;
-    int sex;
+//    int sex;
     MapAnnotationView *_companylbl;
     MapAnnotationView *_industrylbl;
-    NSInteger _selIndex;
+//    NSInteger _selIndex;
 }
 @property(nonatomic,strong)NSString *phoneStr;
 @property(nonatomic,strong)NSString *passwordStr;

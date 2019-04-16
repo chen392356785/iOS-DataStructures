@@ -55,7 +55,7 @@
     NSString *_workCityID;
     NSString *_workPro;
     NSString *_workProID;
-    int position_id;
+//    int position_id;
     int disPlay;//1 不隐藏 0 隐藏
     int resume_id;//提交获取到的简历ID
     
@@ -305,7 +305,7 @@
             _JobIntentionLbl = lbl;
             if (stringFormatString(dataDic[@"expect_job_name"]).length > 0&&dataDic !=nil) {
                 _JobIntentionLbl.text = @"已填写";
-                position_id = [dataDic[@"expect_job_type"] intValue];
+//                position_id = [dataDic[@"expect_job_type"] intValue];
                 _workCity = stringFormatString(dataDic[@"work_city"]);
                 
                 NSMutableDictionary *Dic = [[NSMutableDictionary alloc] init];

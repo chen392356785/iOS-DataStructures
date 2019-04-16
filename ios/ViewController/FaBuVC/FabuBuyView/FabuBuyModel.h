@@ -43,6 +43,9 @@
 @property (nonatomic, copy) NSString <Optional> * waterFertilizer;//水肥
 @property (nonatomic, copy) NSString <Optional> * loadLift;//装车起吊技术
 @property (nonatomic, copy) NSString <Optional> * roadWay;//苗圃内转运及道路方便程度
+@property (nonatomic,copy) NSString <Optional>  *remark; //备注信息
+///specUnit
+@property (nonatomic,strong) NSString <Optional> *specUnit; //规格单位
 
 
 

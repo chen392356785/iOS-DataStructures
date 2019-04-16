@@ -55,7 +55,7 @@ static NSString *NoContentCellID  = @"NoContentViewCellID";
 @interface ActivesCrowdFundController () <UICollectionViewDataSource, UICollectionViewDelegate>{
     
     NSString *crowdId;//众筹ID
-    UIView *_topView;
+//    UIView *_topView;
 //    UITableView *_tableView;
     BOOL _isGrid;       //0：格子视图， 1：列表视图
     int whether;//是否众筹过  1为发起过众筹
@@ -97,14 +97,13 @@ static NSString *NoContentCellID  = @"NoContentViewCellID";
 }
 
 - (void) setTitle {
-    CGSize size = [IHUtility GetSizeByText:@"活动详情" sizeOfFont:15 width:200];
-    SMLabel *lbl = [[SMLabel alloc] initWithFrameWith:CGRectMake(0, 0, size.width, size.height) textColor:cBlackColor textFont:sysFont(15)];
-    lbl.text = @"活动详情";
-    self.navigationItem.titleView = lbl;
-    agreeArr=[[NSMutableArray alloc]init];
-    backTopbutton.top = backTopbutton.top - 50;
-    _barlineView.alpha=0;
-    
+	CGSize size = [IHUtility GetSizeByText:@"活动详情" sizeOfFont:15 width:200];
+	SMLabel *lbl = [[SMLabel alloc] initWithFrameWith:CGRectMake(0, 0, size.width, size.height) textColor:cBlackColor textFont:sysFont(15)];
+	lbl.text = @"活动详情";
+	self.navigationItem.titleView = lbl;
+	agreeArr = [[NSMutableArray alloc]init];
+	backTopbutton.top = backTopbutton.top - 50;
+	_barlineView.alpha = 0;
 }
 
 - (UICollectionView *)collectionView {

@@ -8,13 +8,13 @@
 
 #import "DFConstant.h"
 #import "DFIconConstant.h"
-#import "DFCommentViewController.h"
 #import "DFUserCommentView.h"
 #import "DFUserCommentCell.h"
 #import "DFCommentTopCell.h"
 #import "DFCommentModel.h"
 #import "DFIdentifierConstant.h"
 #import "DFDiscernListModel.h"
+#import "DFCommentViewController.h"
 
 @interface DFCommentViewController ()<UITableViewDelegate, UITableViewDataSource, UITextFieldDelegate>
 
@@ -92,7 +92,11 @@
                 [self.listArray removeAllObjects];
                 self.nowPage ++;
                 for (NSDictionary *commDic in array) {
-                    DFCommentModel *commentModel = [DFCommentModel mj_objectWithKeyValues:commDic];
+                    DFCommentModel *commentModel = [[DFCommentModel alloc] init];
+					commentModel.HeadImage = commDic[@"HeadImage"];
+					commentModel.NickName = commDic[@"NickName"];
+					commentModel.Content = commDic[@"Content"];
+					commentModel.TimeStr = commDic[@"TimeStr"];
                     [self.listArray addObject:commentModel];
                 }
             }
@@ -121,7 +125,11 @@
                 if (array.count > 0) {
                     self.nowPage ++;
                     for (NSDictionary *commDic in array) {
-                        DFCommentModel *commentModel = [DFCommentModel mj_objectWithKeyValues:commDic];
+						DFCommentModel *commentModel = [[DFCommentModel alloc] init];
+						commentModel.HeadImage = commDic[@"HeadImage"];
+						commentModel.NickName = commDic[@"NickName"];
+						commentModel.Content = commDic[@"Content"];
+						commentModel.TimeStr = commDic[@"TimeStr"];
                         [self.listArray addObject:commentModel];
                     }
                 }else {

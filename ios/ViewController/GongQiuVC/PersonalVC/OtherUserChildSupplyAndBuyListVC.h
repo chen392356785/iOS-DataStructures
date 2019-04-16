@@ -11,7 +11,7 @@
 
 @interface OtherUserChildSupplyAndBuyListVC : SMBaseViewController<ARSegmentControllerDelegate>
 {
-    MTSupplyAndBuyListModel *_selModel;
+//    MTSupplyAndBuyListModel *_selModel;
     NSIndexPath *_selIndexPath;
 }
 @property(nonatomic,assign)buyType type;

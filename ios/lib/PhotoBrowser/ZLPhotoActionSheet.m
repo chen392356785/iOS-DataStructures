@@ -43,16 +43,16 @@ typedef void (^handler)(NSArray<UIImage *> *selectPhotos);
 {
     self = [[[NSBundle mainBundle] loadNibNamed:@"ZLPhotoActionSheet" owner:self options:nil] lastObject];
     if (self) {
-        self.frame = CGRectMake(0, -65, kViewWidth, kViewHeight);
-        UICollectionViewFlowLayout *layout = [[UICollectionViewFlowLayout alloc] init];
-        layout.scrollDirection = UICollectionViewScrollDirectionHorizontal;
-        layout.minimumInteritemSpacing = 3;
-        layout.sectionInset = UIEdgeInsetsMake(0, 5, 0, 5);
-        
-        self.collectionView.collectionViewLayout = layout;
-        self.collectionView.backgroundColor = [UIColor whiteColor];
-        [self.collectionView registerNib:[UINib nibWithNibName:@"ZLCollectionCell" bundle:nil] forCellWithReuseIdentifier:@"ZLCollectionCell"];
-        
+        self.frame = CGRectMake(0,-65, kViewWidth, kViewHeight);
+//        UICollectionViewFlowLayout *layout = [[UICollectionViewFlowLayout alloc] init];
+//        layout.scrollDirection = UICollectionViewScrollDirectionHorizontal;
+//        layout.minimumInteritemSpacing = 3;
+//        layout.sectionInset = UIEdgeInsetsMake(0, 5, 0, 5);
+//
+//        self.collectionView.collectionViewLayout = layout;
+//        self.collectionView.backgroundColor = [UIColor whiteColor];
+//        [self.collectionView registerNib:[UINib nibWithNibName:@"ZLCollectionCell" bundle:nil] forCellWithReuseIdentifier:@"ZLCollectionCell"];
+//
         _maxSelectCount = 10;
         _maxPreviewCount = 20;
         _arrayDataSources  = [NSMutableArray array];
@@ -121,7 +121,7 @@ typedef void (^handler)(NSArray<UIImage *> *selectPhotos);
     [_arrayDataSources removeAllObjects];
     [_arrayDataSources addObjectsFromArray:[[ZLPhotoTool sharePhotoTool] getAllAssetInPhotoAblumWithAscending:NO]];
     
-    [self.collectionView reloadData];
+//    [self.collectionView reloadData];
 }
 
 #pragma mark - 显示隐藏视图及相关动画
@@ -132,7 +132,7 @@ typedef void (^handler)(NSArray<UIImage *> *selectPhotos);
     [self.arraySelectPhotos removeAllObjects];
     [self.btnCamera setTitle:@"拍照" forState:UIControlStateNormal];
     [self.btnCamera setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
-    [self.collectionView setContentOffset:CGPointZero];
+//    [self.collectionView setContentOffset:CGPointZero];
 }
 
 - (void)show
@@ -373,7 +373,7 @@ typedef void (^handler)(NSArray<UIImage *> *selectPhotos);
         [weakSelf.arraySelectPhotos removeAllObjects];
         [weakSelf.arraySelectPhotos addObjectsFromArray:selectedPhotos];
         [weakSelf changeBtnCameraTitle];
-        [weakSelf.collectionView reloadData];
+//        [weakSelf.collectionView reloadData];
     }];
     [svc setBtnDoneBlock:^(NSArray<ZLSelectPhotoModel *> *selectedPhotos, BOOL isSelectOriginalPhoto) {
         weakSelf.isSelectOriginalPhoto = isSelectOriginalPhoto;
@@ -427,11 +427,11 @@ typedef void (^handler)(NSArray<UIImage *> *selectPhotos);
 #pragma mark - 获取图片及图片尺寸的相关方法
 - (CGSize)getSizeWithAsset:(PHAsset *)asset
 {
-    CGFloat width  = (CGFloat)asset.pixelWidth;
-    CGFloat height = (CGFloat)asset.pixelHeight;
-    CGFloat scale = width/height;
-    
-    return CGSizeMake(self.collectionView.frame.size.height*scale, self.collectionView.frame.size.height);
+//    CGFloat width  = (CGFloat)asset.pixelWidth;
+//    CGFloat height = (CGFloat)asset.pixelHeight;
+//    CGFloat scale = width/height;
+	return CGSizeZero;
+//    return CGSizeMake(self.collectionView.frame.size.height*scale, self.collectionView.frame.size.height);
 }
 
 - (void)getImageWithAsset:(PHAsset *)asset completion:(void (^)(UIImage *image))completion

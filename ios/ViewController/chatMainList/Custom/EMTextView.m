@@ -21,8 +21,8 @@
         // Initialization code
         _contentColor = [UIColor blackColor];
         _placeholderColor = [UIColor lightGrayColor];
-        _editing = NO;
-        
+//        _editing = NO;
+		
         [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(startEditing:) name:UITextViewTextDidBeginEditingNotification object:self];
         [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(finishEditing:) name:UITextViewTextDidEndEditingNotification object:self];
     }
@@ -75,8 +75,8 @@
 
 - (void)startEditing:(NSNotification *)notification
 {
-    _editing = YES;
-    
+//    _editing = YES;
+	
     if ([super.text isEqualToString:_placeholder] && super.textColor == _placeholderColor) {
         super.textColor = _contentColor;
         super.text = @"";
@@ -85,15 +85,13 @@
 
 - (void)finishEditing:(NSNotification *)notification
 {
-    _editing = NO;
-    
-    if (super.text.length == 0) {
-        super.textColor = _placeholderColor;
-        super.text = _placeholder;
-    }
-    else{
-        super.textColor = _contentColor;
-    }
+//    _editing = NO;
+	if (super.text.length == 0) {
+		super.textColor = _placeholderColor;
+		super.text = _placeholder;
+	} else {
+		super.textColor = _contentColor;
+	}
 }
 
 @end

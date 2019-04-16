@@ -55,22 +55,19 @@
 - (instancetype)initWithFrame:(CGRect)frame
 {
     if (self = [super initWithFrame:frame]) {
-        
         [self setupViews];
-    
-        
-
-    }
+	}
     return self;
 }
 
 - (void)setupViews
 {
     _bgImageView = [UIImageView new];
-    UIImage *bgImage = [[[UIImage imageNamed:@""] stretchableImageWithLeftCapWidth:40 topCapHeight:30] imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate];
+    UIImage *bgImage = [[[UIImage imageNamed:@"reply_background"] stretchableImageWithLeftCapWidth:40 topCapHeight:30] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
     _bgImageView.image = bgImage;
-    _bgImageView.tintColor=SDColor(246, 247, 249, 1.0f);
-    _bgImageView.backgroundColor = [UIColor clearColor];
+//    _bgImageView.tintColor = SDColor(246, 247, 249, 1.0f);
+////    _bgImageView.backgroundColor = [UIColor clearColor];
+////	_bgImageView.backgroundColor = RGB(247.0f, 247.0f, 247.0f);
     [self addSubview:_bgImageView];
     
     _likeLabel = [MLLinkLabel new];
@@ -93,12 +90,12 @@
     
     self.commentItemsArray=[[NSMutableArray alloc]init];
     
-    _tableView=[[UITableView alloc]initWithFrame:CGRectMake(0, 0, self.width, 50) style:UITableViewStylePlain];
-    _tableView.backgroundColor=[UIColor clearColor];
-    _tableView.delegate=self;
+    _tableView = [[UITableView alloc]initWithFrame:CGRectMake(0, 0, self.width, 50) style:UITableViewStylePlain];
+    _tableView.backgroundColor = [UIColor clearColor];
+    _tableView.delegate = self;
      [_tableView setSeparatorStyle:UITableViewCellSeparatorStyleNone];
-    _tableView.scrollEnabled=NO;
-    _tableView.dataSource=self;
+    _tableView.scrollEnabled = NO;
+    _tableView.dataSource = self;
     [_tableView registerClass:[SDCommentListCell class] forCellReuseIdentifier:@"SDCommentListCell"];
     
     [self addSubview:_tableView];
@@ -135,58 +132,58 @@
     cell.model=model;
 
     [cell useCellFrameCacheWithIndexPath:indexPath tableView:tableView];
-//       cell.contentView.userInteractionEnabled=YES;
+	cell.contentView.userInteractionEnabled = YES;
 //    [cell addGestureRecognizer: [[UILongPressGestureRecognizer alloc]initWithTarget:self action:@selector(longTap:)]];
     
   
     return cell;
 }
 
--(BOOL)canBecomeFirstResponder{
-    return YES;
-}
+//-(BOOL)canBecomeFirstResponder{
+//    return YES;
+//}
 
-//重载UItableViewDelegate中得方法，长按Cell的时候，系统会调用该方法，确定是否显示出UIMenuController
-- (BOOL)tableView:(UITableView *)tableView shouldShowMenuForRowAtIndexPath:(NSIndexPath *)indexPath {
-    return YES;
-}
+////重载UItableViewDelegate中得方法，长按Cell的时候，系统会调用该方法，确定是否显示出UIMenuController
+//- (BOOL)tableView:(UITableView *)tableView shouldShowMenuForRowAtIndexPath:(NSIndexPath *)indexPath {
+//    return YES;
+//}
 
-//当上面方法返回YES时，系统调用该方法确定UIMenuController显示哪些选项
-- (BOOL)tableView:(UITableView *)tableView canPerformAction:(SEL)action forRowAtIndexPath:(NSIndexPath *)indexPath  withSender:(id)sender {
-     if(action == @selector(copy:)){
-        
-        
-        return YES;
-        
-    }
-    
-   
-    else if(action == @selector(select:)){
-        
-        return NO;
-        
-    }
-    
-    else if(action == @selector(selectAll:)){
-        
-        
-        return NO;    
-        
-    }    else  {     
-        
-        return [super canPerformAction:action withSender:sender];    
-        
-    }
-}
+////当上面方法返回YES时，系统调用该方法确定UIMenuController显示哪些选项
+//- (BOOL)tableView:(UITableView *)tableView canPerformAction:(SEL)action forRowAtIndexPath:(NSIndexPath *)indexPath  withSender:(id)sender {
+//     if(action == @selector(copy:)){
+//
+//
+//        return YES;
+//
+//    }
+//
+//
+//    else if(action == @selector(select:)){
+//
+//        return NO;
+//
+//    }
+//
+//    else if(action == @selector(selectAll:)){
+//
+//
+//        return NO;
+//
+//    }    else  {
+//
+//        return [super canPerformAction:action withSender:sender];
+//
+//    }
+//}
 
-//系统调用该方法确定点击按钮后的相关响应操作
-- (void)tableView:(UITableView *)tableView performAction:(SEL)action forRowAtIndexPath:(NSIndexPath *)indexPath withSender:(id)sender {
-    if (action == @selector(copy:)) {
-        SDTimeLineCellCommentItemModel *model = self.commentItemsArray[indexPath.row];
-        if(model.comment_cotent.length>0)
-        [UIPasteboard generalPasteboard].string = model.comment_cotent;
-    } 
-}
+////系统调用该方法确定点击按钮后的相关响应操作
+//- (void)tableView:(UITableView *)tableView performAction:(SEL)action forRowAtIndexPath:(NSIndexPath *)indexPath withSender:(id)sender {
+//    if (action == @selector(copy:)) {
+//        SDTimeLineCellCommentItemModel *model = self.commentItemsArray[indexPath.row];
+//        if(model.comment_cotent.length>0)
+//        [UIPasteboard generalPasteboard].string = model.comment_cotent;
+//    }
+//}
 
 //由于willDisplayCell是异步调用的，所以在上面的block里面不能即时更新UI，最好使用GCD通过主线程加上你的代码：
 

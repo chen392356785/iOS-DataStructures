@@ -35,7 +35,7 @@
 
 @interface CuttomSelectPicHead () <UICollectionViewDelegate,UICollectionViewDataSource>{
     UICollectionView *_collectionView;
-    CGRect _frame;
+//    CGRect _frame;
     NSMutableArray *imaArray;
 }
 @end
@@ -44,7 +44,7 @@
 
 - (instancetype)initWithFrame:(CGRect)frame {
     if (self = [super initWithFrame:frame]) {
-        _frame = frame;
+//        _frame = frame;
         self.backgroundColor = [UIColor whiteColor];
         [self creatSubView];
     }

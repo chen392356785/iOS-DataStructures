@@ -14,8 +14,8 @@
     UIView *backView;
     UIAsyncImageView *_imageView;
     UILabel *_titleLabel;
-    UILabel *_nameLab;
-    UILabel *lineLab;
+//    UILabel *_nameLab;
+//    UILabel *lineLab;
     
     UIView *subBgView;
 }

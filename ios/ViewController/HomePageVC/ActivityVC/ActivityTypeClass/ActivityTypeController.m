@@ -13,10 +13,8 @@
 #import "ActivityListViewController.h"
 @interface ActivityTypeController () <UITableViewDelegate,UITableViewDataSource>{
     UITableView *_tableView;
-    NSMutableArray *dataArr;
-    
+    NSMutableArray *dataArr;    
     int page;
-    int type_c;
     EmptyPromptView *_EPView;//没有活动的时候默认的提示
 }
 
@@ -53,7 +51,7 @@ static NSString *ActivityTypeCellID = @"ActivityTypeCellId";
     _EPView = EPView;
     [_tableView addSubview:EPView];
     page = 1;
-    type_c = 4;
+//    type_c = 4;
 }
 -(void)loadRefesh:(MJRefreshComponent *)refreshView{
     if (refreshView == _tableView.mj_header) {

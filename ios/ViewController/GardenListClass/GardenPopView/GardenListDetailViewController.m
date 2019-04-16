@@ -37,7 +37,7 @@ static NSString *MessageViewCellId  = @"MessageViewCell";
     IQKeyboardManager *keyboardManager = [IQKeyboardManager sharedManager]; // 获取类库的单例变量
     keyboardManager.shouldResignOnTouchOutside = NO;
     keyboardManager.keyboardDistanceFromTextField = kWidth(30);
-    
+
     [leftbutton setImage:kImage(@"icon_fh_b") forState:UIControlStateNormal];
     
     [UIApplication sharedApplication].statusBarStyle = UIStatusBarStyleLightContent;

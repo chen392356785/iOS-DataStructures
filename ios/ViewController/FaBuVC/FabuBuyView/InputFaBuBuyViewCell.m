@@ -6,6 +6,8 @@
 //  Copyright © 2019 听花科技. All rights reserved.
 //
 
+#import "FabuCuttom.h"
+#import "NumberCalculate.h"
 #import "InputFaBuBuyViewCell.h"
 
 
@@ -13,13 +15,12 @@
 
 - (instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier {
     if (self = [super initWithStyle:style reuseIdentifier:reuseIdentifier]) {
-        [self createText];
-        //  添加输入完成会回调通知
-        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(textFieldChanging:) name:UITextFieldTextDidChangeNotification object:self.textField];
-        [self crateNumCalcuLate];
-        [self addSwitchView];
-        [self createFabuCuttView];
-        
+		[self createText];
+		//  添加输入完成会回调通知
+		[[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(textFieldChanging:) name:UITextFieldTextDidChangeNotification object:self.textField];
+		[self crateNumCalcuLate];
+		[self addSwitchView];
+		[self createFabuCuttView];
     }
     return self;
 }
@@ -32,13 +33,8 @@
 	[self.contentView addSubview:_textField];
 	_textField.textAlignment = NSTextAlignmentRight;
 	_textField.centerY = _titleLabel.centerY;
-	UILabel *line = [[UILabel alloc] initWithFrame:CGRectMake(0, kWidth(46), iPhoneWidth, 1)];
-	line.backgroundColor = cLineColor;
-	[self.contentView addSubview:line];
-	self.lineLabel = line;
 	_textField.font = sysFont(font(15));
 }
-
 
 - (void)setTitleStr:(NSString *)titleStr{
     _titleLabel.text = titleStr;
@@ -55,7 +51,6 @@
     [_titleLabel sizeToFit];
     _textField.size = CGSizeMake(iPhoneWidth - _titleLabel.width - kWidth(40), _textField.height);
     _textField.origin = CGPointMake(_titleLabel.right + kWidth(5), _titleLabel.top);
-    
 }
 
 -(void)textFieldChanging:(id)sender{
@@ -69,10 +64,11 @@
 }
 
 - (void) crateNumCalcuLate{
-    NumberCalculate *number=[[NumberCalculate alloc]initWithFrame:CGRectMake(kWidth(86), 0, kWidth(110), kWidth(27))];
-    number.baseNum=@"1";
-    number.multipleNum=1;//数值增减基数（倍数增减） 默认1的倍数增减
-    number.minNum=1;
+	
+    NumberCalculate *number = [[NumberCalculate alloc]initWithFrame:CGRectMake(kWidth(86), 0, kWidth(110), kWidth(27))];
+    number.baseNum = @"1";
+    number.multipleNum = 1;//数值增减基数（倍数增减） 默认1的倍数增减
+    number.minNum = 1;
     number.maxNum = 99999;//最大值
     number.hidden = YES;
     [self addSubview:number];
@@ -81,7 +77,6 @@
     number.numborderColor = kColor(@"#05C1B0");
     number.buttonColor = kColor(@"#05C1B0");
     number.buttonTextColor = kColor(@"#FFFFFF");
-    
     
     _unitBut = [UIButton buttonWithType:UIButtonTypeSystem];
     _unitBut.frame = CGRectMake(iPhoneWidth - kWidth(20) - kWidth(56), 0,kWidth(56), 27);
@@ -99,8 +94,7 @@
     [_unitBut addSubview:selectImageView];
     selectImageView.frame = CGRectMake(_unitBut.width - 13,_unitBut.height - 12, 13.0f,12.0f);
     
-    
-    
+	
     _DetaiLab = [[UILabel alloc] initWithFrame:CGRectMake(_unitBut.left - 90, 0,kWidth(80), kWidth(27))];
     _DetaiLab.font = sysFont(font(14));
     _DetaiLab.textColor = kColor(@"#828282");
@@ -110,6 +104,7 @@
     _DetaiLab.hidden = YES;
 
 }
+
 - (void) addSwitchView {
     
     UISwitch *systemSwitch = [[UISwitch alloc] initWithFrame:CGRectMake(iPhoneWidth - kWidth(20) - kWidth(46), 0, kWidth(46), kWidth(22))];
@@ -124,6 +119,7 @@
     [systemSwitch setBackgroundColor:kColor(@"#DCDCDC")];
     systemSwitch.layer.cornerRadius = systemSwitch.height/2.;
     systemSwitch.layer.masksToBounds = YES;
+	
 }
 
 /** UISwitch valuedChanged */
@@ -139,20 +135,19 @@
     }
     NSLog(@"UISwitch状态：%@", sender.isOn ? @"开启" : @"关闭");
 }
-- (void) setEmergencyArr:(NSArray *)emergencyArr {
-    if (self.segmentedControl != nil) {
-        return;
-    }
-    UISegmentedControl *segmentedControl = [self retureSegment:emergencyArr];
-    self.segmentedControl = segmentedControl;
-    segmentedControl.frame = CGRectMake(iPhoneWidth - kWidth(20) - kWidth(61)*emergencyArr.count, 0, kWidth(61)*emergencyArr.count, kWidth(26));
-    segmentedControl.centerY = _titleLabel.centerY;
-    segmentedControl.selectedSegmentIndex = 0;
-    [segmentedControl addTarget:self action:@selector(change:) forControlEvents:UIControlEventValueChanged];
+
+- (UISegmentedControl *)segmentedControl {
+	if (!_segmentedControl) {
+		NSArray *itemArray = self.emergencyArr ?: self.payTypeArr;
+		NSInteger itemCount = itemArray.count;
+		_segmentedControl = [self retureSegment:itemArray];
+		_segmentedControl.frame = CGRectMake(iPhoneWidth - kWidth(20) - kWidth(63) *itemCount, 0, kWidth(63)*itemCount, kWidth(26));
+		_segmentedControl.centerY = _titleLabel.centerY;
+		_segmentedControl.apportionsSegmentWidthsByContent = YES;
+		[_segmentedControl addTarget:self action:@selector(change:) forControlEvents:UIControlEventValueChanged];
+	}
+	return _segmentedControl;
 }
-
-
-
 
 -(void)change:(UISegmentedControl*)seg{
     if (self.SegmentSelbloack) {
@@ -172,35 +167,26 @@
     }
 }
 
+- (void)setSegmentControlIndex:(NSInteger)segmentControlIndex {
+	_segmentControlIndex = segmentControlIndex;
+	[self.segmentedControl setSelectedSegmentIndex:_segmentControlIndex];
+}
+
 - (UISegmentedControl*) retureSegment:(NSArray *)arr {
-    UISegmentedControl *segmentedControl = [[UISegmentedControl alloc]initWithItems:arr];
-    self.segmentedControl = segmentedControl;
-    segmentedControl.centerY = _titleLabel.centerY;
-    segmentedControl.frame = CGRectMake(iPhoneWidth - kWidth(20) - kWidth(61)*arr.count, 0, kWidth(61)*arr.count, kWidth(26));
-    segmentedControl.tintColor = kColor(@"#05C1B0");
-    [self.contentView addSubview:segmentedControl];
-    segmentedControl.layer.cornerRadius = 0;
-    NSDictionary *dic = @{
-                          //1.设置字体样式:例如黑体,和字体大小
-                          NSFontAttributeName:[UIFont fontWithName:@"Arial-BoldMT" size:12],
-                          //2.字体颜色
-                          NSForegroundColorAttributeName:kColor(@"#5E5E5E")
-                          };
-    [segmentedControl setTitleTextAttributes:dic forState:UIControlStateNormal];
-//    segmentedControl.apportionsSegmentWidthsByContent = YES;
-    return segmentedControl;
+	UISegmentedControl *segmentedControl = [[UISegmentedControl alloc]initWithItems:arr];
+	segmentedControl.tintColor = kColor(@"#05C1B0");
+	[self.contentView addSubview:segmentedControl];
+	segmentedControl.layer.cornerRadius = 0;
+	NSDictionary *dic = @{
+						  //1.设置字体样式:例如黑体,和字体大小
+						  NSFontAttributeName:[UIFont systemFontOfSize:12.0f],
+						  //2.字体颜色
+						  NSForegroundColorAttributeName:kColor(@"#5E5E5E")
+						  };
+	[segmentedControl setTitleTextAttributes:dic forState:UIControlStateNormal];
+	[segmentedControl sizeToFit];
+	return segmentedControl;
 }
-
-//付款方式
-- (void)setPayTypeArr:(NSArray *)payTypeArr {
-    if (self.segmentedControl != nil) {
-        return;
-    }
-    UISegmentedControl *segmentedControl = [self retureSegment:payTypeArr];
-    segmentedControl.centerY = _titleLabel.centerY;
-    segmentedControl.selectedSegmentIndex = 0;
-}
-
 
 
 - (void) createFabuCuttView{
@@ -213,4 +199,5 @@
         weakSelf.inputBlock(str1);
     };
 }
+
 @end

@@ -19,7 +19,7 @@
 
 @interface MTZhaoPingTableViewCell : MTTableViewCell//招聘
 {
-    UIView *_bgView;
+//    UIView *_bgView;
     CurriculumVitaeView *_view;
 }
 
@@ -57,7 +57,7 @@
 @class RecruitWorksModel;
 @interface CurriculumVitaeTableViewCell : MTTableViewCell//简历详情(工作经历 教育经历)
 {
-    SMLabel *_positionLbl;
+//    SMLabel *_positionLbl;
     SMLabel *_companyLbl;
     SMLabel *_timeLbl;
     SMLabel *_contentLbl;
@@ -95,8 +95,8 @@
 
 @interface ChoosePositionTableViewCell : MTTableViewCell//选择职位
 {
-    SMLabel *_tilteLbl;
-    SMLabel *_lbl;
+//    SMLabel *_tilteLbl;
+//    SMLabel *_lbl;
     ChoosePositionView *_view;
     
 }
@@ -132,8 +132,8 @@
     UIAsyncImageView *_imageView;
     SMLabel *_seeLbl;
     SMLabel *_questionLbl;
-    UIAsyncImageView *_bgView;
-    UIImageView *_image;
+//    UIAsyncImageView *_bgView;
+//    UIImageView *_image;
 }
 -(void)setDataWithModel:(MyQuestionModel *)model i:(NSInteger)i;
 @property(nonatomic,strong)UIImageView *redImageView;
@@ -271,7 +271,7 @@
     SMLabel *_lbl3;
     SMLabel *_couponLbl;
     UIButton *_btn;
-    SMLabel *_statusLbl;
+//    SMLabel *_statusLbl;
 }
 -(void)setDataWithModel:(CouponListModel *)model;
 @end
@@ -287,7 +287,7 @@
 @interface RecommendGroupTableViewCell : MTTableViewCell
 {
     SMLabel *_namelbl;
-    UIButton *_peopleNumBtn;
+//    UIButton *_peopleNumBtn;
     SMLabel *_desclbl;
     UIButton *_applyBtn;
     UIButton *_btn;

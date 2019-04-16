@@ -17,8 +17,8 @@
 {
     UIButton *_manBtn;
     UIButton *_famaleBtn;
-    SMLabel *_manLbl;
-    SMLabel *_famaleLbl;
+//    SMLabel *_manLbl;
+//    SMLabel *_famaleLbl;
     BOOL _sex;
     NSMutableArray *hyArray; //行业list
     UIAsyncImageView *_headImageView;
@@ -199,17 +199,18 @@
     
     [self addWaitingView];
     [AliyunUpload uploadImage:headImageArray FileDirectory:ENT_fileImageHeader success:^(NSString *obj) {
+		[self removeWaitingView];
         NSString *sexStr;
         if (self->_manBtn.selected) {
             sexStr=@"1";
         }else{
             sexStr=@"2";
         }
-        
-//        NSDictionary *dic2=[self->hyArray objectAtIndex:self->_selIndex];
-//        NSString *i_typeID=[NSString stringWithFormat:@"%@",[dic2 objectForKey:@"i_type_id"]];
         [ConfigManager getAddressInfoWithUser_id:0 country:nil province:nil city:nil area:nil street:nil longitude:0 latitude:0 company_lon:0 company_lat:0 distance:0 company_province:nil company_city:nil company_area:nil company_street:nil];
-    }];
+	} failure:^(NSError *error) {
+		[self removeWaitingView];
+	}];
+	
 }
 
 -(void)headTap:(UITapGestureRecognizer *)tap{
@@ -349,7 +350,7 @@
         EditInformationView *urgentView=[_BaseScrollView viewWithTag:1002];
         urgentView.lbl.textColor=cBlackColor;
         urgentView.lbl.text=[dic objectForKey:@"i_name"];
-        _selIndex=index;
+//        _selIndex=index;
     }
 }
 

@@ -45,7 +45,7 @@
     
     NSString *jobName;
     
-    FMDatabase *db;
+//    FMDatabase *db;
     
     NSDictionary *purposeDic;//用户求职意向
     
@@ -114,7 +114,7 @@
     
     commTableView=[[MTBaseTableView alloc]initWithFrame:CGRectMake(0, logisticsView.bottom, WindowWith, WindowHeight - 43) tableviewStyle:UITableViewStylePlain];
     
-    dataArray=[[NSMutableArray alloc]init];
+    dataArray = [[NSMutableArray alloc]init];
     
     commTableView.attribute=self;
     commTableView.table.delegate=self;

@@ -13,7 +13,7 @@
 @interface CarDetailViewController ()<ChatViewControllerDelegate>
 {
     NSDictionary *_dic;
-    FindCarModel *_model;
+//    FindCarModel *_model;
 }
 @end
 

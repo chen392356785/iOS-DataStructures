@@ -13,7 +13,7 @@
     UIButton *myZCPlayBut;
     UIButton *myActionPlay;         //立即支付
     UILabel  *BottomLbael;
-    BOOL _isDidCrowdFunding;       //是否发起过众筹
+//    BOOL _isDidCrowdFunding;       //是否发起过众筹
 }
 @end
 

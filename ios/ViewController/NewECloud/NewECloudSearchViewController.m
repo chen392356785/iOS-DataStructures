@@ -19,12 +19,12 @@
     NSMutableArray *dataArray;
     NSMutableArray *btnArray;//热门搜索或者附近的人
     NSArray *array;//附近的人
-    NSIndexPath *_indexPath;
+//    NSIndexPath *_indexPath;
     UIView *_searchView;
     SearchType _searchType;
     NSString *_nickName;
-    NSInteger btnIndex;//选择按钮的索引
-    NSString *_nursery;
+//    NSInteger btnIndex;//选择按钮的索引
+//    NSString *_nursery;
 }
 @end
 
@@ -48,7 +48,7 @@
     }
     _searchType=ENT_CloseSearch;
     _nickName=@"";
-    _nursery=@"";
+//    _nursery=@"";
     // [self setRightButtonImage:Image(@"Search Icon.png") forState:UIControlStateNormal];
     dataArray=[[NSMutableArray alloc]init];
     btnArray =[[NSMutableArray alloc]init];
@@ -163,9 +163,10 @@
     [_searchView addSubview:commTableView2];
 }
 
--(void)creatSearch:(NSInteger)index{
+-(void)creatSearch:(NSInteger)index {
+	
     __weak NewECloudSearchViewController *weakSelf=self;
-    btnIndex = index;
+//    btnIndex = index;
     if (self.type == ENT_company ||self.type==ENT_nursery) {
         
         _searchType=ENT_Search;

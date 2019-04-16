@@ -13,7 +13,7 @@
 @interface PersonScoreViewController ()<UITableViewDelegate>
 {
     MTBaseTableView *commTableView;
-    int page;
+//    int page;
     NSMutableArray *dataArray;
 }
 @end

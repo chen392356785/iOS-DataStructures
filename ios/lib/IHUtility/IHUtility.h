@@ -14,10 +14,10 @@
 #import <CommonCrypto/CommonHMAC.h>
 #import <CommonCrypto/CommonDigest.h>
 
-#define AppCacheFolder  @"InfoholdCach"                              //文件夹名称
+#define AppCacheFolder  @"InfoholdCach" //文件夹名称
 
 
-typedef enum{
+typedef enum {
 	KCATransitionTypeCube=0,
 	KCATransitionTypeMoveIn,
 	KCATransitionTypeReveal,

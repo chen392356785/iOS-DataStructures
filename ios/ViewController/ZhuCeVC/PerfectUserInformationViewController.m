@@ -17,7 +17,7 @@
     IHTextField *_nickNameTextField;
     KICropImageView* _cropImageView;
     BOOL isSelectedPhoto;
-    NSInteger _selIndex;
+//    NSInteger _selIndex;
 }
 @end
 
@@ -129,7 +129,7 @@
     [self addWaitingView];
     THWeakSelf;
     [AliyunUpload uploadImage:headImageArray FileDirectory:ENT_fileImageHeader success:^(NSString *obj) {
-        
+		[self removeWaitingView];
         NSDictionary *dic = [ConfigManager getAddressInfoWithUser_id:0 country:nil province:nil city:nil area:nil street:nil longitude:0 latitude:0 company_lon:0 company_lat:0 distance:0 company_province:nil company_city:nil company_area:nil company_street:nil];
         
         NSDictionary *dic1 = [ConfigManager getUserDicWithUser_name:self.phoneStr user_id:0 company_name:nil password:[IHUtility MD5Encode:[IHUtility MD5Encode:self.passwordStr]] nickname:self->_nickNameTextField.text address:nil hx_password:nil mobile:nil landline:nil email:nil i_type_id:0 sexy:0 business_direction:nil user_authentication:0 identity_key:0 heed_image_url:obj brief_introduction:nil position:nil wx_key:nil business_license_url:nil map_callout:0 addressInfo:dic];
@@ -141,7 +141,9 @@
                              NSDictionary *dic=[obj objectForKey:@"content"];
                              [self loginHuanXin:dic];
                          }];
-    }];
+	} failure:^(NSError *error) {
+		[self removeWaitingView];
+	}];
 }
 
 -(void)loginHuanXin:(NSDictionary *)dic{

@@ -21,7 +21,7 @@
 
 @interface MTTopView : CustomView
 {
-    SMLabel *_nicknamelbl;
+//    SMLabel *_nicknamelbl;
     SMLabel *_contentlbl;
     LookMeView *_lookView;
     CornerView *_cornerview;
@@ -122,17 +122,18 @@ typedef void (^isDidSelectBlock) (BOOL isClick);
 @class BQView;
 @class PersonLabelView;
 @interface PersonInformationView :UIImageView<ARSegmentPageControllerHeaderProtocol>
-{   SMLabel *_nickNameLbl;
-    UIImageView *_sexImageView;
+{
+    //SMLabel *_nickNameLbl;
+//    UIImageView *_sexImageView;
     UIAsyncImageView *_headerImageView;
     UIAsyncImageView *_VipImageView;
-    SMLabel *_companyNameLbl;
+//    SMLabel *_companyNameLbl;
     UIButton *_companyBtn;
-    UIButton *_certifyBtn;
-    UIButton *_distanceBtn;
-    UIImageView *_imgView;
-    BQView *_bqView;
-    PersonLabelView *_personLabelView;
+//    UIButton *_certifyBtn;
+//    UIButton *_distanceBtn;
+//    UIImageView *_imgView;
+//    BQView *_bqView;
+//    PersonLabelView *_personLabelView;
     UIButton *_btn;
     SMLabel *_fansLbl;
     SMLabel *_guanzhuLbl;

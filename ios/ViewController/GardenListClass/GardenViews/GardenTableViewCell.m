@@ -288,8 +288,8 @@ static CGFloat lastMaxX;
 
 @interface GardenOfflineTabCell () <UIScrollViewDelegate> {
     GardenCollectionView *_collectView;
-    UILabel *titleLab;
-    UILabel *timeLab;
+//    UILabel *titleLab;
+//    UILabel *timeLab;
 }
 
 @end
@@ -428,7 +428,7 @@ static CGFloat lastMaxX;
 
     UILabel *titleLab;
     UILabel *bangLab;
-    UIView *_bgview;
+//    UIView *_bgview;
 }
 - (void)updataSubViewModel:(yuanbangModel *)model;
 @end
@@ -444,7 +444,7 @@ static CGFloat lastMaxX;
     UIView *bgview = [[UIView alloc] initWithFrame:CGRectMake(kWidth(10), kWidth(10), iPhoneWidth - kWidth(20), kWidth(44))];
     bgview.backgroundColor = kColor(@"#FFFFFF");
     [self.contentView addSubview:bgview];
-    _bgview = bgview;
+//    _bgview = bgview;
     
     titleLab = [[UILabel alloc] initWithFrame:CGRectMake(kWidth(10), kWidth(3), bgview.width - kWidth(20), kWidth(20))];
     [bgview addSubview:titleLab];

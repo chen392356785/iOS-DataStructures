@@ -7,30 +7,17 @@
 //
 
 #import "MTTabBarViewController.h"
-//#import "GongQiuMainViewController.h"
-//#import "GuangChangMainViewController.h"
-#import "FaBuMainViewController.h"
 #import "MeMainViewController.h"
-//#import "MiaoTuMainViewController.h"
 #import "MTNewSupplyAndBuyViewController.h"
-//#import "BHBPopView.h"
 #import "NewHomePageViewController.h"
-//#import "ChatListViewController.h"
 #import "THNavigationController.h"
-
-//#import <AVFoundation/AVFoundation.h>
-
-//#import "DFCameraViewController.h"        //拍照
+//拍照
 #define  stateBarHeigh  [UIApplication sharedApplication].statusBarFrame.size.height
-
 #import "ClassroomHomeController.h"      //课堂
-
-
-//#import "UIImage+TabbarIcon.h"
 
 @interface MTTabBarViewController ()<MTTabBarDelegate>
 {
-    int indexFlag;
+//    int indexFlag;
 }
 @end
 
@@ -61,14 +48,7 @@
                 
             }
                 break;
-            case 5:
-            {
-                FaBuMainViewController *item2 = [[FaBuMainViewController alloc] init];
-                THNavigationController *nav = [[THNavigationController alloc] initWithRootViewController:item2];
-                
-                [item addObject:nav];
-                
-            }
+        
                 break;
             case 2:
             {
@@ -76,20 +56,15 @@
                 ClassroomHomeController *classRoomVc = [[ClassroomHomeController alloc] init];
                 THNavigationController *nav = [[THNavigationController alloc] initWithRootViewController:classRoomVc];
                 [item addObject:nav];
-                
-                
-                //                ChatListViewController *vc=[[ChatListViewController alloc]init];
-                //                THNavigationController *nav = [[THNavigationController alloc] initWithRootViewController:vc];
-                //                [item addObject:nav];
-                
+				
             }
                 break;
             case 3:
             {
-                MeMainViewController *item4 = [[MeMainViewController alloc] init];
-                THNavigationController *nav = [[THNavigationController alloc] initWithRootViewController:item4];
-                [item addObject:nav];
-                
+				MeMainViewController *item4 = [[MeMainViewController alloc] init];
+				THNavigationController *nav = [[THNavigationController alloc] initWithRootViewController:item4];
+				[item addObject:nav];
+				
             }
                 break;
             default:
@@ -112,7 +87,7 @@
     
     [super viewDidLoad];
     
-    indexFlag=0;
+//    indexFlag=0;
     self.viewControllers = [self createTabItemArr];
     
     CGRect tabFrame = self.tabBar.frame; //self.TabBar is IBOutlet of your TabBar
@@ -323,7 +298,7 @@
     [[tabbarbuttonArray[index] layer]
      addAnimation:pulse forKey:nil];
     
-    indexFlag =(int) index;
+//    indexFlag =(int) index;
     
 }
 

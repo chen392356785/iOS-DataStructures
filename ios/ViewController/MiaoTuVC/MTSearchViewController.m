@@ -15,7 +15,7 @@
     MTBaseTableView *commTableView;
     int page;
     NSMutableArray *dataArray;
-    NSString *_companyName;
+//    NSString *_companyName;
     NSArray * _typeId;
     SMLabel *_lbl;
 }

@@ -18,7 +18,7 @@
     SMLabel *_personLbl;
     SMLabel *_telphoneLbl;
     SMLabel *_adressLbl;
-    UIView *_lineView1;
+//    UIView *_lineView1;
 }
 - (void) setHomeSearchCellModel:(HomSearchModel *)Model;
 @end

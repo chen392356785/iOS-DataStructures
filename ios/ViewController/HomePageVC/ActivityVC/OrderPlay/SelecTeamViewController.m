@@ -9,8 +9,8 @@
 #import "SelecTeamViewController.h"
 
 @interface SelecTeamViewController ()  {
-    UITableView *_tableView;
-    NSMutableArray *dataArr;
+//    UITableView *_tableView;
+//    NSMutableArray *dataArr;
 }
 
 @end

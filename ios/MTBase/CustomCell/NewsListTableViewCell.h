@@ -18,10 +18,10 @@
     SMLabel * _tittle;
     SMLabel * _source;
     UIButton * _seeNum;
-    UIButton *_commentNum;
+//    UIButton *_commentNum;
     SMLabel * _time;
-    UIImageView *_imageView;
-     UIView *_lineView;
+//    UIImageView *_imageView;
+//     UIView *_lineView;
     SMLabel *_lbl;
 }
 - (void)setData:(NewsListModel *)model;
@@ -36,8 +36,8 @@
     SMLabel * _time;
     UIAsyncImageView * _photo1;
     UIAsyncImageView * _photo2;
-     UIImageView *_imageView;
-     UIView *_lineView;
+//     UIImageView *_imageView;
+//     UIView *_lineView;
      SMLabel *_lbl;
 }
 - (void)setData:(NewsListModel *)model;
@@ -51,8 +51,8 @@
     SMLabel * _source;
     UIButton * _seeNum;
     SMLabel * _time;
-      UIImageView *_imageView;
-     UIView *_lineView;
+//      UIImageView *_imageView;
+//     UIView *_lineView;
      SMLabel *_lbl;
 }
 - (void)setData:(NewsListModel *)model;
@@ -66,10 +66,10 @@
     SMLabel * _tittle;
     SMLabel * _source;
     UIButton * _seeNum;
-    UIButton *_commentNum;
+//    UIButton *_commentNum;
     SMLabel * _time;
-      UIImageView *_imageView;
-     UIView *_lineView;
+//      UIImageView *_imageView;
+//     UIView *_lineView;
      SMLabel *_lbl;
 }
 - (void)setData:(NewsListModel *)model;
@@ -82,11 +82,11 @@
     SMLabel * _tittle;
     SMLabel * _source;
     UIButton * _seeNum;
-    UIButton *_commentNum;
+//    UIButton *_commentNum;
     SMLabel * _time;
     UIAsyncImageView * _photo;
-      UIImageView *_imageView;
-    UIView *_lineView;
+//      UIImageView *_imageView;
+//    UIView *_lineView;
     UIImageView *_playImgView;
      SMLabel *_lbl;
 }

@@ -17,7 +17,9 @@
     int _verticalAlignement;
     int _horizontalAlignement;
 }
+
 @property (nonatomic, strong) NSArray *items;
+
 @end
 
 @implementation PSTGridLayoutRow

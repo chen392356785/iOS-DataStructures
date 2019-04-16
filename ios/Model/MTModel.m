@@ -74,16 +74,10 @@
 -(id)initWithDic:(NSDictionary *)dic{
     self = [super init];
     if (self) {
-        self.imgHeigh=[dic[@"t_height"] floatValue];
-        self.imgWidth=[dic[@"t_width"]floatValue];
-//        self.imgUrl=  [NSString stringWithFormat:@"%@%@@!body", ConfigManager.ImageUrl, dic[@"t_url"]];
-        NSArray *arr =[dic[@"t_url"] componentsSeparatedByString:@"."];
-        if (arr.count >= 2) {
-            self.thumbUrl=  [NSString stringWithFormat:@"%@%@-w228h_h228.%@", ConfigManager.ImageUrl, arr[0],arr[1]];
-        }else {
-            self.thumbUrl = [NSString stringWithFormat:@"%@%@", ConfigManager.ImageUrl, dic[@"t_url"]];
-        }
-        self.imgUrl = [NSString stringWithFormat:@"%@%@", ConfigManager.ImageUrl, dic[@"t_url"]];
+		self.imgHeigh = [dic[@"t_height"] floatValue];
+		self.imgWidth = [dic[@"t_width"]floatValue];
+		NSString *imageUrl = [dic objectForKey:@"t_url"];
+		self.thumbUrl = self.imgUrl = [NSString stringWithFormat:@"%@%@?x-oss-process=style/thumb_288_288", ConfigManager.ImageUrl,imageUrl];
     }
     return self;
 }

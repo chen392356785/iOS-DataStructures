@@ -10,32 +10,19 @@
 
 @implementation IHTableViewCell
 
-@synthesize attribute,delegate,indexPath,cellHeight;
+//@synthesize attribute,delegate,indexPath,cellHeight;
 
 - (id)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier
 {
-    self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
-    if (self) {
-        // Initialization code
-        self.selectionStyle = UITableViewCellSeparatorStyleNone;
-    }
-    return self;
+	self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
+	if (self) {
+		self.selectionStyle = UITableViewCellSeparatorStyleNone;
+	}
+	return self;
 }
 
-- (void)setSelected:(BOOL)selected animated:(BOOL)animated
-{
-    [super setSelected:selected animated:animated];
 
-    // Configure the view for the selected state
-    
-}
 
-//-(void)setData:(NSDictionary *)dic{
-//    _data=[dic retain];
-//}
-//-(NSDictionary *)data{
-//    return _data;
-//}
 
 @end
 
@@ -62,7 +49,7 @@
 		
 		UIImageView *imageview=[[UIImageView alloc] initWithFrame:CGRectMake(30, 15, 22, 22)];
 		[self addSubview:imageview];
-		icon=imageview;
+//		icon=imageview;
 		
 		imageview=[[UIImageView alloc] initWithFrame:CGRectMake(275, 12, 16, 16)];
 		[imageview setImage:[UIImage imageNamed:@"system_arrowing.png"]];

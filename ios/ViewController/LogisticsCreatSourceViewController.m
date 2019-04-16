@@ -14,15 +14,15 @@
 #import "DatePickerView.h"
 @interface LogisticsCreatSourceViewController ()<UITextFieldDelegate,JLActionSheetDelegate,EditInformationDelegate>
 {
-    SourceAdressView *_adressView;
-    CarTypeView *_typeView;
+//    SourceAdressView *_adressView;
+//    CarTypeView *_typeView;
     IHTextField *_textFiled;
-    NSString *textfliedtag;
-    CGFloat longitude;//出发地经度
-    CGFloat latitude;//出发地纬度
+//    NSString *textfliedtag;
+//    CGFloat longitude;//出发地经度
+//    CGFloat latitude;//出发地纬度
     
-    int filedTag;
-    UIView *superView;
+//    int filedTag;
+//    UIView *superView;
 }
 @end
 
@@ -54,8 +54,8 @@
     adressView.endAdressText.delegate = self;
     adressView.goodNameText.delegate = self;
     adressView.goodsNumText.delegate = self;
-    _adressView = adressView;
-    
+//    _adressView = adressView;
+	
     if ([self.type isEqualToString:@"1"]) {
         adressView.height = 91;
     }
@@ -76,7 +76,7 @@
     typeView.carNumText.delegate = self;
     typeView.bearVolumeText.delegate = self;
     typeView.bearWeightText.delegate = self;
-    _typeView = typeView;
+//    _typeView = typeView;
     if ([self.type isEqualToString:@"1"]) {
         typeView.height = 137;
     }
@@ -148,8 +148,8 @@
     }else if(textField.tag == 31){
         textField.text = nil;
     }
-    filedTag = (int)textField.tag;
-    superView = textField.superview;
+//    filedTag = (int)textField.tag;
+//    superView = textField.superview;
 }
 - (void)textFieldDidEndEditing:(UITextField *)textField
 {

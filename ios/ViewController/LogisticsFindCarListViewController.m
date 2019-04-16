@@ -20,13 +20,13 @@
 @interface LogisticsFindCarListViewController ()<UITableViewDelegate>
 {
     MTBaseTableView *commTableView;
-    int page;
-    NSMutableArray *dataArray;
-    
-    NSString *_city;
-    NSString *_province;
-    NSString *_town;
-    
+//    int page;
+//    NSMutableArray *dataArray;
+//
+//    NSString *_city;
+//    NSString *_province;
+//    NSString *_town;
+//
     UIButton *_createBtn;
     calendarView *_calendarV;
     __weak MTLogisticsChooseView *_logisticsView;
@@ -250,9 +250,9 @@
     [self.view addSubview:addressPickView];
     
     addressPickView.block = ^(NSString *province,NSString *city,NSString *town){
-        self->_province=province;
-        self->_city=city;
-        self->_town=town;
+//        self->_province=province;
+//        self->_city=city;
+//        self->_town=town;
     };
     
 }

@@ -22,11 +22,11 @@
 #define iPhoneWidth [UIScreen mainScreen].bounds.size.width
 #define iPhoneHeight [UIScreen mainScreen].bounds.size.height
 //自适应大小
-#define kWidth(width)      iPhoneWidth  * width  / 375.
-#define kHeight(height)    iPhoneHeight * height / 667.
+#define kWidth(width)      iPhoneWidth  * width  / 375.f
+#define kHeight(height)    iPhoneHeight * height / 667.f
 
-#define kLevelSpace(space)  iPhoneWidth  * space  / 375.    //水平方向距离间距
-#define kVertiSpace(space)  iPhoneHeight * space / 667.     //垂直方向距离间距
+#define kLevelSpace(space)  iPhoneWidth  * space  / 375.f    //水平方向距离间距
+#define kVertiSpace(space)  iPhoneHeight * space / 667.f     //垂直方向距离间距
 
 
 #endif /* DeviceConfiguation_h */

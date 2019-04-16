@@ -15,7 +15,7 @@
     MTBaseTableView *commTableView;
     int page;
     NSMutableArray *dataArray;
-    float lastContentOffset;
+//    float lastContentOffset;
     NSIndexPath *_indexPath;
 }
 @end
@@ -27,17 +27,17 @@
     [self setHomeTabBarHidden:YES];
 }
 
-- (void)scrollViewWillBeginDragging:(UIScrollView *)scrollView{
-    lastContentOffset = scrollView.contentOffset.y;
-}
-
-- (void)scrollViewWillBeginDecelerating:(UIScrollView *)scrollView{
-    //    if (lastContentOffset < scrollView.contentOffset.y) {
-    //        [self setHomeTabBarHidden:YES];
-    //    }else{
-    //        [self setHomeTabBarHidden:NO];
-    //    }
-}
+//- (void)scrollViewWillBeginDragging:(UIScrollView *)scrollView{
+//    lastContentOffset = scrollView.contentOffset.y;
+//}
+//
+//- (void)scrollViewWillBeginDecelerating:(UIScrollView *)scrollView{
+//    //    if (lastContentOffset < scrollView.contentOffset.y) {
+//    //        [self setHomeTabBarHidden:YES];
+//    //    }else{
+//    //        [self setHomeTabBarHidden:NO];
+//    //    }
+//}
 
 - (void)viewDidLoad {
     [super viewDidLoad];

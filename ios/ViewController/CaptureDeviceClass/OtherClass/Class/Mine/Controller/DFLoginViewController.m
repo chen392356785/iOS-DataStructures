@@ -115,7 +115,6 @@
          //短信验证码
          self.phoneCode= numCode;
          self.phoneNumber = self.loginView.phoneTextField.text;
-        
 //         [self.loginView.sendCodeButton startTime:60 title:DFSendCodeString() waitTittle:@"秒" waitTime:5 waitTimer:^(NSInteger time) {
 //             
 ////             self.loginView.voiceButton.hidden = NO;
@@ -123,7 +122,6 @@
 //         } complete:^(BOOL finished) {
 //             
 //         }];
-         
      } failure:^(NSString * message) {
          [self alertMessage:DFSorryString() message:message];
      }];

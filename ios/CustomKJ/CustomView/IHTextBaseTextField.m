@@ -49,34 +49,11 @@
     return self;
 }
 
-//-(void)setLeftViewIcon:(UIImage *)image{
-//    CGRect r=self.leftView.frame;
-//    r.size.width=40;
-//    [self.leftView setFrame:r];
-//
-//    UIImageView *imageview=[[UIImageView alloc] initWithFrame:CGRectMake(10, (self.frame.size.height-image.size.height)/2, image.size.width, image.size.height)];
-//    [imageview setImage:image];
-//    [self.leftView addSubview:imageview];
-//    [imageview release];
-//}
 
 -(void)hideKeyBoard:(id)sender{
     [self resignFirstResponder];
 }
 
--(void)dealloc{
-    NSLog(@"IHTextBaseTextField dealloc");
-//    [super dealloc];
-}
-
-/*
-// Only override drawRect: if you perform custom drawing.
-// An empty implementation adversely affects performance during animation.
-- (void)drawRect:(CGRect)rect
-{
-    // Drawing code
-}
-*/
 
 @end
 
@@ -203,15 +180,11 @@
 }
  -(void)hideKeyBoard:(id)sender{
    
-     UIView *v=[self viewWithTag:1001];
+     UIView *v = [self viewWithTag:1001];
      v.origin=CGPointMake(0, kScreenHeight);
-     
      [self resignFirstResponder];
 }
 
--(void)dealloc{
-    NSLog(@"IHTextBaseTextField dealloc");
-}
 
 
 @end

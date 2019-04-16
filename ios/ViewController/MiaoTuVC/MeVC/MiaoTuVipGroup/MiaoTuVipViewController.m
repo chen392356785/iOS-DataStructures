@@ -26,7 +26,7 @@
     UILabel *_vipPriLab; //VIP特权
     WKWebView * _webView;
     
-    BOOL APayShow;      //是否要显示支付
+//    BOOL APayShow;      //是否要显示支付
 }
 @property (nonatomic,copy)NSString *payType;        //付款方式
 @end
@@ -310,7 +310,7 @@
     ApliayView *alipayView = [[ApliayView alloc] initWithFrame:self.view.window.bounds];
     [alipayView setPlayMoneyNum:[NSString stringWithFormat:@"￥%@",self.userInfo.vipPrice]];
     alipayView.top = kScreenHeight;
-    APayShow=YES;
+//    APayShow=YES;
     alipayView.selectBlock = ^(NSInteger index){
         if (index == ENT_top) {
             self.payType = [NSString stringWithFormat:@"%d",WEICHAT_TYPE];
@@ -326,7 +326,7 @@
     } completion:^(BOOL finished) {
         [UIView animateWithDuration:.3 animations:^{
             alipayView.backgroundColor = RGBA(0, 0, 0, 0.3);
-			self->APayShow=NO;
+//			self->APayShow=NO;
         }];
     }];
 }

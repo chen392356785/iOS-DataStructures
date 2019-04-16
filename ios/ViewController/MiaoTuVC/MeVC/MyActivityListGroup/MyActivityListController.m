@@ -24,7 +24,7 @@
     NSString * type_c;     //空-全部 0-未支付待付款 1-已支付
      int page;
     NSMutableArray *dataArr;
-    BOOL APayShow;      //是否要显示支付
+//    BOOL APayShow;      //是否要显示支付
     NSString *type;
 
     
@@ -310,7 +310,7 @@ static NSString *FailureTableCellId = @"FailureTableCellId";
 - (void) GoSelectPlayAction:(ActivitiesListModel *)model indel:(NSIndexPath *)indexPath {
     ApliayView *alipayView = [[ApliayView alloc] initWithFrame:self.view.window.bounds];
     alipayView.top = kScreenHeight;
-    APayShow=YES;
+//    APayShow=YES;
     alipayView.selectBlock = ^(NSInteger index){
         if (index == ENT_top) {
             //锁定众筹
@@ -334,7 +334,7 @@ static NSString *FailureTableCellId = @"FailureTableCellId";
     } completion:^(BOOL finished) {
         [UIView animateWithDuration:.3 animations:^{
             alipayView.backgroundColor = RGBA(0, 0, 0, 0.3);
-            self->APayShow=NO;
+//            self->APayShow=NO;
         }];
     }];
 }

@@ -13,7 +13,7 @@
 {
     // IHTextField *_textField;
     PlaceholderTextView *_placeholderTextView;
-    UIBarButtonItem *item1;
+//    UIBarButtonItem *item1;
     SMLabel *_lbl;
     NSMutableArray *_dataArr;
     UITableView *commTableView;

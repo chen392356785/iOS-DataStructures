@@ -30,8 +30,8 @@
         }
     }
     
-    _connectionState = eEMConnectionConnected;
-    
+//    _connectionState = eEMConnectionConnected;
+	
    [self registerRemoteNotification];
 	
 	
@@ -462,7 +462,7 @@
 // 网络状态变化回调
 - (void)didConnectionStateChanged:(EMConnectionState)connectionState
 {
-     _connectionState = connectionState;
+//     _connectionState = connectionState;
     [[NSNotificationCenter defaultCenter]postNotificationName:@"networkChanged2" object:[NSNumber numberWithInt:connectionState]];
      //[self.mainController networkChanged:connectionState];
 }
@@ -507,10 +507,11 @@
  */
 - (void)configOwnViews {
     // 隐藏键盘上的工具栏
-    [IQKeyboardManager sharedManager].enableAutoToolbar = NO;
-    
-    // 点击视图隐藏键盘
-    [IQKeyboardManager sharedManager].shouldResignOnTouchOutside = YES;
+	[IQKeyboardManager sharedManager].enableAutoToolbar = YES;
+	[IQKeyboardManager sharedManager].enable = YES;
+	// 点击视图隐藏键盘
+	[IQKeyboardManager sharedManager].shouldResignOnTouchOutside = YES;
+	[[IQKeyboardManager sharedManager] setToolbarManageBehaviour:IQAutoToolbarByPosition];
 }
 
 - (void)addDelegate:(id<EMChatManagerDelegate>)delegate delegateQueue:(dispatch_queue_t)queue {

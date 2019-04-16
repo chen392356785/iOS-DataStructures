@@ -27,12 +27,7 @@
  */
 
 #import "SDTimeLineCell.h"
-
-//#import "SDTimeLineCellModel.h"
-//#import "UIView+SDAutoLayout.h"
 #import "SDTimeLineCellCommentView.h"
-//#import "SDWeiXinPhotoContainerView.h"
-//#import "SDTimeLineCellOperationMenu.h"
  
 
 const CGFloat contentLabelFontSize = 15;
@@ -49,33 +44,29 @@ NSString *const kSDTimeLineCellOperationButtonClickedNotification = @"SDTimeLine
     SMLabel *_nameLable;
     SMLabel *_jobLable;
     SMLabel *_companylbl;
-    SMLabel *_contentLabel;
+//    SMLabel *_contentLabel;
     
     SMLabel *_titlelbl;
     SMLabel *_pricelbl;
     SMLabel *_bzlbl;  //标注
     
     UIImageView *_typeImage;
-    
     SDWeiXinPhotoContainerView *_picContainerView;
     UILabel *_timeLabel;
-    UIButton *_moreButton;
+//    UIButton *_moreButton;
     UIButton *_operationButton;
     SDTimeLineCellCommentView *_commentView;
- 
     UIView *_downView;
 }
 
 
-- (instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier
-{
-    if (self = [super initWithStyle:style reuseIdentifier:reuseIdentifier]) {
-        
-        [self setup];
-      
-    }
-    return self;
+- (instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier {
+	if (self = [super initWithStyle:style reuseIdentifier:reuseIdentifier]) {
+		[self setup];
+	}
+	return self;
 }
+
 
 - (void)setup
 {
@@ -108,32 +99,33 @@ NSString *const kSDTimeLineCellOperationButtonClickedNotification = @"SDTimeLine
     
     _companylbl=[SMLabel new];
     _companylbl.font=sysFont(13);
-    _companylbl.text=@"公司阿斯蒂芬阿斯蒂芬0";
+//    _companylbl.text = @"公司阿斯蒂芬阿斯蒂芬0";
     _companylbl.textColor=RGB(81, 80, 84);
     
     _titlelbl=[SMLabel new];
-    _titlelbl.font=sysFont(15);
-    _titlelbl.text=@"【供应】中国红樱花";
-    _titlelbl.textColor=RGB(44, 44, 46);
+    _titlelbl.font = sysFont(15);
+//    _titlelbl.text=@"【供应】中国红樱花";
+    _titlelbl.textColor=RGB(51.0f,51.0f,51.0f);
     
     _pricelbl=[SMLabel new];
-    _pricelbl.font=sysFont(18);
-    _pricelbl.text=@"￥320";
+    _pricelbl.font = sysFont(18);
+//    _pricelbl.text=@"￥320";
     _pricelbl.textAlignment=NSTextAlignmentRight;
 //    _pricelbl.textColor=RGB(6, 193, 174);
-    _pricelbl.textColor=kColor(@"#ff0000");
+    _pricelbl.textColor = UIColor.redColor;
     
     _bzlbl=[SMLabel new];
-    _bzlbl.font=sysFont(13);
-    _bzlbl.text=@"杆径 23-25cm 冠幅 24-52cm";
-    _bzlbl.textColor=RGB(132, 131, 136);
+	_bzlbl.numberOfLines = 1;
+    _bzlbl.font = sysFont(13);
+    _bzlbl.textColor = RGB(56.0f,56.0f,56.0f);
     
-    UIView *lineView=[UIView new];
-    lineView.backgroundColor=RGB(239, 239, 241);
+    UIView *lineView = [UIView new];
+    lineView.backgroundColor = UIColor.whiteColor;
     
     UIImage *img=Image(@"GongQiu_gongying.png");
     _typeImage=[UIImageView new];
     _typeImage.image=img;
+	_typeImage.hidden = YES;
 //    _contentLabel = [SMLabel new];
 //    _contentLabel.font = [UIFont systemFontOfSize:contentLabelFontSize];
 //    _contentLabel.numberOfLines = 0;
@@ -188,11 +180,12 @@ NSString *const kSDTimeLineCellOperationButtonClickedNotification = @"SDTimeLine
             
         }
     };
-    
+	
+    //发布时间
     _timeLabel = [UILabel new];
     _timeLabel.font = sysFont(13);
-    _timeLabel.textColor=RGB(132, 131, 136);
-    
+    _timeLabel.textColor = RGB(115.0f,115.0f,115.0f);
+
     self.operationMenu = [SDTimeLineCellOperationMenu new];
     
     [ self.operationMenu setLikeButtonClickedOperation:^{
@@ -364,7 +357,7 @@ NSString *const kSDTimeLineCellOperationButtonClickedNotification = @"SDTimeLine
     [_commentView setupWithLikeItemsArray:model.clickUserInfos commentItemsArray:model.commentInfos];
     NSString *position=model.userInfo.position;
     if ([position isEqualToString:@"(null)"]) {
-        position=@"";
+        position =@"";
     }
     
     _companylbl.text=[NSString stringWithFormat:@"%@|%@ %@",model.userInfo.company_province,model.userInfo.company_name,position];
@@ -384,9 +377,8 @@ NSString *const kSDTimeLineCellOperationButtonClickedNotification = @"SDTimeLine
     
     
     if (model.userInfo.title.length > 0) {
-        
         _jobLable.text = [NSString stringWithFormat:@"#%@",model.userInfo.title];
-    }else{
+    } else {
         _jobLable.text = @"";
     }
 
@@ -394,27 +386,28 @@ NSString *const kSDTimeLineCellOperationButtonClickedNotification = @"SDTimeLine
     _picContainerView.picPathStringsArray = model.imgArray;
     [_iconView setImageAsyncWithURL:[NSString stringWithFormat:@"%@%@",model.userInfo.heed_image_url,smallHeaderImage] placeholderImage:defalutHeadImage];
     
-    if ([model.type intValue] == 1) {
-        _titlelbl.text=[NSString stringWithFormat:@"【供应】%@",model.varieties];
-        UIImage *img=Image(@"GongQiu_gongying.png");
-        _typeImage.image=img;
-        _pricelbl.text=[NSString stringWithFormat:@"￥%@/株",model.unit_price];
-        _pricelbl.hidden=NO;
+    if ([model.type intValue] == 1) { //供应
+        _titlelbl.text = [NSString stringWithFormat:@"  %@",model.varieties];
+//        UIImage *img = Image(@"GongQiu_gongying.png");
+//        _typeImage.image = img;
+        _pricelbl.text = [NSString stringWithFormat:@"￥%@/株",model.unit_price];
+        _pricelbl.hidden = NO;
         _pricelbl.sd_layout
         .heightIs(18);
         
     }else if([model.type intValue] == 2){
-          _titlelbl.text=[NSString stringWithFormat:@"【求购】%@",model.varieties];
-        UIImage *img=Image(@"GongQiu_qiugou.png");
-        _typeImage.image=img;
-          _pricelbl.hidden=YES;
-        _pricelbl.sd_layout
-        .heightIs(0);
+		_titlelbl.text = [NSString stringWithFormat:@"  %@",model.varieties];
+//		UIImage *img = Image(@"GongQiu_qiugou.png");
+//		_typeImage.image = img;
+		_pricelbl.hidden = YES;
+		_pricelbl.sd_layout
+		.heightIs(0);
     }
     
     NSString *timeStr = [IHUtility compareCurrentTimeString:model.uploadtime];
-    _timeLabel.text = [NSString stringWithFormat:@"发布时间：%@",timeStr];
+    _timeLabel.text = [NSString stringWithFormat:@" %@",timeStr];
     NSMutableArray *bqArray=[self getLabelViewList:[model.rod_diameter floatValue]
+											  spec:[model.spec floatValue]
                                      crown_width_s:[model.crown_width_s floatValue]
                                      crown_width_e:[model.crown_width_e floatValue]
                                           height_s:[model.height_s floatValue]
@@ -424,7 +417,7 @@ NSString *const kSDTimeLineCellOperationButtonClickedNotification = @"SDTimeLine
  
     
     NSString *_str = [bqArray componentsJoinedByString:@"  "];
-    _bzlbl.text=_str;
+    _bzlbl.text = _str;
     
     
     
@@ -516,6 +509,7 @@ NSString *const kSDTimeLineCellOperationButtonClickedNotification = @"SDTimeLine
 }
 
 -(NSMutableArray *)getLabelViewList:(CGFloat)rod_diameter
+							   spec:(CGFloat)spec
                       crown_width_s:(CGFloat)crown_width_s
                       crown_width_e:(CGFloat)crown_width_e
                            height_s:(CGFloat)height_s
@@ -523,51 +517,51 @@ NSString *const kSDTimeLineCellOperationButtonClickedNotification = @"SDTimeLine
                        branch_point:(CGFloat)branch_point
                              number:(int)number
 {
-    NSMutableArray *arr=[[NSMutableArray alloc]init];
-    
-    if (number>0) {
-        NSString *str=[NSString stringWithFormat:@"#数量%d株",number];
+    NSMutableArray *arr = [[NSMutableArray alloc]init];
+	//规格
+	[arr addObject:[NSString stringWithFormat:@"规格: %.1f",spec]];
+	//数量
+    if (number > 0) {
+		NSString *str = [NSString stringWithFormat:@"数量: %d株",number];
         [arr addObject:str];
     }
-    
-    if (rod_diameter>0) {
+	//高度
+	if (height_s>0 && height_e>0) {
+		NSString *str=[NSString stringWithFormat:@"高度: %.1f-%.1fcm",height_s,height_e];
+		[arr addObject:str];
+	}else if (height_s>0 || height_e>0){
+		if (height_s>0) {
+			NSString *str=[NSString stringWithFormat:@"高度: %.1fcm",height_s];
+			[arr addObject:str];
+		}else{
+			NSString *str=[NSString stringWithFormat:@"高度: %.1fcm",height_e];
+			[arr addObject:str];
+		}
+	}
+	
+	if (crown_width_s>0 && crown_width_e>0) {
+		NSString *str=[NSString stringWithFormat:@"冠幅: %.1f-%.1fcm",crown_width_s,crown_width_e];
+		[arr addObject:str];
+	}else if (crown_width_s>0 || crown_width_e>0){
+		if (crown_width_s>0) {
+			NSString *str=[NSString stringWithFormat:@"冠幅: %.1fcm",crown_width_s];
+			[arr addObject:str];
+		}else{
+			NSString *str=[NSString stringWithFormat:@"冠幅: %.1fcm",crown_width_e];
+			[arr addObject:str];
+		}
+	}
+	
+    if (rod_diameter > 0) {
         NSString *str=[NSString stringWithFormat:@"#杆径%.1fcm",rod_diameter];
         [arr addObject:str];
     }
-    if (crown_width_s>0 && crown_width_e>0) {
-        NSString *str=[NSString stringWithFormat:@"#冠幅%.1f-%.1fcm",crown_width_s,crown_width_e];
-        [arr addObject:str];
-    }else if (crown_width_s>0 || crown_width_e>0){
-        if (crown_width_s>0) {
-            NSString *str=[NSString stringWithFormat:@"#冠幅%.1fcm",crown_width_s];
-            [arr addObject:str];
-        }else{
-            NSString *str=[NSString stringWithFormat:@"#冠幅%.1fcm",crown_width_e];
-            [arr addObject:str];
-        }
-        
-        
-    }
-    
-    if (height_s>0 && height_e>0) {
-        NSString *str=[NSString stringWithFormat:@"#高度%.1f-%.1fcm",height_s,height_e];
-        [arr addObject:str];
-    }else if (height_s>0 || height_e>0){
-        if (height_s>0) {
-            NSString *str=[NSString stringWithFormat:@"#高度%.1fcm",height_s];
-            [arr addObject:str];
-        }else{
-            NSString *str=[NSString stringWithFormat:@"#高度%.1fcm",height_e];
-            [arr addObject:str];
-        }
-        
-    }
-    
-    
+	
     if (branch_point>0) {
         NSString *str=[NSString stringWithFormat:@"#分枝点%.1fcm",branch_point];
         [arr addObject:str];
     }
+	
     return arr;
 }
 
@@ -597,14 +591,11 @@ NSString *const kSDTimeLineCellOperationButtonClickedNotification = @"SDTimeLine
         __weak typeof(self) weakSelf = self;
         
         label.didClickLinkBlock=^(MLLink *link,NSString *linkText,MLLinkLabel *label){
-             
-            
             if (weakSelf.didClickUserNameBlock) {
                 weakSelf.didClickUserNameBlock(link);
             }
         };
-        
- 
+		
         [self.contentView addSubview:label];
 
         label.sd_layout
@@ -644,6 +635,7 @@ NSString *const kSDTimeLineCellOperationButtonClickedNotification = @"SDTimeLine
 @end
 
 @implementation SDForJobCell
+
 - (instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier
 {
     if (self = [super initWithStyle:style reuseIdentifier:reuseIdentifier]) {

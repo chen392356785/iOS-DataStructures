@@ -37,7 +37,8 @@
 @class HeadButton;
 @class CommentListModel;
 @interface GongQiuDetailsListTableViewCell : MTTableViewCell
-{  UIImageView *_idImageView;
+{
+//    UIImageView *_idImageView;
     HeadButton *_headBtn;
     SMLabel *_nicknamelbl;
     SMLabel *_contentlbl;
@@ -61,14 +62,14 @@
     SMLabel *_companyLbl;
     SMLabel *_positionLbl;
     SMLabel *_typeLbl;
-    UIImageView *_typeImageView;
+//    UIImageView *_typeImageView;
     SMLabel *_lbl;
-    NSString *_str;
-    HeadButton *_headBtn;
+//    NSString *_str;
+//    HeadButton *_headBtn;
     UIImageView *_imageView;
-    UIImageView *_bkImageView;
-    CGFloat _x;
-    UIImageView *_imageview;
+//    UIImageView *_bkImageView;
+//    CGFloat _x;
+//    UIImageView *_imageview;
     BQView *_bqView;
 
 }
@@ -97,7 +98,7 @@
     UIView *_downView;
     SMLabel *_mecomentlbl;
     UIView *_lineView;
-    UIImageView *_idImageView;
+//    UIImageView *_idImageView;
     
 }
 -(void)setData;
@@ -132,9 +133,9 @@
     HeadButton *_headView;
     SMLabel *_nickNameLbl;
     SMLabel *_adressLbl;
-    UIImageView *_adressImageView;
-    UIImageView *_sexImageView;
-    UIImageView *_idImageView;
+//    UIImageView *_adressImageView;
+//    UIImageView *_sexImageView;
+//    UIImageView *_idImageView;
     UIImageView *_imageView;
 }
 @property(nonatomic,strong)UserChildrenInfo *model;
@@ -176,10 +177,10 @@
 @class ActivityView;
 @interface ActivityTableViewCell : MTTableViewCell
 {
-    ActivityView *_activityView;
+//    ActivityView *_activityView;
     UIAsyncImageView *_topImageView;
-    UIAsyncImageView *_endImageView;
-    UIAsyncImageView *_stateImgView;
+//    UIAsyncImageView *_endImageView;
+//    UIAsyncImageView *_stateImgView;
     SMLabel *_zhuangtaiLabel;
     UIView *_zhuangtaiView;
     SMLabel *_addressLabel;
@@ -190,12 +191,12 @@
 //    SMLabel *_collectLabel;
     UILabel *_lineLabel;
     UIButton *_cancleBtu;
-    UIImageView *_timeImageView;
-    UIButton *_shareImageView;
+//    UIImageView *_timeImageView;
+//    UIButton *_shareImageView;
     UIImageView *_adressImageView;
-    UIView *_lineView;
-    UIView *_lineView2;
-    UIView *_blackView;
+//    UIView *_lineView;
+//    UIView *_lineView2;
+//    UIView *_blackView;
     UIView *_backV;
     SMLabel *_totalMoney;
     SMLabel *_obtainMoney;

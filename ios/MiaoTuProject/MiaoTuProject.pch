@@ -35,7 +35,6 @@
 #import "IHBase.h"
 #import "Contant.h"
 #import "MBProgressHUD.h"
-#import "MJExtension.h"
 #import "Masonry.h"
 #import "UIViewAdditions.h"
 #import "HJCActionSheet.h"

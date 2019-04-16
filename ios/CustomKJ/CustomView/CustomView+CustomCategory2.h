@@ -48,7 +48,7 @@
 {
     UIView *_selView;
     UIButton *_selButton;
-    UIImageView *_redImageView;
+//    UIImageView *_redImageView;
 }
 
 @property(nonatomic) NSInteger navSlideWidth;

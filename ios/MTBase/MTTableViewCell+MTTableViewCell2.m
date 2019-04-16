@@ -32,7 +32,7 @@
                    UIView *bgView=[[UIView alloc]initWithFrame:CGRectMake(0.016*WindowWith, view.bottom, WindowWith-0.032*WindowWith, 45)];
                    bgView.backgroundColor=[UIColor whiteColor];
                    [self.contentView addSubview:bgView];
-                   _bgView=bgView;
+//                   _bgView=bgView;
                    UIView *lineView=[[UIView alloc]initWithFrame:CGRectMake(0, 0, bgView.width, 1)];
                    lineView.backgroundColor=cLineColor;
                    [bgView addSubview:lineView];

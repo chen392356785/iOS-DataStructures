@@ -16,8 +16,8 @@
     MTBaseTableView *commTableView;//评论列表
     int page;
     NSMutableArray *dataArray;
-    UIView *_topView;
-    UIView *_downView;
+//    UIView *_topView;
+//    UIView *_downView;
     UITextField *_pltxt;
     InputKeyBoardView *_keyBoardView;
     SMLabel *_numberLbl;
@@ -39,11 +39,11 @@
 {
     __weak NewsCommentListViewController *weakSelf = self;
     UIView *topView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, kScreenWidth,37)];
-    _topView = topView;
-    
+//    _topView = topView;
+	
     UIView *downView=[[UIView alloc]initWithFrame:CGRectMake(0, 0, WindowWith, 37)];
     downView.backgroundColor=[UIColor whiteColor];
-    _downView = downView;
+//    _downView = downView;
     
     UIImage *img = Image(@"comment_select.png");
     UIImageView *imageV = [[UIImageView alloc] initWithFrame:CGRectMake(12, 0, img.size.width, img.size.height)];

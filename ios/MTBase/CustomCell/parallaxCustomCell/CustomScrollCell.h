@@ -10,7 +10,7 @@
 
 @interface CustomScrollCell : ParallaxCell
 {
-    UIAsyncImageView *_imgView;
+//    UIAsyncImageView *_imgView;
 }
 @property (nonatomic, strong) UIImageView *headerImageView;
 @property (nonatomic, strong) SMLabel *nameLabel;

@@ -15,7 +15,7 @@
     UIView *backView;
     UIAsyncImageView *_imageView;
     UILabel *_titleLabel;
-    UILabel *_nameLab;
+//    UILabel *_nameLab;
     UILabel *lineLab;
     
     UIView *subBgView;
@@ -116,7 +116,7 @@ static NSString *GardenzuixinViewCellId = @"GardenzuixinViewCell";
     IQKeyboardManager *keyboardManager = [IQKeyboardManager sharedManager]; // 获取类库的单例变量
     keyboardManager.shouldResignOnTouchOutside = NO;
     keyboardManager.keyboardDistanceFromTextField = kWidth(30);
-    
+
     [leftbutton setImage:kImage(@"icon_fh_b") forState:UIControlStateNormal];
     
     [UIApplication sharedApplication].statusBarStyle = UIStatusBarStyleLightContent;

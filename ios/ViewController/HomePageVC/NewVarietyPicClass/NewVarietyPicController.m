@@ -22,7 +22,7 @@
     NSMutableArray *dataArr;
     BOOL isSearStatu;
     EmptyPromptView *_EPView;//没有搜索内容时候默认的提示
-    UIButton *_createXPZBtn;     //发布新品种事件
+//    UIButton *_createXPZBtn;     //发布新品种事件
 }
 @property (nonatomic, strong) UICollectionView *collectionView;
 @property (nonatomic, strong) MTSearchView *searchBar;
@@ -120,7 +120,7 @@ static NSString *newVarietypicHeadID  = @"newVarietypicHeadViewId";
     createBtn.titleLabel.numberOfLines = 0;
     createBtn.titleLabel.textAlignment = NSTextAlignmentCenter;
     [createBtn addTarget:self action:@selector(releaseXinPinZAction:) forControlEvents:UIControlEventTouchUpInside];
-    _createXPZBtn=createBtn;
+//    _createXPZBtn=createBtn;
     [createBtn setLayerMasksCornerRadius:createBtn.height/2. BorderWidth:0.1 borderColor:cGreenColor];
     [createBtn setBackgroundColor:cGreenColor];
     createBtn.titleLabel.font=sysFont(14);

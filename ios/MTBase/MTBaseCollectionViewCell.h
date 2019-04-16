@@ -15,8 +15,8 @@
 
 @interface CreateBSCollectionViewCell : MTBaseCollectionViewCell
 {
-    UIImageView *imgView;
-    UIButton *_btn;
+//    UIImageView *imgView;
+//    UIButton *_btn;
 }
 
 @property(nonatomic,strong)UIButton *deleteBtn;

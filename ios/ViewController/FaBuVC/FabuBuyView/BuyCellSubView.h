@@ -13,23 +13,28 @@
 
 typedef void (^DidSelectCellBlock) (UILabel *lab);
 
-@interface BuyCellSubView : UIView <UITableViewDelegate,UITableViewDataSource> {
+@interface BuyCellSubView : UIView  {
     NSArray *_infoArr;
     NSArray *_xingTaiArr;
     NSArray *_technicalArr;
     NSArray *_riskControloArr;
     NSArray *_headTitleArr;
 }
-@property (nonatomic, copy) DidSelectCellBlock selectGuigeBlock;
-@property (nonatomic, copy) DidSelectCellBlock selectCompanyNameBlock;
-@property (nonatomic, copy) DidSelectCellBlock selectMoneyBlock;
 
+@property (nonatomic, copy) DidSelectCellBlock selectCompanyNameBlock;
 @property (nonatomic, copy) DidSelectCellBlock selectPinZBlock;
 @property (nonatomic, assign) NSInteger index;
-
 @property (nonatomic, strong) FabuBuyModel *fabumodel;      //
-
 @property (nonatomic, copy) DidSelectBlock commmitselectBlock;
+
+/**
+ 更新数据
+ */
+- (void) reloadData;
+/**
+ 获取请求参数
+ */
+- (NSDictionary *) getReqeustParamsWithTag:(NSInteger)tag;
 
 @end
 

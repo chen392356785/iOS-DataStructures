@@ -18,11 +18,11 @@
     NSMutableArray *dataArray;
 //    UISearchController *_search;
     NSString *_varieties;
-    NSString *_seedling_source_address;
-    NSString *_mining_area;
+//    NSString *_seedling_source_address;
+//    NSString *_mining_area;
     IHTextField *_textFiled;
     UIButton *_createBtn;
-    BOOL _first;
+//    BOOL _first;
 }
 @end
 
@@ -380,7 +380,7 @@
 
 #pragma mark cell分支点击事件
 -(void)BCtableViewCell:(IHTableViewCell *)cell action:(BCTableViewCellAction)action indexPath:(NSIndexPath *)indexPath attribute:(NSObject *)attribute{
-    _selIndexPath=indexPath;
+//    _selIndexPath=indexPath;
     MTSupplyAndBuyListModel *model=dataArray[indexPath.row];
     __weak GongQiuTableListViewController *weakSelf=self;
     if (action==MTHeadViewActionTableViewCell) {

@@ -93,7 +93,7 @@
 	[btn addTarget:self action:@selector(home:) forControlEvents:UIControlEventTouchUpInside];
 	
 	leftbtn = [[UIBarButtonItem alloc] initWithCustomView:btn];
-	rightbutton=btn;
+	rightbutton = btn;
     rightbutton.hidden=YES;
 	[self.navigationItem setRightBarButtonItem:leftbtn];
     
@@ -266,8 +266,8 @@
 
 -(void)setRightButtonImage:(UIImage *)img forState:(UIControlState)state{
 	[rightbutton setImage:[img imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal]forState:state];
-     rightbutton.hidden=NO;
-     rightbutton.frame=CGRectMake(0, 0, 44, 44);
+     rightbutton.hidden = NO;
+     rightbutton.frame = CGRectMake(0, 0, 44, 44);
 }
 
 -(void)setLeftButtonImage:(UIImage *)img forState:(UIControlState)state{

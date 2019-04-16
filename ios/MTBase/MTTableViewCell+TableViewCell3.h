@@ -60,7 +60,7 @@
 @interface ScoreHistoryCell : MTTableViewCell
 {
     SMLabel *_orderNumLbl;
-    SMLabel *_stateLbl;
+//    SMLabel *_stateLbl;
     UIAsyncImageView *_imageView;
     SMLabel *_timeLbl;
     

@@ -12,7 +12,7 @@
 @interface MJPopView : UIView
 
 {
-    UIImageView *_imageView;
+//    UIImageView *_imageView;
 }
 -(id)initWithOrgin:(CGFloat)y x:(CGFloat)x arr:(NSArray *)arr i:(int)i img:(UIImage *)img;
 @property (nonatomic,copy) DidSelectViewBlock selectBlock;

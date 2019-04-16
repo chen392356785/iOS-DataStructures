@@ -871,7 +871,7 @@
 		img=Image(@"EP_right.png");
 		imageView=[[UIImageView alloc]initWithFrame:CGRectMake(imageView.left-img.size.width-12, 72.5/2-img.size.height/2, img.size.width, img.size.height)];
 		imageView.image=img;
-		_RightimageView=imageView;
+//		_RightimageView=imageView;
 		imageView.hidden=YES;
 		[self.contentView addSubview:imageView];
 		

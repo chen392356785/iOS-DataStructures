@@ -35,19 +35,19 @@
 {
     MAMapView *_mapView;
     AMapSearchAPI *_search;
-    CLLocation *_location;
+//    CLLocation *_location;
     CLLocation *_currentLocation;
     CustomAnnotationView *_annotationView;
     MTBaseTableView *commTableView;
-    NSInteger _i;
-    SMLabel *lbl;
+//    NSInteger _i;
+//    SMLabel *lbl;
     
-    NSInteger _createTime;
-    NSString *_companyName;
-    NSString *_imageUrl;
+//    NSInteger _createTime;
+//    NSString *_companyName;
+//    NSString *_imageUrl;
     
     UIView *_bgView;
-    NSString *_companyAdress;
+//    NSString *_companyAdress;
     tabBarType _type;
     CGPoint _startPoint;
     CGRect oldFrame;
@@ -56,17 +56,17 @@
     NSMutableArray *dataArray;
     
     CLLocationCoordinate2D coordinate;
-    NSString *urlScheme;
-    NSString *appName;
+//    NSString *urlScheme;
+//    NSString *appName;
     CGFloat _latitude;
     CGFloat _longitude;
     SMLabel *_lbl;
     SMLabel *_cityLbl;
     UIImageView *_imageView;
     UIView *_view;
-    NSString *_userid;
+//    NSString *_userid;
     NSMutableArray *_annotationArray;
-    NSArray * _typeId;
+//    NSArray * _typeId;
     UIButton *_topBtn;
     UIButton *_centerButton;
     NSString *_userId;
@@ -94,9 +94,9 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    _i=0;
-    page=0;
-    _typeId=@[@0,@1,@2,@3,@4,@5];
+//    _i=0;
+//    page=0;
+//    _typeId=@[@0,@1,@2,@3,@4,@5];
     _latitude=USERMODEL.latitude;
     _longitude=USERMODEL.longitude;
     
@@ -514,7 +514,7 @@
     
     vc.selectCompanyBlock=^(NSArray *typeArray,NSString *userId,CGFloat latitude,CGFloat longtitude,NSString *companyProvince)
     {
-        self->_typeId=typeArray;
+//        self->_typeId=typeArray;
         self->_userId=userId;
         self.province=companyProvince;
         self.city=nil;
@@ -570,7 +570,7 @@
         self->_lbl.textAlignment=NSTextAlignmentCenter;
         
         [self->_centerButton addSubview:self->_lbl];
-        self->_typeId=typeArray;
+//        self->_typeId=typeArray;
         self->page=0;
         self.company_name=@"";
         [self->dataArray removeAllObjects];

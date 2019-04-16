@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -15,10 +15,10 @@
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <subviews>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HdS-u6-pQg">
-                    <rect key="frame" x="0.0" y="354" width="375" height="313"/>
+                    <rect key="frame" x="0.0" y="517" width="375" height="150"/>
                     <subviews>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FBc-EH-uye">
-                            <rect key="frame" x="0.0" y="255" width="375" height="45"/>
+                            <rect key="frame" x="0.0" y="92" width="375" height="45"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="45" id="scJ-19-oNG"/>
                             </constraints>
@@ -40,7 +40,7 @@
                             </connections>
                         </button>
                         <view alpha="0.40000000000000002" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="liu-Tw-LOz">
-                            <rect key="frame" x="0.0" y="254" width="375" height="1"/>
+                            <rect key="frame" x="0.0" y="91" width="375" height="1"/>
                             <color key="backgroundColor" red="0.66666668653488159" green="0.66666668653488159" blue="0.66666668653488159" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="1" id="0XT-o1-FAI"/>
@@ -57,7 +57,7 @@
                             </variation>
                         </view>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="osH-vp-iin">
-                            <rect key="frame" x="0.0" y="209" width="375" height="45"/>
+                            <rect key="frame" x="0.0" y="46" width="375" height="45"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="45" id="qdA-yW-oyt"/>
                             </constraints>
@@ -79,7 +79,7 @@
                             </connections>
                         </button>
                         <view alpha="0.40000000596046448" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WPd-0Z-68w">
-                            <rect key="frame" x="0.0" y="208" width="375" height="1"/>
+                            <rect key="frame" x="0.0" y="45" width="375" height="1"/>
                             <color key="backgroundColor" red="0.66666668653488159" green="0.66666668653488159" blue="0.66666668653488159" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="1" id="wb8-TF-aLc"/>
@@ -96,7 +96,7 @@
                             </variation>
                         </view>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nhw-8R-mPi">
-                            <rect key="frame" x="0.0" y="163" width="375" height="45"/>
+                            <rect key="frame" x="0.0" y="0.0" width="375" height="45"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="45" id="6k5-wd-vaC"/>
                             </constraints>
@@ -118,7 +118,7 @@
                             </connections>
                         </button>
                         <view alpha="0.40000000596046448" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CTA-g7-50g">
-                            <rect key="frame" x="0.0" y="162" width="375" height="1"/>
+                            <rect key="frame" x="0.0" y="-1" width="375" height="1"/>
                             <color key="backgroundColor" red="0.66666668653488159" green="0.66666668653488159" blue="0.66666668653488159" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="1" id="1SK-2P-zyk"/>
@@ -134,27 +134,11 @@
                                 </mask>
                             </variation>
                         </view>
-                        <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="KYl-HO-djn">
-                            <rect key="frame" x="0.0" y="3" width="375" height="155"/>
-                            <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="hGE-Ij-aP5">
-                                <size key="itemSize" width="50" height="50"/>
-                                <size key="headerReferenceSize" width="0.0" height="0.0"/>
-                                <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                                <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
-                            </collectionViewFlowLayout>
-                            <connections>
-                                <outlet property="dataSource" destination="uFx-aZ-mnT" id="DpS-GU-vjv"/>
-                                <outlet property="delegate" destination="uFx-aZ-mnT" id="kTD-19-tMe"/>
-                            </connections>
-                        </collectionView>
                     </subviews>
                     <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <constraints>
-                        <constraint firstItem="KYl-HO-djn" firstAttribute="top" secondItem="HdS-u6-pQg" secondAttribute="top" constant="3" id="1lD-Tm-O5X"/>
                         <constraint firstAttribute="bottom" secondItem="FBc-EH-uye" secondAttribute="bottom" constant="13" id="3Ml-jh-oYm"/>
-                        <constraint firstItem="KYl-HO-djn" firstAttribute="leading" secondItem="HdS-u6-pQg" secondAttribute="leading" id="3r8-DK-tTg"/>
                         <constraint firstItem="FBc-EH-uye" firstAttribute="top" secondItem="liu-Tw-LOz" secondAttribute="bottom" id="4Pu-bf-gfi"/>
-                        <constraint firstAttribute="trailing" secondItem="KYl-HO-djn" secondAttribute="trailing" id="8px-kJ-bNW"/>
                         <constraint firstItem="WPd-0Z-68w" firstAttribute="leading" secondItem="HdS-u6-pQg" secondAttribute="leading" id="E2p-aG-wb1"/>
                         <constraint firstItem="liu-Tw-LOz" firstAttribute="leading" secondItem="HdS-u6-pQg" secondAttribute="leading" id="Ejt-rK-3vR"/>
                         <constraint firstAttribute="trailing" secondItem="FBc-EH-uye" secondAttribute="trailing" id="MEo-Vj-6S7"/>
@@ -169,12 +153,11 @@
                         <constraint firstItem="CTA-g7-50g" firstAttribute="leading" secondItem="HdS-u6-pQg" secondAttribute="leading" id="gpS-Lf-wG1"/>
                         <constraint firstItem="osH-vp-iin" firstAttribute="leading" secondItem="HdS-u6-pQg" secondAttribute="leading" id="idQ-pb-Ccb"/>
                         <constraint firstAttribute="height" constant="265" id="l11-SA-pT2">
-                            <variation key="heightClass=regular-widthClass=compact" constant="313"/>
+                            <variation key="heightClass=regular-widthClass=compact" constant="150"/>
                         </constraint>
                         <constraint firstAttribute="trailing" secondItem="WPd-0Z-68w" secondAttribute="trailing" id="lxl-Sd-y4u"/>
                         <constraint firstItem="liu-Tw-LOz" firstAttribute="top" secondItem="osH-vp-iin" secondAttribute="bottom" id="qbc-3g-S3P"/>
                         <constraint firstItem="WPd-0Z-68w" firstAttribute="top" secondItem="Nhw-8R-mPi" secondAttribute="bottom" id="uH1-Mo-N6d"/>
-                        <constraint firstItem="CTA-g7-50g" firstAttribute="top" secondItem="KYl-HO-djn" secondAttribute="bottom" constant="4" id="yfK-pt-qfo"/>
                     </constraints>
                     <variation key="default">
                         <mask key="subviews">
@@ -184,16 +167,11 @@
                             <exclude reference="WPd-0Z-68w"/>
                             <exclude reference="Nhw-8R-mPi"/>
                             <exclude reference="CTA-g7-50g"/>
-                            <exclude reference="KYl-HO-djn"/>
                         </mask>
                         <mask key="constraints">
                             <exclude reference="l11-SA-pT2"/>
-                            <exclude reference="1lD-Tm-O5X"/>
-                            <exclude reference="3r8-DK-tTg"/>
-                            <exclude reference="8px-kJ-bNW"/>
                             <exclude reference="MW7-9F-FZc"/>
                             <exclude reference="gpS-Lf-wG1"/>
-                            <exclude reference="yfK-pt-qfo"/>
                             <exclude reference="bB4-Td-axN"/>
                             <exclude reference="ccX-Ii-Pv7"/>
                             <exclude reference="cdE-lu-0Bc"/>
@@ -220,16 +198,11 @@
                             <include reference="WPd-0Z-68w"/>
                             <include reference="Nhw-8R-mPi"/>
                             <include reference="CTA-g7-50g"/>
-                            <include reference="KYl-HO-djn"/>
                         </mask>
                         <mask key="constraints">
                             <include reference="l11-SA-pT2"/>
-                            <include reference="1lD-Tm-O5X"/>
-                            <include reference="3r8-DK-tTg"/>
-                            <include reference="8px-kJ-bNW"/>
                             <include reference="MW7-9F-FZc"/>
                             <include reference="gpS-Lf-wG1"/>
-                            <include reference="yfK-pt-qfo"/>
                             <include reference="bB4-Td-axN"/>
                             <include reference="ccX-Ii-Pv7"/>
                             <include reference="cdE-lu-0Bc"/>
@@ -279,7 +252,6 @@
             <connections>
                 <outlet property="baseView" destination="HdS-u6-pQg" id="5FV-qk-8n5"/>
                 <outlet property="btnCamera" destination="Nhw-8R-mPi" id="xKG-qa-xiU"/>
-                <outlet property="collectionView" destination="KYl-HO-djn" id="zhm-al-rfV"/>
             </connections>
             <point key="canvasLocation" x="-698" y="389"/>
         </view>

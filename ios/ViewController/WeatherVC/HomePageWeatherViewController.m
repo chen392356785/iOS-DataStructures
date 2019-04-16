@@ -17,7 +17,7 @@
     UIButton *_btn;//顶部切换城市
     
     UIAsyncImageView *_backImg;
-    UIImageView *_imageV;
+//    UIImageView *_imageV;
     UIPageControl *_pageControl;
     int currentPage;
 }

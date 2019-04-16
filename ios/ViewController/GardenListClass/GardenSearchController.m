@@ -14,7 +14,7 @@
 @interface GardenSearchViewCell : UITableViewCell {
     UIAsyncImageView *_imageView;
     UILabel *_titleLabel;
-    UILabel *_nameLab;
+//    UILabel *_nameLab;
     UILabel *_bangNameLab;
     UILabel *_paimingLab;
 }

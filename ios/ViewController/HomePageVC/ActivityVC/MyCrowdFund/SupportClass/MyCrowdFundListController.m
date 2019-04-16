@@ -16,8 +16,8 @@
     UITableView *_tableView;
     NSMutableArray *dataArr;
     int page;
-    int type_c;
-    UIView *_topView;
+//    int type_c;
+//    UIView *_topView;
     EmptyPromptView *_EPView;//没有活动的时候默认的提示
     NSString *status;
 }
@@ -60,7 +60,7 @@ static NSString *FailureTableCellId = @"FailureTableCellId";
     _EPView = EPView;
     [_tableView addSubview:EPView];
     page = 1;
-    type_c = 4;
+//    type_c = 4;
 }
 -(void)loadRefesh:(MJRefreshComponent *)refreshView{
     if (refreshView == _tableView.mj_header) {

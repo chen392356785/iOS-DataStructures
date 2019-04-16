@@ -47,7 +47,7 @@
     UIMenuItem *_deleteMenuItem;
     NSIndexPath *_longPressIndexPath;
     
-    NSInteger _recordingCount;
+//    NSInteger _recordingCount;
     
     dispatch_queue_t _messageQueue;
     

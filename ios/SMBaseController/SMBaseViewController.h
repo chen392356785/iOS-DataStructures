@@ -34,7 +34,7 @@ typedef enum{
     UIButton *searchBtn;
     UIButton *backTopbutton;
     UIView *_barlineView;
-    UIButton *_backBtn;
+//    UIButton *_backBtn;
     XHFriendlyLoadingView* _HUD;
 
 }
@@ -123,7 +123,7 @@ typedef enum{
     UIScrollView *_BaseScrollView;
     IHTextField *_activityTextField;
     UITextView *_activityTextView;
-    float _scrollOffset_y;
+//    float _scrollOffset_y;
     float _moreOffset_y;
     
     

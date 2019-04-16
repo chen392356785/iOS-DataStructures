@@ -53,9 +53,9 @@
     
     NSDictionary *sourceDic = dic;
     NSArray *classArr = [sourceDic allKeys];
-    _classArr=classArr;
+//    _classArr = classArr;
     UIView *classview = [[UIView alloc] initWithFrame:CGRectMake(0, 0, self.width, 374)];
-    _classView=classview;
+//    _classView = classview;
     classview.backgroundColor = [UIColor whiteColor];
     for (int i=0; i < classArr.count; i ++) {
         NSDictionary *Dic=@{classArr[i]:@[]};

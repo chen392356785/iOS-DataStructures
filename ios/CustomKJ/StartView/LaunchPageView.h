@@ -14,7 +14,7 @@ typedef void (^DidSelectBtnBlock) (NSInteger index);
 {
     UIImageView *_topImageView;
     UIImageView *_titleImageView;
-    NSArray *_images;
+//    NSArray *_images;
 }
 @property(nonatomic,copy)DidSelectBtnBlock selectBtnBlock;
 @property (nonatomic,assign,getter=isClickPass) BOOL clickPass;

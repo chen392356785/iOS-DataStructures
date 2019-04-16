@@ -28,7 +28,7 @@
 
     UIView *_barImageView;
     UIAsyncImageView *_topImage;
-    UIAsyncImageView *_backImg;
+//    UIAsyncImageView *_backImg;
     
     SMLabel *_titleBarLbl;//导航栏标题
     SMLabel *_titleLbl;
@@ -151,7 +151,7 @@
     
     UIAsyncImageView *backImg = [UIAsyncImageView new];
     [backImg setBackgroundColor:[UIColor colorWithPatternImage:Image(@"back_Image.png")]];
-    _backImg = backImg;
+//    _backImg = backImg;
     [topImage addSubview:backImg];
     backImg.sd_layout.leftSpaceToView(topImage,0).topSpaceToView(topImage,0).bottomSpaceToView(topImage,0).widthIs(WindowWith);
     

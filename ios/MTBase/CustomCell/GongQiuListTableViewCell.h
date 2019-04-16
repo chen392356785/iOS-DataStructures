@@ -18,7 +18,7 @@
     HeaderView *_headView;
     BuyListView *_listView;
     CommentView *_commentView;
-    PersonType _psersonType;
+//    PersonType _psersonType;
     CancelView* _cancelView;
 }
 @property(nonatomic,strong)MTSupplyAndBuyListModel *model;

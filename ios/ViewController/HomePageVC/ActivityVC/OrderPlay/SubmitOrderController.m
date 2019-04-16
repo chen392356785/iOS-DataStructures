@@ -29,13 +29,13 @@
     NSString *companyname;  //公司
     NSString *JobStr;       //职位
     NSString *remarkStr;    //备注
-    UIButton *CommitBut;        //提交订单
+//    UIButton *CommitBut;        //提交订单
     NSMutableArray *dataArr;
     PlaceholderTextView *textView;  //备注
     NSString *TeamStr;          //战队
     TeamListModel *teamModel;   //战队Model
     NSString *xuanYanStr;       //宣言
-    BOOL APayShow;      //是否要显示支付
+//    BOOL APayShow;      //是否要显示支付
     NSIndexPath * PhoneIndeX;     //联系方式
     UITableView    *myTableView;
     NSMutableArray *phoneArray;
@@ -50,7 +50,7 @@ static NSString *OrderInfoCell = @"OrderInfoViewCell";
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
     [IQKeyboardManager sharedManager].enableAutoToolbar = NO;
-    
+
     // 点击视图隐藏键盘
     [IQKeyboardManager sharedManager].shouldResignOnTouchOutside = NO;
 }
@@ -582,7 +582,7 @@ static NSString *OrderInfoCell = @"OrderInfoViewCell";
     
     ApliayView *alipayView = [[ApliayView alloc] initWithFrame:self.view.window.bounds];
     alipayView.top = kScreenHeight;
-    APayShow=YES;
+//    APayShow=YES;
     alipayView.selectBlock = ^(NSInteger index){
         if (index == ENT_top) {
             self.payType = [NSString stringWithFormat:@"%d",WEICHAT_TYPE];
@@ -607,7 +607,7 @@ static NSString *OrderInfoCell = @"OrderInfoViewCell";
     } completion:^(BOOL finished) {
         [UIView animateWithDuration:.3 animations:^{
             alipayView.backgroundColor = RGBA(0, 0, 0, 0.3);
-			self->APayShow=NO;
+//			self->APayShow=NO;
         }];
     }];
 }

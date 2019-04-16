@@ -20,7 +20,7 @@
     UIView *_progressView;
     CGFloat progress;
     UILabel *AlPicLabel;    //还差金额
-    NSString *ActivityState;
+//    NSString *ActivityState;
 }
 @property (strong, nonatomic)  CountDown *countDownForLabel;
 

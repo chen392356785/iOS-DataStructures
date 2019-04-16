@@ -8,9 +8,7 @@
 
 #import "AliPayService.h"
 #import <AlipaySDK/AlipaySDK.h>
-
 #import "AliPayConfig.h"
-
 #import "AlixPayResult.h"
 
 #pragma mark - Class AliPayService

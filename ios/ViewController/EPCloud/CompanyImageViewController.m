@@ -16,7 +16,7 @@ UICollectionViewDataSource,UITextViewDelegate,JLActionSheetDelegate>
 	UICollectionView *_collectionView;
 	NSMutableArray *imgsArray;
 	BOOL isFirstAddPhoto;
-	BOOL isSelectedPhoto;
+//	BOOL isSelectedPhoto;
 	SMLabel *_lbl;
 }
 @end
@@ -222,10 +222,10 @@ UICollectionViewDataSource,UITextViewDelegate,JLActionSheetDelegate>
 	}
 	[_collectionView reloadData];
 	[self setBaseScrollHeigh:imgsArray];
-	if (imgsArray.count==0) {
-		isSelectedPhoto=NO;
-	}
-	
+//	if (imgsArray.count==0) {
+//		isSelectedPhoto=NO;
+//	}
+//
 }
 
 
@@ -286,9 +286,7 @@ UICollectionViewDataSource,UITextViewDelegate,JLActionSheetDelegate>
 			NSMutableDictionary *Dic=[[NSMutableDictionary alloc]initWithDictionary:[IHUtility getUserDefalutsDicKey:kUserDefalutLoginInfo]];
 			
 			NSMutableDictionary *dic1=[[NSMutableDictionary alloc]initWithDictionary:Dic[@"companyinfo"]];
-			
-			
-			
+						
 			[dic1 setObject:obj forKey:@"company_image"];
 			
 			[Dic setObject:dic1 forKey:@"companyinfo"];
@@ -300,6 +298,8 @@ UICollectionViewDataSource,UITextViewDelegate,JLActionSheetDelegate>
 			[self back:nil];
 			
 		});
+		
+	} failure:^(NSError *error) {
 		
 	}];
 	

@@ -19,12 +19,12 @@ typedef enum{
 }FileType;
 @interface AliyunOSSUpload : NSObject
 
-@property (nonatomic,retain) AFHTTPSessionManager *sessionManager;
 
-//+(AliyunOSSUpload *)aliyunInit;
 + (instancetype)create;
 
--(void)uploadImage:(NSArray*)imgArr FileDirectory:(FileType)type success:(void (^)(NSString *obj))successBlock;
-
+- (void)uploadImage:(NSArray*)imgArr
+	  FileDirectory:(FileType)type
+			success:(void (^)(NSString *obj))successBlock
+			failure:(void(^)(NSError *error))failBlock;
 
 @end

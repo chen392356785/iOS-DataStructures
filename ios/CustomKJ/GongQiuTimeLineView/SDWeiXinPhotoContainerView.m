@@ -55,7 +55,6 @@
     
     for (int i = 0; i < 9; i++) {
         UIAsyncImageView *imageView = [UIAsyncImageView new];
-        imageView.layer.cornerRadius = kWidth(14);
         [self addSubview:imageView];
         imageView.userInteractionEnabled = YES;
         imageView.tag = i+100;
@@ -84,29 +83,21 @@
     }
     
     CGFloat itemW = [self itemWidthForPicPathArray:_picPathStringsArray];
-    CGFloat itemH = 0;
-    if (_picPathStringsArray.count == 1) {
-        MTPhotosModel *obj=_picPathStringsArray.firstObject;
-        
-     //   UIImage *image = [UIImage imageNamed:_picPathStringsArray.firstObject];
-        if (obj.imgWidth) {
-//            itemH = obj.imgHeigh /obj.imgWidth * itemW;
-            itemH = kWidth(219);
-        }
-    } else {
-        itemH = itemW;
-    }
+	CGFloat itemH = 0;
+	if (_picPathStringsArray.count == 1) {
+		itemH = kWidth(110.0f);
+	} else {
+		itemH = itemW;
+	}
     long perRowItemCount = [self perRowItemCountForPicPathArray:_picPathStringsArray];
     CGFloat margin = 5;
     
     [_picPathStringsArray enumerateObjectsUsingBlock:^(MTPhotosModel *  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
         long columnIndex = idx % perRowItemCount;
         long rowIndex = idx / perRowItemCount;
-        UIAsyncImageView *btn=(UIAsyncImageView *)[self viewWithTag:idx+100];
-      //  UIAsyncImageView *imageView = [_imageViewsArray objectAtIndex:idx];
+        UIAsyncImageView *btn = (UIAsyncImageView *)[self viewWithTag:idx+100];
         btn.hidden = NO;
         [btn setImageAsyncWithURL:obj.thumbUrl placeholderImage:DefaultSquareImage];
-   
         btn.frame = CGRectMake(columnIndex * (itemW + margin), rowIndex * (itemH + margin), itemW, itemH);
     }];
     
@@ -136,15 +127,12 @@
 - (CGFloat)itemWidthForPicPathArray:(NSArray *)array
 {
     if (array.count == 1) {
-        return iPhoneWidth - 40;
+        return kWidth(110.0f);
     } if (array.count == 2 || array.count == 4) {
         CGFloat w=(WindowWith-40)/2;
         return w;
     } else {
-        
-        CGFloat w=(WindowWith-40)/3;
-        
-       // CGFloat w = [UIScreen mainScreen].bounds.size.width > 320 ? 80 : 70;
+        CGFloat w = (WindowWith-40)/3;        
         return w;
     }
 }
@@ -174,10 +162,9 @@
 
 
 // 返回高质量图片的url
-- (NSURL *)photoBrowser:(SDPhotoBrowser *)browser highQualityImageURLForIndex:(NSInteger)index
-{
-    NSString *urlStr = [[self.picPathStringsArray[index] imgUrl] stringByReplacingOccurrencesOfString:@"thumbnail" withString:@"bmiddle"];
-    return [NSURL URLWithString:urlStr];
+- (NSURL *)photoBrowser:(SDPhotoBrowser *)browser highQualityImageURLForIndex:(NSInteger)index {
+	NSString *urlStr = [[self.picPathStringsArray[index] imgUrl] stringByReplacingOccurrencesOfString:@"thumbnail" withString:@"bmiddle"];
+	return [NSURL URLWithString:urlStr];
 }
 
 @end

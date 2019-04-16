@@ -134,7 +134,9 @@
             [IHUtility saveDicUserDefaluts:dic1 key:kUserDefalutLoginInfo];
             [weakSelf popViewController:(int)(self.navigationController.viewControllers.count - 3)];
         });
-    }];
+	} failure:^(NSError *error) {
+		[self removeWaitingView];
+	}];
     
 }
 - (void)referImage:(UIButton *)button

@@ -14,12 +14,12 @@
 #import "NavSlideView.h"
 @interface GongQiuMainViewController ()<UITableViewDelegate,SlideNavTabBarDelegate>
 {
-     MTBaseTableView *commTableView;
+//     MTBaseTableView *commTableView;
     SlideNavTabBarController *navTabBarController;
     NSMutableArray* controllerArray;
     NavSlideView *navView;
     
-    SMLabel *_lbl;
+//    SMLabel *_lbl;
     SMLabel *_cityLbl;
     UIImageView *_imageView;
     UIView *_view;

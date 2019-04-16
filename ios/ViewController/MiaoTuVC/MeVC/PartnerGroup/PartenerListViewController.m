@@ -247,7 +247,7 @@
 @interface PartenerListViewController () <UICollectionViewDelegate,UICollectionViewDataSource> {
     NSMutableArray *dataArr;
     partenerModel *_model;
-    UITableView *_tableView;
+//    UITableView *_tableView;
     UIAsyncImageView *_headImagView;
 }
 

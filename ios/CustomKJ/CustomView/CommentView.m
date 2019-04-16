@@ -17,7 +17,7 @@
     UIImage *timeImg=Image(@"fav_time.png");
     UIImageView *timeImageView=[[UIImageView alloc]initWithFrame:CGRectMake(15, (self.height - timeImg.size.height)/2.0, timeImg.size.width, timeImg.size.height)];
     timeImageView.image=timeImg;
-    _timeImage=timeImageView;
+//    _timeImage=timeImageView;
     [self addSubview:timeImageView];
     
     SMLabel *timeLbl=[[SMLabel alloc]initWithFrameWith:CGRectMake(timeImageView.right+5, timeImageView.top, WindowWith/4 * 2 - timeImageView.right-5, 15) textColor:cGrayLightColor textFont:sysFont(12)];

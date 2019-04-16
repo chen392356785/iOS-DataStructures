@@ -12,9 +12,8 @@
 {
     IHTextField *_passWordText;
     IHTextField *_phoneText;
-    IHTextField *_oldPassWordTextFeild;
-    IHTextField *_newPassWordTextFeild;
-  
+//    IHTextField *_oldPassWordTextFeild;
+//    IHTextField *_newPassWordTextFeild;
 }
 @end
 @implementation MTLoginView

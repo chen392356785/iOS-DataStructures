@@ -14,7 +14,7 @@
 @interface PlayAmountViewController () <UITextFieldDelegate> {
     IHTextField *_textFied;
     NSString *PicStr;   //最多可支付金额
-    BOOL APayShow;      //是否要显示支付
+//    BOOL APayShow;      //是否要显示支付
     NSString *type;
     IHTextField *textView;  //评论
     UIButton *playBut;
@@ -226,7 +226,7 @@
 - (void) GoSelectPlayPaymentOrderNO:(NSString *)orderNo OrderPrice:(NSString *)orderPrice {
     ApliayView *alipayView = [[ApliayView alloc] initWithFrame:self.view.window.bounds];
     alipayView.top = kScreenHeight;
-    APayShow=YES;
+//    APayShow=YES;
     alipayView.selectBlock = ^(NSInteger index){
         if (index == ENT_top) {
             //锁定众筹
@@ -250,7 +250,7 @@
     } completion:^(BOOL finished) {
         [UIView animateWithDuration:.3 animations:^{
             alipayView.backgroundColor = RGBA(0, 0, 0, 0.3);
-            self->APayShow=NO;
+//            self->APayShow=NO;
         }];
     }];
 }

@@ -191,7 +191,10 @@ UICollectionViewDataSource,UITextViewDelegate,JLActionSheetDelegate>
                              [[NSNotificationCenter defaultCenter] postNotificationName:NotificationChangeTabBarSelectedIndex object:[NSNumber numberWithInt:0]];
                              [weakSelf back];
                          }];
-        }];
+		} failure:^(NSError *error) {
+			
+			
+		}];
     }else{
         [network getAddTopic:@""
                topic_content:_placeholderTextView.text

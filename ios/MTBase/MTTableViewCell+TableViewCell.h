@@ -96,8 +96,8 @@
 @interface EPCloudCumlativeTableViewCell : MTTableViewCell
 {
     UIImageView *_imageView;
-    UIImageView *_ToimageView;
-    UIImageView *_RightimageView;
+//    UIImageView *_ToimageView;
+//    UIImageView *_RightimageView;
     SMLabel *_lbl;
     
 }
@@ -133,7 +133,7 @@
 @interface BindCompanyListCell : MTTableViewCell<EDStarRatingProtocol>
 {
     EDStarRating *_ratingImage;
-    UIAsyncImageView *_heardImg;
+//    UIAsyncImageView *_heardImg;
     UIAsyncImageView *_companyImg;
     SMLabel *_companyLbl;
     SMLabel *_companyInfo;

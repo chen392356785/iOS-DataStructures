@@ -22,10 +22,10 @@
     
     NSMutableArray *HistoryArray;
     NSMutableArray *buyClassArray;
-     int page;
+//     int page;
     UIView *_topView;
     UIView *_lineVew;
-    UITableView *_tableView;
+//    UITableView *_tableView;
     
 }
 @property (nonatomic, strong) UIScrollView * bgScroll;
@@ -222,7 +222,7 @@ static NSString *historyClassScoreCellId = @"historyClassScoreCellID";
     self.bgScroll.showsHorizontalScrollIndicator = NO;
     [self.view addSubview:self.bgScroll];
     self.bgScroll.bounces = NO;
-    page = 1;
+//    page = 1;
     for (int i= 0 ; i < arr.count ; i ++) {
         UITableView *tableView = [[UITableView alloc] initWithFrame:CGRectMake(i * WindowWith, 0, iPhoneWidth, height(self.bgScroll)) style:UITableViewStylePlain];
         tableView.backgroundColor = cLineColor;
@@ -304,8 +304,8 @@ static NSString *historyClassScoreCellId = @"historyClassScoreCellID";
 
     _lineVew.centerX = button.center.x;
     
-    _tableView = [self.bgScroll viewWithTag:100 + button.tag - 10];
-    
+//    _tableView = [self.bgScroll viewWithTag:100 + button.tag - 10];
+	
 }
 
 #pragma mark -- scrollviewDelegate

@@ -19,14 +19,14 @@
     MTBaseTableView *commTableView;
     int page;
     NSMutableArray *dataArray;
-    NSIndexPath *_indexPath;
+//    NSIndexPath *_indexPath;
     EPCloudDetailTopView *_topDetaiView;
     UIView *_topView;
     UIView *_downView;
     SMLabel *_numberLbl;
-    UIView *_lineView;
+//    UIView *_lineView;
     NSMutableArray *imageArr;
-    AdView *_imagev;
+//    AdView *_imagev;
 }
 @end
 
@@ -93,7 +93,7 @@
     
     AdView *v=[AdView adScrollViewWithFrame:CGRectMake(0, 0, WindowWith, WindowWith*0.47) imageLinkURL:imageArr placeHoderImageName:@"defaulLogo.png" pageControlShowStyle:UIPageControlShowStyleRight];
     v.isNeedCycleRoll = NO;
-    _imagev=v;
+//    _imagev=v;
     v.callBack=^(NSInteger index,NSDictionary * dic){
 //        [weakSelf weakPushWebVC:dic];
     };
@@ -149,7 +149,7 @@
     
     UIView *lineView2=[[UIView alloc]initWithFrame:CGRectMake(lbl.left, 36, numberLbl.right - lbl.left, 2)];
     lineView2.backgroundColor=RGBA(85, 201, 196, 1);
-    _lineView = lineView2;
+//    _lineView = lineView2;
     [downView addSubview:lineView2];
     [topView addSubview:downView];
     

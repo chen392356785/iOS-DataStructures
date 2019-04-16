@@ -17,9 +17,9 @@
 
 @interface GardenCloudViewController ()<UICollectionViewDelegate, UIScrollViewDelegate>
 {
-    NSMutableArray *dataArrary;
-    UICollectionView  *collectionView ;
-    UIScrollView *_scoller;
+//    NSMutableArray *dataArrary;
+//    UICollectionView  *collectionView ;
+//    UIScrollView *_scoller;
     NSArray *_arr;
      NSArray *_arr2;
 }
@@ -42,7 +42,7 @@
     scoller.backgroundColor=[UIColor whiteColor];
     [self.view addSubview:scoller];
  
-    _scoller=scoller;
+//    _scoller=scoller;
     SMLabel *lbl=[[SMLabel alloc]initWithFrameWith:CGRectMake(0.05*WindowWith, 0.062*WindowWith, 63, 21) textColor:cBlackColor textFont:sysFont(21)];
     lbl.text=@"人脉云";
     [scoller addSubview:lbl];

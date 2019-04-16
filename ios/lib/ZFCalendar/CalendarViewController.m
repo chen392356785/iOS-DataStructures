@@ -23,7 +23,7 @@
 <UICollectionViewDataSource,UICollectionViewDelegate>
 {
 
-     NSTimer* timer;//定时器
+//     NSTimer* timer;//定时器
 
 }
 @end

@@ -28,9 +28,9 @@
     NSMutableArray *classTitlesArr;
     NSMutableArray *BannerArr;
     MTHomeSearchView *searchTextfiled;
-    UIBarButtonItem *negativeSpacer;
+//    UIBarButtonItem *negativeSpacer;
     UILabel *Titlelabel;
-    NSString *RefresType;   //下拉 0 上拉1
+//    NSString *RefresType;   //下拉 0 上拉1
     ClassroomModel *ClassMode;
     
     CGFloat showNaHeight;
@@ -219,12 +219,8 @@ static NSString *ClassSourceReusableViewID      =  @"ClassSourceReusableView";
 
 
 -(void)loadRefesh:(MJRefreshComponent *)refreshView {
-    if (refreshView == _collectionView.mj_header) {
-        RefresType = @"0";
-    }else {
-        RefresType = @"1";
-    }
-    [network httpGETRequestTagWithParameter:nil method:ClassroomStudyUrl tag:IH_init success:^(NSDictionary *dic) {
+
+	[network httpGETRequestTagWithParameter:nil method:ClassroomStudyUrl tag:IH_init success:^(NSDictionary *dic) {
         ClassroomModel *model = [[ClassroomModel alloc] initWithDictionary:dic[@"content"] error:nil];
 		self->ClassMode = model;
         if (refreshView == self->_collectionView.mj_header) {

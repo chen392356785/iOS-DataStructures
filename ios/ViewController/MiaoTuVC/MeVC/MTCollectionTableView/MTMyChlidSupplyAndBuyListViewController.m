@@ -16,7 +16,7 @@
     MTBaseTableView *commTableView;
     int page;
     NSMutableArray *dataArray;
-    NSIndexPath *_selIndexPath;
+//    NSIndexPath *_selIndexPath;
     EmptyPromptView *_EPView;
 }
 
@@ -133,8 +133,8 @@
 
 #pragma mark cell分支点击事件
 -(void)BCtableViewCell:(IHTableViewCell *)cell action:(BCTableViewCellAction)action indexPath:(NSIndexPath *)indexPath attribute:(NSObject *)attribute{
-    _selIndexPath=indexPath;
-    
+//    _selIndexPath = indexPath;
+	
     if (action==MTHeadViewActionTableViewCell) {
         NSLog(@"点击头像");
         if (self.type==ENT_Supply||self.type==ENT_Buy) {

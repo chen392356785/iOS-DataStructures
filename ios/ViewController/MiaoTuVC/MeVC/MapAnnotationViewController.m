@@ -12,9 +12,9 @@
 #import "JLSimplePickViewComponent.h"
 @interface MapAnnotationViewController()<JLActionSheetDelegate>
 {
-    NSString *_zhuying;
-    NSString *_introduction;
-    NSString *_adress;
+//    NSString *_zhuying;
+//    NSString *_introduction;
+//    NSString *_adress;
     NSString *_province;
     NSString *_city;
     NSString *_town;
@@ -273,12 +273,12 @@
 
 -(void)displayAdress:(NSString *)adress city:(NSString *)city province:(NSString *)province town:(NSString *)town latitude:(CGFloat)latitude longitude:(CGFloat)longitude
 {
-    _i=1;
-    _province=province;
-    _city=city;
-    _town=town;
+	_i = 1;
+	_province = province;
+	_city = city;
+	_town = town;
     
-    NSMutableDictionary *dic=[[NSMutableDictionary alloc]initWithDictionary:[IHUtility getUserDefalutsDicKey:kUserDefalutLoginInfo]];
+    NSMutableDictionary *dic = [[NSMutableDictionary alloc]initWithDictionary:[IHUtility getUserDefalutsDicKey:kUserDefalutLoginInfo]];
     
     NSMutableDictionary *obj=[[NSMutableDictionary alloc]initWithDictionary:dic[@"addressInfo"]];
     [obj setValue:city forKey:@"company_city"];

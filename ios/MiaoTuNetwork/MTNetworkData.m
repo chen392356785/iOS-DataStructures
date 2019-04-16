@@ -173,55 +173,55 @@ static inline void appendHTTPHeaders(AFHTTPSessionManager *sessionManager,IHFunc
 
 -(void)httpRequestWithParameter:(NSDictionary *)dic method:(NSString *)method success:(void (^)(id))success failure:(void (^)(id))failure{
 	
-//	AFHTTPSessionManager *sessionManager = [AFHTTPSessionManager manager];
-//	sessionManager.responseSerializer = [AFHTTPResponseSerializer serializer];
-//	sessionManager.requestSerializer = [AFJSONRequestSerializer serializer];
-//	sessionManager.operationQueue.maxConcurrentOperationCount = 5;
-//	// 设置超时时间
-//	[sessionManager.requestSerializer willChangeValueForKey:@"timeoutInterval"];
-//	sessionManager.requestSerializer.timeoutInterval = 8.f;
-//	[sessionManager.requestSerializer didChangeValueForKey:@"timeoutInterval"];
-//
-//	[sessionManager.requestSerializer setValue:@"application/json" forHTTPHeaderField:@"Content-Type"];
-//	NSString *service = [NSString stringWithFormat:@"%@%@", [ServerConfig HTTPServer],method];
-//	NSString* parameter;
-//	if (dic.allKeys.count>0) {
-//		parameter  = [IHUtility getParameterString:dic];
-//	}
-//
-//	NSLog(@"total url:  %@?%@", service,parameter);
-//	NSDictionary *mDic = [NSDictionary dictionaryWithObjectsAndKeys:
-//						  //       @"4",@"deviceType",  //IOS
-//						  USERMODEL.userName,@"user_name",
-//						  USERMODEL.token,@"authorization_code",nil];
-//	//    NSString *str = [mDic JSONRepresentation];
-//
-//	NSString *str = [mDic mj_JSONString];
-//
-//	NSData *basicAuthCredentials = [str dataUsingEncoding:NSUTF8StringEncoding];
-//	NSString *base64AuthCredentials = [basicAuthCredentials base64EncodedStringWithOptions:(NSDataBase64EncodingOptions)0];
-//
-//	[sessionManager.requestSerializer setValue:USERMODEL.token forHTTPHeaderField:@"token"];
-//	[sessionManager.requestSerializer setValue:base64AuthCredentials forHTTPHeaderField:@"Authorization"];
-//	//   [sessionManager.requestSerializer setValue:@"4" forHTTPHeaderField:@"deviceType"];
-//	[sessionManager.requestSerializer setValue:@"4" forHTTPHeaderField:@"device_type"];
-//	[sessionManager.requestSerializer setValue:VERSION_CODE forHTTPHeaderField:@"version_code"];
-//	[sessionManager.requestSerializer setValue:APP_KEY forHTTPHeaderField:@"app_key"];
-//	[sessionManager.requestSerializer setValue:@"ios" forHTTPHeaderField:@"modelType"];
-//
-//#ifdef DEBUG
-//	[sessionManager.requestSerializer setValue:@"woshiceshi" forHTTPHeaderField:@"woshiceshi"];
-//#else
-//
-//#endif
-//
-//	NSDictionary *infoDictionary = [[NSBundle mainBundle] infoDictionary];
-//	NSString *app_Version = [infoDictionary objectForKey:@"CFBundleShortVersionString"];
-//	[sessionManager.requestSerializer setValue:app_Version forHTTPHeaderField:@"api_version"];
-//
-//	NSString *Aestime = [[IHUtility getNowTimeTimestamp] aci_encryptWithAES];
-//	[sessionManager.requestSerializer setValue:Aestime forHTTPHeaderField:@"verger"]; //时间加密
-//
+	//	AFHTTPSessionManager *sessionManager = [AFHTTPSessionManager manager];
+	//	sessionManager.responseSerializer = [AFHTTPResponseSerializer serializer];
+	//	sessionManager.requestSerializer = [AFJSONRequestSerializer serializer];
+	//	sessionManager.operationQueue.maxConcurrentOperationCount = 5;
+	//	// 设置超时时间
+	//	[sessionManager.requestSerializer willChangeValueForKey:@"timeoutInterval"];
+	//	sessionManager.requestSerializer.timeoutInterval = 8.f;
+	//	[sessionManager.requestSerializer didChangeValueForKey:@"timeoutInterval"];
+	//
+	//	[sessionManager.requestSerializer setValue:@"application/json" forHTTPHeaderField:@"Content-Type"];
+	//	NSString *service = [NSString stringWithFormat:@"%@%@", [ServerConfig HTTPServer],method];
+	//	NSString* parameter;
+	//	if (dic.allKeys.count>0) {
+	//		parameter  = [IHUtility getParameterString:dic];
+	//	}
+	//
+	//	NSLog(@"total url:  %@?%@", service,parameter);
+	//	NSDictionary *mDic = [NSDictionary dictionaryWithObjectsAndKeys:
+	//						  //       @"4",@"deviceType",  //IOS
+	//						  USERMODEL.userName,@"user_name",
+	//						  USERMODEL.token,@"authorization_code",nil];
+	//	//    NSString *str = [mDic JSONRepresentation];
+	//
+	//	NSString *str = [mDic mj_JSONString];
+	//
+	//	NSData *basicAuthCredentials = [str dataUsingEncoding:NSUTF8StringEncoding];
+	//	NSString *base64AuthCredentials = [basicAuthCredentials base64EncodedStringWithOptions:(NSDataBase64EncodingOptions)0];
+	//
+	//	[sessionManager.requestSerializer setValue:USERMODEL.token forHTTPHeaderField:@"token"];
+	//	[sessionManager.requestSerializer setValue:base64AuthCredentials forHTTPHeaderField:@"Authorization"];
+	//	//   [sessionManager.requestSerializer setValue:@"4" forHTTPHeaderField:@"deviceType"];
+	//	[sessionManager.requestSerializer setValue:@"4" forHTTPHeaderField:@"device_type"];
+	//	[sessionManager.requestSerializer setValue:VERSION_CODE forHTTPHeaderField:@"version_code"];
+	//	[sessionManager.requestSerializer setValue:APP_KEY forHTTPHeaderField:@"app_key"];
+	//	[sessionManager.requestSerializer setValue:@"ios" forHTTPHeaderField:@"modelType"];
+	//
+	//#ifdef DEBUG
+	//	[sessionManager.requestSerializer setValue:@"woshiceshi" forHTTPHeaderField:@"woshiceshi"];
+	//#else
+	//
+	//#endif
+	//
+	//	NSDictionary *infoDictionary = [[NSBundle mainBundle] infoDictionary];
+	//	NSString *app_Version = [infoDictionary objectForKey:@"CFBundleShortVersionString"];
+	//	[sessionManager.requestSerializer setValue:app_Version forHTTPHeaderField:@"api_version"];
+	//
+	//	NSString *Aestime = [[IHUtility getNowTimeTimestamp] aci_encryptWithAES];
+	//	[sessionManager.requestSerializer setValue:Aestime forHTTPHeaderField:@"verger"]; //时间加密
+	//
 	//    NSString* apiVersion = [IHApiConfigManager getAPIVersionWithMethod:method];
 	//    if (app_Version) {
 	//        apiVersion = [NSString stringWithFormat:@"%@", apiVersion];
@@ -242,103 +242,103 @@ static inline void appendHTTPHeaders(AFHTTPSessionManager *sessionManager,IHFunc
 	[sessionManager POST:service parameters:dic
 				progress:nil
 				 success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
-		
-		if (success) {
-			
-			NSError *err=nil;
-			NSDictionary *ret = [NSJSONSerialization JSONObjectWithData:responseObject options:NSJSONReadingMutableContainers
-																  error:&err];
-			printResponseData(ret);
-			
-			
-			NSInteger errorNo = [[ret objectForKey:@"errorNo"]integerValue];
-			
-			if (errorNo!=0) {
-				[IHUtility removeWaitingView];
-				[IHUtility addSucessView:[ret objectForKey:@"errorContent"] type:2];
-				failure(ret);
-				
-				if (errorNo==401 && USERMODEL.isLogin) {
-					[[NSNotificationCenter defaultCenter]postNotificationName:NotificationLoginIn object:nil]; //挤登录
-				}
-				return ;
-			}
-			NSDictionary *dic2=[self parseResult:ret tag:IH_init];
-			success(dic2);
-		}
-		
-	} failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
-		NSLog(@"%@",error);
-		NSDictionary *userInfo=error.userInfo;
-		[IHUtility addSucessView:[userInfo objectForKey:@"NSLocalizedDescription"] type:2];
-		failure(error);
-	}];
+					 
+					 if (success) {
+						 
+						 NSError *err=nil;
+						 NSDictionary *ret = [NSJSONSerialization JSONObjectWithData:responseObject options:NSJSONReadingMutableContainers
+																			   error:&err];
+						 printResponseData(ret);
+						 
+						 
+						 NSInteger errorNo = [[ret objectForKey:@"errorNo"]integerValue];
+						 
+						 if (errorNo!=0) {
+							 [IHUtility removeWaitingView];
+							 [IHUtility addSucessView:[ret objectForKey:@"errorContent"] type:2];
+							 failure(ret);
+							 
+							 if (errorNo==401 && USERMODEL.isLogin) {
+								 [[NSNotificationCenter defaultCenter]postNotificationName:NotificationLoginIn object:nil]; //挤登录
+							 }
+							 return ;
+						 }
+						 NSDictionary *dic2=[self parseResult:ret tag:IH_init];
+						 success(dic2);
+					 }
+					 
+				 } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+					 NSLog(@"%@",error);
+					 NSDictionary *userInfo=error.userInfo;
+					 [IHUtility addSucessView:[userInfo objectForKey:@"NSLocalizedDescription"] type:2];
+					 failure(error);
+				 }];
 	
 }
 
 
 -(void)httpRequestWithParameter:(NSDictionary *)dic method:(NSString *)method success:(void (^)(id))success{
 	
-//	AFHTTPSessionManager *sessionManager = [AFHTTPSessionManager manager];
-//	sessionManager.responseSerializer = [AFHTTPResponseSerializer serializer];
-//	sessionManager.requestSerializer = [AFJSONRequestSerializer serializer];
-//	sessionManager.operationQueue.maxConcurrentOperationCount = 5;
-//	// 设置超时时间
-//	[sessionManager.requestSerializer willChangeValueForKey:@"timeoutInterval"];
-//	sessionManager.requestSerializer.timeoutInterval = 8.f;
-//	[sessionManager.requestSerializer didChangeValueForKey:@"timeoutInterval"];
-//
-//	[sessionManager.requestSerializer setValue:@"application/json" forHTTPHeaderField:@"Content-Type"];
-//	[sessionManager.requestSerializer setValue:APP_KEY forHTTPHeaderField:@"app_key"];
-//	[sessionManager.requestSerializer setValue:@"ios" forHTTPHeaderField:@"modelType"];
-//
-//	NSString *Aestime = [[IHUtility getNowTimeTimestamp] aci_encryptWithAES];
-//	[sessionManager.requestSerializer setValue:Aestime forHTTPHeaderField:@"verger"]; //时间加密
-//
-//#ifdef DEBUG
-//	[sessionManager.requestSerializer setValue:@"woshiceshi" forHTTPHeaderField:@"woshiceshi"];
-//#else
-//
-//#endif
-//
-//	NSDictionary *mDic=[NSDictionary dictionaryWithObjectsAndKeys:
-//						//   @"4",@"deviceType",  //IOS
-//						USERMODEL.userName,@"user_name",
-//						USERMODEL.token,@"authorization_code",nil];
-//	//    NSString *str=[mDic JSONRepresentation];
-//	NSString *str = [mDic mj_JSONString];
-//
-//	NSData *basicAuthCredentials = [str dataUsingEncoding:NSUTF8StringEncoding];
-//	NSString *base64AuthCredentials = [basicAuthCredentials base64EncodedStringWithOptions:(NSDataBase64EncodingOptions)0];
-//	[sessionManager.requestSerializer setValue:USERMODEL.token forHTTPHeaderField:@"token"];
-//	[sessionManager.requestSerializer setValue:base64AuthCredentials forHTTPHeaderField:@"Authorization"];
-//	[sessionManager.requestSerializer setValue:@"4" forHTTPHeaderField:@"device_type"];
-//	[sessionManager.requestSerializer setValue:VERSION_CODE forHTTPHeaderField:@"version_code"];
-//	[sessionManager.requestSerializer setValue:APP_KEY forHTTPHeaderField:@"app_key"];
-//
-//#ifdef DEBUG
-//	[sessionManager.requestSerializer setValue:@"woshiceshi" forHTTPHeaderField:@"woshiceshi"];
-//#else
-//
-//#endif
-//
-//	//    NSString* apiVersion = [IHApiConfigManager getAPIVersionWithMethod:method];
-//	//
-//	//    if (apiVersion) {
-//	//        apiVersion = [NSString stringWithFormat:@"%@", apiVersion];
-//	//        [sessionManager.requestSerializer setValue:apiVersion forHTTPHeaderField:@"api_version"];
-//	//    }else{
-//	//        [sessionManager.requestSerializer setValue:@"1" forHTTPHeaderField:@"api_version"];
-//	//    }
-//
-//
-//	NSString *service = [NSString stringWithFormat:@"%@%@", [ServerConfig HTTPServer],method];
-//	NSString *parameter=nil;
-//	if (dic.allKeys.count>0) {
-//		parameter  = [IHUtility getParameterString:dic];
-//	}
-//
-//	NSLog(@"total url:  %@?%@", service, parameter);
+	//	AFHTTPSessionManager *sessionManager = [AFHTTPSessionManager manager];
+	//	sessionManager.responseSerializer = [AFHTTPResponseSerializer serializer];
+	//	sessionManager.requestSerializer = [AFJSONRequestSerializer serializer];
+	//	sessionManager.operationQueue.maxConcurrentOperationCount = 5;
+	//	// 设置超时时间
+	//	[sessionManager.requestSerializer willChangeValueForKey:@"timeoutInterval"];
+	//	sessionManager.requestSerializer.timeoutInterval = 8.f;
+	//	[sessionManager.requestSerializer didChangeValueForKey:@"timeoutInterval"];
+	//
+	//	[sessionManager.requestSerializer setValue:@"application/json" forHTTPHeaderField:@"Content-Type"];
+	//	[sessionManager.requestSerializer setValue:APP_KEY forHTTPHeaderField:@"app_key"];
+	//	[sessionManager.requestSerializer setValue:@"ios" forHTTPHeaderField:@"modelType"];
+	//
+	//	NSString *Aestime = [[IHUtility getNowTimeTimestamp] aci_encryptWithAES];
+	//	[sessionManager.requestSerializer setValue:Aestime forHTTPHeaderField:@"verger"]; //时间加密
+	//
+	//#ifdef DEBUG
+	//	[sessionManager.requestSerializer setValue:@"woshiceshi" forHTTPHeaderField:@"woshiceshi"];
+	//#else
+	//
+	//#endif
+	//
+	//	NSDictionary *mDic=[NSDictionary dictionaryWithObjectsAndKeys:
+	//						//   @"4",@"deviceType",  //IOS
+	//						USERMODEL.userName,@"user_name",
+	//						USERMODEL.token,@"authorization_code",nil];
+	//	//    NSString *str=[mDic JSONRepresentation];
+	//	NSString *str = [mDic mj_JSONString];
+	//
+	//	NSData *basicAuthCredentials = [str dataUsingEncoding:NSUTF8StringEncoding];
+	//	NSString *base64AuthCredentials = [basicAuthCredentials base64EncodedStringWithOptions:(NSDataBase64EncodingOptions)0];
+	//	[sessionManager.requestSerializer setValue:USERMODEL.token forHTTPHeaderField:@"token"];
+	//	[sessionManager.requestSerializer setValue:base64AuthCredentials forHTTPHeaderField:@"Authorization"];
+	//	[sessionManager.requestSerializer setValue:@"4" forHTTPHeaderField:@"device_type"];
+	//	[sessionManager.requestSerializer setValue:VERSION_CODE forHTTPHeaderField:@"version_code"];
+	//	[sessionManager.requestSerializer setValue:APP_KEY forHTTPHeaderField:@"app_key"];
+	//
+	//#ifdef DEBUG
+	//	[sessionManager.requestSerializer setValue:@"woshiceshi" forHTTPHeaderField:@"woshiceshi"];
+	//#else
+	//
+	//#endif
+	//
+	//	//    NSString* apiVersion = [IHApiConfigManager getAPIVersionWithMethod:method];
+	//	//
+	//	//    if (apiVersion) {
+	//	//        apiVersion = [NSString stringWithFormat:@"%@", apiVersion];
+	//	//        [sessionManager.requestSerializer setValue:apiVersion forHTTPHeaderField:@"api_version"];
+	//	//    }else{
+	//	//        [sessionManager.requestSerializer setValue:@"1" forHTTPHeaderField:@"api_version"];
+	//	//    }
+	//
+	//
+	//	NSString *service = [NSString stringWithFormat:@"%@%@", [ServerConfig HTTPServer],method];
+	//	NSString *parameter=nil;
+	//	if (dic.allKeys.count>0) {
+	//		parameter  = [IHUtility getParameterString:dic];
+	//	}
+	//
+	//	NSLog(@"total url:  %@?%@", service, parameter);
 	//    NSError *serializationError = nil;
 	//    NSMutableURLRequest *request = [[AFJSONRequestSerializer serializer] requestWithMethod:@"POST" URLString:service parameters:dic error:&serializationError];
 	
@@ -421,64 +421,64 @@ static inline void appendHTTPHeaders(AFHTTPSessionManager *sessionManager,IHFunc
 							  success:(void (^)(id))success
 							  failure:(void (^)(id))failure{
 	
-//	AFHTTPSessionManager *sessionManager = [AFHTTPSessionManager manager];
-//	sessionManager.responseSerializer = [AFHTTPResponseSerializer serializer];
-//	sessionManager.requestSerializer = [AFJSONRequestSerializer serializer];
-//	sessionManager.operationQueue.maxConcurrentOperationCount = 5;
-//
-//	// 设置超时时间
-//	[sessionManager.requestSerializer willChangeValueForKey:@"timeoutInterval"];
-//	sessionManager.requestSerializer.timeoutInterval = 8.f;
-//	[sessionManager.requestSerializer didChangeValueForKey:@"timeoutInterval"];
-//
-//	[sessionManager.requestSerializer setValue:@"application/json" forHTTPHeaderField:@"Content-Type"];
-//
-//	NSDictionary *mDic=[NSDictionary dictionaryWithObjectsAndKeys:
-//
-//						USERMODEL.userName,@"user_name",
-//						USERMODEL.token,@"authorization_code",nil];
-//	//    NSString *str=[mDic JSONRepresentation];
-//	NSString *str = [mDic mj_JSONString];
-//
-//	NSData *basicAuthCredentials = [str dataUsingEncoding:NSUTF8StringEncoding];
-//	NSString *base64AuthCredentials = [basicAuthCredentials base64EncodedStringWithOptions:(NSDataBase64EncodingOptions)0];
-//	[sessionManager.requestSerializer setValue:USERMODEL.token forHTTPHeaderField:@"token"];
-//	[sessionManager.requestSerializer setValue:base64AuthCredentials forHTTPHeaderField:@"Authorization"];
-//	[sessionManager.requestSerializer setValue:@"4" forHTTPHeaderField:@"device_type"];
-//	[sessionManager.requestSerializer setValue:VERSION_CODE forHTTPHeaderField:@"version_code"];
-//	[sessionManager.requestSerializer setValue:APP_KEY forHTTPHeaderField:@"app_key"];
-//	[sessionManager.requestSerializer setValue:@"ios" forHTTPHeaderField:@"modelType"];
-//
-//#ifdef DEBUG
-//	[sessionManager.requestSerializer setValue:@"woshiceshi" forHTTPHeaderField:@"woshiceshi"];
-//#else
-//
-//#endif
-//
-//	NSString *service = [NSString stringWithFormat:@"%@%@", [ServerConfig HTTPServer],method];
-//
-//	NSDictionary *infoDictionary = [[NSBundle mainBundle] infoDictionary];
-//	NSString *app_Version = [infoDictionary objectForKey:@"CFBundleShortVersionString"];
-//	[sessionManager.requestSerializer setValue:app_Version forHTTPHeaderField:@"api_version"];
-//
-//	NSString *Aestime = [[IHUtility getNowTimeTimestamp] aci_encryptWithAES];
-//	[sessionManager.requestSerializer setValue:Aestime forHTTPHeaderField:@"verger"]; //时间加密
-//	//    NSString* apiVersion = [IHApiConfigManager getAPIVersionWithMethod:method];
-//	//
-//	//    if (apiVersion) {
-//	//        apiVersion = [NSString stringWithFormat:@"%@", apiVersion];
-//	//        [sessionManager.requestSerializer setValue:apiVersion forHTTPHeaderField:@"api_version"];
-//	//    }else{
-//	//        [sessionManager.requestSerializer setValue:@"1" forHTTPHeaderField:@"api_version"];
-//	//    }
-//
-//	//   NSString* parameter;
-//	//    if (dic.allKeys.count>0) {
-//	//        parameter  = [IHUtility getParameterString:dic];
-//	//    }
-//	//
-//	//    NSLog(@"total url:  %@?%@", service, parameter);
-//
+	//	AFHTTPSessionManager *sessionManager = [AFHTTPSessionManager manager];
+	//	sessionManager.responseSerializer = [AFHTTPResponseSerializer serializer];
+	//	sessionManager.requestSerializer = [AFJSONRequestSerializer serializer];
+	//	sessionManager.operationQueue.maxConcurrentOperationCount = 5;
+	//
+	//	// 设置超时时间
+	//	[sessionManager.requestSerializer willChangeValueForKey:@"timeoutInterval"];
+	//	sessionManager.requestSerializer.timeoutInterval = 8.f;
+	//	[sessionManager.requestSerializer didChangeValueForKey:@"timeoutInterval"];
+	//
+	//	[sessionManager.requestSerializer setValue:@"application/json" forHTTPHeaderField:@"Content-Type"];
+	//
+	//	NSDictionary *mDic=[NSDictionary dictionaryWithObjectsAndKeys:
+	//
+	//						USERMODEL.userName,@"user_name",
+	//						USERMODEL.token,@"authorization_code",nil];
+	//	//    NSString *str=[mDic JSONRepresentation];
+	//	NSString *str = [mDic mj_JSONString];
+	//
+	//	NSData *basicAuthCredentials = [str dataUsingEncoding:NSUTF8StringEncoding];
+	//	NSString *base64AuthCredentials = [basicAuthCredentials base64EncodedStringWithOptions:(NSDataBase64EncodingOptions)0];
+	//	[sessionManager.requestSerializer setValue:USERMODEL.token forHTTPHeaderField:@"token"];
+	//	[sessionManager.requestSerializer setValue:base64AuthCredentials forHTTPHeaderField:@"Authorization"];
+	//	[sessionManager.requestSerializer setValue:@"4" forHTTPHeaderField:@"device_type"];
+	//	[sessionManager.requestSerializer setValue:VERSION_CODE forHTTPHeaderField:@"version_code"];
+	//	[sessionManager.requestSerializer setValue:APP_KEY forHTTPHeaderField:@"app_key"];
+	//	[sessionManager.requestSerializer setValue:@"ios" forHTTPHeaderField:@"modelType"];
+	//
+	//#ifdef DEBUG
+	//	[sessionManager.requestSerializer setValue:@"woshiceshi" forHTTPHeaderField:@"woshiceshi"];
+	//#else
+	//
+	//#endif
+	//
+	//	NSString *service = [NSString stringWithFormat:@"%@%@", [ServerConfig HTTPServer],method];
+	//
+	//	NSDictionary *infoDictionary = [[NSBundle mainBundle] infoDictionary];
+	//	NSString *app_Version = [infoDictionary objectForKey:@"CFBundleShortVersionString"];
+	//	[sessionManager.requestSerializer setValue:app_Version forHTTPHeaderField:@"api_version"];
+	//
+	//	NSString *Aestime = [[IHUtility getNowTimeTimestamp] aci_encryptWithAES];
+	//	[sessionManager.requestSerializer setValue:Aestime forHTTPHeaderField:@"verger"]; //时间加密
+	//	//    NSString* apiVersion = [IHApiConfigManager getAPIVersionWithMethod:method];
+	//	//
+	//	//    if (apiVersion) {
+	//	//        apiVersion = [NSString stringWithFormat:@"%@", apiVersion];
+	//	//        [sessionManager.requestSerializer setValue:apiVersion forHTTPHeaderField:@"api_version"];
+	//	//    }else{
+	//	//        [sessionManager.requestSerializer setValue:@"1" forHTTPHeaderField:@"api_version"];
+	//	//    }
+	//
+	//	//   NSString* parameter;
+	//	//    if (dic.allKeys.count>0) {
+	//	//        parameter  = [IHUtility getParameterString:dic];
+	//	//    }
+	//	//
+	//	//    NSLog(@"total url:  %@?%@", service, parameter);
+	//
 	AFHTTPSessionManager *sessionManager = [MTNetworkData shareSessionManager];
 	///拼接请求头信息
 	appendHTTPHeaders(sessionManager,0);
@@ -532,20 +532,20 @@ static inline void appendHTTPHeaders(AFHTTPSessionManager *sessionManager,IHFunc
 							  success:(void (^)(id))success
 							  failure:(void (^)(id))failure{
 	
-//	AFHTTPSessionManager *sessionManager = [AFHTTPSessionManager manager];
-//	sessionManager.responseSerializer = [AFHTTPResponseSerializer serializer];
-//	sessionManager.requestSerializer = [AFJSONRequestSerializer serializer];
-//	sessionManager.operationQueue.maxConcurrentOperationCount = 5;
-//
-//	// 设置超时时间
-//	[sessionManager.requestSerializer willChangeValueForKey:@"timeoutInterval"];
-//	sessionManager.requestSerializer.timeoutInterval = 8.f;
-//	[sessionManager.requestSerializer didChangeValueForKey:@"timeoutInterval"];
-//
-//	[sessionManager.requestSerializer setValue:@"application/json" forHTTPHeaderField:@"Content-Type"];
-//
-//	NSString *Aestime = [[IHUtility getNowTimeTimestamp] aci_encryptWithAES];
-//	[sessionManager.requestSerializer setValue:Aestime forHTTPHeaderField:@"verger"]; //时间加密
+	//	AFHTTPSessionManager *sessionManager = [AFHTTPSessionManager manager];
+	//	sessionManager.responseSerializer = [AFHTTPResponseSerializer serializer];
+	//	sessionManager.requestSerializer = [AFJSONRequestSerializer serializer];
+	//	sessionManager.operationQueue.maxConcurrentOperationCount = 5;
+	//
+	//	// 设置超时时间
+	//	[sessionManager.requestSerializer willChangeValueForKey:@"timeoutInterval"];
+	//	sessionManager.requestSerializer.timeoutInterval = 8.f;
+	//	[sessionManager.requestSerializer didChangeValueForKey:@"timeoutInterval"];
+	//
+	//	[sessionManager.requestSerializer setValue:@"application/json" forHTTPHeaderField:@"Content-Type"];
+	//
+	//	NSString *Aestime = [[IHUtility getNowTimeTimestamp] aci_encryptWithAES];
+	//	[sessionManager.requestSerializer setValue:Aestime forHTTPHeaderField:@"verger"]; //时间加密
 	
 	AFHTTPSessionManager *sessionManager = [MTNetworkData shareSessionManager];
 	///拼接请求头信息
@@ -588,7 +588,7 @@ static inline void appendHTTPHeaders(AFHTTPSessionManager *sessionManager,IHFunc
 		return [self getSupplyAndBuyList:dic type:tag page:self.ntpage];
 	}else if (tag==IH_QueryNearUser){
 		return [self parseGetNearUserList:dic];
-	}else if (tag==IH_QuerySupplyCommentList || tag==IH_QueryWantBuyCommentList||tag==IH_QueryTopicCommentList||tag == IH_ActivtiesCommentList){
+	}else if (tag==IH_QuerySupplyCommentList || tag == IH_QueryWantBuyCommentList||tag == IH_QueryTopicCommentList||tag == IH_ActivtiesCommentList){
 		return [self parseGetSupplyCommentList:dic];
 	}
 	else if(tag==IH_SelectUserCompanyName ){
@@ -1135,22 +1135,18 @@ seedling_source_address:(NSString *)seedling_source_address
 						 success:(void (^)(NSDictionary *obj))success
 						 failure:(void (^)(NSDictionary *obj2))failure{
 	
-	self.tag=IH_QuerySupplyCommentList;
-	NSDictionary *dic2=[NSDictionary dictionaryWithObjectsAndKeys:
-						stringFormatInt(page),@"page",
-						stringFormatInt(maxResults),@"num",
-						[NSString stringWithFormat:@"%@",supplyID],@"supply_id",
-						@"0",@"supply_comment_id",
-						
-						nil];
-	
-	[self httpRequestTagWithParameter:dic2 method:@"openModel/selectSupplyCommentInfoList" tag:IH_QuerySupplyCommentList success:^(NSDictionary *dic) {
+	NSDictionary *dic2 = [NSDictionary dictionaryWithObjectsAndKeys:
+						  @(page),@"page",
+						  @(maxResults),@"num",
+						  supplyID,@"supply_id",
+						  @"0",@"supply_comment_id",
+						  nil];
+	[self httpRequestTagWithParameter:dic2 method:@"openModel/selectSupplyCommentInfoList" tag:0 success:^(NSDictionary *dic) {
 		success(dic);
 	} failure:^(NSDictionary *dic) {
 		failure(dic);
 	}];
-	
-	
+		
 	
 }
 
@@ -1226,13 +1222,14 @@ seedling_source_address:(NSString *)seedling_source_address
 -(void)getAddSupplyComment:(int)supply_id
 				   user_id:(int)user_id     //供应主键ID,
 			 reply_user_id:(int)reply_user_id   //回复用户主键ID,
+		 supply_comment_id:(int)supply_comment_id ///评论 id
 			reply_nickname:(NSString *)reply_nickname   //回复用户昵称,
 			supply_comment:(NSString *)supply_comment   //供应评论内容,
 			  comment_type:(int)comment_type  //0:主动评论,1回复,
    reply_supply_comment_id:(int)reply_supply_comment_id  // 回复评论的评论ID,如果不是回复评论就默认为0
 				   success:(void (^)(NSDictionary *obj))success
 {
-	self.tag=IH_AddSupplyComment;
+	self.tag = IH_AddSupplyComment;
 	NSDictionary *dic2=[NSDictionary dictionaryWithObjectsAndKeys:
 						stringFormatInt(supply_id),@"supply_id",
 						stringFormatInt(user_id),@"user_id",
@@ -1241,7 +1238,7 @@ seedling_source_address:(NSString *)seedling_source_address
 						stringFormatString(supply_comment),@"supply_comment",
 						stringFormatInt(comment_type),@"comment_type",
 						stringFormatInt(reply_supply_comment_id),@"reply_supply_comment_id",
-						@"0",@"supply_comment_id",
+						@(supply_comment_id),@"supply_comment_id",
 						nil];
 	[self httpRequestTagWithParameter:dic2 method:@"supply/addSupplyComment" tag:IH_AddSupplyComment success:^(NSDictionary *dic) {
 		success(dic);
@@ -1413,16 +1410,14 @@ seedling_source_address:(NSString *)seedling_source_address
 
 
 //查看供应详情
--(void)getQuerySupplyComment:(int)supply_id
+-(void)getQuerySupplyComment:(NSString *)supply_id
 					 success:(void (^)(NSDictionary *obj))success
-					 failure:(void (^)(NSDictionary *obj2))failure
-{
-	self.tag=IH_QuerySupplyComment;
-	NSDictionary *dic2=[NSDictionary dictionaryWithObjectsAndKeys:
-						
-						stringFormatInt(supply_id),@"supply_id",
-						nil];
-	[self httpRequestWithParameter:dic2 method:@"supply/selectSupplyforId" success:^(NSDictionary *dic) {
+					 failure:(void (^)(NSDictionary *obj2))failure {
+	
+	self.tag = IH_QuerySupplyComment;
+	NSDictionary *dic2 = [NSDictionary dictionaryWithObjectsAndKeys:supply_id,@"supply_id",
+						  nil];
+	[self httpRequestWithParameter:dic2 method:@"openModel/selectSupplyforId" success:^(NSDictionary *dic) {
 		success(dic);
 	} failure:^(NSDictionary *dic) {
 		failure(dic);
@@ -1756,4 +1751,5 @@ payment_methods_dictionary_id:(NSInteger)paymentId
 }
 
 @end
+
 

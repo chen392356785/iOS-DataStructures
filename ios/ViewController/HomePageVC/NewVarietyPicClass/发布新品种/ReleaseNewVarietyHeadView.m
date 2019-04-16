@@ -11,7 +11,7 @@
 @interface ReleaseNewVarietyHeadView () <UICollectionViewDelegate,UICollectionViewDataSource>{
     UICollectionView *_collectionView;
 //    UILabel *photoLabel;
-    CGRect _frame;
+//    CGRect _frame;
     NSMutableArray *imaArray;
 }
 @end
@@ -20,7 +20,7 @@
 
 - (instancetype)initWithFrame:(CGRect)frame {
     if (self = [super initWithFrame:frame]) {
-        _frame = frame;
+//        _frame = frame;
         self.backgroundColor = [UIColor whiteColor];
         [self creatSubView];
     }

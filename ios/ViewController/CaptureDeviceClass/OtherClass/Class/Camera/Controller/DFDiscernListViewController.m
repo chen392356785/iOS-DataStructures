@@ -8,16 +8,17 @@
 
 #import "DFConstant.h"
 #import "DFIconConstant.h"
-#import "DFIdentifierConstant.h"
-#import "DFDiscernListViewController.h"
-#import "DFUsersDiscernView.h"
-#import "TFWaterflowLayout.h"
-#import "DFUsersDiscernListCell.h"
-#import "DFDiscernTypeListView.h"
-#import "DFCommentViewController.h"
-#import "DFDiscernListModel.h"
 #import "DFCommentModel.h"
 #import "DFAddCommentView.h"
+#import "TFWaterflowLayout.h"
+#import "DFUsersDiscernView.h"
+#import "DFDiscernListModel.h"
+#import "DFIdentifierConstant.h"
+#import "DFDiscernTypeListView.h"
+#import "DFUsersDiscernListCell.h"
+#import "DFCommentViewController.h"
+#import "DFDiscernListViewController.h"
+
 
 @interface DFDiscernListViewController ()<TFWaterflowLayoutDelegate, UICollectionViewDelegate, UICollectionViewDataSource, DFDiscernTypeListViewDelegate, DFAddCommentViewDelegate, DFDiscernListCellDelegate, TFShowEmptyViewDelegate>
 
@@ -144,8 +145,26 @@
             
             if (TTValidateArray(array) && array.count != 0) {
                 self.currentPage ++;
-                for (NSDictionary *dictionary in array) {
-                    DFDiscernListModel *model = [DFDiscernListModel mj_objectWithKeyValues:dictionary];
+                for (NSDictionary *dictionary in array) {					
+					DFDiscernListModel *model = [DFDiscernListModel new];
+					model.ID = dictionary[@"ID"];
+					model.NickName = dictionary[@"NickName"];
+					model.NickName = dictionary[@"HeadImage"];
+					model.NickName = dictionary[@"Title"];
+					model.NickName = dictionary[@"ImagePath"];
+					model.NickName = dictionary[@"CreateTime"];
+					NSArray *CommentList = dictionary[@"CommentList"];
+					NSMutableArray *temp = [NSMutableArray array];
+					for (NSDictionary *commDic in CommentList) {
+						DFCommentModel *commentModel = [[DFCommentModel alloc] init];
+						commentModel.HeadImage = commDic[@"HeadImage"];
+						commentModel.NickName = commDic[@"NickName"];
+						commentModel.Content = commDic[@"Content"];
+						commentModel.TimeStr = commDic[@"TimeStr"];
+						[temp addObject:commentModel];
+					}
+					model.CommentList = [temp mutableCopy];
+					
                     [self.listArray addObject:model];
                 }
             }
@@ -210,7 +229,24 @@
                 if (array.count > 0) {
                     self.currentPage ++;
                     for (NSDictionary *dictionary in array) {
-                        DFDiscernListModel *model = [DFDiscernListModel mj_objectWithKeyValues:dictionary];
+                        DFDiscernListModel *model = [DFDiscernListModel new];
+						model.ID = dictionary[@"ID"];
+						model.NickName = dictionary[@"NickName"];
+						model.NickName = dictionary[@"HeadImage"];
+						model.NickName = dictionary[@"Title"];
+						model.NickName = dictionary[@"ImagePath"];
+						model.NickName = dictionary[@"CreateTime"];
+						NSArray *CommentList = dictionary[@"CommentList"];
+						NSMutableArray *temp = [NSMutableArray array];
+						for (NSDictionary *commDic in CommentList) {
+							DFCommentModel *commentModel = [[DFCommentModel alloc] init];
+							commentModel.HeadImage = commDic[@"HeadImage"];
+							commentModel.NickName = commDic[@"NickName"];
+							commentModel.Content = commDic[@"Content"];
+							commentModel.TimeStr = commDic[@"TimeStr"];
+							[temp addObject:commentModel];
+						}
+						model.CommentList = [temp mutableCopy];
                         [self.listArray addObject:model];
                     }
                 }else {

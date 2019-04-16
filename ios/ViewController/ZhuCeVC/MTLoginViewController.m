@@ -52,8 +52,7 @@
     [self.navigationController setNavigationBarHidden:NO animated:animated];
     //先让环信退出
     [[EaseMob sharedInstance].chatManager asyncLogoffWithUnbindDeviceToken:YES completion:^(NSDictionary *info, EMError *error) {
-        if (!error && info) {
-        }
+        if (!error && info) { }
     } onQueue:nil];
     [[EaseMob sharedInstance].chatManager asyncLogoffWithUnbindDeviceToken:YES];
 }
@@ -132,22 +131,20 @@
     
     //密码文本框
     _passWordText=[[IHTextField alloc]initWithFrame:CGRectMake(_phoneText.left, _phoneText.bottom+20, lineView.width, _phoneText.height)];
-    
-    _passWordText.borderStyle=UITextBorderStyleNone;
-    _passWordText.delegate=self;
+	if (@available(iOS 12.0, *)) { ///短信验证码自动填充功能
+		_passWordText.textContentType = UITextContentTypeOneTimeCode;
+	}
+    _passWordText.borderStyle = UITextBorderStyleNone;
+    _passWordText.delegate = self;
     [_BaseScrollView addSubview:_passWordText];
+	
+    _passWordText.leftViewMode = UITextFieldViewModeAlways;
+	_passWordText.keyboardType = UIKeyboardTypeNumberPad;
+	lineView = [[UIView alloc]initWithFrame:CGRectMake(_passWordText.left, _passWordText.bottom+5, _passWordText.width, 1)];
+	lineView.backgroundColor = kColor(@"#D6D6D6");
+	[_BaseScrollView addSubview:lineView];
     
-   
-    _passWordText.secureTextEntry=YES;
-    
-    _passWordText.leftViewMode=UITextFieldViewModeAlways;
-    _passWordText.keyboardType = UIKeyboardTypeNumbersAndPunctuation;
-    lineView=[[UIView alloc]initWithFrame:CGRectMake(_passWordText.left, _passWordText.bottom+5, _passWordText.width, 1)];
-    lineView.backgroundColor = kColor(@"#D6D6D6");
-    [_BaseScrollView addSubview:lineView];
-    
-    
-    
+	
     UIButton *passW=[UIButton buttonWithType:UIButtonTypeCustom];
     [passW setTitle:@"忘记密码" forState:UIControlStateNormal];
     [passW setTitleColor:kColor(@"#424242") forState:UIControlStateNormal];
@@ -311,7 +308,9 @@
                              
                          } failure:^(NSDictionary *obj2) {
                          }];
-                    }];
+					} failure:^(NSError *error) {
+						
+					}];
                 }
                 else {
                 
@@ -418,15 +417,15 @@
         titleLab.text = @"用户名密码登录";
         _forgetPWbut.hidden = NO;
         _passWordText.secureTextEntry = YES;
-    }else{
-        self.GetCodeNumBut.hidden = NO;
-        [logTypeBut setTitle:@"用户名密码登录" forState:UIControlStateNormal];
-        _passWordText.placeholder=@"验证码";
-        _phoneText.width = _passWordText.width - self.GetCodeNumBut.width;
-        logType = @"1";
-        titleLab.text = @"验证码登录";
-        _forgetPWbut.hidden = YES;
-        _passWordText.secureTextEntry = NO;
+    } else {
+		self.GetCodeNumBut.hidden = NO;
+		[logTypeBut setTitle:@"用户名密码登录" forState:UIControlStateNormal];
+		_passWordText.placeholder=@"验证码";
+		_phoneText.width = _passWordText.width - self.GetCodeNumBut.width;
+		logType = @"1";
+		titleLab.text = @"验证码登录";
+		_forgetPWbut.hidden = YES;
+		_passWordText.secureTextEntry = NO;
     }
 }
 -(void)forgetPassword

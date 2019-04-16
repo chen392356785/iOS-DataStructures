@@ -19,18 +19,18 @@ UINavigationControllerDelegate,
 UIImagePickerControllerDelegate
 >
 {
-    ZLPhotoActionSheet *actionSheet;
+//    ZLPhotoActionSheet *actionSheet;
     NSMutableArray *imgsArray;
-    BOOL isFirstAddPhoto;
-    UIView *_downView;
+//    BOOL isFirstAddPhoto;
+//    UIView *_downView;
     
-    BOOL isSelectedPhoto;
+//    BOOL isSelectedPhoto;
     NSMutableArray *hyArray; //行业list
-    NSInteger _selIndex;
+//    NSInteger _selIndex;
     NSDictionary *_dic;
     
     UIAsyncImageView * _companyCulative;
-    KICropImageView* _cropImageView;
+//    KICropImageView* _cropImageView;
 	//    UICollectionView *_collectionView;
 
 }
@@ -58,7 +58,7 @@ UIImagePickerControllerDelegate
     UIImage *img=Image(@"redstar.png");
     UIView *downView=[[UIView alloc]init];
     
-    _downView=downView;
+//    _downView=downView;
     __weak CompanyCumlativeViewController *weakSelf=self;
     
     //上传企业营业执照
@@ -335,7 +335,10 @@ UIImagePickerControllerDelegate
                 
             } failure:^(NSDictionary *obj2) {
             }];
-        }];
+		} failure:^(NSError *error) {
+			
+			
+		}];
     }else{
         NSDictionary *dic=[ConfigManager getAddressInfoWithUser_id:[USERMODEL.userID intValue]country:nil province:nil city:nil area:nil street:nil longitude:0 latitude:0 company_lon:0 company_lat:0 distance:0 company_province:nil company_city:nil company_area:nil company_street:nil];
         
@@ -611,7 +614,7 @@ UIImagePickerControllerDelegate
         EditInformationView *urgentView=[_BaseScrollView viewWithTag:1002];
         urgentView.lbl.textColor=cBlackColor;
         urgentView.lbl.text=[dic objectForKey:@"i_name"];
-        _selIndex=index;
+//        _selIndex=index;
     }
     
 }

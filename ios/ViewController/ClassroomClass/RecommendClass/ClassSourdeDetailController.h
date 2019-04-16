@@ -13,4 +13,6 @@
 @interface ClassSourdeDetailController : SMBaseViewController
 
 @property (nonatomic, strong) studyBannerListModel *model;
+
+
 @end

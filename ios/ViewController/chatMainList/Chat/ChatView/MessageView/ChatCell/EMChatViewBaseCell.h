@@ -34,7 +34,7 @@ extern NSString *const kRouterEventChatHeadImageTapEventName;
     UILabel *_nameLabel;
     EMChatBaseBubbleView *_bubbleView;
     
-    CGFloat _nameLabelHeight;
+//    CGFloat _nameLabelHeight;
     MessageModel *_messageModel;
 }
 

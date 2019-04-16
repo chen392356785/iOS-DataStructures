@@ -19,7 +19,7 @@ typedef enum
 @interface SMLabel : UILabel{
      id delegate;
 @private
-    VerticalAlignment _verticalAlignment;
+//    VerticalAlignment _verticalAlignment;
 }
 @property (nonatomic) VerticalAlignment verticalAlignment;  //居上、中、下
 

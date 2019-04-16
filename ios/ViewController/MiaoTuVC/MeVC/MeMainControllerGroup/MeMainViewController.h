@@ -11,7 +11,7 @@
 
 @interface MeMainViewController : SMBaseViewController
 {
-    MTTopView *_topView;
+//    MTTopView *_topView;
 }
 
 @property (nonatomic, strong) CNPPopupController *popupViewController;//弹出试图

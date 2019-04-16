@@ -128,13 +128,13 @@ typedef void (^CancelButBut) ();
 
 
 @interface JoinGardenListController () <UITableViewDelegate,UITableViewDataSource,UICollectionViewDelegate,UICollectionViewDataSource,UITextViewDelegate,UITextFieldDelegate>{
-    NSString *CompanyStr;           //企业名称
-    NSString *nameStr;              //姓名
-    NSString *phoneStr;             //电话
-    NSString *CompanyInfo;          //企业地址
-    NSString *guimoinfoStr;         //种植规模
-    NSString *guigestr;             //规格
-    NSString *miaomuNum;            //数量
+//    NSString *CompanyStr;           //企业名称
+//    NSString *nameStr;              //姓名
+//    NSString *phoneStr;             //电话
+//    NSString *CompanyInfo;          //企业地址
+//    NSString *guimoinfoStr;         //种植规模
+//    NSString *guigestr;             //规格
+//    NSString *miaomuNum;            //数量
 
     NSMutableDictionary *InputDic;  //填写内容
     NSMutableArray *DataArr;        //填写榜单那内容
@@ -147,7 +147,7 @@ typedef void (^CancelButBut) ();
     BOOL isFirstAddPhoto;
     UICollectionView *_collectionView;
     NSMutableArray *imgsArray;
-    BOOL isSelectedPhoto;
+//    BOOL isSelectedPhoto;
                  //榜单类别
     
 }
@@ -464,20 +464,23 @@ static NSString *JoinGardenListCellID = @"JoinGardenListCell";
 }
 
 - (void) sendNewGardenListInfo {
-    [self addWaitingView];
-    [AliyunUpload uploadImage:imgsArray FileDirectory:ENT_fileImagesAdd success:^(NSString *obj) {
-        NSLog(@"--------           %@%@",@"http://8yyq8.com",obj);
-        NSLog(@"--------           %@%@",@"https://image.8yyq8.com",obj);
-        [self->InputDic setObject:obj forKey:@"gardenPic"];
-        [network httpRequestWithParameter:self->InputDic method:JoinGardenListUrl success:^(NSDictionary *dic) {
-            [self removeWaitingView];
-            [self popJoinGardenListSuccess];
-        } failure:^(NSDictionary *dic) {
-            [self removeWaitingView];
-        }];
-        
-    }];
-    
+	
+	[self addWaitingView];
+	[AliyunUpload uploadImage:imgsArray FileDirectory:ENT_fileImagesAdd success:^(NSString *obj) {
+		NSLog(@"--------           %@%@",@"http://8yyq8.com",obj);
+		NSLog(@"--------           %@%@",@"https://image.8yyq8.com",obj);
+		[self->InputDic setObject:obj forKey:@"gardenPic"];
+		[network httpRequestWithParameter:self->InputDic method:JoinGardenListUrl success:^(NSDictionary *dic) {
+			[self removeWaitingView];
+			[self popJoinGardenListSuccess];
+		} failure:^(NSDictionary *dic) {
+			[self removeWaitingView];
+		}];
+		
+	} failure:^(NSError *error) {
+		[self removeWaitingView];
+	}];
+	
     
 }
 
@@ -670,9 +673,9 @@ static NSString *JoinGardenListCellID = @"JoinGardenListCell";
     [imgsArray removeObjectAtIndex:sender.tag];
     [_collectionView reloadData];
     [self setBaseScrollHeigh:imgsArray];
-    if (imgsArray.count==0) {
-        isSelectedPhoto=NO;
-    }
+//    if (imgsArray.count==0) {
+//        isSelectedPhoto=NO;
+//    }
 }
 -(void)setBaseScrollHeigh:(NSArray *)arr2{
     CGFloat f=(WindowWith-kWidth(80))/3;

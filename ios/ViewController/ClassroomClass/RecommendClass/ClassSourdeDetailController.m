@@ -138,33 +138,29 @@
 @end
 
 
-
-
-
-
 @interface ClassSourdeDetailController () <UITableViewDelegate,UITableViewDataSource,UIScrollViewDelegate>{
-    UITableView *_tableView;
-    studyBannerListModel *DetailModel;
-    UIView *_headView;
-    ClassDetailModel *_DetailModel;
-    UIScrollView *_scrollView;
-    
-    UIButton *_listBut;     //选集But
-    UIButton *_DetailBut;   //详情But
-    
-    NSString *_currentUrl;  //VedioUrl
-    
-    UILabel *_InfoLab;   //VIP免费观看
-    UIButton *_PayVip;   //去开通VIP
-    UIView *_VideoView;
-    NSMutableArray *imagArr;    //详情图片
-    
-    CAGradientLayer* ListGl;
-    CAGradientLayer* DetailG1;
-    CAGradientLayer* VipButGl;
-    UIView *ListView;
-    UIView *DetailView;
-    CGFloat imgHeight;
+//	UITableView *_tableView;
+//	studyBannerListModel *DetailModel;
+//	UIView *_headView;
+	ClassDetailModel *_DetailModel;
+	UIScrollView *_scrollView;
+	
+	UIButton *_listBut;     //选集But
+	UIButton *_DetailBut;   //详情But
+	
+	NSString *_currentUrl;  //VedioUrl
+	
+	UILabel *_InfoLab;   //VIP免费观看
+	UIButton *_PayVip;   //去开通VIP
+	UIView *_VideoView;
+	NSMutableArray *imagArr;    //详情图片
+	
+	CAGradientLayer* ListGl;
+	CAGradientLayer* DetailG1;
+	CAGradientLayer* VipButGl;
+	UIView *ListView;
+	UIView *DetailView;
+	CGFloat imgHeight;
 }
 
 @property(nonatomic,strong)LXAVPlayView *playerview;

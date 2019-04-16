@@ -15,7 +15,7 @@
 @interface EMTextView : UITextView
 {
     UIColor *_contentColor;
-    BOOL _editing;
+//    BOOL _editing;
 }
 
 @property(strong, nonatomic) NSString *placeholder;

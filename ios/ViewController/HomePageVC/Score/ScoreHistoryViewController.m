@@ -11,7 +11,7 @@
 @interface ScoreHistoryViewController ()<UITableViewDelegate>
 {
     MTBaseTableView *commTableView;
-    int page;
+//    int page;
     NSMutableArray *dataArray;
     
     EmptyPromptView *_EPView;

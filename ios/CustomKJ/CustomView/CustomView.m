@@ -1396,7 +1396,7 @@
 }
 
 
-@synthesize imageView;
+//@synthesize imageView;
 
 @end
 

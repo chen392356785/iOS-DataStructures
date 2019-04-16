@@ -18,7 +18,7 @@
     MTBaseTableView *commTableView2;
     int page;
     NSMutableArray *dataArray;
-    NSIndexPath *_indexPath;
+//    NSIndexPath *_indexPath;
     AreaView *_areaV;
     MTLogisticsChooseView *_logisticsView;
     SearchView *_searchV;
@@ -34,7 +34,7 @@
     
     UIView *_searchView;//搜索结果遮罩
     NSMutableArray *dataArray2;
-    ButtonTypesetView *_HotSearchView;//热门搜索
+//    ButtonTypesetView *_HotSearchView;//热门搜索
     
 }
 

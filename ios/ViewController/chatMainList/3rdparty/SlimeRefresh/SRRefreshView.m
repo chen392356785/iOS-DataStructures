@@ -30,7 +30,7 @@
 @synthesize slime = _slime, refleshView = _refleshView;
 @synthesize block = _block, upInset = _upInset;
 @synthesize slimeMissWhenGoingBack = _slimeMissWhenGoingBack;
-@synthesize activityIndicationView = _activityIndicatorView;
+//@synthesize activityIndicationView = _activityIndicatorView;
 
 - (void)dealloc
 {

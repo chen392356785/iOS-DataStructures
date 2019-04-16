@@ -15,9 +15,9 @@
 static EMAudioRecorderUtil *audioRecorderUtil = nil;
 
 @interface EMAudioRecorderUtil () <AVAudioRecorderDelegate> {
-    NSDate *_startDate;
-    NSDate *_endDate;
-    
+//    NSDate *_startDate;
+//    NSDate *_endDate;
+//
     void (^recordFinish)(NSString *recordPath);
 }
 @property (nonatomic, strong) AVAudioRecorder *recorder;
@@ -123,10 +123,9 @@ static EMAudioRecorderUtil *audioRecorderUtil = nil;
         }
         return ;
     }
-    _startDate = [NSDate date];
+//    _startDate = [NSDate date];
     _recorder.meteringEnabled = YES;
     _recorder.delegate = self;
-    
     [_recorder record];
     if (completion) {
         completion(error);

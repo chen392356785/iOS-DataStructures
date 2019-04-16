@@ -17,7 +17,7 @@
 
 @interface MTSupplyAndBuyDetailsImageView : CustomView
 {
-    UIAsyncImageView *_lastImg;
+//    UIAsyncImageView *_lastImg;
     SDWeiXinPhotoContainerView *_picContainerView;
 }
 -(void)setData:(NSArray *)arr;
@@ -35,7 +35,7 @@
 @interface CrowdFundingTopView : CustomView<UITextViewDelegate>
 {
     UIView *_progressView;
-    UIView *_view;
+//    UIView *_view;
     UIAsyncImageView *_headImageView;
     SMLabel *_titleLbl;
     SMLabel *_timeLbl;
@@ -46,7 +46,7 @@
     SMLabel *_chajiaLbl;
     SMLabel *_jiezhiLbl;
     UIAsyncImageView *_ImageView;
-    SMLabel *_bottomLbl;
+//    SMLabel *_bottomLbl;
     UIButton *_editBtn;
   
 }
@@ -67,11 +67,9 @@
 @interface CrowdFundingShareView : CustomView<UITextViewDelegate>
 {
       PlaceholderTextView *_placeholderTextView;
-    UIView *_bkView;
-    UIAsyncImageView *_imageView;
-    SMLabel *_lbl;
-    
-    
+//    UIView *_bkView;
+//    UIAsyncImageView *_imageView;
+//    SMLabel *_lbl;
 }
 -(void)show;
 @end

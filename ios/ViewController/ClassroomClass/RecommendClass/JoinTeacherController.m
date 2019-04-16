@@ -29,7 +29,7 @@
     BOOL isFirstAddPhoto;
     NSMutableArray *TempImgsArr;
     NSMutableArray *imgsArr;
-    NSMutableArray *phoneArray;
+//    NSMutableArray *phoneArray;
     int channel;
 }
 @property (nonatomic, strong) UIButton *GetCodeNumBut;
@@ -81,7 +81,7 @@ static NSString *ReleaseNewVarietyViewCellID = @"ReleaseNewVarietyViewCell";
     [super viewDidLoad];
     self.title = @"加入讲师";
     TempImgsArr = [[NSMutableArray alloc] init];
-    phoneArray = [[NSMutableArray alloc] init];
+//    phoneArray = [[NSMutableArray alloc] init];
     imgsArr = [[NSMutableArray alloc] init];
     [self inPutTextnameInit];
     [self createTableview];
@@ -319,7 +319,9 @@ static NSString *ReleaseNewVarietyViewCellID = @"ReleaseNewVarietyViewCell";
             //           NSLog(@"11111----- %@",dic);
         }];
         //*/
-    }];
+	} failure:^(NSError *error) {
+		[self removeWaitingView];
+	}];
     
 }
 

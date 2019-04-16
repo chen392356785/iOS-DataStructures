@@ -12,7 +12,7 @@
 
 
 @interface MessageViewCell ()<UITableViewDataSource, UITableViewDelegate> {
-    GardenCommentListModel *_model;
+//    GardenCommentListModel *_model;
     NSMutableArray *dataArray;
     UILabel *linLab;
     UIView *_footView;

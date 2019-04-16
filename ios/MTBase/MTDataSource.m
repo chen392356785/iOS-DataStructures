@@ -451,7 +451,7 @@
     if (cell==nil) {
         cell = [[MTMeListTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:identify];
     }
-    if (self.datasource.count==0) {
+	if (self.datasource.count==0) {
         return cell;
     }
    
@@ -1475,8 +1475,8 @@
         return cell;
     }
     NSDictionary *dic=self.datasource[indexPath.section];
-    _dic=dic;
-    
+//    _dic=dic;
+	
     [cell setDataWith:dic];
     cell.indexPath=indexPath;
     cell.delegate=(id<BCBaseTableViewCellDelegate>)self.attributes;

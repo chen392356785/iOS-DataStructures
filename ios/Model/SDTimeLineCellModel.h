@@ -59,6 +59,9 @@ NS_ASSUME_NONNULL_BEGIN
 
 
 @interface MTNewSupplyAndBuyListModel : JSONModel
+
+///spec
+@property (nonatomic,copy) NSString <Optional> *spec;
 @property(nonatomic,strong,nullable)UserChildrenInfo <Optional>*userInfo;
 @property (nonatomic ,strong,nullable) NSString<Optional> *position;
 

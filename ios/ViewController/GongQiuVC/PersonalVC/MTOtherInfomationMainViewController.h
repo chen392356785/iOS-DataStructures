@@ -6,9 +6,10 @@
 //  Copyright © 2016年 xubin. All rights reserved.
 //
 
+#import "Follwer.h"
 #import "SMBaseViewController.h"
 #import "ARSegmentPageController.h"
-#import "Follwer.h"
+
 @interface MTOtherInfomationMainViewController : ARSegmentPageController
 
 -(instancetype)initWithUserID:(NSString *)userID :(BOOL)isMe dic:(NSDictionary *)dic;
@@ -21,4 +22,5 @@
 @property(nonatomic)BOOL isMe;
 @property(nonatomic,strong)NSIndexPath *indexPath;
 @property(nonatomic,weak)id<Follwer>delegate;
+
 @end

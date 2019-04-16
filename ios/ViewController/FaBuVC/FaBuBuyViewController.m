@@ -6,22 +6,15 @@
 //  Copyright © 2019 听花科技. All rights reserved.
 //
 
-#import "FaBuBuyViewController.h"
+#import "FabuCuttom.h"
+#import "NumberCalculate.h"
 #import "CuttomSelectPicHead.h"
-
-
-//#import "ZLPhotoActionSheet.h"
+#import "FaBuBuyViewController.h"
 #import "FabuBuyViewCell.h"
-
 #import "SelectAddressViewController.h"
 #import "AddSpecificationsController.h"
-
-#import "SearchVarietiesController.h"   //品种
 #import "InputFaBuBuyViewCell.h"
-
-
-//#import "FabuBuyModel.h"
-
+#import "SearchVarietiesController.h"   //品种
 #import "MTSpecificationListView.h"
 
 @interface FaBuBuyViewController () <MTSpecificationListViewDelegate,SelectPicDelegate,UITableViewDelegate,UITableViewDataSource>{
@@ -96,74 +89,40 @@
 }
 
 - (void) createTableView {
-
-	[self addTopSegmentView];
-    
-    if (self.type == ENT_Buy) {
-        _tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, iPhoneWidth, iPhoneHeight - KtopHeitht + KTabSpace) style:UITableViewStyleGrouped];
-    }else {
-        _tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, iPhoneWidth, iPhoneHeight - KtopHeitht + KTabSpace) style:UITableViewStylePlain];
-    }
-    
-    _tableView.delegate = self;
-    _tableView.dataSource = self;
-    _tableView.separatorColor = [UIColor clearColor];
-    _tableView.backgroundColor = cBgColor;
-    [self.view addSubview:_tableView];
-    _tableView.keyboardDismissMode = UIScrollViewKeyboardDismissModeOnDrag;
-    
-    headView = [[CuttomSelectPicHead alloc] initWithFrame:CGRectMake(0, 0, iPhoneWidth, kWidth(138))];
-    headView.delegage = self;
-    _tableView.tableHeaderView = headView;
-    [self setActionSheet];
-    
-    UIView *bottomView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, iPhoneWidth, kWidth(45) + kWidth(66))];
-    bottomView.backgroundColor = cLineColor;
-    
-    _tableView.tableFooterView = bottomView;
-    UIButton *submitBut = [UIButton buttonWithType:UIButtonTypeSystem];
-    submitBut.frame = CGRectMake(0, bottomView.height - kWidth(45),bottomView.width , kWidth(45));
-    [bottomView addSubview:submitBut];
-    submitBut.backgroundColor = kColor(@"#05C1B0");
-    [submitBut setTitle:@"提交" forState:UIControlStateNormal];
-    [submitBut setTitleColor:kColor(@"#FFFFFF") forState:UIControlStateNormal];
-    submitBut.titleLabel.font = darkFont(font(17));
-    [submitBut addTarget:self action:@selector(submitAction) forControlEvents:UIControlEventTouchUpInside];
-    
-//=	[self addTopSegmentView];
 	
-//	if (self.type == ENT_Buy) {
-//		_tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, iPhoneWidth, iPhoneHeight - KtopHeitht + KTabSpace) style:UITableViewStyleGrouped];
-//	}else {
-//		_tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, iPhoneWidth, iPhoneHeight - KtopHeitht + KTabSpace) style:UITableViewStylePlain];
-//	}
-//
-//	_tableView.delegate = self;
-//	_tableView.dataSource = self;
-//	_tableView.separatorColor = [UIColor clearColor];
-//	_tableView.backgroundColor = cBgColor;
-//	[self.view addSubview:_tableView];
-//	_tableView.keyboardDismissMode = UIScrollViewKeyboardDismissModeOnDrag;
-//
-//	headView = [[CuttomSelectPicHead alloc] initWithFrame:CGRectMake(0, 0, iPhoneWidth, kWidth(138))];
-//	headView.delegage = self;
-//	_tableView.tableHeaderView = headView;
-//	[self setActionSheet];
-//
-//	UIView *bottomView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, iPhoneWidth, kWidth(45) + kWidth(66))];
-//	bottomView.backgroundColor = [UIColor clearColor];
-//
-//	_tableView.tableFooterView = bottomView;
-//	UIButton *submitBut = [UIButton buttonWithType:UIButtonTypeSystem];
-//	submitBut.frame = CGRectMake(0, bottomView.height - kWidth(45),bottomView.width , kWidth(45));
-//	[bottomView addSubview:submitBut];
-//	submitBut.backgroundColor = kColor(@"#05C1B0");
-//	[submitBut setTitle:@"提交" forState:UIControlStateNormal];
-//	[submitBut setTitleColor:kColor(@"#FFFFFF") forState:UIControlStateNormal];
-//	submitBut.titleLabel.font = darkFont(font(17));
-//	[submitBut addTarget:self action:@selector(submitAction) forControlEvents:UIControlEventTouchUpInside];
-//
-//>>>>>>> 提交代码
+	[self addTopSegmentView];
+	
+	if (self.type == ENT_Buy) {
+		_tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, iPhoneWidth, iPhoneHeight - KtopHeitht + KTabSpace) style:UITableViewStyleGrouped];
+	}else {
+		_tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, iPhoneWidth, iPhoneHeight - KtopHeitht + KTabSpace) style:UITableViewStylePlain];
+	}
+	
+	_tableView.delegate = self;
+	_tableView.dataSource = self;
+	_tableView.separatorColor = [UIColor clearColor];
+	_tableView.backgroundColor = cBgColor;
+	[self.view addSubview:_tableView];
+	_tableView.keyboardDismissMode = UIScrollViewKeyboardDismissModeOnDrag;
+	
+	headView = [[CuttomSelectPicHead alloc] initWithFrame:CGRectMake(0, 0, iPhoneWidth, kWidth(138))];
+	headView.delegage = self;
+	_tableView.tableHeaderView = headView;
+	[self setActionSheet];
+	
+	UIView *bottomView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, iPhoneWidth, kWidth(45) + kWidth(66))];
+	bottomView.backgroundColor = cLineColor;
+	
+	_tableView.tableFooterView = bottomView;
+	UIButton *submitBut = [UIButton buttonWithType:UIButtonTypeSystem];
+	submitBut.frame = CGRectMake(0, bottomView.height - kWidth(45),bottomView.width , kWidth(45));
+	[bottomView addSubview:submitBut];
+	submitBut.backgroundColor = kColor(@"#05C1B0");
+	[submitBut setTitle:@"提交" forState:UIControlStateNormal];
+	[submitBut setTitleColor:kColor(@"#FFFFFF") forState:UIControlStateNormal];
+	submitBut.titleLabel.font = darkFont(font(17));
+	[submitBut addTarget:self action:@selector(submitAction) forControlEvents:UIControlEventTouchUpInside];
+	
 }
 
 
@@ -219,9 +178,7 @@
 	NSIndexPath * indexPath = [NSIndexPath indexPathForRow:0 inSection:0];
 	FabuBuyViewCell * cell = [_tableView cellForRowAtIndexPath:indexPath];
 	[cell setScrollViewContOffX:index];
-	[UIView animateWithDuration:0.3 animations:^{
-		self->_tableView.contentOffset = CGPointZero;
-	}];
+	[self->_tableView reloadData];
 }
 - (void) setTopSegMent:(NSInteger ) index {
 	if (index != currentType) {
@@ -235,9 +192,8 @@
 		currentLab.font = sysFont(14);
 		currentLab.backgroundColor = [UIColor colorWithRed:255/255.0 green:255/255.0 blue:255/255.0 alpha:1.0];
 		currentType = index;
-		[UIView animateWithDuration:0.3 animations:^{
-			self->_tableView.contentOffset = CGPointMake(0, 0);
-		}];
+		[self->_tableView reloadData];
+		[self->_tableView setContentOffset:CGPointZero];
 	}
 }
 
@@ -249,6 +205,7 @@
 	//设置照片最大预览数
 	actionSheet.maxPreviewCount = 20;
 }
+
 -(void)back:(id)sender{
 	if (self.presentingViewController) {
 		//判断1
@@ -261,6 +218,7 @@
 
 #pragma mark - 选择添加图片代理
 - (void)showActionSheetPicSelectBlock:(PicSelectItemBlock)block {
+	
 	[actionSheet showWithSender:self animate:YES completion:^(NSArray<UIImage *> * _Nonnull selectPhotos) {
 		for (int i=0; i<selectPhotos.count; i++) {
 			UIImage *img2 = [selectPhotos objectAtIndex:i];
@@ -327,16 +285,15 @@
 			if (indexPath.row == 0) {
 				cell.textField.hidden = YES;
 				cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
-				
 				if (cell.detailTextLabel.text.length < 1) {
 					cell.detailTextLabel.text = @"请选择名称";
 				}
 				cell.detailTextLabel.textColor = kColor(@"#828282");
 			}
-		}else if (indexPath.section == 1) {
+		} else if (indexPath.section == 1) {
 			if (indexPath.row == 0 ) {
 				if (cell.detailTextLabel.text.length < 1) {
-					cell.detailTextLabel.text = @"请选择品种";
+					cell.detailTextLabel.text = @"请输入品种";
 				}
 				cell.textField.hidden = YES;
 				cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
@@ -365,7 +322,7 @@
 			}
 			if (indexPath.row == 2) {
 				if (cell.detailTextLabel.text.length < 1) {
-					cell.detailTextLabel.text = @"请选择规格";
+					cell.detailTextLabel.text = @"请输入规格";
 				}
 				
 				cell.textField.hidden = YES;
@@ -390,7 +347,6 @@
 				cell.textField.keyboardType = UIKeyboardTypeDecimalPad;
 				cell.textField.clearButtonMode = UITextFieldViewModeWhileEditing;
 				cell.inputBlock = ^(NSString *inputResult) {
-					
 					self->qiugouModel.crownWidth = inputResult;
 				};
 				
@@ -399,7 +355,6 @@
 				cell.textField.keyboardType = UIKeyboardTypeDecimalPad;
 				cell.textField.clearButtonMode = UITextFieldViewModeWhileEditing;
 				cell.inputBlock = ^(NSString *inputResult) {
-					
 					self->qiugouModel.windPoint = inputResult;
 				};
 				
@@ -477,31 +432,25 @@
 		FabuBuyViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellId];
 		if (cell == nil) {
 			cell = [[FabuBuyViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellId];
+			cell.backgroundColor = cBgColor;
+			cell.selectionStyle = UITableViewCellSelectionStyleNone;
 		}
-		cell.backgroundColor = cBgColor;
-		cell.selectionStyle = UITableViewCellSelectionStyleNone;
 		WS(weakSelf);
+		//选择公司名称
+		cell.selectCompanyNameBlock = ^(UILabel *lab) {
+			[weakSelf pushAddNameController:lab];
+		};
+		//添加子视图
+		[cell addScrollSubViews];
 		///滑动视图事件
 		cell.ContOffXBlock = ^(NSInteger index) {
 			[weakSelf setTopSegMent:index];
 		};
-		///基本信息
-		cell.selectGuigeBlock = ^(UILabel *lab) {
-			[weakSelf pushAddressViewControl:lab];
-		};
-		///选择价格
-		cell.selectMoneyBlock = ^(UILabel *lab) {
-			[weakSelf pushMoneyViewControl:lab];
-		};
-		cell.selectCompanyNameBlock = ^(UILabel *lab) {
-			[weakSelf pushAddNameController:lab];
-		};
-		cell.selectPinZhongBlock = ^(UILabel *lab) {
-			[weakSelf selectSearchVarietiesController:lab];
-		};
+		///提交发布
 		cell.selectcommitModelBlock = ^(FabuBuyModel *model) {
 			[weakSelf subSmitGongyinModel:model];
 		};
+	
 		return cell;
 	}
 }
@@ -529,40 +478,45 @@
 		return kWidth(46);
 	}
 }
+
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+	CGFloat rowHeight = 0.0f;
 	if (self.type == ENT_Buy) {
-		return kWidth(47);
-	}else {
-		if (currentType == MTInformation) {
-			return kWidth(650);
-		} else if (currentType == MTMorphology) {
-			return kWidth(372);
-		} else if (currentType == MTTechnicalMeasures) {
-			return kWidth(490);
-		} else if (currentType == MTRiskControl) {
-			return kWidth(420);
-		}else {
-			return iPhoneHeight - KStatusBarHeight;
+		rowHeight = kWidth(47.0f);
+	} else {
+		if (currentType == MTInformation) { //基本信息
+			rowHeight = kWidth(561.0f);
+		} else if (currentType == MTMorphology) { //苗木形态
+			rowHeight =  kWidth(250.0f);
+		} else if (currentType == MTTechnicalMeasures) { //技术措施
+			rowHeight = kWidth(345.0f);
+		} else if (currentType == MTRiskControl) { //风险控制
+			rowHeight = kWidth(250.0f);
+		} else {
+			rowHeight = 44.0f;
 		}
 	}
+	return rowHeight;
 }
+
 -(CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section {
-	return 0.1;
+	return 0.0001f;
 }
+
 - (UIView *)tableView:(UITableView *)tableView viewForFooterInSection:(NSInteger)section {
-	UIView *view = [[UIView alloc] init];
-	return view;
+	return nil;
 }
+
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
 	if (self.type == ENT_Buy) {
 		AddSpecifitionCell *cell = [tableView cellForRowAtIndexPath:indexPath];
 		if (indexPath.section == 0 && indexPath.row == 0) {
 			[self pushAddNameController:cell.detailTextLabel];
-		}else if (indexPath.section == 1 && indexPath.row == 0) {
+		} else if (indexPath.section == 1 && indexPath.row == 0) {
 			[self selectSearchVarietiesController:cell.detailTextLabel];
-		}else if (indexPath.section == 1 && indexPath.row == 2) {
+		} else if (indexPath.section == 1 && indexPath.row == 2) {
 			[self pushAddressViewControl:cell.detailTextLabel];
-		}else if (indexPath.section == 1 && indexPath.row == 3) {
+		} else if (indexPath.section == 1 && indexPath.row == 3) {
 			[self pushMoneyViewControl:cell.detailTextLabel];
 		}
 	}
@@ -574,7 +528,6 @@
 	WS(weakSelf);
 	AddressVc.SpacifiBlock = ^(NSString * _Nonnull guigeiStr, NSString * _Nonnull moneyStr, NSString * _Nonnull jsonStr) {
 		lab.text = guigeiStr;
-		
 		self->spec = guigeiStr;
 		self->Guigejson = jsonStr;
 	};
@@ -595,12 +548,15 @@
 //选择苗圃
 - (void) pushAddNameController:(UILabel *)lab{
 	SelectAddressViewController *AddressVc = [[SelectAddressViewController alloc] init];
-	WS(weakSelf);
-	[weakSelf pushViewController:AddressVc];
+	[self pushViewController:AddressVc];
+	__weak typeof(self)weakSelf = self;
 	AddressVc.changeBlock = ^(NSString *str1, NSString *str2) {
+		__strong typeof(weakSelf)strongSelf = weakSelf;
 		lab.text = str1;
-		self->companyname = str1;
-		self->companyId = str2;
+		strongSelf->companyname = str1;
+		strongSelf->companyId = str2;
+		FabuBuyViewCell *cell = [strongSelf->_tableView cellForRowAtIndexPath:[NSIndexPath indexPathForRow:0 inSection:0]];
+		[cell updateCompanyName:strongSelf->companyname companyId:strongSelf->companyId];
 	};
 }
 //选择品种
@@ -629,30 +585,18 @@
 }
 
 - (void) fabuGongying {
+	
 	if ([companyname isEqualToString:@""]) {
 		[IHUtility addSucessView:@"请选择苗圃名称" type:2];
 		return;
 	}
-	if ([varieties isEqualToString:@""]) {
-		[IHUtility addSucessView:@"请选择品种" type:2];
-		return;
-	}
-	if ([spec isEqualToString:@""]) {
-		[IHUtility addSucessView:@"请选择规格" type:2];
-		return;
-	}
-	if ([money isEqualToString:@""]) {
-		[IHUtility addSucessView:@"请选择单价" type:2];
-		return;
-	}
-	
 	[[NSNotificationCenter defaultCenter]postNotificationName:NotificationBuyFabuAction object:nil];
 }
 
 
 - (void) fabuQiugou {
 	if ([varieties isEqualToString:@""]) {
-		[IHUtility addSucessView:@"请选择品种" type:2];
+		[IHUtility addSucessView:@"请输入品种" type:2];
 		return;
 	}
 	if (TempImgsArr.count>0) {
@@ -684,6 +628,8 @@
 			} failure:^(NSDictionary *obj) {
 				[IHUtility addSucessView:@"发布失败,请重试" type:2];
 			}];
+		} failure:^(NSError *error) {
+			
 		}];
 	}
 	
@@ -693,44 +639,27 @@
 //提交供应
 - (void) subSmitGongyinModel:(FabuBuyModel *)model {
 	
-	
-	if (TempImgsArr.count>0) {
-		[self addWaitingView];
-		[AliyunUpload uploadImage:TempImgsArr FileDirectory:ENT_fileImageBody success:^(NSString *obj) {
-			model.supplyurl = [NSString stringWithFormat:@"%@",obj];
-			//            <<<<<<< HEAD
-			//            model.spec = spec;
-			//            model.specJson = Guigejson;
-			//            model.univalent = money;
-			//            model.companyId = companyId;
-			//            model.companyname = companyname;
-			//            model.varieties = varieties;
-			//            model.plantType = plantType;
-			//            =======
-			model.spec = self->spec;
-			model.specJson = self->Guigejson;
-			model.univalent = self->money;
-			model.companyId = self->companyId;
-			model.companyname = self->companyname;
-			model.varieties = self->varieties;
-			model.plantType = self->companyId;
-			model.userId = USERMODEL.userID;
-			NSDictionary *dict = [model toDictionary];
-			NSString * parameter  = [IHUtility getParameterString:dict];
-			NSLog(@"dict ==%@",dict);
-			NSString *url = [NSString stringWithFormat:@"%@?%@",supplyAndBuyUpplyUrl,parameter];
-			[network httpRequestWithParameter:nil method:url success:^(NSDictionary *obj) {
-				NSLog(@"%@",obj);
-				[IHUtility addSucessView:@"发布成功" type:1];
-				if (self.updataTable) {
-					self.updataTable();
-				}
-				[self backAction];
-			} failure:^(NSDictionary *obj) {
-				[IHUtility addSucessView:@"发布失败,请重试" type:2];
-			}];
+	[self addWaitingView];
+	[AliyunUpload uploadImage:TempImgsArr FileDirectory:ENT_fileImageBody success:^(NSString *obj) {
+		model.supplyurl = [NSString stringWithFormat:@"%@",obj];
+		NSDictionary *dict = [model toDictionary];
+		NSString * parameter  = [IHUtility getParameterString:dict];
+		NSLog(@"dict ==%@",dict);
+		NSString *url = [NSString stringWithFormat:@"%@?%@",supplyAndBuyUpplyUrl,parameter];
+		[network httpRequestWithParameter:nil method:url success:^(NSDictionary *obj) {
+			NSLog(@"%@",obj);
+			[IHUtility addSucessView:@"发布成功" type:1];
+			if (self.updataTable) {
+				self.updataTable();
+			}
+			[self backAction];
+		} failure:^(NSDictionary *obj) {
+			[IHUtility addSucessView:@"发布失败,请重试" type:2];
 		}];
-	}
+	} failure:^(NSError *error) {
+		
+	}];
+	
 }
 
 
@@ -797,5 +726,6 @@
 
 
 @end
+
 
 

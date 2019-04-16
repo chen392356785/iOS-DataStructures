@@ -18,8 +18,8 @@
 @interface LogisticsFindGoodsListViewController ()<UITableViewDelegate>
 {
     MTBaseTableView *commTableView;
-    int page;
-    NSMutableArray *dataArray;
+//    int page;
+//    NSMutableArray *dataArray;
     UIButton *_createBtn;
     calendarView *_calendarV;
     MTLogisticsChooseView *_logisticsView;

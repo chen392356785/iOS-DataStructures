@@ -29,7 +29,6 @@
 - (void)addSubviews {
     [super addSubviews];
     self.backgroundColor = [UIColor whiteColor];
-    
     [self addSubview:self.wechatButton];
     [self addSubview:self.wechatLabel];
     [self addSubview:self.lineView];
@@ -38,7 +37,7 @@
     [self addSubview:self.phoneTextField];
     [self addSubview:self.codeTextField];
     [self addSubview:self.voiceButton];
-    [self addSubview:self.loginButton];
+    [self addSubview:self.loginButton];	
 }
 
 - (void)defineLayout {

@@ -10,7 +10,6 @@
 #import "FabuBuyModel.h"
 
 typedef void (^DidSelectlabBlock) (UILabel *lab);
-
 typedef void (^DidSelectModelBlock) (FabuBuyModel *model);
 
 typedef NS_ENUM(NSInteger , buyViewType) {
@@ -21,21 +20,18 @@ typedef NS_ENUM(NSInteger , buyViewType) {
     MTbuyViewTypeCount,          //个数
 };
 
-@interface FabuBuyViewCell : UITableViewCell <UIScrollViewDelegate>{
-    UIScrollView *_scroll;
-    NSMutableArray *marr;
-}
+@interface FabuBuyViewCell : UITableViewCell <UIScrollViewDelegate>
 
 @property (nonatomic, copy) DidSelectBtnBlock ContOffXBlock;
-@property (nonatomic, copy) DidSelectlabBlock selectGuigeBlock;
 @property (nonatomic, copy) DidSelectlabBlock selectCompanyNameBlock;
-
-@property (nonatomic, copy) DidSelectlabBlock selectMoneyBlock;
-
-@property (nonatomic, copy) DidSelectlabBlock selectPinZhongBlock;
-
 @property (nonatomic, copy) DidSelectModelBlock selectcommitModelBlock;
+
+// 设置 cell 内部 scrollView 偏移量
 - (void) setScrollViewContOffX:(NSInteger ) index;
+///每次reload 时候重新创建视图
+- (void) addScrollSubViews;
+/// 更新公司苗圃名称
+- (void) updateCompanyName:(NSString *)company companyId:(NSString *)aCompanyId;
 
 @end
 

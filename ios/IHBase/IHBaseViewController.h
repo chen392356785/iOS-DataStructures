@@ -34,7 +34,7 @@ typedef enum{
 	UIButton *rightbutton;
 	UILabel  *titleLabel;
 @private
-	UIView *_footBar;
+//	UIView *_footBar;
 }
 
 -(void)setTitle:(NSString *)title;

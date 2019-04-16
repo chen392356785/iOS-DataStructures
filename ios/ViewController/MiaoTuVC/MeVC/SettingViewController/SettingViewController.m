@@ -29,7 +29,7 @@
 
 @interface SettingViewController ()<UITableViewDelegate,SKStoreProductViewControllerDelegate>
 {
-    UIView *_headView;
+//    UIView *_headView;
     MTBaseTableView *commTableView;
 }
 @end

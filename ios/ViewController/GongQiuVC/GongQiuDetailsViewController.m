@@ -16,7 +16,7 @@
     MTBaseTableView *commTableView;
     int page;
     NSMutableArray *dataArray;
-    int _agreeNum;
+//    int _agreeNum;
     SMLabel *_numberLbl;
     BuyListView *_listView;
     UIView *_downView;
@@ -449,7 +449,7 @@
         [network getQuerySupplyCommentList:page maxResults:pageNum supplyID:model.supply_id success:^(NSDictionary *obj) {
             if (refreshView==self->commTableView.table.mj_header) {
                 [self->dataArray removeAllObjects];
-                self->page=0;
+                self->page = 0;
             }
             NSArray *arr=obj[@"content"];
             if (arr.count>0) {
@@ -519,11 +519,13 @@
     int commentType=0;
     int replyComment_id=0;
     int replyUserID=0;
+	int supply_comment_id = 0;
     NSString *replyUserName;
     if (self.isReply) {
         commentType=1;
         CommentListModel *mod=[dataArray objectAtIndex:_selIndexPath.row];
         replyComment_id =mod.comment_id;
+		supply_comment_id = mod.comment_id;
         replyUserID=[mod.userChildrenInfo.user_id intValue];
         replyUserName=mod.userChildrenInfo.nickname;
     }else{
@@ -538,6 +540,7 @@
         [network getAddSupplyComment:[model.supply_id intValue]
                              user_id:[USERMODEL.userID intValue]
                        reply_user_id:replyUserID
+				   supply_comment_id:supply_comment_id
                       reply_nickname:replyUserName
                       supply_comment:content
                         comment_type:commentType

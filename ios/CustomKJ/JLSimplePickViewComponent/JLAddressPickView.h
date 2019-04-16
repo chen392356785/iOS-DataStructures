@@ -27,7 +27,7 @@ UIPickerViewDelegate,
 UIPickerViewDataSource
 >
 {
-    UIView *ActionView;
+//    UIView *ActionView;
     NSArray *Pro_DataArray;
     NSArray *City_DataArray;
     NSArray *ProInfo_DataArray;

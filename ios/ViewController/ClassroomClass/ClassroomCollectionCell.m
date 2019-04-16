@@ -78,7 +78,7 @@
 
 
 @interface ClassroomHeadViewCell () <UIGestureRecognizerDelegate> {
-    UILabel *titleLabel;
+//    UILabel *titleLabel;
 }
 @end
 

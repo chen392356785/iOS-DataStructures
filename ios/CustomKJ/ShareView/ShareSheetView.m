@@ -31,7 +31,7 @@
 
 @interface ShareSheetView ()
 {
-    int _tag;
+//    int _tag;
     NSArray *arr;
     UIImageView * _imageView;
 }
@@ -87,7 +87,7 @@
     _imageView.centerX = self.centerX;
     [[UIApplication sharedApplication].keyWindow addSubview: _imageView];
     
-    _tag = 4;
+//    _tag = 4;
     SMLabel *lbl=[[SMLabel alloc]initWithFrameWith:CGRectMake(0, 20, ScreenWidth, 20) textColor:cBlackColor textFont:sysFont(15)];
     lbl.text=@"分享到";
     lbl.textAlignment=NSTextAlignmentCenter;
@@ -176,8 +176,8 @@
     self.sheetView = sheetView;
     sheetView.hidden = YES;
     
-    _tag = 4;
-    
+//    _tag = 4;
+	
     SMLabel *lbl=[[SMLabel alloc]initWithFrameWith:CGRectMake(0, kWidth(10), width(sheetView), kWidth(50)) textColor:cBlackColor textFont:sysFont(font(18))];
     lbl.text=@"分享到";
     lbl.textAlignment=NSTextAlignmentCenter;
@@ -265,8 +265,8 @@
     self.sheetView = sheetView;
     sheetView.hidden = YES;
     
-    _tag = 4;
-    
+//    _tag = 4;
+	
     SMLabel *lbl=[[SMLabel alloc]initWithFrameWith:CGRectMake(0, 20, ScreenWidth, 20) textColor:cBlackColor textFont:sysFont(15)];
     lbl.text=@"分享到";
     lbl.textAlignment=NSTextAlignmentCenter;

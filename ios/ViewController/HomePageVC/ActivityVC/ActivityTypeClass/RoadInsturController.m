@@ -36,7 +36,7 @@
 
 @interface RoadInsturController () <UITableViewDelegate,UITableViewDataSource>{
     UITableView *_tableView;
-    NSMutableArray *dataArr;
+//    NSMutableArray *dataArr;
 }
 
 @end
@@ -51,7 +51,7 @@ static NSString *RoadtableViewCellID = @"RoadtableViewCellId";
     [self createTableView];
 }
 - (void) createTableView {
-    dataArr = [[NSMutableArray alloc] init];
+//    dataArr = [[NSMutableArray alloc] init];
     _tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, iPhoneWidth, iPhoneHeight - KtopHeitht - kWidth(50)) style:UITableViewStylePlain];
     _tableView.backgroundColor = [UIColor clearColor];
     _tableView.dataSource = self;

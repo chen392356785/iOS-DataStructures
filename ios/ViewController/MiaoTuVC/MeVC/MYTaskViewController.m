@@ -175,7 +175,7 @@
     if (cell==nil) {
         cell=[[MyTaskTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:identify];
     }
-    cell.delegate=self;
+    cell.delegate = (id<BtnClick,BCBaseTableViewCellDelegate>)self;
     int tag= [dataArray[indexPath.section][indexPath.row][@"grade"]intValue];
     if (dataArray.count == 3) {
         

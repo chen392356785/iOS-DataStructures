@@ -12,10 +12,7 @@
 #import "FaBuBuyViewController.h"                               //发布求购
 #import "CreatTopicViewController.h"
 #import "EMCDDeviceManager.h"
-//#import "MTNetworkData+ForModel.h"
 #import "MTLoginViewController.h"
-//#import "IHBaseConfig.h"
-//#import "InvitedViewController.h"
 #import "IntegralView.h"
 #import "MYTaskViewController.h"
 #import "THModalNavigationController.h"
@@ -126,7 +123,7 @@
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor clearColor];
     [self setUpTabbar];
-    ConfigManager.ImageUrl=TestImageURL;
+    ConfigManager.ImageUrl = TestImageURL;
     ConfigManager.uploadImgUrl=upload_url_write;
     
     NSDictionary *dic=[IHUtility getUserDefalutDic:kUserDefalutLoginInfo];
@@ -234,27 +231,20 @@
             v.type = ENT_Buy;
             [self presentViewController:v];
             
-        }
-        if (index==1) {//供求 ，供应
+        } else if (index==1) {//供求 ，供应
             if ([dic[@"mobile"] isEqualToString:@""]) {
                 [self showLoginViewWithType:ENT_Lagin];
                 return;
             }
-            CreateBuyOrSupplyViewController *v=[[CreateBuyOrSupplyViewController alloc]init];
-            v.type=ENT_Supply;
-            [self presentViewController:v];
-        }
-        if (index==2) {
+			CreateBuyOrSupplyViewController *v = [[CreateBuyOrSupplyViewController alloc]init];
+			v.type = ENT_Supply;
+			[self presentViewController:v];
+        } else if (index==2) {
             CreatTopicViewController *vc=[[CreatTopicViewController alloc]init];
-            
             [self presentViewController:vc];
-        }
-        
-        else if (index==3){
+        } else if (index==3){
             ReleaseNewVarietyController *vc = [[ReleaseNewVarietyController alloc] init];
             [self presentViewController:vc];
-
-//            [self ShareUrl:self withTittle:[NSString stringWithFormat:@"%@，加入%@，携手共赢",KAppTitle,KAppName] content:[NSString stringWithFormat:@"我一直在用%@找苗木、搜人脉、找企业。邀你一起来体验，积分还可抵现金用哦",KAppName] withUrl:dwonShareURL imgUrl:@""];
         }
     };
      [self pushTabbarVC];

@@ -10,7 +10,7 @@
 #import "GongQiuAgreeDelegate.h"
 #import "GongQiuCommentDelegate.h"
 @interface GongQiuTableListViewController : SMBaseViewController<GongQiuAgreeDelegate,GongQiuCommentDelegate>{
-    NSIndexPath *_selIndexPath;
+//    NSIndexPath *_selIndexPath;
 }
 
 @property(nonatomic) buyType type;

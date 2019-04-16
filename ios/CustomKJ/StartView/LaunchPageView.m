@@ -25,7 +25,7 @@
     
     if (self) {
         self.backgroundColor = [UIColor whiteColor];
-        _images = images;
+//        _images = images;
         
         NSDictionary *UserDefaultDic = [IHUtility getUserDefalutDic:kUserDefalutInit];
         NSDictionary *imgDic = UserDefaultDic[@"startupImage"];

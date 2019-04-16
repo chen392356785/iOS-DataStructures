@@ -10,8 +10,8 @@
 
 //评论回复列表cell
 @interface GardenCommentCell () {
-	UILabel *conLabel;
-	UILabel *_lineLab;
+//	UILabel *conLabel;
+//	UILabel *_lineLab;
 }
 @property (nonatomic, strong) UILabel *contentLabel;
 
@@ -53,7 +53,7 @@
         make.bottom.mas_equalTo(self.contentView);
         make.width.mas_offset(1);
     }];
-    _lineLab = lineLab;
+//    _lineLab = lineLab;
 }
 - (void)setModel:(gardenReplyCommentModel *)model {
     NSString *str = nil;

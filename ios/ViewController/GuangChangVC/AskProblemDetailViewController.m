@@ -19,7 +19,7 @@
     NSMutableArray *dataArray;
     UIView *_topView;
     
-    UIView *_sectionView;
+//    UIView *_sectionView;
     UIView *_firstView;
     
     UITextField *_pltxt;
@@ -119,7 +119,7 @@
     
     UIView *sectionView = [UIView new];
     sectionView.backgroundColor = RGB(247, 248, 250);
-    _sectionView =sectionView;
+//    _sectionView = sectionView;
     [topView addSubview:sectionView];
     sectionView.sd_layout.leftSpaceToView(0,0).topSpaceToView(contentView,0).widthIs(WindowWith).heightIs(43);
     

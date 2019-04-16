@@ -191,8 +191,8 @@
 
 
 @interface GardenListcompanydescribeCell () <UITextViewDelegate>{
-    UILabel *conLabel;
-    yuanbangModel *_model;
+//    UILabel *conLabel;
+//    yuanbangModel *_model;
     UITextView * _contentLabel;
 }
 @end

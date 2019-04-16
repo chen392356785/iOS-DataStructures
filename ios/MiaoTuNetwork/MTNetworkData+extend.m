@@ -6,14 +6,11 @@
 //  Copyright © 2016年 xubin. All rights reserved.
 //
 
-#import "MTNetworkData+extend.h"
-//#import "AFNetworking.h"
-//#import "MTNetworkData+ForModel.h"
 #import "JSONUtility.h"
 #import "NSString+AES.h"
-//#import "THJSONAdapter.h"
-#import "NSObject+GetIP.h"
 #import "ServerConfig.h"
+#import "NSObject+GetIP.h"
+#import "MTNetworkData+extend.h"
 
 
 @implementation MTNetworkData (extend)
@@ -24,19 +21,18 @@ static MTNetworkData *_config;
 -(void)getAddSupplyClickLike:(int)user_id
                    supply_id:(int)supply_id
                         type:(int)type   // 0点赞 1取消点赞
- success:(void (^)(NSDictionary *obj))success
-{
-    self.tag=IH_AddSupplyClickLike;
-    NSDictionary *dic2=[NSDictionary dictionaryWithObjectsAndKeys:
+ success:(void (^)(NSDictionary *obj))success {
+	
+    self.tag = IH_AddSupplyClickLike;
+    NSDictionary *dic2 = [NSDictionary dictionaryWithObjectsAndKeys:
                         stringFormatInt(user_id),@"user_id",
                         stringFormatInt(supply_id),@"supply_id",
                         stringFormatInt(type),@"type",
                         nil];
-    
     [self httpRequestWithParameter:dic2 method:@"supply/addSupplyClickLike" success:^(NSDictionary *dic) {
         success(dic);
     }];
- 
+	
 }
 
 //求购点赞
@@ -640,14 +636,13 @@ static MTNetworkData *_config;
                     activities_id:(NSString *)activities_id
                           success:(void (^)(NSDictionary *obj))success
 {
-    NSDictionary *dic2=[NSDictionary dictionaryWithObjectsAndKeys:
-                        user_id,@"user_id",
-                        activities_id,@"activities_id",
-                        nil];
-    
-    [self httpRequestWithParameter:dic2 method:@"CrowdActivity/checkCrowdOrder" success:^(NSDictionary *dic) {
-        success(dic);
-    }];
+	NSDictionary *dic2 = [NSDictionary dictionaryWithObjectsAndKeys:
+						  user_id,@"user_id",
+						  activities_id,@"activities_id",
+						  nil];
+	[self httpRequestWithParameter:dic2 method:@"CrowdActivity/checkCrowdOrder" success:^(NSDictionary *dic) {
+		success(dic);
+	}];
     
 }
 
@@ -2136,10 +2131,12 @@ page:(int)page
     NSMutableDictionary *jsonParam = [@{} mutableCopy];
     [jsonParam setValue:jsonString_encrpty forKey:@"data"];
     [jsonParam setValue:activitie_id forKey:@"activitie_id"];
-    
-    NSString *DataStr = [jsonParam mj_JSONString];
-    NSString *data = [DataStr aci_encryptWithAES];
-    NSDictionary *dict1 = @{@"data" : data};
+	
+	NSData *data = [NSJSONSerialization dataWithJSONObject:jsonParam options:NSJSONWritingPrettyPrinted error:NULL];
+	
+    NSString *DataStr = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
+    NSString *aesString = [DataStr aci_encryptWithAES];
+    NSDictionary *dict1 = @{@"data" : aesString};
     
 //    [self httpRequestTagWithParameter:jsonParam method:@"http://open.miaoto.net/beetl/alipay/topay" tag:IH_orderPay
 //    NSString *Server =  @"https://www.miaoto.net/zmh/Activities/toPay";

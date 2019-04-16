@@ -25,10 +25,10 @@
 {
     NSString  *_city;
     NSString  *_province;
-    IHTextField *_passWordText;
-    IHTextField *_phoneText;
-    IHTextField *_oldPassWordTextFeild;
-    IHTextField *_newPassWordTextFeild;
+//    IHTextField *_passWordText;
+//    IHTextField *_phoneText;
+//    IHTextField *_oldPassWordTextFeild;
+//    IHTextField *_newPassWordTextFeild;
      int channel;
     BOOL  isErrorLocation;
     BOOL isLocation ;
@@ -799,7 +799,7 @@
                 }
                
             }
-                       if (type==ENT_Supply) {
+			if (type==ENT_Supply) {
                  sharUrl=[NSString stringWithFormat:@"%@%@%@&appkey=%@",shareURL,shareSupply,model.supply_id,APP_KEY];
                 title=[NSString stringWithFormat:@"供应-%@",model.varieties];
                 content=[NSString stringWithFormat:@"单价:%@\n数量:%@",model.unit_price,model.number];
@@ -956,7 +956,7 @@
                 MTPhotosModel *mod = model.imageArr[0];
                 imgUrl = mod.imgUrl;
             }
-            content=[NSString stringWithFormat:@"装车价:%@\n数量:%@",model.loading_price,model.num];
+            content = [NSString stringWithFormat:@"装车价:%@\n数量:%@",model.loading_price,model.num];
         }
         
         if (index==6) {
@@ -1351,7 +1351,7 @@
     
     NSLog(@"size after,content height:%f",c.height);
     
-    _scrollOffset_y = 0.0f;
+   // _scrollOffset_y = 0.0f;
     _activityTextField=nil;
     _activityTextView=nil;
     

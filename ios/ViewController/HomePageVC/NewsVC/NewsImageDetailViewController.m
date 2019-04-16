@@ -21,7 +21,7 @@
     UITextView *_detailLbl;
     UITextField *_pltxt;
     InputKeyBoardView *_keyBoardView;
-    UIButton *_collectBtn;
+//    UIButton *_collectBtn;
     NewsImgCommentView *_commentV;
     ImageDetailTableView *_tableView;
 }

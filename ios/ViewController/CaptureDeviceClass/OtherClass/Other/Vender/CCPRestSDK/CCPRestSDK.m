@@ -27,16 +27,16 @@
 @implementation CCPRestSDK
 
 
-@synthesize server_IP;
-@synthesize server_Port;
-@synthesize bodyType;//EType_XML 0 xml,EType_JSON 1 json
-@synthesize app_ID;
-@synthesize main_Account;
-@synthesize main_Token;
-@synthesize sub_AccountSid;
-@synthesize sub_AccountToken;
-@synthesize voip_Account;
-@synthesize voip_Password;
+//@synthesize server_IP;
+//@synthesize server_Port;
+//@synthesize bodyType;//EType_XML 0 xml,EType_JSON 1 json
+//@synthesize app_ID;
+//@synthesize main_Account;
+//@synthesize main_Token;
+//@synthesize sub_AccountSid;
+//@synthesize sub_AccountToken;
+//@synthesize voip_Account;
+//@synthesize voip_Password;
 
 /*
  注意事项：

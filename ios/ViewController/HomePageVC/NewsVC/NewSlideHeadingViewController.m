@@ -42,7 +42,7 @@ typedef enum {
     
     NSInteger _lastSelectedTag;
     
-    NSInteger _lastSelectedViewTag;
+//    NSInteger _lastSelectedViewTag;
     NSInteger _pageNum;
     SearchView *_searchV;
     UIView *_lineView;
@@ -51,10 +51,10 @@ typedef enum {
     
     UIView *_searchView;//搜索结果遮罩
     NSMutableArray *dataArray;
-    NSMutableArray *btnArray;//热门搜索或者附近的人
+//    NSMutableArray *btnArray;//热门搜索或者附近的人
     NSArray *array;//附近的人
     
-    NSInteger btnIndex;//选择按钮的索引
+//    NSInteger btnIndex;//选择按钮的索引
     MTBaseTableView *commTableView;
     SearchType _searchType;
 }

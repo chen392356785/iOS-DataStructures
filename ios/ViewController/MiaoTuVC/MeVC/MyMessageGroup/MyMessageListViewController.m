@@ -96,7 +96,7 @@
 
 @interface MyMessageListViewController () <UITableViewDelegate,UITableViewDataSource> {
     NSMutableArray *dataArr;
-    NSString *topImgUrl;
+//    NSString *topImgUrl;
     UITableView *_tableView;
     NSInteger page;
     EmptyPromptView *_EPView;//没有搜索内容时候默认的提示

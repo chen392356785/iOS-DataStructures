@@ -271,14 +271,6 @@ NS_ASSUME_NONNULL_BEGIN
 @end
 
 
-
-
-
-
-
-
-
-
 @interface MyCollectionSupplyAndBuyModel : JSONModel  //我的收藏
 @property(nonatomic,strong)NSString *collectionTime; // 收藏时间
 @property(nonatomic,strong)MTSupplyAndBuyListModel *supplyBuyInfo;

@@ -979,7 +979,7 @@
 		</dict>
 		<dict>
 			<key>title</key>
-			<string>供求</string>
+			<string>供应</string>
 			<key>image</key>
 			<string>tabBar2_unsel.png</string>
 			<key>titleColor</key>

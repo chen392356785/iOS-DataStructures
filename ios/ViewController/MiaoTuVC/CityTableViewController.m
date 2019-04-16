@@ -18,8 +18,8 @@
     NSMutableDictionary *_areaDic;
     NSMutableArray *_dataSource;
     AMapSearchAPI *_search;
-    CLLocation *_location;
-    CLLocation *_currentLocation;
+//    CLLocation *_location;
+//    CLLocation *_currentLocation;
 }
 
 @end

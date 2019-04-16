@@ -329,7 +329,9 @@ static NSString *ReleaseNewVarietyTypeCellId = @"ReleaseNewVarietyTypeCell";
 //           NSLog(@"11111----- %@",dic);
         }];
  //*/
-    }];
+	} failure:^(NSError *error) {
+		[self removeWaitingView];
+	}];
 
 }
 
@@ -477,7 +479,7 @@ static NSString *ReleaseNewVarietyTypeCellId = @"ReleaseNewVarietyTypeCell";
 
 - (void)viewWillDisappear:(BOOL)animated {
     [super viewWillDisappear:animated];
-    [IQKeyboardManager sharedManager].shouldResignOnTouchOutside = YES;
+//    [IQKeyboardManager sharedManager].shouldResignOnTouchOutside = YES;
     [self.view endEditing:NO];;
 }
 @end

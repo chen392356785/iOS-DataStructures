@@ -26,7 +26,7 @@ static BOOL ISSHOWKEYBOARD;
 static KeyBoardType m_keyBoardType;
 static UITextField *m_NextTextField;
 
-static CGSize kbSize;
+//static CGSize kbSize;
 
 +(AppUserSettings *)usersettings
 {

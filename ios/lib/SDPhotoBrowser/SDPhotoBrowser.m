@@ -32,7 +32,7 @@
     UIScrollView *_scrollView;
     BOOL _hasShowedFistView;
     UILabel *_indexLabel;
-    UIButton *_saveButton;
+//    UIButton *_saveButton;
     UIActivityIndicatorView *_indicatorView;
     UIPageControl *_pageControl;
 }

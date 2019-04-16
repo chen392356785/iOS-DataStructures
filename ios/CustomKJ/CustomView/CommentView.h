@@ -11,13 +11,13 @@
 @class MTSupplyAndBuyListModel;
 @interface CommentView : CustomView
 {
-    BOOL _share;
-    BOOL _agree;
-    BOOL _favrite;
+//    BOOL _share;
+//    BOOL _agree;
+//    BOOL _favrite;
     UIButton *_likeBtn;
     UIButton *_zanBtn;
     SMLabel *_timelbl;
-    UIImageView *_timeImage;
+//    UIImageView *_timeImage;
     UIButton *_commentBtn;
     
 }

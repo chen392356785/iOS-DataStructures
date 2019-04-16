@@ -72,7 +72,7 @@ typedef enum{
 
 
 @interface IHTableViewCell : UITableViewCell{
-    NSDictionary *_data;
+//    NSDictionary *_data;
 }
 
 @property(nonatomic)float cellHeight;
@@ -91,7 +91,7 @@ typedef enum{
 
     @private
     UILabel *lblTitle;
-    UIImageView *icon;
+//    UIImageView *icon;
 }
 
 -(void)setMember:(NSDictionary *)dic;

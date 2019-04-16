@@ -11,6 +11,8 @@
 #import "MTOtherInfomationMainViewController.h"
 #import "ChatViewController.h"
 #import "CreateBuyOrSupplyViewController.h"
+
+
 @class SDTimeLineCellCommentItemModel;
 @interface MTNewSupplyAndBuyDetailsViewController ()<UITableViewDelegate,HJCActionSheetDelegate,ChatViewControllerDelegate>
 {
@@ -32,33 +34,29 @@
     MTSupplyAndBuyListModel *_model;
     MTNewSupplyAndBuyDetailsView *_topview;
     
-    BOOL isAgree;
+//    BOOL isAgree;
 }
 @end
 
 @implementation MTNewSupplyAndBuyDetailsViewController
 @synthesize model;
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.automaticallyAdjustsScrollViewInsets = NO;
     if (self.type==ENT_Buy) {
         [self setTitle:@"求购详情"];
-    }else
-    {
+    } else {
         [self setTitle:@"供应详情"];
     }
-    // Do any additional setup after loading the view.
-    // [self addPushViewWaitingView];
-    
     [self creatTableView];
-    [self setbackTopFrame:WindowHeight-120];
     self.view.backgroundColor = cBgColor;
 }
 
--(void)backTopClick:(UIButton *)sender{
-    [self scrollTopPoint:commTableView.table];
-    [self setHomeTabBarHidden:YES];
-}
+//-(void)backTopClick:(UIButton *)sender{
+//    [self scrollTopPoint:commTableView.table];
+//    [self setHomeTabBarHidden:YES];
+//}
 
 -(void)becomeKeyBoard{
     
@@ -298,8 +296,8 @@
 
 
 -(void)setSupplyAndBuyBlock:(NSDictionary *)obj{
-    MTSupplyAndBuyListModel *Model=[[MTSupplyAndBuyListModel alloc]initWithDictionary:obj[@"content"] error:nil];
-    _model=Model;
+    MTSupplyAndBuyListModel *Model = [[MTSupplyAndBuyListModel alloc]initWithDictionary:obj[@"content"] error:nil];
+    _model = Model;
     
     __weak typeof(self) weakSelf = self;
     [weakSelf creatBottomViewWith:Model];
@@ -312,11 +310,11 @@
 
 -(void)creatTableView
 {
-    _height=0;
+    _height = 0;
     
     __weak MTNewSupplyAndBuyDetailsViewController *weakSelf = self;
     
-    dataArray=[[NSMutableArray alloc]init];
+    dataArray = [[NSMutableArray alloc]init];
     
     NSString *userid;
     
@@ -330,11 +328,8 @@
     if (self.type==ENT_Supply) {
         [network getSupplyDetailID:userid supply_id:self.newsId success:^(NSDictionary *obj) {
             [weakSelf setSupplyAndBuyBlock:obj];
-            
         } failure:^(NSDictionary *obj2) {
-            
         }];
-        
     }else{
         
         [network getBuyDetailID:userid want_buy_id:self.newsId success:^(NSDictionary *obj) {
@@ -428,9 +423,9 @@
 -(void)creatTableHighViewWithModel:(MTSupplyAndBuyListModel *)Model{
     UIView *topView=[[UIView alloc]init];
     MTNewSupplyAndBuyDetailsView *topview=[[MTNewSupplyAndBuyDetailsView alloc]init];
-    _topview=topview;
-    _height=[topview setDataWithmodel:Model];
-    topview.frame=CGRectMake(0, 0, WindowWith, _height);
+    _topview = topview;
+    _height = [topview setDataWithmodel:Model];
+    topview.frame = CGRectMake(0, 0, WindowWith, _height);
     
     __weak MTNewSupplyAndBuyDetailsViewController *weakSelf = self;
     
@@ -545,9 +540,9 @@
     [_pltxt becomeFirstResponder];
     [_keyBoardView.txtView becomeFirstResponder];
     _keyBoardView.txtView.text = @"";
-    self.isReply=NO;
-    if (_keyBoardView.txtView.text.length==0) {
-        _keyBoardView.txtView.placeholder=@"";
+    self.isReply = NO;
+    if (_keyBoardView.txtView.text.length == 0) {
+        _keyBoardView.txtView.placeholder = @"";
     }
 }
 //点赞列表
@@ -589,18 +584,21 @@
 }
 
 //评论列表
--(void)createComment:(NSString *)content{
+-(void)createComment:(NSString *)content {
     
     int commentType=0;
     int replyComment_id=0;
     int replyUserID=0;
     NSString *replyUserName;
+	int supply_comment_id = 0;
+
     if (self.isReply) {
         commentType=1;
         CommentListModel *mod=[dataArray objectAtIndex:_selIndexPath.row];
         replyComment_id =mod.comment_id;
         replyUserID=[mod.userChildrenInfo.user_id intValue];
         replyUserName=mod.userChildrenInfo.nickname;
+		supply_comment_id = mod.comment_id;
     }else{
         replyUserID=[_model.userChildrenInfo.user_id intValue];
         replyUserName=_model.userChildrenInfo.nickname;
@@ -614,6 +612,7 @@
         [network getAddSupplyComment:[self.newsId intValue]
                              user_id:[USERMODEL.userID intValue]
                        reply_user_id:replyUserID
+				   supply_comment_id:supply_comment_id
                       reply_nickname:replyUserName
                       supply_comment:content
                         comment_type:commentType

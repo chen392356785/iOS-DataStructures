@@ -29,20 +29,12 @@
 {
     MTBaseTableView *commTableView;
     int page;
-    int agreePage;
     NSMutableArray *dataArray;
-    int _agreeNum;
-    int _clickLikeTotal;
     InputKeyBoardView *_keyBoardView;
     UITextField *_pltxt;
-    SMLabel *_numberLabel;
     UIView *_lineView;
-    
-    UIButton *_agreeListBtn;
     UIButton *_commentListBtn;
-    UIButton *_commentBtn;
     UIButton *_collectBtn;
-    ACtivityTopView *_activityTopView;
     ActivtiesOrderView *_activOrderView;
     ActivityDetailView *_activityDetailView;
     UIView *_downView;
@@ -176,7 +168,7 @@
     //活动图片及信息
     ACtivityTopView *activityTopView = [[ACtivityTopView alloc] initWithFrame:CGRectMake(0, 0, kScreenWidth, 195)];
     [activityTopView setImageURl:self.model.activities_pic signNum:self.model.sign_up_num title:self.model.activities_titile skimNum:self.model.onlookers_user uint_price:self.model.payment_amount];
-    _activityTopView = activityTopView;
+//    _activityTopView = activityTopView;
     [topView addSubview:activityTopView];
     
     //活动地址，时间
@@ -697,21 +689,17 @@
     _topView.frame = CGRectMake(0, 0, WindowWith,_downView.bottom);
     commTableView.table.tableHeaderView = _topView;
 }
+
 //点击活动详情中的链接
 - (BOOL)webView:(UIWebView *)webView shouldStartLoadWithRequest:(NSURLRequest *)request navigationType:(UIWebViewNavigationType)navigationType
 {
     NSString *urlstr = [request.URL absoluteString];
     if ( [urlstr hasPrefix:@"http://"] || [urlstr hasPrefix:@"https://"] || [urlstr hasPrefix:@"www."]|| [urlstr hasPrefix:@".com"]|| [urlstr hasPrefix:@".cn"]) {
-        
         [self webViewUrl:[NSURL URLWithString:urlstr]];
-        
         return NO;
     };
     return YES;
 }
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
+
 
 @end

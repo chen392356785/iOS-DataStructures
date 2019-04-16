@@ -21,7 +21,7 @@
      KICropImageView* _cropImageView;
      NSMutableArray *headImageArray;
       NSArray *positionArr;
-      int job_type;
+//      int job_type;
     JionEPCloudInfoModel *_model;
     EditInformationView *_zhuyingView;
     UIView *_bgView1;
@@ -512,7 +512,7 @@
         for (NSDictionary *obj in positionArr) {
             for (NSDictionary *dic in obj[@"data"]) {
                 if ([title isEqualToString:dic[@"job_name"]]) {
-                    job_type=[dic[@"job_id"] intValue];
+//                    job_type=[dic[@"job_id"] intValue];
                 }
                 
             }
@@ -624,22 +624,6 @@
                  [Dic setObject:adress forKey:@"email"];
                  [Dic setObject:company forKey:@"title"];
                  [Dic setObject:phone forKey:@"position"];
-//                 int jobType=0;
-//                 for (NSDictionary *obj in positionArr) {
-//                     for (NSDictionary *dic2 in obj[@"data"]) {
-//                         if ([phone isEqualToString:dic2[@"job_name"]]) {
-//                             jobType=[dic2[@"job_id"] intValue];
-//                         }
-//                         
-//                         
-//                         
-//                     }
-//                 }
-//                 
-//                 
-//                 [Dic setObject:stringFormatInt(jobType) forKey:@"i_type_id"];
-                 
-                 
                  [IHUtility saveDicUserDefaluts:Dic key:kUserDefalutLoginInfo];
                 // [IHUtility addWaitingView];
                  [network authenticationForUser:Dic success:^(NSDictionary *obj) {
@@ -664,7 +648,9 @@
           
             
             
-        }];
+		} failure:^(NSError *error) {
+			
+		}];
         
         
     }else{

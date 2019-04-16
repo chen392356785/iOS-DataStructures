@@ -133,7 +133,7 @@
     
 - (void)pushViewController:(UIViewController *)viewController animated:(BOOL)animated
     {
-        //    NSLog(@"%s, %@", __PRETTY_FUNCTION__, viewController);
+		NSLog(@"%s, %@\n", __PRETTY_FUNCTION__, viewController);
         void(^block)() = ^(){
 #ifdef _HANDLE_ANIMATING_BUG_
             if (self.animatingPushOrPop)

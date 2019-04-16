@@ -6,11 +6,9 @@
 //  Copyright (c) 2015年 xubin. All rights reserved.
 //
 
-#import "YLWebViewController.h"
-//#import "UINavigationBar+Awesome.h"
 #import <WebKit/WebKit.h>
+#import "YLWebViewController.h"
 
-#define currentSystemVersion [[[UIDevice currentDevice] systemVersion] floatValue]
 
 // WKWebView 内存不释放的问题解决
 @interface WeakWebViewScriptMessageDelegate : NSObject<WKScriptMessageHandler>

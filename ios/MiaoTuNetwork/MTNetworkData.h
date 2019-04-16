@@ -226,13 +226,14 @@ seedling_source_address:(NSString *)seedling_source_address
                    failure:(void (^)(NSDictionary *obj2))failure;
 #pragma mark 添加供应评论
 -(void)getAddSupplyComment:(int)supply_id
-                   user_id:(int)user_id     //供应主键ID,
-             reply_user_id:(int)reply_user_id   //回复用户主键ID,
-            reply_nickname:(NSString *)reply_nickname   //回复用户昵称,
-            supply_comment:(NSString *)supply_comment   //供应评论内容,
-              comment_type:(int)comment_type
+				   user_id:(int)user_id     //供应主键ID,
+			 reply_user_id:(int)reply_user_id   //回复用户主键ID,
+		 supply_comment_id:(int)supply_comment_id ///评论 id
+			reply_nickname:(NSString *)reply_nickname   //回复用户昵称,
+			supply_comment:(NSString *)supply_comment   //供应评论内容,
+			  comment_type:(int)comment_type  //0:主动评论,1回复,
    reply_supply_comment_id:(int)reply_supply_comment_id  // 回复评论的评论ID,如果不是回复评论就默认为0
-                   success:(void (^)(NSDictionary *obj))success;
+				   success:(void (^)(NSDictionary *obj))success;
 
 #pragma mark 添加求购评论
 -(void)getAddWantBuyComment:(int)supply_id
@@ -288,7 +289,7 @@ seedling_source_address:(NSString *)seedling_source_address
 
 
 #pragma mark 查看供应详情
--(void)getQuerySupplyComment:(int)supply_id
+-(void)getQuerySupplyComment:(NSString *)supply_id
                      success:(void (^)(NSDictionary *obj))success
                      failure:(void (^)(NSDictionary *obj2))failure;
 

@@ -19,7 +19,7 @@
     PlaceholderTextView *_placeholderTextView;
     LogisticsAddressView *_logisticsAdressView;
      LogisticsAddressView *_logisticsAdressView2;
-     AreaView *_areaV;
+//     AreaView *_areaV;
     NSString *_provice;
     NSString *_city;
     NSString *_town;
@@ -33,7 +33,7 @@
     LogisticsInformationView *_view;
     NSString *KeybordType;
     UIView *_textBgView;
-    NSArray * _bankDataSource;
+//    NSArray * _bankDataSource;
     SMLabel *_carTypeLbl;
     SMLabel *_timeLbl;
     NSMutableArray *_nerseryTypeArr;

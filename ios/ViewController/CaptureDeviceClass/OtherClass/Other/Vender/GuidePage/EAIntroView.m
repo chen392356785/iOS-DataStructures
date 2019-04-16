@@ -12,7 +12,7 @@
 @interface EAIntroView()
 {
     NSMutableArray *pageViews;
-    NSInteger LastPageIndex;
+//    NSInteger LastPageIndex;
 }
 
 @end
@@ -260,7 +260,7 @@
     }
     else
     {
-        LastPageIndex = self.pageControl.currentPage;
+//        LastPageIndex = self.pageControl.currentPage;
         self.pageControl.currentPage = self.currentPageIndex;
         [self makePanelVisibleAtIndex:(NSInteger)self.currentPageIndex];
     }
@@ -377,7 +377,7 @@
 }
 
 - (void)showPanelAtPageControl {
-    LastPageIndex = self.pageControl.currentPage;
+//    LastPageIndex = self.pageControl.currentPage;
     self.currentPageIndex = self.pageControl.currentPage;
     
     [self makePanelVisibleAtIndex:(NSInteger)self.currentPageIndex];

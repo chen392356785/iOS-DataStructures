@@ -16,7 +16,7 @@
 
 @interface MessageModel : NSObject
 {
-    BOOL _isPlaying;
+//    BOOL _isPlaying;
 }
 
 @property (nonatomic) MessageBodyType type;

@@ -13,7 +13,7 @@
 @interface ShowImaewCell () <UIGestureRecognizerDelegate,UIScrollViewDelegate> {
     UIScrollView  *_scrollView;
     UITapGestureRecognizer *tap2;
-    NSMutableArray *imageArr;
+//    NSMutableArray *imageArr;
 }
 @property (nonatomic, strong) UIAsyncImageView *imageView;
 @end

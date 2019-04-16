@@ -12,9 +12,9 @@
 {
     float topY;
     NSMutableArray *_arr;
-    NSArray *_classArr;
+//    NSArray *_classArr;
     NSDictionary *_dic;
-    UIView *_classView;
+//    UIView *_classView;
 }
 @property (nonatomic,strong)UIButton *cancleBtn;
 @property (nonatomic,strong)UIButton *referBtn;

@@ -39,7 +39,7 @@
     
     // Grid
     MWGridViewController *_gridController;
-    UIBarButtonItem *_gridPreviousLeftNavItem;
+//    UIBarButtonItem *_gridPreviousLeftNavItem;
     UIBarButtonItem *_gridPreviousRightNavItem;
     
     // Appearance
@@ -57,7 +57,7 @@
     BOOL _hasBelongedToViewController;
     BOOL _isVCBasedStatusBarAppearance;
     BOOL _statusBarShouldBeHidden;
-    BOOL _displayActionButton;
+//    BOOL _displayActionButton;
     BOOL _leaveStatusBarAlone;
 	BOOL _performingLayout;
 	BOOL _rotating;

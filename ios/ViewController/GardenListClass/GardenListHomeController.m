@@ -40,7 +40,7 @@
     
     
     NSMutableArray *topItemArr;
-    CGFloat _topSpaceH;
+//    CGFloat _topSpaceH;
     
     NSString *okUrl;
     
@@ -116,7 +116,7 @@ static NSString *GardenRedsStoryTabCellId  = @"GardenRedsStoryTabCell";     //�
     _yuanbangArr = [[NSMutableArray alloc] init];           //第0分区横向滚动标签园榜
     _OfflineModelArr = [[NSMutableArray alloc] init];
     topItemArr = [[NSMutableArray alloc] init];
-    _topSpaceH = 0;
+//    _topSpaceH = 0;
     [self createTableView];
     [self reloadData];
     ScroHeight = kWidth(260);

@@ -17,7 +17,7 @@
 @interface EPCloudEditInformationViewController ()<JLActionSheetDelegate,HJCActionSheetDelegate,UINavigationControllerDelegate,UIImagePickerControllerDelegate>
 {
     NSMutableArray *headImageArray;
-    NSInteger _selIndex;
+//    NSInteger _selIndex;
     KICropImageView* _cropImageView;
     UIAsyncImageView *_headImageView;
 }

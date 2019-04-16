@@ -54,7 +54,7 @@
 @interface SearchVarietiesController ()<TFFlowerSearchViewDelegate,UITextFieldDelegate,UITableViewDelegate,UITableViewDataSource>{
     MTHomeSearchView *searchTextfiled;
     NSMutableArray *dataArr;
-    UITextField *_textField;
+//    UITextField *_textField;
 }
 @property (nonatomic, strong)UITableView *tableView;
 

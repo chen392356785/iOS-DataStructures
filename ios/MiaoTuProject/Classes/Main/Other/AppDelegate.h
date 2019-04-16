@@ -12,11 +12,11 @@
 #import "LaunchPageView.h"
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
 {
-    EMConnectionState _connectionState;
+//    EMConnectionState _connectionState;
     LaunchPageView *_launchView;
 }
-- (CGFloat)autoScaleW:(CGFloat)w;
 
+- (CGFloat)autoScaleW:(CGFloat)w;
 - (CGFloat)autoScaleH:(CGFloat)h;
 
 @property (strong, nonatomic) UIWindow *window;

@@ -7,16 +7,17 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "FabuCuttom.h"
-#import "NumberCalculate.h"
+@class IHTextField;
+@class NumberCalculate;
+@class FabuCuttom;
 
 @interface InputFaBuBuyViewCell : UITableViewCell
 
 @property (nonatomic, strong) IHTextField *textField;
-@property (nonatomic, strong) UILabel *lineLabel;
+//@property (nonatomic, strong) UILabel *lineLabel;
 @property (nonatomic, strong) UILabel *titleLabel;
 @property (nonatomic, copy) NSString *titleStr;
-@property (nonatomic, strong)NumberCalculate *numberView;
+@property (nonatomic, strong) NumberCalculate *numberView;
 
 @property (nonatomic, strong) UIButton *unitBut;
 @property (nonatomic, strong) UILabel *DetaiLab;
@@ -28,12 +29,11 @@
 @property (nonatomic, strong) NSArray *payTypeArr;
 
 @property (nonatomic, strong) FabuCuttom *fabuCuttView;
-
-
-
-
 @property (nonatomic, copy) DidSelectStrBlock inputBlock;
 @property (nonatomic, copy) DidSelectBtnBlock SegmentSelbloack;
+///segmentControlIndex
+@property (nonatomic,assign) NSInteger segmentControlIndex;
+
 @end
 
 

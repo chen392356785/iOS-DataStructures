@@ -11,9 +11,8 @@
 
 @interface ActivesCrowdFundController : SMBaseViewController {
     
-    NSMutableArray *dataArray;
+//    NSMutableArray *dataArray;
     NSMutableArray *agreeArr;
-    
 }
 
 

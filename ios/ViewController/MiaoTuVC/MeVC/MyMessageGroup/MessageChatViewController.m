@@ -13,7 +13,7 @@
     UIAsyncImageView *_iconImageView;
     SMLabel *_messageLab;
     UIAsyncImageView *_bgView;
-    MessageContentModel *_model;
+//    MessageContentModel *_model;
     
 }
 @property (nonatomic, strong) MessageContentModel *model;
@@ -86,7 +86,7 @@
     UIAsyncImageView *_iconImageView;
     SMLabel *_messageLab;
     UIAsyncImageView *_bgView;
-    MessageContentModel *_model;
+//    MessageContentModel *_model;
     
 }
 @property (nonatomic, strong) MessageContentModel *model;
@@ -165,7 +165,7 @@
     NSMutableArray *dataArr;
     NSString *Sendstatu;    //1发送过消息
     NSInteger page;
-    NSMutableArray *tempArr;
+//    NSMutableArray *tempArr;
 }
 
 @end
@@ -200,7 +200,7 @@ static NSString *identifierStr1 = @"MessageMeTabViewCellId";
 }
 - (void) dataInit {
     dataArr = [[NSMutableArray alloc] init];
-    tempArr = [[NSMutableArray alloc] init];
+//    tempArr = [[NSMutableArray alloc] init];
     WS(weakSelf);
     [self addBaseTableViewRefesh:_tableView type:ENT_RefreshHeader successRefesh:^(MJRefreshComponent *refreshView) {
         [weakSelf loadRefesh:refreshView];

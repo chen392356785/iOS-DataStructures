@@ -20,7 +20,7 @@
 //#import "LaunchPageView.h"
 #import "BeeCloud.h"
 #import "THRootNavigationViewController.h"
-#import "xmSchemeManager.h"
+#import "XMSchemeManager.h"
 
 //#import <UserNotifications/UserNotifications.h>
 
@@ -133,9 +133,8 @@ static NSString *userAgent = @"097fce92c454b02dab1471917755554";
 	[MobClick setCrashReportEnabled:YES];
 	//开发者需要显式的调用此函数，日志系统才能工作
 //	[UMCommonLogManager setUpUMCommonLogManager];
-#if DEBUG
 	[UMConfigure setLogEnabled:YES];
-#endif
+
 	
 }
 
@@ -143,6 +142,7 @@ static NSString *userAgent = @"097fce92c454b02dab1471917755554";
  友盟更新SDK初始化
  */
 - (void) configurationUMUpdate {
+	
 	[UMCheckUpdate setLogEnabled:YES];
 	[UMCheckUpdate checkUpdateWithAppID:kStoreAppId];
 }
@@ -154,7 +154,7 @@ static NSString *userAgent = @"097fce92c454b02dab1471917755554";
 	
 	[[UMSocialManager defaultManager] openLog:YES];
 	//配置微信平台分享
-	[[UMSocialManager defaultManager] setPlaform:UMSocialPlatformType_WechatSession appKey:@"wxeab3fe32632897e3" appSecret:@"57bd081ad1ec70a146006ebcfa302b57" redirectURL:@"http://mobile.umeng.com/social"];
+	[[UMSocialManager defaultManager] setPlaform:UMSocialPlatformType_WechatSession appKey:WXAppId appSecret:@"d02c7f80e6f4996cceebec52a6c4077f" redirectURL:@"http://mobile.umeng.com/social"];
 	//配置QQ平台分享
 	[[UMSocialManager defaultManager] setPlaform:UMSocialPlatformType_QQ appKey:@"1105083809"  appSecret:nil redirectURL:@"http://mobile.umeng.com/social"];
 	//配置微博平台分享
@@ -286,16 +286,16 @@ void UncaughtExceptionHandler(NSException *exception) {
 #endif
 	
 	
-#ifdef APP_MiaoTu
+//#ifdef APP_MiaoTu
 	//
 	//向微信注册,发起支付必须注册
 	[WXApi registerApp:WXAppId];         //单接微信支付
 	
 	//      [BeeCloud initWeChatPay:@"wx7efd0146f0a682ea"];
-	[BeeCloud initWeChatPay:@"wxeab3fe32632897e3"];
-#elif defined APP_YiLiang
-	[BeeCloud initWeChatPay:@"wxeebc078bd7a21d57"];
-#endif
+	[BeeCloud initWeChatPay:WXAppId];
+//#elif defined APP_YiLiang
+//	[BeeCloud initWeChatPay:@"wxeebc078bd7a21d57"];
+//#endif
 	
 	
 	if(![[[NSUserDefaults standardUserDefaults] objectForKey:@"first"] isEqualToString:@"1"]){
@@ -309,13 +309,10 @@ void UncaughtExceptionHandler(NSException *exception) {
 		THRootNavigationViewController *navi = [[THRootNavigationViewController alloc]initWithRootViewController:controller];
 		self.window.rootViewController=navi;
 	}
+	
 	[self.window makeKeyAndVisible];
-	//启动动画
 	[self startShowWindow];
-	
-	
-	
-	// Override point for customization after application launch.
+
 	return YES;
 }
 
@@ -394,9 +391,6 @@ void UncaughtExceptionHandler(NSException *exception) {
 		launchView.selectBtnBlock = ^(NSInteger index){
 			[[NSNotificationCenter defaultCenter] postNotificationName:NotificationTapLanuch object:imgDic userInfo:nil];
 		};
-		
-#elif defined APP_YiLiang
-		
 #endif
 		[self.window addSubview:launchView];
 	}

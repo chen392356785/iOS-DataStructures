@@ -14,7 +14,7 @@
     MTBaseTableView *commTableView;
     int page;
     NSMutableArray *dataArray;
-    NSIndexPath *_indexPath;
+//    NSIndexPath *_indexPath;
     SMLabel *_timeLbl;
     SMLabel *_statusLbl;
     SMLabel *_lbl;

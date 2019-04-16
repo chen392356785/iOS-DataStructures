@@ -85,7 +85,7 @@
 #pragma mark 行业资讯
 @interface MTNewsDataSource : MTDataSource
 {
-    MTTableViewCell *_cell;
+//    MTTableViewCell *_cell;
 }
 @end
 
@@ -239,7 +239,7 @@
 
 @interface ChoosePositionDataSource : MTDataSource
 {
-    NSDictionary *_dic;
+//    NSDictionary *_dic;
 }
 @end
 

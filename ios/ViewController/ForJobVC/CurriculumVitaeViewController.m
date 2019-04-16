@@ -11,7 +11,7 @@
 @interface CurriculumVitaeViewController ()<UITableViewDelegate,ChatViewControllerDelegate>
 {
     MTBaseTableView *commTableView;
-    int page;
+//    int page;
     NSMutableArray *dataArray;
     NSDictionary *_dic;
 }

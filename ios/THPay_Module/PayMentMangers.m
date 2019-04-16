@@ -6,12 +6,10 @@
 //
 
 #import "PayMentMangers.h"
-//#import "MTNetworkData+extend.h"
-//#import "WXApi.h"
 #import "XMPaySchemeService.h"
 #import "PayTypeConstants.h"
 #import "PayMentModel.h"
-#import "THJSONAdapter.h"
+//#import "THJSONAdapter.h"
 #import "JSONUtility.h"
 #import "NSString+AES.h"
 
@@ -92,8 +90,9 @@
     self.resultBlock = resultBlock;
     THWeak(parentVC);
     [parentVC addWaitingView];
-    
-    NSString *DataStr = [dict mj_JSONString];
+	
+	NSData *jsonData = [NSJSONSerialization dataWithJSONObject:dict options:NSJSONWritingPrettyPrinted error:NULL];
+	NSString *DataStr = [[NSString alloc] initWithData:jsonData encoding:NSUTF8StringEncoding];
     NSString *data = [DataStr aci_encryptWithAES];
     NSDictionary *dict1 = @{@"data" : data};
     
@@ -107,12 +106,16 @@
             }
             return ;
         }
-        PayMentModel *model = [THJSONAdapter modelOfClass:[PayMentModel class] jsonDictionary:obj];
-        [self choosePayType:type json:model];
+		PayMentModel *model = [PayMentModel new];
+		model.code = [[obj objectForKey:@"code"] intValue];
+		model.data = [obj objectForKey:@"data"];
+		model.type = [[obj objectForKey:@"type"] intValue];
+		model.msg = [obj objectForKey:@"msg"];
+		[self choosePayType:type json:model];
     } failure:^(NSDictionary *obj2) {
-        THStrong(parentVC);
-        [parentVC showHint:@"网络错误"];
-        [parentVC removeWaitingView];
+		THStrong(parentVC);
+		[parentVC showHint:@"网络错误"];
+		[parentVC removeWaitingView];
     }];
     
 }
@@ -134,8 +137,12 @@
     [network orderPay:orderNo orderPrice:orderPrice subject:subject type:type crowID:crowID  activitieID:activitie_id success:^(NSDictionary *obj) {
         THStrong(parentVC);
         [parentVC removeWaitingView];
-        PayMentModel *model = [THJSONAdapter modelOfClass:[PayMentModel class] jsonDictionary:obj];
-        [self choosePayType:type json:model];
+		PayMentModel *model = [PayMentModel new];
+		model.code = [[obj objectForKey:@"code"] intValue];
+		model.data = [obj objectForKey:@"data"];
+		model.type = [[obj objectForKey:@"type"] intValue];
+		model.msg = [obj objectForKey:@"msg"];
+		[self choosePayType:type json:model];
 
     } failure:^(NSDictionary *obj2) {
         THStrong(parentVC);
@@ -150,8 +157,8 @@
     THWeak(parentVC);
     [parentVC addWaitingView];
     
-    
-    NSString *DataStr = [dict mj_JSONString];
+	NSData *jsonData = [NSJSONSerialization dataWithJSONObject:dict options:NSJSONWritingPrettyPrinted error:NULL];
+    NSString *DataStr = [[NSString alloc] initWithData:jsonData encoding:NSUTF8StringEncoding];
     NSString *data = [DataStr aci_encryptWithAES];
     NSDictionary *dict1 = @{@"data" : data};
     
@@ -165,8 +172,11 @@
             }
             return ;
         }
-        
-        PayMentModel *model = [THJSONAdapter modelOfClass:[PayMentModel class] jsonDictionary:obj];
+		PayMentModel *model = [PayMentModel new];
+		model.code = [[obj objectForKey:@"code"] intValue];
+		model.data = [obj objectForKey:@"data"];
+		model.type = [[obj objectForKey:@"type"] intValue];
+		model.msg = [obj objectForKey:@"msg"];
         [self choosePayType:type json:model];
     } failure:^(NSDictionary *obj2) {
         THStrong(parentVC);

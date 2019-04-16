@@ -25,7 +25,7 @@
     UIButton *_createBtn;
     MTBaseTableView *commTableView;
     int page;
-    NSMutableArray *nurseryNameArr;
+//    NSMutableArray *nurseryNameArr;
     NSString *parent_nursery_name;
     NSInteger i;
     NSMutableDictionary *dataSourceDic;
@@ -36,12 +36,12 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    dataArray=[[NSMutableArray alloc]init];
-    dataSource=[[NSMutableArray alloc]init];
-    listArray =[NSMutableArray new];
-    parentIdArr=[[NSMutableArray alloc]init];
+    dataArray = [[NSMutableArray alloc]init];
+    dataSource = [[NSMutableArray alloc]init];
+    listArray = [NSMutableArray new];
+    parentIdArr = [[NSMutableArray alloc]init];
     page=0;
-    nurseryNameArr=[[NSMutableArray alloc]init];
+//    nurseryNameArr=[[NSMutableArray alloc]init];
     dataSourceDic=[[NSMutableDictionary alloc]init];
     //[self setbackTopFrame:WindowHeight-100];
     UIView *searchView=[[UIView alloc]initWithFrame:CGRectMake(0, 0, WindowWith, 40)];

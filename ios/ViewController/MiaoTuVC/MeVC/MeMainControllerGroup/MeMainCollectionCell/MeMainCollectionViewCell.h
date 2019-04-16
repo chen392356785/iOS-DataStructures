@@ -20,11 +20,11 @@
     SMLabel *_nickNameLbl;
     SMLabel *_isVipLbl;
     SMLabel *_VipTypeLbl;
-    SMLabel *_AccountNumLbl;      //余额
-    SMLabel *_kaquanNumLbl;       //卡券
-    SMLabel *_MiaoBipNumLbl;      //苗途币
-    SMLabel *_fensiNumLbl;        //粉丝
-    SMLabel *_guanzhuNumLbl;      //关注
+//    SMLabel *_AccountNumLbl;      //余额
+//    SMLabel *_kaquanNumLbl;       //卡券
+//    SMLabel *_MiaoBipNumLbl;      //苗途币
+//    SMLabel *_fensiNumLbl;        //粉丝
+//    SMLabel *_guanzhuNumLbl;      //关注
     UIButton *_settingBut;     //设置
     
 }
@@ -51,7 +51,7 @@
 typedef void (^DidSelectModelBlock) (pointsAdvListModel *pModel);
 
 @interface MeMainLunboCollectionViewCell : UICollectionViewCell {
-   HeadBannerView *_scrollView;
+//   HeadBannerView *_scrollView;
     NSMutableArray *_imgsArr;
     NSMutableArray *_modelArr;
 }

@@ -15,10 +15,10 @@
 @interface WeatherView : CustomView
 {
     SMLabel *_timeLbl;//时间
-    SMLabel *_pmLbl;//上下午
+//    SMLabel *_pmLbl;//上下午
     SMLabel *_adressLbl;//当前城市
     SMLabel *_weatherLbl;//天气
-    SMLabel *_kongqiLbl;//空气
+//    SMLabel *_kongqiLbl;//空气
     SMLabel *_wenduLbl;//当前温度
     SMLabel *_wenduchaLbl;//温度差
     UIImageView *_weatherImageView;//天气图片

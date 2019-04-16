@@ -349,7 +349,7 @@
         UIImage *img=Image(@"renmaiBK.png");
         UIImageView *bkimageView=[[UIImageView alloc]initWithFrame:CGRectMake(0.026*WindowWith, 10, WindowWith-0.026*WindowWith*2, 0.3*WindowWith)];
         bkimageView.image=img;
-        _bkImageView=bkimageView;
+//        _bkImageView=bkimageView;
         [self.contentView addSubview:bkimageView];
      
     
@@ -449,7 +449,7 @@
         
         UIImage *typeImg;
         UIImageView *typeImageView=[[UIImageView alloc]initWithImage:typeImg];
-        _typeImageView=typeImageView;
+//        _typeImageView=typeImageView;
         lbl=[[SMLabel alloc]initWithFrameWith:CGRectMake(bkimageView.width-60, bkimageView.height-28, 50, 14) textColor:RGB(232, 121, 117) textFont:sysFont(14)];
         _lbl=lbl;
         
@@ -1077,7 +1077,7 @@
         //判断性别
         UIImage *sexImg=Image(@"boy.png");
         UIImageView *sexImageView=[[UIImageView alloc]initWithFrame:CGRectMake(nickNameLbl.right+5, nickNameLbl.top+3, sexImg.size.width, sexImg.size.height)];
-        _sexImageView=sexImageView;
+//        _sexImageView=sexImageView;
         sexImageView.image=sexImg;
        // [self.contentView addSubview:sexImageView];
 
@@ -1090,7 +1090,7 @@
         UIImage *adressImg=Image(@"m.png");
         
         UIImageView *adressImageView=[[UIImageView alloc]initWithFrame:CGRectMake(adressLbl.right+5, adressLbl.top, adressImg.size.width, adressImg.size.height)];
-        _adressImageView=adressImageView;
+//        _adressImageView=adressImageView;
         adressImageView.image=adressImg;
         
         //[self.contentView addSubview:adressImageView];

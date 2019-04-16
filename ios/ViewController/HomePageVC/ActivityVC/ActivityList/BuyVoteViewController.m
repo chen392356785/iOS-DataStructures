@@ -12,7 +12,7 @@
 
 @interface BuyVoteViewController () {
     UILabel *moneyLab;
-    BOOL APayShow;      //是否要显示支付
+//    BOOL APayShow;      //是否要显示支付
     NSString *type;
     NSString *picNum;
 }
@@ -152,7 +152,7 @@
 - (void) GoSelectPlayPaymentOrderNO:(NSString *)orderNo OrderPrice:(NSString *)orderPrice {
     ApliayView *alipayView = [[ApliayView alloc] initWithFrame:self.view.window.bounds];
     alipayView.top = kScreenHeight;
-    APayShow=YES;
+//    APayShow = YES;
     alipayView.selectBlock = ^(NSInteger index){
         if (index == ENT_top) {
             self->type = @"1";
@@ -174,10 +174,11 @@
     } completion:^(BOOL finished) {
         [UIView animateWithDuration:.3 animations:^{
             alipayView.backgroundColor = RGBA(0, 0, 0, 0.3);
-            self->APayShow=NO;
+//            self->APayShow=NO;
         }];
     }];
 }
+
 - (void)referAlipayOrderNo:(NSString *)OrderNo andPic:(NSString *)pic
 {
     [[PayMentMangers manager] payment:OrderNo orderPrice:pic type:self.payType subject:self.ActiviModel.activities_titile activitieID:self.ActiviModel.activities_id parentVC:self resultBlock:^(BOOL isPaySuccess, NSString *msg) {
