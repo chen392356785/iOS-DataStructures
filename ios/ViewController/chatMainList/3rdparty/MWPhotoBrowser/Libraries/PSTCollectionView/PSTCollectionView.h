@@ -28,11 +28,11 @@ typedef NS_OPTIONS(NSUInteger, PSTCollectionViewScrollPosition) {
     PSTCollectionViewScrollPositionRight                = 1 << 5
 };
 
-typedef NS_ENUM(NSUInteger, PSTCollectionElementCategory) {
-    PSTCollectionElementCategoryCell,
-    PSTCollectionElementCategorySupplementaryView,
-    PSTCollectionElementCategoryDecorationView
-};
+//typedef NS_ENUM(NSUInteger, PSTCollectionElementCategory) {
+//    PSTCollectionElementCategoryCell,
+//    PSTCollectionElementCategorySupplementaryView,
+//    PSTCollectionElementCategoryDecorationView
+//};
 
 // Define the `PSTCollectionViewDisableForwardToUICollectionViewSentinel` to disable the automatic forwarding to UICollectionView on iOS 6+. (Copy below line into your AppDelegate.m)
 //@interface PSTCollectionViewDisableForwardToUICollectionViewSentinel : NSObject @end @implementation PSTCollectionViewDisableForwardToUICollectionViewSentinel @end

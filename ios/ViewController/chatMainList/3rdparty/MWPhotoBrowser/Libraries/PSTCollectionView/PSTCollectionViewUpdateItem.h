@@ -13,7 +13,6 @@ typedef NS_ENUM(NSInteger, PSTCollectionUpdateAction) {
     PSTCollectionUpdateActionDelete,
     PSTCollectionUpdateActionReload,
     PSTCollectionUpdateActionMove,
-    PSTCollectionUpdateActionNone
 };
 
 @interface PSTCollectionViewUpdateItem : NSObject

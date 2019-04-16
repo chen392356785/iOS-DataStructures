@@ -10,12 +10,12 @@
 
 @implementation keychainItemManager
 
-static NSString * const KEY_PASSWORD = @"com.xj.app.Password";
+//static NSString * const KEY_PASSWORD = @"com.xj.app.Password";
 static NSString * const KEY_PhoneNum = @"com.xj.app.PhoneNum";
-static NSString * const KEY_SessionId = @"com.xj.app.SessionId";
-static NSString *const KEY_HasSupplyPwd = @"com.xj.app.HasSupplyPwd";
-static NSString *const KEY_UserID = @"com.talkWeb.app.UserID";
-static NSString *const Key_UserInfo=@"com.xj.app.UserInfo";
+//static NSString * const KEY_SessionId = @"com.xj.app.SessionId";
+//static NSString *const KEY_HasSupplyPwd = @"com.xj.app.HasSupplyPwd";
+//static NSString *const KEY_UserID = @"com.talkWeb.app.UserID";
+//static NSString *const Key_UserInfo=@"com.xj.app.UserInfo";
 
 /*****写入信息******/
 //+ (void)writePassWord:(NSString *)passWord;

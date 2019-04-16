@@ -15,7 +15,7 @@
 
 @implementation MTNetworkData (extend)
 
-static MTNetworkData *_config;
+//static MTNetworkData *_config;
 
 //供应点赞
 -(void)getAddSupplyClickLike:(int)user_id

@@ -8,24 +8,24 @@
 
 #import <UIKit/UIKit.h>
 
-typedef enum{
-    IHDeviceTypeIPhone1G,
-    IHDeviceTypeIPhone3G,
-    IHDeviceTypeIPhone3GS,
-    IHDeviceTypeIPhone4,
-    IHDeviceTypeIPhone4S,
-    IHDeviceTypeVerizonIPhone4,
-    IHDeviceTypeIPodTouch1G,
-    IHDeviceTypeIPodTouch2G,
-    IHDeviceTypeIPodTouch3G,
-    IHDeviceTypeIPodTouch4G,
-    IHDeviceTypeIPad,
-    IHDeviceTypeIPad2WiFi,
-    IHDeviceTypeIPad2GSM,
-    IHDeviceTypeIPad2CDMA,
-    IHDeviceTypeSimulator,
-    IHDeviceTypeOther,
-}IHDeviceType;
+//typedef enum{
+//    IHDeviceTypeIPhone1G,
+//    IHDeviceTypeIPhone3G,
+//    IHDeviceTypeIPhone3GS,
+//    IHDeviceTypeIPhone4,
+//    IHDeviceTypeIPhone4S,
+//    IHDeviceTypeVerizonIPhone4,
+//    IHDeviceTypeIPodTouch1G,
+//    IHDeviceTypeIPodTouch2G,
+//    IHDeviceTypeIPodTouch3G,
+//    IHDeviceTypeIPodTouch4G,
+//    IHDeviceTypeIPad,
+//    IHDeviceTypeIPad2WiFi,
+//    IHDeviceTypeIPad2GSM,
+//    IHDeviceTypeIPad2CDMA,
+//    IHDeviceTypeSimulator,
+//    IHDeviceTypeOther,
+//}IHDeviceType;
 
 #define MAS_SHORTHAND_GLOBALS
 #define WS(weakSelf) __weak __typeof(&*self) weakSelf = self

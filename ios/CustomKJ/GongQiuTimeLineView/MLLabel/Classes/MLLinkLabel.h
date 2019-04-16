@@ -12,7 +12,6 @@ typedef NS_OPTIONS(NSUInteger, MLDataDetectorTypes) {
     MLDataDetectorTypeURL           = 1 << 1,          // 链接，不用link定义，是因为link作为统称
     MLDataDetectorTypePhoneNumber   = 1 << 0,          // 电话
     MLDataDetectorTypeNone          = 0,               // 禁用
-    MLDataDetectorTypeAll           = NSUIntegerMax,    // 所有
     //上面4个和UIDataDetectorTypes的对应，下面是自己加的
     
     MLDataDetectorTypeEmail         = 1 << 4,          // 邮箱
@@ -31,10 +30,6 @@ typedef NS_ENUM(NSUInteger, MLLinkType) {
     MLLinkTypeNone          = 0,
     MLLinkTypeURL           = 1,          // 链接
     MLLinkTypePhoneNumber   = 2,          // 电话
-    MLLinkTypeEmail         = 3,          // 邮箱
-    MLLinkTypeUserHandle    = 4,          //@
-    MLLinkTypeHashtag       = 5,          //#..#
-    
     MLLinkTypeOther        = 31,          //这个一般是和MLDataDetectorTypeAttributedLink对应的，但是也可以自己随意添加啦，不过是一个标识而已，至于为什么31，随便定的，预留上面空间以添加新的个性化
 };
 

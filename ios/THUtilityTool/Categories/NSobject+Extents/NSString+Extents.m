@@ -102,7 +102,7 @@
     return string;
 }
 
-static NSString *ccphoneRegex = @"^((17[0-9])|(13[0-9])|(15[^4,\\D])|(18[0,0-9]))\\d{8}$";
+//static NSString *ccphoneRegex = @"^((17[0-9])|(13[0-9])|(15[^4,\\D])|(18[0,0-9]))\\d{8}$";
 
 static NSString *emailregex = @"[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,4}";
 
@@ -122,7 +122,7 @@ static NSString *nickNameregex = @"^[\u4e00-\u9fa5a-zA-Z0-9]{4,16}";
 
 static NSString *bankNameregex = @"[\u4e00-\u9fa5a-zA-Z0-9]{2,}";
 
-static NSString *isChinese = @"[\u4e00-\u9fa5]";
+//static NSString *isChinese = @"[\u4e00-\u9fa5]";
 
 static NSString *isNumber = @"^[0-9]*$";
 //匹配首尾空白字符的正则表达式

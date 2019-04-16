@@ -50,7 +50,6 @@ typedef enum{
     IH_QueryTopicCommentList,//查询话题评论列表
     IH_QueryClickLikeListType,//查询点赞列表 根据type
     IH_UserInfoUpdate,//用户信息更新
-    IH_QueryCollectionSupplyAndWantBuyList, //
     IH_GetMyCollectionSupplyList, //我收藏的 供应
     IH_GetMyCollectionBuyList,//我收藏的 求购
     IH_GetMyCollectionTopicList, //我收藏的话题
@@ -112,7 +111,6 @@ typedef enum{
     IH_recommendCompany,//推荐企业
 
     IH_invatedFriendsId,//邀请好友数统计
-    IH_MTDic,//查询公共字典
     IH_selectRecruitList,//查询简历列表
      IH_selectRecruitListSearce,//搜索简历
      IH_SearchJobName,//搜索职位名称

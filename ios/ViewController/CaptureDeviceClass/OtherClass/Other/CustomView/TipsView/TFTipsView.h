@@ -9,8 +9,6 @@
 #import <UIKit/UIKit.h>
 
 typedef NS_ENUM(NSInteger, TFTipsType) {
-    //未知
-    kTFTipsTypeUnknown = 0,
     //居上
     kTFTipsTypeTop,
     //居中

@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 
 typedef void(^GoPlayBlock)();
-typedef void(^CancelyBlock)();
+//typedef void(^CancelyBlock)();
 
 @interface PlayPopView : UIView
 

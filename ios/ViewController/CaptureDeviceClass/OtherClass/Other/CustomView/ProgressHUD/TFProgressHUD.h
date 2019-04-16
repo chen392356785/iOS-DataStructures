@@ -9,8 +9,6 @@
 #import <UIKit/UIKit.h>
 
 typedef NS_ENUM(NSInteger, TFProgressHUDType) {
-    //未知类型
-    kTFProgressHUDTypeUnknown = 0,
     //只有转圈图
     kTFProgressHUDTypeCycle,
     //只有文字提示

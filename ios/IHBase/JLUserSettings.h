@@ -6,8 +6,9 @@
 //  Copyright 2011 infohold. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
+#import <Foundation/Foundation.h>
+
 typedef enum{
 	keyType_NumberDefault,//默认的数字键盘，什么都没有
 	keyType_IDNumber,//用户身份证
@@ -16,16 +17,13 @@ typedef enum{
 	keyType_NextDefault//添加下一个按钮，适合与数字键盘和非数字键盘
 } KeyBoardType;
 
-
-
-
 @interface AppUserModel : NSObject {
 	NSString *userName;
-    
-    
-    
+
 }
+
 @property(nonatomic,retain)NSString *userName;
+
 @end
 
 

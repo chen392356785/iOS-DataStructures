@@ -16,8 +16,7 @@ typedef enum {
 
 typedef enum {
     SDCycleScrollViewPageContolStyleClassic,        // 系统自带经典样式
-    SDCycleScrollViewPageContolStyleAnimated,       // 动画效果pagecontrol
-    SDCycleScrollViewPageContolStyleNone            // 不显示pagecontrol
+    SDCycleScrollViewPageContolStyleAnimated       // 动画效果pagecontrol
 } SDCycleScrollViewPageContolStyle;
 
 @class SDCycleScrollView;

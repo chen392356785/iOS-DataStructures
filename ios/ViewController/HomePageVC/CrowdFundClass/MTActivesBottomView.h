@@ -8,15 +8,14 @@
 
 #import <UIKit/UIKit.h>
 
-typedef NS_ENUM(NSInteger , BootomType) {
-    SignUpNotStart  = 0,
-    CrowdFundNotStart,
-    ActiviesPay,        //活动立即支付
-    MyCrowdFund,        //我要众筹
-    CrowdFundDidEnd,    //众筹结束
-    ActiviesDidEnd,     //活动结束
-};
-
+//typedef NS_ENUM(NSInteger , BootomType) {
+//    SignUpNotStart  = 0,
+//    CrowdFundNotStart,
+//    ActiviesPay,        //活动立即支付
+//    MyCrowdFund,        //我要众筹
+//    CrowdFundDidEnd,    //众筹结束
+//    ActiviesDidEnd,     //活动结束
+//};
 
 typedef void(^ActivityPlayBlock)();       //活动立即支付
 typedef void(^myCrowdFundBlock)();        //我要众筹
@@ -34,4 +33,5 @@ typedef void(^myCrowdFundPlayBlock)();    //我要支付
 @property (nonatomic, assign) BOOL isDidCrowdFund;
 
 - (void)layoutupSubviews;
+
 @end

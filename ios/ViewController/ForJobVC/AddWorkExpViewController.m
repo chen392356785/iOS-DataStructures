@@ -55,7 +55,7 @@
     //获取当前年份和月份
     NSDate *now = [NSDate date];
     NSCalendar *calendar = [NSCalendar currentCalendar];
-    NSUInteger unitFlags = NSCalendarUnitYear | NSCalendarUnitMonth | NSCalendarUnitDay | NSCalendarUnitHour | NSCalendarUnitMinute | NSCalendarUnitSecond;
+    NSCalendarUnit unitFlags = NSCalendarUnitYear | NSCalendarUnitMonth | NSCalendarUnitDay | NSCalendarUnitHour | NSCalendarUnitMinute | NSCalendarUnitSecond;
     NSDateComponents *dateComponent = [calendar components:unitFlags fromDate:now];
     int year = (int)[dateComponent year];
     month = (int)[dateComponent month];

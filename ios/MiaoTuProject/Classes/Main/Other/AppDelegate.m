@@ -63,9 +63,9 @@
 
 
 //有赞商城
-static NSString *appID = @"0bd1f32440c9ea8dc1";
-static NSString *appSecret = @"abecb41a237d63cfcdcdf27bb5f6bd14";
-static NSString *userAgent = @"097fce92c454b02dab1471917755554";
+//static NSString *appID = @"0bd1f32440c9ea8dc1";
+//static NSString *appSecret = @"abecb41a237d63cfcdcdf27bb5f6bd14";
+//static NSString *userAgent = @"097fce92c454b02dab1471917755554";
 
 
 @interface AppDelegate () <UNUserNotificationCenterDelegate>
@@ -208,67 +208,19 @@ void UncaughtExceptionHandler(NSException *exception) {
 	[[UIApplication sharedApplication] openURL:url];
 	return;
 }
-//iOS适配
-- (void) adapterIos11 {
-#ifndef __IPHONE_11_0
-#define __IPHONE_11_0    110000
-#endif
-#if __IPHONE_OS_VERSION_MAX_ALLOWED >= __IPHONE_11_0
-	if (@available(iOS 11.0, *)) {
-		
-	} else {
-		
-	}
-#endif
-}
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-	[self adapterIos11];
+
 	[self initAutoScaleSize];  //初始化自动字体
 	self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
 	self.window.backgroundColor = [UIColor whiteColor];
 	[self configOwnViews];
 	[self easemobApplication:application didFinishLaunchingWithOptions:launchOptions];
-	//
-	//    UNUserNotificationCenter *center = [UNUserNotificationCenter currentNotificationCenter];
-	//    center.delegate = self;
-	//    UNAuthorizationOptions types10=UNAuthorizationOptionBadge|  UNAuthorizationOptionAlert|UNAuthorizationOptionSound;
-	//    [center requestAuthorizationWithOptions:types10 completionHandler:^(BOOL granted, NSError * _Nullable error) {
-	//        if (granted) {
-	//            //点击允许
-	//            //这里可以添加一些自己的逻辑
-	//        } else {
-	//            //点击不允许
-	//            //这里可以添加一些自己的逻辑
-	//        }
-	//    }];
-	//打开日志，方便调试
-	//    [UMessage setLogEnabled:YES];
-	
-	
-	//    //集成有赞商城
-	//    [YZSDK setOpenInterfaceAppID:appID appSecret:appSecret];
-	//
-	//    //设置UA
-	//    [YZSDK userAgentInit:userAgent version:@""];
-	
-	//V2.9.17 取消后可以跳转商城
-	//    [YZSDK setOpenDebugLog:NO];
-	//    [YZSDK setUserAgent:userAgent];
-	
 	[self getLocationData];
 	
 	_uncaughtExceptionHandler = NSGetUncaughtExceptionHandler();
 	NSSetUncaughtExceptionHandler(&UncaughtExceptionHandler);
-	
-	
-	//   [JSPatch startWithAppKey:@"3b385ab74f862856"];
-	//
-	//#ifdef DEBUG
-	//    [JSPatch setupDevelopment];
-	//#endif
-	//    [JSPatch sync];
-	
+
 	///高德产品初始化
 	[self ammapInit];
 	///友盟产品初始化
@@ -282,7 +234,6 @@ void UncaughtExceptionHandler(NSException *exception) {
 	
 	[BeeCloud initWithAppID:@"5c9ac31c-4f6a-44c1-911c-4e0d7acd58b1" andAppSecret:@"8bd09c42-7a75-48af-b06c-11694f40c656"];
 	
-	//  [BeeCloud initWithAppID:@"5c9ac31c-4f6a-44c1-911c-4e0d7acd58b1" andAppSecret:@"8bd09c42-7a75-48af-b06c-11694f40c656" sandbox:YES];
 #endif
 	
 	

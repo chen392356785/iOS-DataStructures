@@ -12,7 +12,7 @@
 static const CGFloat kDefaultPlaySoundInterval = 3.0;
 static NSString *kMessageType = @"MessageType";
 static NSString *kConversationChatter = @"ConversationChatter";
-static NSString *kGroupName = @"GroupName";
+//static NSString *kGroupName = @"GroupName";
 @interface MainViewController : SMBaseViewController
 
 @property (strong, nonatomic) NSDate *lastPlaySoundDate;

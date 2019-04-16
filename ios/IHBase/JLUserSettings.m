@@ -24,7 +24,7 @@ static UITextView *CURRENTACTIVITYTEXTVIEW=nil;
 static UISearchBar *CURRENTACTIVITYSEARCHBAR=nil;
 static BOOL ISSHOWKEYBOARD;
 static KeyBoardType m_keyBoardType;
-static UITextField *m_NextTextField;
+//static UITextField *m_NextTextField;
 
 //static CGSize kbSize;
 

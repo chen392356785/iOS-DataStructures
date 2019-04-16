@@ -15,14 +15,14 @@
 
 @implementation EMAlertView
 
-void EMNoTitleAlert(NSString* message) {
-    UIAlertView* alert = [[UIAlertView alloc] initWithTitle:message
-                                                    message:nil
-                                                   delegate:nil
-                                          cancelButtonTitle:@"确定"
-                                          otherButtonTitles:nil];
-    [alert show];
-}
+//void EMNoTitleAlert(NSString* message) {
+//    UIAlertView* alert = [[UIAlertView alloc] initWithTitle:message
+//                                                    message:nil
+//                                                   delegate:nil
+//                                          cancelButtonTitle:@"确定"
+//                                          otherButtonTitles:nil];
+//    [alert show];
+//}
 
 + (id)showAlertWithTitle:(NSString *)title message:(NSString *)message
          completionBlock:(void (^)(NSUInteger buttonIndex, EMAlertView *alertView))block

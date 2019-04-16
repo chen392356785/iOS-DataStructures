@@ -9,11 +9,8 @@
 #import <UIKit/UIKit.h>
 
 typedef NS_ENUM(NSInteger,TFRemindStyle){
-    
     TFRemindStyleNote,
-    TFRemindStyleAlter,
-    TFRemindStyleSubTitle
-
+    TFRemindStyleAlter
 };
 
 //@protocol TFRemindViewDelegate <NSObject>

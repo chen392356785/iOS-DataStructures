@@ -12,7 +12,7 @@
 
 @implementation MTNetworkData (Job)
 
-static MTNetworkData *_config;
+//static MTNetworkData *_config;
 
 #pragma mark - 职位列表
 - (void)getPositionList:(int)UID

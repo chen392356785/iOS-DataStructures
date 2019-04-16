@@ -167,39 +167,39 @@ NSString* TTDeviceModelName() {
 }
 
 
-///////////////////////////////////////////////////////////////////////////////////////////////////
-BOOL TTIsSupportedOrientation(UIInterfaceOrientation orientation) {
-  if (TTIsPad()) {
-    return YES;
+/////////////////////////////////////////////////////////////////////////////////////////////////////
+//BOOL TTIsSupportedOrientation(UIInterfaceOrientation orientation) {
+//  if (TTIsPad()) {
+//    return YES;
+//
+//  } else {
+//    switch (orientation) {
+//      case UIInterfaceOrientationPortrait:
+//      case UIInterfaceOrientationLandscapeLeft:
+//      case UIInterfaceOrientationLandscapeRight:
+//        return YES;
+//      default:
+//        return NO;
+//    }
+//  }
+//}
 
-  } else {
-    switch (orientation) {
-      case UIInterfaceOrientationPortrait:
-      case UIInterfaceOrientationLandscapeLeft:
-      case UIInterfaceOrientationLandscapeRight:
-        return YES;
-      default:
-        return NO;
-    }
-  }
-}
-
-
-///////////////////////////////////////////////////////////////////////////////////////////////////
-CGAffineTransform TTRotateTransformForOrientation(UIInterfaceOrientation orientation) {
-  if (orientation == UIInterfaceOrientationLandscapeLeft) {
-    return CGAffineTransformMakeRotation(M_PI*1.5);
-
-  } else if (orientation == UIInterfaceOrientationLandscapeRight) {
-    return CGAffineTransformMakeRotation(M_PI/2);
-
-  } else if (orientation == UIInterfaceOrientationPortraitUpsideDown) {
-    return CGAffineTransformMakeRotation(-M_PI);
-
-  } else {
-    return CGAffineTransformIdentity;
-  }
-}
+/////////////////////////////////////////////////////////////////////////////////////////////////////
+//CGAffineTransform TTRotateTransformForOrientation(UIInterfaceOrientation orientation) {
+//  if (orientation == UIInterfaceOrientationLandscapeLeft) {
+//    return CGAffineTransformMakeRotation(M_PI*1.5);
+//
+//  } else if (orientation == UIInterfaceOrientationLandscapeRight) {
+//    return CGAffineTransformMakeRotation(M_PI/2);
+//
+//  } else if (orientation == UIInterfaceOrientationPortraitUpsideDown) {
+//    return CGAffineTransformMakeRotation(-M_PI);
+//
+//  } else {
+//    return CGAffineTransformIdentity;
+//  }
+//}
+//
 
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////

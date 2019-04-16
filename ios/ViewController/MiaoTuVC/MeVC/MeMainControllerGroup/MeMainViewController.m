@@ -55,7 +55,7 @@
 
 static NSString *MeMainHeadCollectionViewCellID  = @"MeMainHeadCollectionViewCell";
 static NSString *MeMainVipCollectionViewCellID   = @"MeMainVipCollectionViewCell";
-static NSString *MePartnerCollectionViewCellID   = @"MePartnerCollectionViewCellID";
+//static NSString *MePartnerCollectionViewCellID   = @"MePartnerCollectionViewCellID";
 static NSString *MeMainToolCollectionViewCellID  = @"MeMainToolCollectionViewCell";
 static NSString *MeMainHelpCollectionViewCellID  = @"MeMainHelpCollectionViewCell";
 

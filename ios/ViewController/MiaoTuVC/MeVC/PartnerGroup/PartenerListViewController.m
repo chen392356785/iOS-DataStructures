@@ -258,7 +258,7 @@
 static NSString *partenerListCellId    = @"PartenerListCollectionViewCell";
 static NSString *partenerListOneCellId = @"PartenerListCollectionViewOneCell";
 
-static NSIndexPath *currentIndex;
+//static NSIndexPath *currentIndex;
 
 
 @implementation PartenerListViewController

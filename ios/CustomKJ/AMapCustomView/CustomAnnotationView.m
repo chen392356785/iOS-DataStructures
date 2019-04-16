@@ -9,8 +9,6 @@
 #import "CustomAnnotationView.h"
 #import "CustomCalloutView.h"
 
-//#define kWidth  150.f
-//#define kHeight 60.f
 
 static const CGFloat kWidth = 150.0f;
 static const CGFloat kHeight = 60.f;

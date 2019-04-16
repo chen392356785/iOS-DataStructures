@@ -61,7 +61,6 @@ extern NSString *const PSTFlowLayoutLastRowHorizontalAlignmentKey;
 extern NSString *const PSTFlowLayoutRowVerticalAlignmentKey;
 
 typedef NS_ENUM(NSInteger, PSTFlowLayoutHorizontalAlignment) {
-    PSTFlowLayoutHorizontalAlignmentLeft,
     PSTFlowLayoutHorizontalAlignmentCentered,
     PSTFlowLayoutHorizontalAlignmentRight,
     PSTFlowLayoutHorizontalAlignmentJustify // 3; default except for the last row

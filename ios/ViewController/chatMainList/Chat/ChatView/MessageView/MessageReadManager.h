@@ -16,7 +16,7 @@
 #import "MessageModel.h"
 
 typedef void (^FinishBlock)(BOOL success);
-typedef void (^PlayBlock)(BOOL playing, MessageModel *messageModel);
+//typedef void (^PlayBlock)(BOOL playing, MessageModel *messageModel);
 
 @class EMChatFireBubbleView;
 @interface MessageReadManager : NSObject<MWPhotoBrowserDelegate>

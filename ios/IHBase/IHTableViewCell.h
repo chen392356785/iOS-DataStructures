@@ -12,7 +12,7 @@
 @class IHTableViewCell;
 
 typedef enum{
-    
+
     MTHeadViewActionTableViewCell, //点击头像
     MTHeadViewActionTableViewCell2, //点击头像
     MTCommentActionTableViewCell,//点击评论
@@ -24,7 +24,7 @@ typedef enum{
     MTPhoneActionTableViewCell,//点击电话
     MTQiangDanActionTableViewCell,//点击抢单
     MTLianXiActionTableViewCell,//联系
-    
+
     MTAppointActionTableViewCell,//点击预约
     MTcancelAgreeActionTableViewCell,//点击取消点赞
     MTcancelShareActionTableViewCell,//点击取消分享
@@ -32,35 +32,35 @@ typedef enum{
     MTcancelFavriteTopicActionTableViewCell,//点击取消话题收藏
     MTcancelFavriteSupplyActionTableViewCell, //供应取消收藏
     MTcancelFavriteBuyActionTableViewCell, //求购取消收藏
-    
+
     MTDetailActionTalbeViewCell, //进入详情
-    
+
     MTActivityBMTableViewCell, //活动报名
     MTActivityBMZFTableViewCell,//报名费支付
     MTActivityBMYZFTableViewCell,//已支付
     MTActivityQXBMTableViewCell,//取消活动
     MTActivityShareActivTableViewCell,
     MTActivityCollectBMTableViewCell,//收藏活动
-    
-    
+
+
     MTActivityFollowBMTableViewCell,//关注
     MTActivityUpFollowBMTableViewCell,//取消关注
     MTActionClickUserURlTableViewCellAction,  //点击用户链接
     MTMLLinkPhoneCellAction,//点击用户电话
     MTActionClickUserNameTableViewCellAction, // 点击 用户昵称
-    
+
     MYActionMiaoMuYunSelectCell, //cell点击
-  
+
     MYActionHomePageZiXunTableViewAction, //首页资讯点击
     MYActionHomePageZhanlueQiyeTableViewAction, //首页战略企业
     MTActionHomePageXinPinZhongTableViewCellAction, //新品种
     MTActionHomePagePinZhongTableViewCellAciont, //品种点击
     MTActionHomePageQiYeTableViewCellAction, //首页企业点击
     MTActionHomePageRenMaiTableViewCellAction , // 首页 人脉点击
-     MYActionSearchZhanlueQiyeTableViewAction, //首页搜索战略企业
+    MYActionSearchZhanlueQiyeTableViewAction, //首页搜索战略企业
     MTActionApplyChatGroupTableViewCell, //申请入群
-    
-    
+
+
 }BCTableViewCellAction;
 
 @protocol BCBaseTableViewCellDelegate<NSObject>
@@ -89,7 +89,7 @@ typedef enum{
 @interface IHMemberCenterCell : IHTableViewCell{
     NSDictionary *_member;
 
-    @private
+@private
     UILabel *lblTitle;
 //    UIImageView *icon;
 }

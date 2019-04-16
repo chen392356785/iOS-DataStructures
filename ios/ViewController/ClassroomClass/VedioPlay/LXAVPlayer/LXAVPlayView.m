@@ -14,12 +14,12 @@
 @interface LXAVPlayView()<UIGestureRecognizerDelegate>
 // 播放器的几种状态
 typedef NS_ENUM(NSInteger, LXPlayerState) {
-    LXPlayerStateFailed,     // 播放失败
+//    LXPlayerStateFailed,     // 播放失败
     LXPlayerStateBuffering,  // 缓冲中
     LXPlayerStatePlaying,    // 播放中
     LXPlayerStateStopped,    // 停止播放
-    LXPlayerStatePause,       // 暂停播放
-    LXPlayerStateEnd         // 播放完成
+    LXPlayerStatePause       // 暂停播放
+//    LXPlayerStateEnd         // 播放完成
 };
 
 // 枚举值，包含水平移动方向和垂直移动方向
