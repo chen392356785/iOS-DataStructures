@@ -31,11 +31,9 @@
 #import "BadgeNumModel.h"
 #import "MTNetworkData+ForModel.h"
 #import "MTNetworkData+ForModel2.h"
-//#import "ActivityView.h"
 #import "MTTableViewCell+TableViewCell.h"
-//#import "CustomView+CustomCategory2.h"
 #import "MTTableViewCell+TableViewCell3.h"
-#import "MobClick.h"
+#import <UMAnalytics/MobClick.h>
 #import "MTNewSupplyAndBuyView.h"
 #import "MTNewSupplyAndBuyTableViewCell.h"
 #import "SDAutoLayout.h"
@@ -47,12 +45,11 @@
 #import "MTNetworkData+Job.h"
 #import "MTModel+model1.h"
 #import "MTNetworkData+JobModel.h"
-//#import "CustomView+AskBarSubViews.h"
 #import "MTNetworkData+AskBarData.h"
 #import "MTNetworkData+AskBarModel.h"
 #import "MTDataSource+DataSource2.h"
 #import "WXWaveView.h"
 #import "ScoreConvertViewController.h"
-//#import "CustomView+category5.h"
+//#import "CustomView+category5h"
 
 

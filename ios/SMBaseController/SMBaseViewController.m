@@ -1297,7 +1297,7 @@
  
     float h = _boundHeihgt;
     
-    UIWindow* window = [AppDelegate sharedAppDelegate].window;
+    UIWindow * window = UIApplication.sharedApplication.delegate.window;
     
     //全部都转到window里去
     CGPoint ptToWindow = [_BaseScrollView convertPoint:_BaseScrollView.frame.origin toView:window];

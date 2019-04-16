@@ -431,6 +431,10 @@ typedef enum {
 #define LightFont(f) [UIFont fontWithName:@"Helvetica-Light" size:autoScaleW(f)]  //
 
 
+#define IS_IPHONE_5 ( fabs( ( double )[ [ UIScreen mainScreen ] bounds ].size.height - ( double )568 ) < DBL_EPSILON )
+#define RGBACOLOR(r,g,b,a) [UIColor colorWithRed:(r)/255.0 green:(g)/255.0 blue:(b)/255.0 alpha:(a)]
+
+#define KNOTIFICATION_LOGINCHANGE @"loginStateChange"
 
 #define KAmapKey @"ef4a7352e68626c6e1951527aaa07257"//高德key
 

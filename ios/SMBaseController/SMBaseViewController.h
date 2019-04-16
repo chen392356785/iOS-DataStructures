@@ -7,7 +7,7 @@
 //
 
 #import "MTLoginView.h"
-#import "UMShare.h"
+#import <UMShare/UMShare.h>
 #import "IHBaseViewController.h"
 #import "CNPPopupController.h"//弹出视图
 #import <CoreLocation/CoreLocation.h>

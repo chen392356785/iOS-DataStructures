@@ -80,7 +80,6 @@ MMSchemeCommonImplementation;
 + (void)payHandlerWithUrl:(NSURL *)url {
     XMPaySchemeService *payService = [self sharedInstance];
     [WXApi handleOpenURL:url delegate:(id<WXApiDelegate>)payService.weichatPay];
-    
 }
 
 

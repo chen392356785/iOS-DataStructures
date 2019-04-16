@@ -1563,22 +1563,18 @@ payment_methods_dictionary_id:(NSInteger)paymentId
 			  success:(void (^)(NSDictionary *obj))success
 			  failure:(void (^)(NSError *error))failure
 {
-	self.tag=IH_init;
-	
-	NSDictionary *dic2=[NSDictionary dictionaryWithObjectsAndKeys:
-						stringFormatDouble(longitude),@"longitude",
-						stringFormatDouble(latitude),@"latitude",
-						stringFormatString(user_id),@"user_id",
-						nil];
-	
-	
-	
-	[self httpRequestWithParameter:dic2
-							method:@"registerAndLogin/InitializationDictionary" success:^(NSDictionary *dic) {
-								success(dic);
-							} failure:^(NSError *error) {
-								failure(error);
-							}];
+    self.tag = IH_init;
+    NSDictionary *dic2=[NSDictionary dictionaryWithObjectsAndKeys:
+                        stringFormatDouble(longitude),@"longitude",
+                        stringFormatDouble(latitude),@"latitude",
+                        stringFormatString(user_id),@"user_id",
+                        nil];
+    [self httpRequestWithParameter:dic2
+                            method:@"registerAndLogin/InitializationDictionary" success:^(NSDictionary *dic) {
+                                success(dic);
+                            } failure:^(NSError *error) {
+                                failure(error);
+                            }];
 	
 	
 }

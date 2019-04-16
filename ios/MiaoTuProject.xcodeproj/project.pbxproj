@@ -281,7 +281,6 @@
 		1E4801851E5C3E1300667B09 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E4801811E5C3E1300667B09 /* AppDelegate.m */; };
 		1E4801861E5C3E1300667B09 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E4801821E5C3E1300667B09 /* main.m */; };
 		1E4801961E5C3F6B00667B09 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1E48018C1E5C3F6B00667B09 /* Images.xcassets */; };
-		1E4801971E5C3F6B00667B09 /* MiaoTuProject.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 1E48018E1E5C3F6B00667B09 /* MiaoTuProject.xcdatamodeld */; };
 		1E4801A01E5C417A00667B09 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1E4801A21E5C417A00667B09 /* Localizable.strings */; };
 		1E4801AC1E5C439E00667B09 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E4801A91E5C439E00667B09 /* MainViewController.m */; };
 		1E4801AD1E5C439E00667B09 /* StartViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E4801AB1E5C439E00667B09 /* StartViewController.m */; };
@@ -772,7 +771,6 @@
 		455B49671DE2CA86000F58E3 /* EMSearchBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 048CB3661CBB90F300C0AE1C /* EMSearchBar.m */; };
 		455B49691DE2CA86000F58E3 /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 048CB36E1CBB90F300C0AE1C /* BaseViewController.m */; };
 		455B496A1DE2CA86000F58E3 /* ZLCollectionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 04BA79C21C993B6E00266C6E /* ZLCollectionCell.m */; };
-		455B496B1DE2CA86000F58E3 /* UMCheckUpdate.m in Sources */ = {isa = PBXBuildFile; fileRef = 457DCFCB1D0D5A0500AD46D7 /* UMCheckUpdate.m */; };
 		455B496E1DE2CA86000F58E3 /* MyJobViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F6463BD1D8F916B005142A6 /* MyJobViewController.m */; };
 		455B49701DE2CA86000F58E3 /* MTNewSupplyAndBuyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FC1D2371D3F181200775EF3 /* MTNewSupplyAndBuyViewController.m */; };
 		455B49711DE2CA86000F58E3 /* IHDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FD3EF1B1D0126570023A203 /* IHDataSource.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
@@ -913,7 +911,6 @@
 		455B4A371DE2CA86000F58E3 /* LogisticsCreatSourceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 846B23B01CFBE5780027795F /* LogisticsCreatSourceViewController.m */; };
 		455B4A391DE2CA86000F58E3 /* ZLPhotoBrowserCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 04BA79C51C993B6E00266C6E /* ZLPhotoBrowserCell.m */; };
 		455B4A3A1DE2CA86000F58E3 /* MTNewSupplyAndBuyView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FC1D2301D3F0E9500775EF3 /* MTNewSupplyAndBuyView.m */; };
-		455B4A3B1DE2CA86000F58E3 /* CheckUpdateUitl.m in Sources */ = {isa = PBXBuildFile; fileRef = 457DCFC91D0D5A0500AD46D7 /* CheckUpdateUitl.m */; };
 		455B4A3C1DE2CA86000F58E3 /* CustomView+CustomCategory4.m in Sources */ = {isa = PBXBuildFile; fileRef = 8451228F1DDC3C3900716C56 /* CustomView+CustomCategory4.m */; };
 		455B4A3D1DE2CA86000F58E3 /* MTMyChlidSupplyAndBuyListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04EB0A931CBFDC8D00992814 /* MTMyChlidSupplyAndBuyListViewController.m */; };
 		455B4A3E1DE2CA86000F58E3 /* EPCloudFansViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FC1D2191D38880700775EF3 /* EPCloudFansViewController.m */; };
@@ -1132,8 +1129,6 @@
 		4579A0351DB473E700C4DE35 /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4579A0341DB473E700C4DE35 /* ImageIO.framework */; };
 		457BCCB41E024B51008FE253 /* RecommendChatGroupListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 457BCCB21E024B51008FE253 /* RecommendChatGroupListViewController.m */; };
 		457BCCB51E024B51008FE253 /* RecommendChatGroupListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 457BCCB21E024B51008FE253 /* RecommendChatGroupListViewController.m */; };
-		457DCFCC1D0D5A0500AD46D7 /* CheckUpdateUitl.m in Sources */ = {isa = PBXBuildFile; fileRef = 457DCFC91D0D5A0500AD46D7 /* CheckUpdateUitl.m */; };
-		457DCFCD1D0D5A0500AD46D7 /* UMCheckUpdate.m in Sources */ = {isa = PBXBuildFile; fileRef = 457DCFCB1D0D5A0500AD46D7 /* UMCheckUpdate.m */; };
 		457F0A011D41B02A0092B243 /* SDTimeLineCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 457F0A001D41B02A0092B243 /* SDTimeLineCell.m */; };
 		457F0A051D41B1330092B243 /* SDTimeLineCellOperationMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = 457F0A041D41B1330092B243 /* SDTimeLineCellOperationMenu.m */; };
 		457F0A081D41B13B0092B243 /* SDTimeLineCellCommentView.m in Sources */ = {isa = PBXBuildFile; fileRef = 457F0A071D41B13B0092B243 /* SDTimeLineCellCommentView.m */; };
@@ -2384,7 +2379,6 @@
 		1E4801821E5C3E1300667B09 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		1E4801881E5C3F6B00667B09 /* ChatDemoUIDefine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChatDemoUIDefine.h; sourceTree = "<group>"; };
 		1E48018C1E5C3F6B00667B09 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		1E48018F1E5C3F6B00667B09 /* MiaoTuProject.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = MiaoTuProject.xcdatamodel; sourceTree = "<group>"; };
 		1E4801A11E5C417A00667B09 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		1E4801A31E5C418600667B09 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		1E4801A81E5C439E00667B09 /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
@@ -2805,7 +2799,6 @@
 		30BE83D420A02B2800AE6C40 /* ChooseHTTPServiceViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChooseHTTPServiceViewController.m; sourceTree = "<group>"; };
 		30E0321420999E36001E9945 /* THRootNavigationViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = THRootNavigationViewController.h; sourceTree = "<group>"; };
 		30E0321520999E36001E9945 /* THRootNavigationViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = THRootNavigationViewController.m; sourceTree = "<group>"; };
-		450633171CD9969C00F33F4D /* UMCheckUpdate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UMCheckUpdate.h; sourceTree = "<group>"; };
 		450863761D2BA2B800D85393 /* NSMutableArray+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableArray+Extension.h"; sourceTree = "<group>"; };
 		450863771D2BA2B800D85393 /* NSMutableArray+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableArray+Extension.m"; sourceTree = "<group>"; };
 		4508637A1D2BB32A00D85393 /* NSDictionary+PropertyCode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+PropertyCode.h"; sourceTree = "<group>"; };
@@ -2892,9 +2885,6 @@
 		4579A0341DB473E700C4DE35 /* ImageIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ImageIO.framework; path = System/Library/Frameworks/ImageIO.framework; sourceTree = SDKROOT; };
 		457BCCB11E024B51008FE253 /* RecommendChatGroupListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RecommendChatGroupListViewController.h; sourceTree = "<group>"; };
 		457BCCB21E024B51008FE253 /* RecommendChatGroupListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RecommendChatGroupListViewController.m; sourceTree = "<group>"; };
-		457DCFC91D0D5A0500AD46D7 /* CheckUpdateUitl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CheckUpdateUitl.m; sourceTree = "<group>"; };
-		457DCFCA1D0D5A0500AD46D7 /* CheckUpdateUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CheckUpdateUtil.h; sourceTree = "<group>"; };
-		457DCFCB1D0D5A0500AD46D7 /* UMCheckUpdate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UMCheckUpdate.m; sourceTree = "<group>"; };
 		457F09FF1D41B02A0092B243 /* SDTimeLineCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDTimeLineCell.h; sourceTree = "<group>"; };
 		457F0A001D41B02A0092B243 /* SDTimeLineCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDTimeLineCell.m; sourceTree = "<group>"; };
 		457F0A031D41B1330092B243 /* SDTimeLineCellOperationMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDTimeLineCellOperationMenu.h; sourceTree = "<group>"; };
@@ -5035,7 +5025,6 @@
 			children = (
 				1E4801881E5C3F6B00667B09 /* ChatDemoUIDefine.h */,
 				1E48018C1E5C3F6B00667B09 /* Images.xcassets */,
-				1E48018E1E5C3F6B00667B09 /* MiaoTuProject.xcdatamodeld */,
 				1E4801A21E5C417A00667B09 /* Localizable.strings */,
 			);
 			path = "Supporting Files";
@@ -5755,17 +5744,6 @@
 			path = "NSobject+Extents";
 			sourceTree = "<group>";
 		};
-		450633151CD9969C00F33F4D /* UMCheckUpdate */ = {
-			isa = PBXGroup;
-			children = (
-				457DCFC91D0D5A0500AD46D7 /* CheckUpdateUitl.m */,
-				457DCFCA1D0D5A0500AD46D7 /* CheckUpdateUtil.h */,
-				457DCFCB1D0D5A0500AD46D7 /* UMCheckUpdate.m */,
-				450633171CD9969C00F33F4D /* UMCheckUpdate.h */,
-			);
-			path = UMCheckUpdate;
-			sourceTree = "<group>";
-		};
 		450863751D2BA29300D85393 /* Category */ = {
 			isa = PBXGroup;
 			children = (
@@ -5979,13 +5957,6 @@
 			path = ViewController;
 			sourceTree = "<group>";
 		};
-		4573885A1CE5AE830067AC7E /* LTNavigationBar */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = LTNavigationBar;
-			sourceTree = "<group>";
-		};
 		457F0A021D41B0640092B243 /* GongQiuTimeLineView */ = {
 			isa = PBXGroup;
 			children = (
@@ -6079,8 +6050,6 @@
 				1F23222E1E0CF7F8009AE2B6 /* YouzaniOSSDK */,
 				8484AC2D1D2DE9390063BB2C /* EDStarRating */,
 				8462F52C1CFD703500BB8FDB /* ZFCalendar */,
-				4573885A1CE5AE830067AC7E /* LTNavigationBar */,
-				450633151CD9969C00F33F4D /* UMCheckUpdate */,
 				049545511CB3D9ED009DBE04 /* keychainItem */,
 				0492F7951CB220D200B469A8 /* CustomActivity1 */,
 				045B3F981C9AADF7001209CE /* ARSegmentPageController */,
@@ -8536,7 +8505,7 @@
 			files = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-MiaoTuProject/Pods-MiaoTuProject-resources.sh",
+				"${PODS_ROOT}/Target Support Files/Pods-MiaoTuProject/Pods-MiaoTuProject-resources.sh",
 				"${PODS_ROOT}/AMap3DMap/MAMapKit.framework/AMap.bundle",
 				"${PODS_ROOT}/BeeCloud/BCPaySDK/BeeCloud/SandBox/BeeCloud.bundle",
 				"${PODS_ROOT}/EaseMobSDKFull/EaseMobSDKFull/resources/EaseMob.bundle",
@@ -8553,7 +8522,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MiaoTuProject/Pods-MiaoTuProject-resources.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-MiaoTuProject/Pods-MiaoTuProject-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -8734,7 +8703,6 @@
 				455B49671DE2CA86000F58E3 /* EMSearchBar.m in Sources */,
 				455B49691DE2CA86000F58E3 /* BaseViewController.m in Sources */,
 				455B496A1DE2CA86000F58E3 /* ZLCollectionCell.m in Sources */,
-				455B496B1DE2CA86000F58E3 /* UMCheckUpdate.m in Sources */,
 				1F929B6E1E246945003A36EA /* CustomView+category5.m in Sources */,
 				455B496E1DE2CA86000F58E3 /* MyJobViewController.m in Sources */,
 				455B49701DE2CA86000F58E3 /* MTNewSupplyAndBuyViewController.m in Sources */,
@@ -8883,7 +8851,6 @@
 				455B4A371DE2CA86000F58E3 /* LogisticsCreatSourceViewController.m in Sources */,
 				455B4A391DE2CA86000F58E3 /* ZLPhotoBrowserCell.m in Sources */,
 				455B4A3A1DE2CA86000F58E3 /* MTNewSupplyAndBuyView.m in Sources */,
-				455B4A3B1DE2CA86000F58E3 /* CheckUpdateUitl.m in Sources */,
 				455B4A3C1DE2CA86000F58E3 /* CustomView+CustomCategory4.m in Sources */,
 				455B4A3D1DE2CA86000F58E3 /* MTMyChlidSupplyAndBuyListViewController.m in Sources */,
 				455B4A3E1DE2CA86000F58E3 /* EPCloudFansViewController.m in Sources */,
@@ -9296,7 +9263,6 @@
 				E56C0F6E20DCA63100970F0E /* ActivityListViewController.m in Sources */,
 				E5133BBE2175E04F00159CBB /* ClassSourceListController.m in Sources */,
 				04BA79F01C993B6F00266C6E /* ZLCollectionCell.m in Sources */,
-				457DCFCD1D0D5A0500AD46D7 /* UMCheckUpdate.m in Sources */,
 				E5E05F4E215B1B570084D83D /* DFIconConstant.m in Sources */,
 				E533B5DC2214FF8200D100B8 /* GetRewardViewController.m in Sources */,
 				24BC1B59226087FE00D9A0D5 /* UILabel+YVAdd.m in Sources */,
@@ -9365,7 +9331,6 @@
 				E5885C9F2237E8D200126C40 /* LXAVPlayView.m in Sources */,
 				048CB3AF1CBB90F300C0AE1C /* THProgressView.m in Sources */,
 				0495453F1CB386DA009DBE04 /* UIImage+KIAdditions.m in Sources */,
-				1E4801971E5C3F6B00667B09 /* MiaoTuProject.xcdatamodeld in Sources */,
 				E5D0B45F20F4460D0087BF6B /* MyActivityOrderCell.m in Sources */,
 				457F0A081D41B13B0092B243 /* SDTimeLineCellCommentView.m in Sources */,
 				E5E05FEE215B1B910084D83D /* DFUsersDiscernListCell.m in Sources */,
@@ -9562,7 +9527,6 @@
 				1F929B571E20BA61003A36EA /* HKLPickerView.m in Sources */,
 				04BA79F21C993B6F00266C6E /* ZLPhotoBrowserCell.m in Sources */,
 				1FC1D2311D3F0E9500775EF3 /* MTNewSupplyAndBuyView.m in Sources */,
-				457DCFCC1D0D5A0500AD46D7 /* CheckUpdateUitl.m in Sources */,
 				845122901DDC3C3900716C56 /* CustomView+CustomCategory4.m in Sources */,
 				E51524DA21C8D13400E567D8 /* MyRankListViewController.m in Sources */,
 				04EB0A941CBFDC8D00992814 /* MTMyChlidSupplyAndBuyListViewController.m in Sources */,
@@ -10584,19 +10548,6 @@
 			defaultConfigurationName = Debug;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCVersionGroup section */
-		1E48018E1E5C3F6B00667B09 /* MiaoTuProject.xcdatamodeld */ = {
-			isa = XCVersionGroup;
-			children = (
-				1E48018F1E5C3F6B00667B09 /* MiaoTuProject.xcdatamodel */,
-			);
-			currentVersion = 1E48018F1E5C3F6B00667B09 /* MiaoTuProject.xcdatamodel */;
-			path = MiaoTuProject.xcdatamodeld;
-			sourceTree = "<group>";
-			versionGroupType = wrapper.xcdatamodel;
-		};
-/* End XCVersionGroup section */
 	};
 	rootObject = B36717511AA5F30A00D27CFD /* Project object */;
 }
